@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://scrapetools.scaleturn.com/sitemap.xml

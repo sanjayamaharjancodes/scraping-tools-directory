@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Benchmarks: Methodology | ScrapeTools</title>
+<meta name="description" content="How ScrapeTools plans to run independent, real success-rate and speed benchmarks across web scraping APIs — methodology published in advance; first results not live yet.">
+<link rel="canonical" href="https://scrapetools.scaleturn.com/methodology.html">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="affiliate-banner">
+  This site may earn a commission from some vendor links, at no extra cost to you. <a href="disclosure.html">Full affiliate disclosure</a>.
+</div>
+<header class="site-header">
+  <div class="container">
+    <a class="site-logo" href="index.html">Scrape<span>Tools</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="scraperapi-vs-scrapingbee.html">ScraperAPI vs ScrapingBee</a></li>
+        <li><a href="scraperapi-vs-bright-data.html">ScraperAPI vs Bright Data</a></li>
+        <li><a href="cheapest-web-scraping-api.html">Cheapest API</a></li>
+        <li><a href="web-scraping-apis-with-free-tier.html">Free Tiers</a></li>
+        <li><a href="methodology.html">Methodology</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container prose">
+    <span class="freshness-stamp">Last reviewed: 25 Jul 2026</span>
+    <h1>Benchmarks: Methodology</h1>
+    <p><strong>First results are not live yet.</strong> Everything currently published on this site — pricing, credit systems, free-tier terms, feature lists — is sourced directly from each vendor's own published pages, cited with a link and a verification date. Nothing on the site today claims to be a tested result. This page describes the method we intend to use once we run real, independent benchmarks, so the approach is on record before any number is published.</p>
+  </div>
+</section>
+
+<main>
+  <div class="container prose">
+
+    <h2>Why publish the method before the results</h2>
+    <p>The strongest complaint against comparison sites in this space is a fair one: the vendors being compared often outrank independent reviewers in search results for their own "best scraping API" round-ups, and a lot of third-party "comparisons" recycle the vendor's own marketing claims without testing anything. The only way an independent site earns credibility here is by running its own tests, publishing the method openly, and being willing to rank a paying affiliate partner below a competitor when the data says so. We're publishing the plan first, in public, before a single benchmark number appears on this site.</p>
+
+    <h2>What we plan to measure</h2>
+    <ul>
+      <li><strong>Success rate.</strong> Percentage of requests against a fixed panel of target pages that return a usable, correctly-rendered response (not a block page, CAPTCHA wall, or empty/garbled response).</li>
+      <li><strong>Response time.</strong> Median and 95th-percentile latency per successful request, measured end-to-end from our test harness.</li>
+      <li><strong>Cost per 1,000 successful pages.</strong> Computed from each vendor's own published pricing at like-for-like settings (same feature flags — e.g., JavaScript rendering on or off — enabled across every vendor tested in that run), not the cheapest possible configuration for one vendor against the most expensive for another.</li>
+      <li><strong>Anti-bot / CAPTCHA bypass rate</strong> on a subset of known bot-protected targets, tracked separately from the general success rate since it behaves very differently by site.</li>
+    </ul>
+
+    <h2>How we plan to keep it fair</h2>
+    <ul>
+      <li><strong>Fixed, disclosed target list.</strong> A published set of test URLs spanning static pages, JavaScript-heavy pages, and pages with active anti-bot protection — not a target list picked after seeing which vendor does better on it.</li>
+      <li><strong>Same settings across vendors in a given run.</strong> Every vendor tested with the same feature flags enabled (e.g., JS rendering on, or off) in a given comparison, rather than each vendor's best-case configuration against another's default.</li>
+      <li><strong>Recurring re-runs, not a one-time snapshot.</strong> Scraping success rates and anti-bot defenses change on both sides — we intend to re-run the panel on a regular cadence and publish the date of each run, rather than leaving a single result live indefinitely.</li>
+      <li><strong>Affiliate relationships disclosed, not hidden from the ranking.</strong> Some vendors tested may be ones we earn an affiliate commission from (see the <a href="disclosure.html">Affiliate Disclosure</a>) — the fixed target list and published parameters exist specifically so that relationship can't quietly tilt which vendor "wins" a given test.</li>
+      <li><strong>Only publish what we actually ran.</strong> No estimated, interpolated, or "typical" numbers standing in for a real test. If a vendor isn't tested yet, its page says so — as this page does now.</li>
+    </ul>
+
+    <h2>Legal and platform-terms scope</h2>
+    <p>Test targets will be limited to pages and services where automated access is either explicitly permitted or falls within general, publicly-documented technique — no scraping of the org's own confidential client work, and no targets chosen specifically to demonstrate bypassing a site's terms of service. This methodology draws only on public, general-technique knowledge, consistent with the org's standing clean-room policy for all published work.</p>
+
+    <h2>Status</h2>
+    <p>This methodology is published; the benchmark harness has not been built and no test run has occurred as of the date on this page. When the first results are published, this page will be updated with the run date, and every comparison page on this site that currently states "not independently benchmarked" will be updated to link to the actual data instead.</p>
+
+    <div class="disclaimer-box">
+      <strong>No results exist yet.</strong> Nothing on ScrapeTools today is a tested benchmark. All current pricing and feature comparisons are sourced from vendor-published pages, not from running these tools ourselves. Treat this page as a commitment to a method, not a report of findings.
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="methodology.html">Methodology</a></li>
+      <li><a href="disclosure.html">Affiliate Disclosure</a></li>
+    </ul>
+    <div class="footer-disclosure">
+      <strong>Affiliate disclosure:</strong> ScrapeTools is an independent comparison site published by Scaleturn. Some links to vendors may be affiliate/referral links — if you sign up through one, we may earn a commission at no extra cost to you. This does not influence the pricing or feature facts we publish, which are sourced directly from each vendor's own pages and cited. Read the full <a href="disclosure.html">Affiliate Disclosure</a>.
+    </div>
+    <p>&copy; 2026 ScrapeTools, published by Scaleturn. Pricing and features change — always confirm current terms on the vendor's own site before buying.</p>
+  </div>
+</footer>
+<script data-goatcounter="https://scaleturn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
