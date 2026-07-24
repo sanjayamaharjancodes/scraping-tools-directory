@@ -96,13 +96,30 @@ Hosted on GitHub Pages, served from the repo root of the `main` branch (plain
 HTML/CSS, no Jekyll processing needed).
 
 Custom domain: `scrapetools.scaleturn.com`, via a `CNAME` file at the repo
-root. **DNS has not been wired by the orchestrator as of this build** — the
-Pages custom-domain URL will 404 until that DNS record exists (expected, per
-the build task). The `github.io` project URL serves the same content in the
-meantime; because a custom domain serves from the domain root while a project
-Pages URL serves from a `/scraping-tools-directory/` subpath, every internal
-link/asset reference must stay relative (no leading `/`) — verified true of
-this build (see QA section of the delivery report).
+root. **DNS has not been wired by the orchestrator as of this build.** The
+`github.io` project URL serves the same content in the meantime; because a
+custom domain serves from the domain root while a project Pages URL serves
+from a `/scraping-tools-directory/` subpath, every internal link/asset
+reference must stay relative (no leading `/`) — verified true of this build.
+
+**GitHub Pages redirect gotcha (new finding, not covered by the prior
+`getting-paid-nepal` migration notes).** Calling `POST /pages` to enable
+Pages while a `CNAME` file already exists in the pushed commit makes GitHub
+immediately set the Pages custom-domain config and **301-redirect the
+`github.io` URL to the custom domain** — even though that domain doesn't
+resolve yet (DNS not wired), which breaks the `github.io` URL entirely in the
+interim. Fix used here: `PUT /pages -f cname=''` to clear the domain config
+(this also auto-commits a "Delete CNAME" commit to the branch as a side
+effect — pull before re-adding the file), then re-add the `CNAME` file via a
+**plain `git push`** with no follow-up Pages settings API call. Empirically,
+the plain push leaves the file in the deployed content (so it's there for
+DNS wiring later, and `GET /pages` reports the `cname` value again) but does
+**not** re-trigger the redirect-enforcement — `github.io` kept serving 200
+across multiple checks after that push. If the redirect reappears once DNS
+is actually live and GitHub verifies the domain, that's expected and correct
+at that point. If wiring DNS doesn't make `scrapetools.scaleturn.com`
+resolve on its own, an explicit `PUT /pages -f cname=scrapetools.scaleturn.com`
+call may be needed to re-enable enforcement.
 
 Live URLs:
 - GitHub Pages (works now): https://sanjayamaharjancodes.github.io/scraping-tools-directory/
