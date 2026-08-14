@@ -29,18 +29,10 @@ see `memory/episodic/2026/07/25-strategist-autonomous-portfolio-bets.md` and
   were deliberately excluded from headline figures in favor of standard
   monthly list price (e.g., ScraperAPI's "$44.10/mo billed annually" and
   Bright Data's "25% off" checkout-code banner are NOT the numbers used).
-- **ScraperAPI links are a placeholder.** Every link intended for ScraperAPI
-  uses the literal placeholder `[SCRAPERAPI-AFFILIATE-LINK]` as its `href`
-  (both CTA-style links and inline citation links). **These are not live
-  links.** ScraperAPI's affiliate program has not yet been applied to. Before
-  promoting/monetizing this site, apply via
-  `https://www.scraperapi.com/affiliates/`, then once approved:
-  ```
-  grep -rl "\[SCRAPERAPI-AFFILIATE-LINK\]" *.html
-  ```
-  Find-and-replace that exact string across all matching files with the real
-  tracked affiliate link, and update `disclosure.html`'s "what's live" section
-  to say the relationship is active. All other vendor links (Bright Data,
+- **ScraperAPI affiliate links are live.** Links containing
+  `fp_ref=sanjaya18` are tracked referral links and the relationship is named
+  on `disclosure.html` and before the first affiliate link on every page. All
+  other vendor links (Bright Data,
   Oxylabs, Zyte, ScrapingBee, Apify, Scrapfly, ScrapingDog) are plain,
   non-affiliate links to the vendor's own pricing page — no program has been
   applied to for those yet either; if/when the org pursues them, the same

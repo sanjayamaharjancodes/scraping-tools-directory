@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ScraperAPI Cost Calculator 2026 — Credits &amp; Plan Estimator</title>
+<meta name="description" content="Estimate monthly ScraperAPI credits and the smallest published plan for normal, rendered, premium, SERP, Amazon, LinkedIn, and ultra-premium requests.">
+<link rel="canonical" href="https://scrapetools.scaleturn.com/scraperapi-cost-calculator.html">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="affiliate-banner">
+  This calculator contains a ScraperAPI affiliate link. If you sign up through it, we may earn a commission at no extra cost to you. <a href="disclosure.html">Full affiliate disclosure</a>.
+</div>
+<header class="site-header">
+  <div class="container">
+    <a class="site-logo" href="index.html">Scrape<span>Tools</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="scraperapi-vs-scrapingbee.html">ScraperAPI vs ScrapingBee</a></li>
+        <li><a href="scraperapi-vs-bright-data.html">ScraperAPI vs Bright Data</a></li>
+        <li><a href="cheapest-web-scraping-api.html">Cheapest API</a></li>
+        <li><a href="web-scraping-apis-with-free-tier.html">Free Tiers</a></li>
+        <li><a href="scraperapi-cost-calculator.html" aria-current="page">Cost calculator</a></li>
+        <li><a href="methodology.html">Methodology</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container prose">
+    <span class="freshness-stamp">Pricing and credit costs verified: 14 Aug 2026</span>
+    <h1>ScraperAPI cost calculator</h1>
+    <p>Convert successful monthly requests into API credits, then find the smallest published ScraperAPI plan with enough capacity. The calculation runs in your browser; no values are sent anywhere.</p>
+  </div>
+</section>
+
+<main>
+  <div class="container prose">
+    <form id="cost-calculator" class="calculator" novalidate>
+      <div class="field-grid">
+        <label>
+          Successful requests per month
+          <input id="monthly-requests" name="monthlyRequests" type="number" min="1" step="1000" value="100000" inputmode="numeric" required>
+          <span class="field-help">ScraperAPI says it charges successful requests (HTTP 200 and 404), plus requests cancelled before the service has enough time to finish.</span>
+        </label>
+
+        <label>
+          Request profile
+          <select id="request-profile" name="requestProfile">
+            <option value="1">Normal request — 1 credit</option>
+            <option value="5">Amazon / e-commerce — 5 credits</option>
+            <option value="10">Render, premium, screenshot, or bot bypass — 10 credits</option>
+            <option value="25">SERP or premium + render — 25 credits</option>
+            <option value="30">LinkedIn or ultra-premium — 30 credits</option>
+            <option value="75">Ultra-premium + render — 75 credits</option>
+            <option value="custom">Custom / measured cost</option>
+          </select>
+          <span class="field-help">These presets come from ScraperAPI's current credit-cost documentation. For mixed or unusual URLs, measure first with its URL Cost API.</span>
+        </label>
+
+        <label id="custom-credit-field" hidden>
+          Credits per successful request
+          <input id="credits-per-request" name="creditsPerRequest" type="number" min="0.01" step="0.01" value="1" inputmode="decimal">
+        </label>
+      </div>
+
+      <div id="calculator-error" class="form-error" role="alert" hidden></div>
+
+      <section class="calculator-result" aria-live="polite" aria-atomic="true">
+        <p class="result-label">Estimated monthly credits</p>
+        <p id="estimated-credits" class="result-number">100,000</p>
+        <h2 id="recommended-plan">Hobby — $49/month</h2>
+        <p id="recommendation-detail">100,000 credits included, with 0 credits of headroom.</p>
+        <a id="affiliate-cta" class="btn" href="https://www.scraperapi.com/?fp_ref=sanjaya18" target="_blank" rel="sponsored noopener">Start a ScraperAPI trial</a>
+      </section>
+    </form>
+
+    <h2>Published monthly plans used by this calculator</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Plan</th><th>Monthly price</th><th>API credits</th><th>Concurrent threads</th><th>Geotargeting</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Hobby</td><td class="price">$49</td><td>100,000</td><td>20</td><td>US &amp; EU only</td></tr>
+          <tr><td>Startup</td><td class="price">$149</td><td>1,000,000</td><td>50</td><td>US &amp; EU only</td></tr>
+          <tr><td>Business</td><td class="price">$299</td><td>3,000,000</td><td>100</td><td>Global</td></tr>
+          <tr><td>Scaling</td><td class="price">$475</td><td>5,000,000</td><td>200</td><td>Global</td></tr>
+          <tr><td>Professional</td><td class="price">$975</td><td>10,500,000</td><td>300</td><td>Global</td></tr>
+          <tr><td>Advanced</td><td class="price">$1,975</td><td>21,500,000</td><td>500</td><td>Global</td></tr>
+          <tr><td>Enterprise</td><td>Custom</td><td>22,000,000+</td><td>500+</td><td>Confirm with sales</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="source-line">Source: <a href="https://www.scraperapi.com/pricing/" target="_blank" rel="noopener">ScraperAPI pricing</a>, verified 14 Aug 2026. Monthly list prices are used; annual discounts are deliberately excluded.</p>
+
+    <h2>What the estimate can and cannot tell you</h2>
+    <div class="note-box">
+      <strong>Use measured credit cost for production budgeting.</strong> Some domains have custom costs and can change protection methods. ScraperAPI provides an authenticated <a href="https://docs.scraperapi.com/getting-started/quick-start/credits-and-requests-costs" target="_blank" rel="noopener">URL Cost API and dashboard tool</a> that accept the same parameters as a real request. Put that measured result into “Custom” above when accuracy matters.
+    </div>
+    <p>The estimator multiplies successful requests by credits per request and selects the first published plan whose included credits cover that total. It does not model failed-request rates, retries, concurrency limits, annual discounts, negotiated pricing, pay-as-you-go overages, or combinations not explicitly priced in the documentation.</p>
+
+    <div class="disclosure-box">
+      <strong>Affiliate relationship:</strong> the “Start a ScraperAPI trial” button is a tracked affiliate link. ScrapeTools may earn a commission if you sign up through it, at no extra cost to you. The calculation and plan thresholds are based on ScraperAPI's public documentation, not commission size. See the <a href="disclosure.html">full disclosure</a>.
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="methodology.html">Methodology</a></li>
+      <li><a href="disclosure.html">Affiliate Disclosure</a></li>
+    </ul>
+    <div class="footer-disclosure">
+      <strong>Affiliate disclosure:</strong> ScrapeTools is an independent comparison site published by Scaleturn. Some links to vendors are affiliate/referral links — if you sign up through one, we may earn a commission at no extra cost to you.
+    </div>
+    <p>&copy; 2026 ScrapeTools, published by Scaleturn. Pricing and features change — always confirm current terms on the vendor's own site before buying.</p>
+  </div>
+</footer>
+<script src="calculator.js"></script>
+<script data-goatcounter="https://scaleturn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
