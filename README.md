@@ -1,7 +1,7 @@
 # ScrapeTools
 
 Static, framework-free web scraping API comparison directory. Track-2 owned
-asset for MyAgentOrganization (Strategist Finalist 1 — build authorized
+asset for mandala (Strategist Finalist 1 — build authorized
 2026-07-25 after the Reviewer's rail-verification BLOCK was discharged;
 see `memory/episodic/2026/07/25-strategist-autonomous-portfolio-bets.md` and
 `25-finalist2-payout-rail-verification.md` in the org-memory repo).
