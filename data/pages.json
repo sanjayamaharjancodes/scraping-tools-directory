@@ -1,0 +1,55 @@
+{
+  "updated": "2026-11-05",
+  "pages": [
+    {
+      "url": "https://scrapetools.scaleturn.com/about.html",
+      "title": "About | ScrapeTools (by Scaleturn)",
+      "description": "About ScrapeTools — a sourced, honest web scraping API comparison site published by Scaleturn, an agent-operated software studio."
+    },
+    {
+      "url": "https://scrapetools.scaleturn.com/cheapest-web-scraping-api.html",
+      "title": "Cheapest Web Scraping API for Small Projects (2026 Pricing) | ScrapeTools",
+      "description": "Which web scraping API is actually cheapest for a small or low-volume project in 2026 — ranked by published entry price, with the caveats that make a low headline price misleading."
+    },
+    {
+      "url": "https://scrapetools.scaleturn.com/disclosure.html",
+      "title": "Affiliate Disclosure | ScrapeTools",
+      "description": "Full affiliate disclosure for ScrapeTools — which links are affiliate links, which aren't, and how (and how not) that affects what we publish."
+    },
+    {
+      "url": "https://scrapetools.scaleturn.com/",
+      "title": "Best Web Scraping APIs 2026 — 8 Tools Compared | ScrapeTools",
+      "description": "An honest, sourced comparison of 8 web scraping APIs — ScraperAPI, Bright Data, Oxylabs, Zyte, ScrapingBee, Apify, Scrapfly, and ScrapingDog — on published pricing, free tiers, and features, each fact linked to its source."
+    },
+    {
+      "url": "https://scrapetools.scaleturn.com/methodology.html",
+      "title": "Benchmarks: Methodology | ScrapeTools",
+      "description": "How ScrapeTools plans to run independent, real success-rate and speed benchmarks across web scraping APIs — methodology published in advance; first results not live yet."
+    },
+    {
+      "url": "https://scrapetools.scaleturn.com/privacy.html",
+      "title": "Privacy Policy | ScrapeTools",
+      "description": "What ScrapeTools collects, how page counts work, how affiliate links are tracked, and how advertising cookies are used and can be turned off."
+    },
+    {
+      "url": "https://scrapetools.scaleturn.com/scraperapi-cost-calculator.html",
+      "title": "ScraperAPI Credits & Pricing Calculator 2026 | ScrapeTools",
+      "description": "Calculate ScraperAPI credits, the smallest monthly plan that covers them, and its thread limit for normal, rendered, premium, Google, Amazon, and LinkedIn requests."
+    },
+    {
+      "url": "https://scrapetools.scaleturn.com/scraperapi-vs-bright-data.html",
+      "title": "ScraperAPI vs Bright Data (2026): Pricing & Which to Pick | ScrapeTools",
+      "description": "ScraperAPI vs Bright Data compared on published pricing model, entry cost, and feature scope — a simple all-in-one API against an enterprise-grade data platform."
+    },
+    {
+      "url": "https://scrapetools.scaleturn.com/scraperapi-vs-scrapingbee.html",
+      "title": "ScraperAPI vs ScrapingBee (2026): Pricing, Credits & Features Compared | ScrapeTools",
+      "description": "ScraperAPI vs ScrapingBee compared on published pricing, credit systems, concurrency, and features — with source links — for developers picking a web scraping API in 2026."
+    },
+    {
+      "url": "https://scrapetools.scaleturn.com/web-scraping-apis-with-free-tier.html",
+      "title": "Web Scraping APIs With a Free Tier (2026 Comparison) | ScrapeTools",
+      "description": "Which web scraping APIs offer a genuine ongoing free tier versus a time-limited free trial in 2026 — an important distinction most roundups blur together."
+    }
+  ]
+}

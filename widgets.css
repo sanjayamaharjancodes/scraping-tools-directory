@@ -1,0 +1,58 @@
+[hidden] { display: none !important; }
+.site-footer .footer-disclosure { margin-bottom: 1rem; }
+/* ScrapeTools add-on styles: answer-first box, cost widget, affiliate card. Loaded after style.css. */
+.answer-first {
+  border-left: 4px solid var(--color-primary, #0e7c86);
+  background: var(--color-bg-alt, #f2f6f5);
+  padding: 1rem 1.25rem;
+  margin: 0 0 1.5rem 0;
+  border-radius: 0 8px 8px 0;
+}
+.answer-first > :last-child { margin-bottom: 0; }
+.answer-first-label { display: block; font-size: .8rem; text-transform: uppercase; letter-spacing: .04em;
+  color: var(--color-text-muted, #55645f); margin-bottom: .25rem; }
+
+.vcw { border: 1px solid var(--color-border, #dbe4e1); border-radius: 8px; padding: 1rem;
+  margin: 1.5rem 0; background: #fff; min-height: 22rem; }
+.vcw-label { display: block; font-weight: 600; margin-bottom: .5rem; }
+.vcw-label span { display: block; margin-bottom: .25rem; }
+.vcw-volume { font-family: var(--font-mono, monospace); font-size: 1.5rem; color: var(--color-primary-dark, #0a5a62); }
+.vcw-slider { width: 100%; margin: .25rem 0 .75rem; accent-color: var(--color-primary, #0e7c86); height: 2rem; }
+.vcw-summary { min-height: 3.2em; margin: 0 0 .75rem; }
+.vcw-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; }
+.vcw-row { padding: .5rem 0; border-top: 1px solid var(--color-border, #dbe4e1); min-height: 4.4rem; }
+.vcw-rowtop { display: flex; justify-content: space-between; gap: .5rem; flex-wrap: wrap; }
+.vcw-name { font-weight: 600; }
+.vcw-cost { font-family: var(--font-mono, monospace); }
+.vcw-track { height: .6rem; background: var(--color-bg-alt, #f2f6f5); border-radius: 4px; margin: .35rem 0; overflow: hidden; }
+.vcw-bar { height: 100%; width: 100%; background: var(--color-primary, #0e7c86); transform-origin: left center;
+  transform: scaleX(.02); transition: transform .35s ease-out; border-radius: 4px; }
+.vcw-bar.vcw-none { background: repeating-linear-gradient(45deg, #c9d3d0, #c9d3d0 6px, #e6ecea 6px, #e6ecea 12px); }
+.vcw-meta { font-size: .85rem; color: var(--color-text-muted, #55645f); display: flex; gap: .75rem; flex-wrap: wrap; }
+.vcw-note { font-size: .82rem; color: var(--color-text-muted, #55645f); }
+.vcw-skipped, .vcw-foot { font-size: .85rem; color: var(--color-text-muted, #55645f); margin: .75rem 0 0; }
+
+.affiliate-card { border: 2px dashed #b9a46a; background: #fffaf0; border-radius: 8px; padding: .9rem 1rem; margin: 1rem 0 0; }
+.affiliate-card-label { display: inline-block; font-size: .75rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .05em; background: #7a4a1f; color: #fff; padding: .1rem .5rem; border-radius: 4px; margin-bottom: .4rem; }
+.affiliate-card-text { margin: 0 0 .6rem; }
+.affiliate-card-fine { font-size: .8rem; color: var(--color-text-muted, #55645f); margin: .6rem 0 0; }
+
+/* Tables with more than 3 columns: add class="stack-table" and data-label="Column name" on every td.
+   At phone width each row becomes a labelled card, so nothing needs sideways scrolling. */
+@media (max-width: 560px) {
+  .stack-table, .stack-table tbody, .stack-table tr, .stack-table td { display: block; width: 100%; }
+  .stack-table thead { position: absolute; left: -9999px; }
+  .stack-table tr { border: 1px solid var(--color-border, #dbe4e1); border-radius: 8px; margin: 0 0 .75rem; padding: .4rem .7rem; background: #fff; }
+  .stack-table td { border: 0; padding: .2rem 0; }
+  .stack-table td::before { content: attr(data-label); display: block; font-size: .72rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: .04em; color: var(--color-text-muted, #55645f); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vcw-bar { transition: none; }
+}
+@media (max-width: 480px) {
+  .vcw { padding: .75rem; }
+  .vcw-volume { font-size: 1.3rem; }
+}

@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "currency": "USD",
+  "updated": "2026-08-14",
+  "unit": "basic request per month (no JavaScript rendering, standard proxies)",
+  "vendors": [
+    {
+      "id": "scraperapi", "name": "ScraperAPI", "model": "credits", "comparable": true,
+      "verified": "2026-08-14", "source_url": "https://www.scraperapi.com/pricing/",
+      "free_included": 1000,
+      "tiers": [
+        {"name": "Hobby", "monthly_usd": 49, "included": 100000},
+        {"name": "Startup", "monthly_usd": 149, "included": 1000000},
+        {"name": "Business", "monthly_usd": 299, "included": 3000000},
+        {"name": "Scaling", "monthly_usd": 475, "included": 5000000},
+        {"name": "Professional", "monthly_usd": 975, "included": 10500000},
+        {"name": "Advanced", "monthly_usd": 1975, "included": 21500000}
+      ],
+      "note": "A normal request costs 1 credit; rendering, premium and SERP requests cost more."
+    },
+    {
+      "id": "scrapingbee", "name": "ScrapingBee", "model": "credits", "comparable": true,
+      "verified": "2026-07-25", "source_url": "https://www.scrapingbee.com/#pricing",
+      "tiers": [
+        {"name": "Entry", "monthly_usd": 49, "included": 250000},
+        {"name": "Top self-serve", "monthly_usd": 599, "included": 8000000}
+      ],
+      "note": "Credits counted at the base rate; JavaScript rendering and premium proxies use more credits."
+    },
+    {
+      "id": "brightdata", "name": "Bright Data (Web Scraper API)", "model": "per-record", "comparable": true,
+      "verified": "2026-07-25", "source_url": "https://brightdata.com/pricing/web-scraper",
+      "free_included": 5000, "payg_per_1000_usd": 1.5,
+      "tiers": [{"name": "Monthly plan", "monthly_usd": 499, "included": 384000}],
+      "note": "Billed per successfully delivered record, not per request."
+    },
+    {
+      "id": "scrapingdog", "name": "ScrapingDog", "model": "credits", "comparable": true,
+      "verified": "2026-07-25", "source_url": "https://www.scrapingdog.com/pricing/",
+      "free_included": 200,
+      "tiers": [{"name": "Entry", "monthly_usd": 40, "included": 200000}],
+      "note": "Entry plan shown; larger plans exist on the vendor page and are not modeled here."
+    },
+    {
+      "id": "apify", "name": "Apify", "model": "compute-units", "comparable": false,
+      "verified": "2026-07-25", "source_url": "https://apify.com/pricing",
+      "note": "Priced per compute unit, so cost depends on the Actor you run, not on request count."
+    },
+    {
+      "id": "zyte", "name": "Zyte API", "model": "per-response", "comparable": false,
+      "verified": "2026-07-25", "source_url": "https://www.zyte.com/pricing/",
+      "note": "Volume-tiered per-response pricing; no single basic-request rate verified."
+    }
+  ]
+}

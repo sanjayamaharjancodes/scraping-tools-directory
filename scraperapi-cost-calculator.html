@@ -4,9 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ScraperAPI Credits &amp; Pricing Calculator 2026 | ScrapeTools</title>
-<meta name="description" content="Calculate ScraperAPI credits, monthly plan cost, and capacity for normal, rendered, premium, SERP, Amazon, LinkedIn, and ultra-premium requests.">
+<meta name="description" content="Calculate ScraperAPI credits, the smallest monthly plan that covers them, and its thread limit for normal, rendered, premium, Google, Amazon, and LinkedIn requests.">
 <link rel="canonical" href="https://scrapetools.scaleturn.com/scraperapi-cost-calculator.html">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="widgets.css">
+<style>
+form.calculator{margin-bottom:1.5rem}
+#custom-credit-field[hidden]{display:none}
+.calculator [hidden]{display:none}
+#plan-ladder{margin-top:1.5rem}
+#plan-ladder tr.is-pick td{font-weight:700;background:rgba(0,0,0,.05)}
+@media (max-width:640px){
+  .plan-table th,.plan-table td{padding:.4rem .5rem;font-size:.875rem}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ScraperAPI credits and pricing calculator",
+  "description": "Calculate ScraperAPI credits, the smallest monthly plan that covers them, and its thread limit for normal, rendered, premium, Google, Amazon, and LinkedIn requests.",
+  "url": "https://scrapetools.scaleturn.com/scraperapi-cost-calculator.html",
+  "dateModified": "2026-11-05",
+  "inLanguage": "en-US",
+  "publisher": {"@type": "Organization", "name": "Scaleturn", "url": "https://scaleturn.com/"},
+  "isPartOf": {"@type": "WebSite", "name": "ScrapeTools", "url": "https://scrapetools.scaleturn.com/"}
+}
+</script>
 </head>
 <body>
 <div class="affiliate-banner">
@@ -32,34 +56,42 @@
 
 <section class="hero">
   <div class="container prose">
-    <span class="freshness-stamp">Pricing and credit costs verified: 14 Aug 2026</span>
+    <span class="freshness-stamp">Pricing verified: Nov 5, 2026</span>
     <h1>ScraperAPI credits and pricing calculator</h1>
-    <p>Convert successful monthly requests into API credits, then find the smallest published ScraperAPI plan with enough capacity. Use it to compare the real plan impact of normal, rendered, premium, Amazon, SERP, LinkedIn, and ultra-premium requests. The calculation runs in your browser; no values are sent anywhere.</p>
+    <p>Convert successful monthly requests into API credits, then find the smallest published ScraperAPI plan with enough credits.</p>
   </div>
 </section>
 
 <main>
   <div class="container prose">
+    <div class="answer-first">
+      <span class="answer-first-label">Short answer</span>
+      <p>Multiply successful monthly requests by the credits each request uses. A normal request costs 1 credit, so 100,000 normal requests fit the Hobby plan at $49/month. The same 100,000 requests need 1,000,000 credits with rendering (Startup, $149/month) and 3,000,000 credits on LinkedIn (Business, $299/month). Each of these uses the whole allowance, with no headroom, and scraping pauses by default at zero, so budget for the next plan if volume could grow.</p>
+    </div>
+
     <form id="cost-calculator" class="calculator" novalidate>
       <div class="field-grid">
         <label>
           Successful requests per month
-          <input id="monthly-requests" name="monthlyRequests" type="number" min="1" step="1000" value="100000" inputmode="numeric" required>
-          <span class="field-help">ScraperAPI says it charges successful requests (HTTP 200 and 404), plus requests cancelled before the service has enough time to finish.</span>
+          <input id="monthly-requests" name="monthlyRequests" type="number" min="0" step="1000" value="100000" inputmode="numeric" required>
+          <span class="field-help">ScraperAPI says it charges successful requests (HTTP 200 and 404), plus some canceled requests; see <a href="#failed-requests">the FAQ</a>.</span>
         </label>
 
         <label>
           Request profile
           <select id="request-profile" name="requestProfile">
-            <option value="1">Normal request — 1 credit</option>
-            <option value="5">Amazon / e-commerce — 5 credits</option>
-            <option value="10">Render, premium, screenshot, or bot bypass — 10 credits</option>
-            <option value="25">SERP or premium + render — 25 credits</option>
-            <option value="30">LinkedIn or ultra-premium — 30 credits</option>
-            <option value="75">Ultra-premium + render — 75 credits</option>
-            <option value="custom">Custom / measured cost</option>
+            <option value="1">Normal request: 1 credit</option>
+            <option value="5">Amazon, Walmart, or eBay: 5 credits</option>
+            <option value="10">Render, premium, or screenshot: 10 credits</option>
+            <option value="10" data-measure="1">Bot-protected domain: 10+ credits (measure)</option>
+            <option value="25">Google or Bing: 25 credits</option>
+            <option value="25">Premium + render: 25 credits</option>
+            <option value="30">LinkedIn: 30 credits</option>
+            <option value="30" data-paid="1">Ultra-premium: 30 credits</option>
+            <option value="75" data-paid="1">Ultra-premium + render: 75 credits</option>
+            <option value="custom">Custom or measured cost</option>
           </select>
-          <span class="field-help">These presets come from ScraperAPI's current credit-cost documentation. For mixed or unusual URLs, measure first with its URL Cost API.</span>
+          <span class="field-help">Presets come from ScraperAPI's credit-cost docs. For unpriced combinations, such as Amazon with render, measure one request and use Custom.</span>
         </label>
 
         <label id="custom-credit-field" hidden>
@@ -73,74 +105,116 @@
       <section class="calculator-result" aria-live="polite" aria-atomic="true">
         <p class="result-label">Estimated monthly credits</p>
         <p id="estimated-credits" class="result-number">100,000</p>
-        <h2 id="recommended-plan">Hobby — $49/month</h2>
-        <p id="recommendation-detail">100,000 credits included, with 0 credits of headroom.</p>
-        <a id="affiliate-cta" class="btn" href="https://www.scraperapi.com/?fp_ref=sanjaya18" target="_blank" rel="sponsored noopener" data-goatcounter-click="affiliate/scraperapi-calculator" data-goatcounter-title="ScraperAPI affiliate CTA">Start a ScraperAPI trial</a>
+        <h2 id="recommended-plan">Hobby: $49/month</h2>
+        <p id="recommendation-detail">100,000 credits included, with 0 credits of headroom and a limit of 20 concurrent threads. US &amp; EU geotargeting only. That is a tight fit, and scraping pauses by default when credits run out. The next plan up is Startup at $149/month.</p>
+        <p id="cost-per-thousand">$0.49 per 1,000 successful requests, assuming you pay the full plan price.</p>
+        <p id="profile-note" hidden>ScraperAPI's docs and pricing.md both list this cost at 10 credits, while its pricing FAQ says such sites "add 10 credits per request," so confirm it with the URL Cost API or the sa-credit-cost response header.</p>
+        <a id="affiliate-cta" class="btn" href="https://www.scraperapi.com/?fp_ref=sanjaya18" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="affiliate/scraperapi-calculator" data-goatcounter-title="ScraperAPI affiliate CTA">Start a ScraperAPI trial</a>
+        <p class="field-help"><span id="affiliate-label">Affiliate link. </span>The calculator runs in your browser and sends no values anywhere.</p>
       </section>
+
+      <div id="plan-ladder">
+        <h3>What each plan buys at this credit cost</h3>
+        <div class="table-wrap">
+          <table class="plan-table">
+            <thead>
+              <tr><th>Plan</th><th>Monthly price</th><th>Most requests per month</th><th>Cost per 1,000 requests at that volume</th></tr>
+            </thead>
+            <tbody>
+              <tr class="is-pick"><td>Hobby (smallest fit)</td><td class="price">$49</td><td>100,000</td><td>$0.49</td></tr>
+              <tr><td>Startup</td><td class="price">$149</td><td>1,000,000</td><td>$0.149</td></tr>
+              <tr><td>Business</td><td class="price">$299</td><td>3,000,000</td><td>$0.0997</td></tr>
+              <tr><td>Scaling</td><td class="price">$475</td><td>5,000,000</td><td>$0.095</td></tr>
+              <tr><td>Professional</td><td class="price">$975</td><td>10,500,000</td><td>$0.0929</td></tr>
+              <tr><td>Advanced</td><td class="price">$1,975</td><td>21,500,000</td><td>$0.0919</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </form>
 
+    <p><strong>Mixed workload?</strong> Enter a blended average in Custom. For 80,000 normal plus 20,000 Google requests: (80,000×1 + 20,000×25) / 100,000 = 5.8 credits per request. With 100,000 requests and 5.8 credits per request, the calculator returns 580,000 credits, which the Startup plan covers.</p>
+
     <h2>How to calculate ScraperAPI credits</h2>
-    <p>The basic formula is <strong>successful monthly requests × credits per request = monthly API credits</strong>. A normal page request costs 1 credit, but the multiplier rises for harder domains and resource-intensive parameters. That means request count alone does not tell you which plan fits.</p>
+    <p>The basic formula is <strong>successful monthly requests × credits per request = monthly API credits</strong>. A normal page request costs 1 credit, but the multiplier rises for harder domains and resource-intensive parameters.</p>
     <div class="table-wrap">
-      <table>
+      <table class="stack-table workload-table">
         <thead>
           <tr><th>Example workload</th><th>Calculation</th><th>Monthly credits</th><th>Smallest published plan</th></tr>
         </thead>
         <tbody>
-          <tr><td>80,000 normal requests</td><td>80,000 × 1</td><td>80,000</td><td>Hobby</td></tr>
-          <tr><td>100,000 Amazon requests</td><td>100,000 × 5</td><td>500,000</td><td>Startup</td></tr>
-          <tr><td>100,000 rendered requests</td><td>100,000 × 10</td><td>1,000,000</td><td>Startup</td></tr>
-          <tr><td>100,000 SERP requests</td><td>100,000 × 25</td><td>2,500,000</td><td>Business</td></tr>
-          <tr><td>100,000 LinkedIn requests</td><td>100,000 × 30</td><td>3,000,000</td><td>Business</td></tr>
+          <tr><td data-label="Example workload">80,000 normal requests</td><td data-label="Calculation">80,000 × 1</td><td data-label="Monthly credits"><span>80,000</span></td><td data-label="Smallest published plan">Hobby, $49</td></tr>
+          <tr><td data-label="Example workload">100,000 Amazon requests</td><td data-label="Calculation">100,000 × 5</td><td data-label="Monthly credits"><span>500,000</span></td><td data-label="Smallest published plan">Startup, $149</td></tr>
+          <tr><td data-label="Example workload">100,000 Google or Bing requests</td><td data-label="Calculation">100,000 × 25</td><td data-label="Monthly credits"><span>2,500,000</span></td><td data-label="Smallest published plan">Business, $299</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="source-line">Examples use the current published monthly plan allowances and documented credit multipliers. They assume one request profile for the entire workload and exclude retries, mixed traffic, and custom account terms.</p>
+    <p class="source-line">Examples use published monthly plan allowances and documented credit multipliers. They assume one request profile for the entire workload and exclude retries and custom account terms.</p>
 
-    <h2>ScraperAPI credit multipliers</h2>
-    <p>ScraperAPI documents 1 credit for a normal request, 5 for Amazon or e-commerce, 25 for Google or Bing SERPs, and 30 for LinkedIn. Parameters can also change the cost: rendering, premium routing, screenshots, or bot-bypass requests cost 10 credits; premium plus rendering costs 25; ultra-premium costs 30, or 75 with rendering. Domain-specific logic can override a general estimate, so production budgets should use the vendor's URL Cost API.</p>
+    <!-- ad:after-answer -->
+
+    <h2 id="credit-multipliers">ScraperAPI credit multipliers</h2>
+    <p>ScraperAPI documents 1 credit for a normal request, 5 for e-commerce domains (Amazon, Walmart, eBay), 25 for Google and Bing, including their subdomains, and 30 for LinkedIn. Parameters can also change the cost: rendering, premium routing, and screenshots cost 10 credits; premium plus rendering costs 25; ultra-premium costs 30, or 75 with rendering. Both ultra-premium options are for paid plans only. Accounts on custom discounted pricing may pay more for Ultra Premium, per the docs, so those two presets may not apply to them.</p>
+    <p>The docs list the render, premium, and screenshot costs under "Extra Cost" without saying whether they include the 1-credit base; pricing.md lists them as 10, which this calculator uses. Confirm with <code>sa-credit-cost</code> or the URL Cost API.</p>
+    <p>Bot-protected domains need a closer look. The docs and pricing.md both list them at 10 credits, while the pricing page FAQ says such sites "add 10 credits per request." The calculator uses 10, so measure these URLs rather than trusting the preset.</p>
 
     <h2>Published monthly plans used by this calculator</h2>
     <div class="table-wrap">
-      <table>
+      <table class="plan-table">
         <thead>
-          <tr><th>Plan</th><th>Monthly price</th><th>API credits</th><th>Concurrent threads</th><th>Geotargeting</th></tr>
+          <tr><th>Plan</th><th>Monthly price</th><th>API credits</th><th>Threads</th></tr>
         </thead>
         <tbody>
-          <tr><td>Hobby</td><td class="price">$49</td><td>100,000</td><td>20</td><td>US &amp; EU only</td></tr>
-          <tr><td>Startup</td><td class="price">$149</td><td>1,000,000</td><td>50</td><td>US &amp; EU only</td></tr>
-          <tr><td>Business</td><td class="price">$299</td><td>3,000,000</td><td>100</td><td>Global</td></tr>
-          <tr><td>Scaling</td><td class="price">$475</td><td>5,000,000</td><td>200</td><td>Global</td></tr>
-          <tr><td>Professional</td><td class="price">$975</td><td>10,500,000</td><td>300</td><td>Global</td></tr>
-          <tr><td>Advanced</td><td class="price">$1,975</td><td>21,500,000</td><td>500</td><td>Global</td></tr>
-          <tr><td>Enterprise</td><td>Custom</td><td>22,000,000+</td><td>500+</td><td>Confirm with sales</td></tr>
+          <tr><td>Hobby</td><td class="price">$49</td><td>100,000</td><td>20</td></tr>
+          <tr><td>Startup</td><td class="price">$149</td><td>1,000,000</td><td>50</td></tr>
+          <tr><td>Business</td><td class="price">$299</td><td>3,000,000</td><td>100</td></tr>
+          <tr><td>Scaling</td><td class="price">$475</td><td>5,000,000</td><td>200</td></tr>
+          <tr><td>Professional</td><td class="price">$975</td><td>10,500,000</td><td>300</td></tr>
+          <tr><td>Advanced</td><td class="price">$1,975</td><td>21,500,000</td><td>500</td></tr>
+          <tr><td>Enterprise</td><td>Custom</td><td>22,000,000+</td><td>500+</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="source-line">Source: <a href="https://www.scraperapi.com/pricing/" target="_blank" rel="noopener">ScraperAPI pricing</a>, verified 14 Aug 2026. Monthly list prices are used; annual discounts are deliberately excluded.</p>
+    <p>Geotargeting also differs by plan: Business through Advanced offer global, country-level targeting; Enterprise is listed as country-level; and Hobby and Startup are US &amp; EU only.</p>
+    <p class="source-line">Source: <a href="https://www.scraperapi.com/pricing/" target="_blank" rel="noopener">ScraperAPI pricing</a> and <a href="https://www.scraperapi.com/pricing.md" target="_blank" rel="noopener">pricing.md</a>, verified Nov 5, 2026. Unchanged since our Aug 14, 2026 check. Monthly list prices are used; the page marks yearly billing as 10% off, which is not modeled here.</p>
+    <p>Included credits get cheaper as plans grow: $0.49 per 1,000 credits on Hobby, $0.149 on Startup, $0.0997 on Business, $0.095 on Scaling, $0.0929 on Professional, and $0.0919 on Advanced. Those rates only hold if you use the whole allowance, because the balance resets at renewal and unused credits do not roll over.</p>
+    <p>The discount is lopsided. Moving from Hobby to Startup cuts the per-credit rate by 69.6%, while moving from Scaling to Advanced cuts it by only 3.3%, so past Scaling, choose a bigger plan for its credits or threads, not its rate. Costly domains widen the dollar gap: at Google's 25 credits, Hobby buys 4,000 requests at $12.25 per 1,000, while Advanced buys 860,000 at $2.30 per 1,000.</p>
 
     <h2>What the estimate can and cannot tell you</h2>
     <div class="note-box">
-      <strong>Use measured credit cost for production budgeting.</strong> Some domains have custom costs and can change protection methods. ScraperAPI provides an authenticated <a href="https://docs.scraperapi.com/getting-started/quick-start/credits-and-requests-costs" target="_blank" rel="noopener">URL Cost API and dashboard tool</a> that accept the same parameters as a real request. Put that measured result into “Custom” above when accuracy matters.
+      <strong>Use measured credit cost for production budgeting.</strong> ScraperAPI warns that domains may switch protection measures, so a cost can change. Its <a href="https://docs.scraperapi.com/getting-started/quick-start/credits-and-requests-costs" target="_blank" rel="noopener">URL Cost API</a> (requires an API key, so you need an account or the trial) accepts real request parameters, the dashboard's Domain Cost Estimator (called Domain Multiplier in the credit-cost docs) shows the cost for a URL before you scrape, and each response's <code>sa-credit-cost</code> header shows what that request cost. Put the measured result into "Custom" above when accuracy matters.
     </div>
-    <p>The estimator multiplies successful requests by credits per request and selects the first published plan whose included credits cover that total. It does not model failed-request rates, retries, concurrency limits, annual discounts, negotiated pricing, pay-as-you-go overages, or combinations not explicitly priced in the documentation.</p>
+    <p>To stop a request's cost from drifting past what you budgeted, ScraperAPI's <a href="https://www.scraperapi.com/pricing.md" target="_blank" rel="noopener">pricing.md</a> says you can set <code>max_cost</code> per scrape to keep any single request within your limit.</p>
+    <p>The estimator multiplies successful requests by credits per request and selects the first published plan whose included credits cover that total. It shows that plan's thread limit but does not size plans by concurrency or geotargeting, and it does not model failed-request rates, retries, yearly discounts, negotiated pricing, pay-as-you-go use, or combinations not explicitly priced in the documentation.</p>
+    <p>It also ignores limited-offer bonus credits. The pricing page currently shows +250K on Professional and +500K on Advanced, and offers like these can end, so plan thresholds here use the base allowance only.</p>
 
     <h2>Frequently asked questions</h2>
-    <h3>How many ScraperAPI credits does one request use?</h3>
-    <p>A standard request uses 1 credit. Amazon requests use 5, Google or Bing SERP requests use 25, and LinkedIn requests use 30. Rendering, premium routing, screenshots, bot bypass, and ultra-premium routing can raise the multiplier.</p>
+    <h3 id="failed-requests">Do failed requests consume ScraperAPI credits?</h3>
+    <p>No, but treat canceled requests as billable. ScraperAPI charges only 200 and 404 responses plus some canceled requests, and its wording conflicts: the <a href="https://docs.scraperapi.com/getting-started/quick-start/credits-and-requests-costs" target="_blank" rel="noopener">credit-cost docs</a> say requests canceled before 70 seconds, while <a href="https://www.scraperapi.com/pricing.md" target="_blank" rel="noopener">pricing.md</a> says after 70 seconds.</p>
 
-    <h3>Do failed requests consume ScraperAPI credits?</h3>
-    <p>ScraperAPI says it charges successful responses with HTTP status 200 or 404. It also charges requests that the customer cancels before the service has had enough time to finish. Other failed requests are not included in this calculator.</p>
+    <h3>What happens when credits run out?</h3>
+    <p>By default, scraping pauses until your credits renew. Depending on your plan, you have other options:</p>
+    <ul>
+      <li><strong>Auto-upgrade:</strong> On Hobby, Startup, Business, Scaling, and Professional, you can opt in to move to the next plan when your credits run out. The next plan's list price is higher, for example Startup is $149/month against Hobby's $49. ScraperAPI's pricing pages don't say how the auto-upgrade charge is calculated or whether it is prorated, so confirm with ScraperAPI before enabling it.</li>
+      <li><strong>Pay-as-you-go:</strong> On Scaling, Professional, Advanced, and Enterprise, you can keep scraping at a fixed per-credit rate, up to a monthly cap you set. ScraperAPI's pricing page does not list the rate, so the calculator leaves it out.</li>
+      <li><strong>Annual early renewal:</strong> ScraperAPI says annual plans can renew early for a fresh batch of credits.</li>
+    </ul>
 
-    <h3>Which plan covers one million normal requests per month?</h3>
-    <p>The Startup plan includes 1,000,000 credits, so it covers one million normal 1-credit requests with no headroom. The same plan covers only 100,000 requests when each request costs 10 credits.</p>
+    <h3>Is there a free option?</h3>
+    <p>Yes, in two steps. ScraperAPI's <a href="https://www.scraperapi.com/pricing.md" target="_blank" rel="noopener">pricing.md</a> describes a 7-day trial with 5,000 API credits and no credit card required. When the trial ends, you can upgrade or stay on the Free plan, which includes 1,000 credits per month and 5 concurrent threads. See <a href="web-scraping-apis-with-free-tier.html">web scraping APIs with a free tier</a> for how vendors differ.</p>
 
-    <h3>Why can the same request volume require different plans?</h3>
-    <p>ScraperAPI uses feature-weighted credits rather than a flat one-request-equals-one-credit model. A workload with rendering or protected domains can therefore consume 5 to 75 times as many credits as the same number of normal requests.</p>
+    <h3>What if my workload needs more threads than the plan allows?</h3>
+    <p>Credits are not the only limit. Going over your thread limit returns a 429 response, with no extra charge, asking you to bring concurrency back within the plan's limit, so a high-speed job may need a larger plan than its credits suggest.</p>
+
+    <h2>Compare before you commit</h2>
+    <p>This page only sizes ScraperAPI plans. To weigh it against other vendors, see <a href="scraperapi-vs-scrapingbee.html">ScraperAPI vs ScrapingBee</a>, <a href="scraperapi-vs-bright-data.html">ScraperAPI vs Bright Data</a>, and the <a href="cheapest-web-scraping-api.html">cheapest web scraping API</a> roundup.</p>
 
     <div class="disclosure-box">
-      <strong>Affiliate relationship:</strong> the “Start a ScraperAPI trial” button is a tracked affiliate link. ScrapeTools may earn a commission if you sign up through it, at no extra cost to you. The calculation and plan thresholds are based on ScraperAPI's public documentation, not commission size. See the <a href="disclosure.html">full disclosure</a>.
+      <strong>Affiliate relationship:</strong> the "Start a ScraperAPI trial" button is a tracked affiliate link. ScrapeTools may earn a commission if you sign up through it, at no extra cost to you. The calculation and plan thresholds are based on ScraperAPI's public documentation, not commission size. See the <a href="disclosure.html">full disclosure</a>.
     </div>
+
+    <h2>Sources</h2>
+    <p class="source-line"><a href="https://www.scraperapi.com/pricing/" target="_blank" rel="noopener">ScraperAPI pricing</a>, checked Nov 5, 2026. <a href="https://www.scraperapi.com/pricing.md" target="_blank" rel="noopener">ScraperAPI pricing.md</a>, checked Nov 5, 2026. <a href="https://docs.scraperapi.com/getting-started/quick-start/credits-and-requests-costs" target="_blank" rel="noopener">ScraperAPI credits and request costs documentation</a>, checked Nov 5, 2026.</p>
   </div>
 </main>
 
@@ -153,12 +227,127 @@
       <li><a href="privacy.html">Privacy Policy</a></li>
     </ul>
     <div class="footer-disclosure">
-      <strong>Affiliate disclosure:</strong> ScrapeTools is an independent comparison site published by Scaleturn. Some links to vendors are affiliate/referral links — if you sign up through one, we may earn a commission at no extra cost to you.
+      <strong>Affiliate disclosure:</strong> ScrapeTools is an independent comparison site published by Scaleturn. Some links to vendors are affiliate/referral links. If you sign up through one, we may earn a commission at no extra cost to you.
     </div>
-    <p>&copy; 2026 ScrapeTools, published by Scaleturn. Pricing and features change — always confirm current terms on the vendor's own site before buying.</p>
+    <p>&copy; 2026 ScrapeTools, published by Scaleturn. Pricing and features change. Always confirm current terms on the vendor's own site before buying.</p>
   </div>
 </footer>
-<script src="calculator.js"></script>
+<script>
+(function () {
+  "use strict";
+  var plans = [
+    { name: "Hobby", price: 49, credits: 100000, threads: 20, usEuOnly: true },
+    { name: "Startup", price: 149, credits: 1000000, threads: 50, usEuOnly: true },
+    { name: "Business", price: 299, credits: 3000000, threads: 100 },
+    { name: "Scaling", price: 475, credits: 5000000, threads: 200 },
+    { name: "Professional", price: 975, credits: 10500000, threads: 300 },
+    { name: "Advanced", price: 1975, credits: 21500000, threads: 500 }
+  ];
+  var FREE_CREDITS = 1000;
+  var FREE_THREADS = 5;
+  var TIGHT_FIT_SHARE = 0.1;
+  var requestsInput = document.getElementById("monthly-requests");
+  var profileSelect = document.getElementById("request-profile");
+  var customField = document.getElementById("custom-credit-field");
+  var customInput = document.getElementById("credits-per-request");
+  var error = document.getElementById("calculator-error");
+  var estimated = document.getElementById("estimated-credits");
+  var planOut = document.getElementById("recommended-plan");
+  var detailOut = document.getElementById("recommendation-detail");
+  var costOut = document.getElementById("cost-per-thousand");
+  var profileNote = document.getElementById("profile-note");
+  var cta = document.getElementById("affiliate-cta");
+  var affiliateLabel = document.getElementById("affiliate-label");
+  var ladder = document.getElementById("plan-ladder");
+  var ladderRows = ladder.querySelectorAll("tbody tr");
+  var fmt = new Intl.NumberFormat("en-US", { maximumFractionDigits: 2 });
+  var rateFmt = new Intl.NumberFormat("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 3 });
+  var ladderLargeFmt = new Intl.NumberFormat("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var ladderSmallFmt = new Intl.NumberFormat("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 4 });
+
+  function tightFitNote(included, needed, next) {
+    if ((included - needed) / included >= TIGHT_FIT_SHARE) { return ""; }
+    var nextText = next ? next.name + " at $" + fmt.format(next.price) + "/month" : "Enterprise, with custom pricing";
+    return " That is a tight fit, and scraping pauses by default when credits run out. The next plan up is " + nextText + ".";
+  }
+
+  function renderLadder(perRequest, pickIndex) {
+    ladder.hidden = false;
+    for (var i = 0; i < plans.length; i++) {
+      var plan = plans[i];
+      var row = ladderRows[i];
+      var maxRequests = Math.floor(Number((plan.credits / perRequest).toFixed(6)));
+      var rate = plan.price * perRequest / plan.credits * 1000;
+      row.className = i === pickIndex ? "is-pick" : "";
+      row.cells[0].textContent = plan.name + (i === pickIndex ? " (smallest fit)" : "");
+      row.cells[2].textContent = fmt.format(maxRequests);
+      row.cells[3].textContent = maxRequests >= 1 ? "$" + (rate >= 1 ? ladderLargeFmt : ladderSmallFmt).format(rate) : "–";
+    }
+  }
+
+  function update() {
+    var isCustom = profileSelect.value === "custom";
+    customField.hidden = !isCustom;
+    customInput.disabled = !isCustom;
+    costOut.hidden = true;
+    var requests = Number(requestsInput.value);
+    var perRequest = Number(isCustom ? customInput.value : profileSelect.value);
+    if (!isFinite(requests) || requests <= 0 || Math.floor(requests) !== requests || !isFinite(perRequest) || perRequest <= 0) {
+      error.textContent = "Enter a whole number of requests above zero and a positive number of credits per request.";
+      error.hidden = false;
+      estimated.textContent = "–";
+      planOut.textContent = "–";
+      detailOut.textContent = "";
+      profileNote.hidden = true;
+      cta.hidden = true;
+      affiliateLabel.hidden = true;
+      ladder.hidden = true;
+      return;
+    }
+    error.textContent = "";
+    error.hidden = true;
+    cta.hidden = false;
+    affiliateLabel.hidden = false;
+    var selected = profileSelect.options[profileSelect.selectedIndex];
+    profileNote.hidden = selected.getAttribute("data-measure") !== "1";
+    var needed = Math.ceil(Number((requests * perRequest).toFixed(6)));
+    estimated.textContent = fmt.format(needed);
+    var paidOnly = selected.getAttribute("data-paid") === "1";
+    if (needed <= FREE_CREDITS && !paidOnly) {
+      planOut.textContent = "Free plan covers this";
+      detailOut.textContent = "ScraperAPI's Free plan includes " + fmt.format(FREE_CREDITS) + " credits per month and " + FREE_THREADS + " concurrent threads. You start on the 7-day trial and can stay on the Free plan when it ends." + tightFitNote(FREE_CREDITS, needed, plans[0]);
+      renderLadder(perRequest, -1);
+      return;
+    }
+    var planIndex = -1;
+    for (var i = 0; i < plans.length; i++) {
+      if (plans[i].credits >= needed) { planIndex = i; break; }
+    }
+    renderLadder(perRequest, planIndex);
+    if (planIndex < 0) {
+      planOut.textContent = "Enterprise: custom pricing";
+      detailOut.textContent = fmt.format(needed) + " credits exceeds the largest published self-serve allowance of " + fmt.format(plans[plans.length - 1].credits) + " credits. The trial below is only for testing; volume pricing goes through ScraperAPI sales.";
+      return;
+    }
+    var plan = plans[planIndex];
+    planOut.textContent = plan.name + ": $" + fmt.format(plan.price) + "/month";
+    detailOut.textContent = fmt.format(plan.credits) + " credits included, with " + fmt.format(plan.credits - needed) + " credits of headroom and a limit of " + plan.threads + " concurrent threads." + (plan.usEuOnly ? " US & EU geotargeting only." : "") + tightFitNote(plan.credits, needed, plans[planIndex + 1]);
+    if (paidOnly && needed <= FREE_CREDITS) {
+      detailOut.textContent += " Ultra-premium is for paid plans only, so the Free plan is skipped.";
+    }
+    if (requests >= 1000) {
+      costOut.textContent = "$" + rateFmt.format(plan.price / requests * 1000) + " per 1,000 successful requests, assuming you pay the full plan price.";
+      costOut.hidden = false;
+    }
+  }
+
+  requestsInput.addEventListener("input", update);
+  profileSelect.addEventListener("change", update);
+  customInput.addEventListener("input", update);
+  document.getElementById("cost-calculator").addEventListener("submit", function (e) { e.preventDefault(); });
+  update();
+}());
+</script>
 <script data-goatcounter="https://scaleturn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
