@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ScraperAPI Free Trial: 5,000 Credits, What They Buy | ScrapeTools</title>
+<meta name="description" content="The ScraperAPI free trial gives 5,000 credits for 7 days: 5,000 normal requests but only 166 on LinkedIn. Calculate what your own test needs.">
+<link rel="canonical" href="https://scrapetools.scaleturn.com/scraperapi-free-trial.html">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="widgets.css">
+<link rel="alternate" type="application/json" href="data/vendors.json" title="Vendor pricing data">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ScraperAPI free trial: what 5,000 credits buy",
+  "description": "The ScraperAPI free trial gives 5,000 credits for 7 days: 5,000 normal requests but only 166 on LinkedIn. Calculate what your own test needs.",
+  "url": "https://scrapetools.scaleturn.com/scraperapi-free-trial.html",
+  "dateModified": "2026-11-05",
+  "inLanguage": "en-US",
+  "publisher": {"@type": "Organization", "name": "Scaleturn", "url": "https://scaleturn.com/"},
+  "isPartOf": {"@type": "WebSite", "name": "ScrapeTools", "url": "https://scrapetools.scaleturn.com/"}
+}
+</script>
+</head>
+<body>
+<div class="affiliate-banner">
+  This page may contain an affiliate link. If you sign up through it, we may earn a commission at no extra cost to you. <a href="disclosure.html">Full affiliate disclosure</a>.
+</div>
+<header class="site-header">
+  <div class="container">
+    <a class="site-logo" href="index.html">Scrape<span>Tools</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="scraperapi-vs-scrapingbee.html">ScraperAPI vs ScrapingBee</a></li>
+        <li><a href="scraperapi-vs-bright-data.html">ScraperAPI vs Bright Data</a></li>
+        <li><a href="cheapest-web-scraping-api.html">Cheapest API</a></li>
+        <li><a href="scraperapi-cost-calculator.html">Cost calculator</a></li>
+        <li><a href="methodology.html">Methodology</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container prose">
+    <span class="freshness-stamp">Pricing verified: Nov 5, 2026</span>
+    <h1>ScraperAPI free trial: what 5,000 credits buy</h1>
+  </div>
+</section>
+
+<main>
+  <div class="container prose">
+    <div class="answer-first">
+      <span class="answer-first-label">Short answer</span>
+      <p>The ScraperAPI free trial gives you 5,000 API credits for 7 days with no credit card, enough for 5,000 normal requests, 500 rendered pages, 200 Google searches, or 166 LinkedIn requests. ScraperAPI's FAQ counts the 7 days from sign-up, so have your URL list ready first. When the trial ends, you can upgrade or keep scraping on the Free plan's 1,000 credits a month. That is enough to check whether the API returns the data you need, but not to test full volume or sustained concurrency.</p>
+    </div>
+
+    <form id="trial-calculator" class="calculator" novalidate>
+      <div class="field-grid">
+        <label>
+          Request type
+          <select id="request-type" name="requestType">
+            <option value="1">Normal page: 1 credit</option>
+            <option value="5">Amazon, Walmart, or eBay: 5 credits</option>
+            <option value="10" selected>JavaScript rendering: 10 credits</option>
+            <option value="10">Premium proxies: 10 credits</option>
+            <option value="10" data-measure="1">Bot-protected site: 10 credits (measure)</option>
+            <option value="25">Premium + rendering: 25 credits</option>
+            <option value="25">Google or Bing: 25 credits</option>
+            <option value="30">LinkedIn: 30 credits</option>
+            <option value="custom">Custom or measured cost</option>
+          </select>
+        </label>
+        <label id="custom-cost-field">
+          Credits per request
+          <input id="custom-cost" name="customCost" type="number" min="1" step="any" value="10" inputmode="decimal">
+          <span class="field-help">Type the cost from the response header for your target URL. This switches the request type to Custom.</span>
+        </label>
+        <label>
+          Successful requests your test needs
+          <input id="test-size" name="testSize" type="number" min="1" step="1" value="300" inputmode="numeric">
+        </label>
+      </div>
+
+      <div id="calc-error" class="form-error" role="alert" hidden></div>
+
+      <section class="calculator-result" aria-live="polite" aria-atomic="true">
+        <p class="result-label">Requests the trial credits buy</p>
+        <p id="trial-requests" class="result-number">500</p>
+        <p id="verdict"><strong>Covered:</strong> this test needs 3,000 credits, leaving 2,000 of the 5,000.</p>
+        <p id="after-trial">Afterward, the Free plan's 1,000 monthly credits buy 100 of these requests.</p>
+        <p id="measure-note" hidden>Measure this one. The docs list 10 credits, but the pricing FAQ says such sites "add 10 credits per request."</p>
+      </section>
+    </form>
+
+    <h2>How many requests do 5,000 credits buy?</h2>
+    <p>At published single-type costs, between 166 and 5,000. Unpriced combinations can buy fewer. ScraperAPI's credit cost runs from 1 for a normal page to 30 for LinkedIn. The table divides the allowances by each published cost and rounds down to whole requests.</p>
+    <div class="table-wrap">
+      <table style="min-width:0">
+        <thead>
+          <tr><th>Request type</th><th>Credits</th><th>Trial</th><th>Free/mo</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Normal page</td><td>1</td><td>5,000</td><td>1,000</td></tr>
+          <tr><td>Amazon, Walmart, eBay</td><td>5</td><td>1,000</td><td>200</td></tr>
+          <tr><td>Rendering or premium proxies</td><td>10</td><td>500</td><td>100</td></tr>
+          <tr><td>Bot-protected site</td><td>10 (measure)</td><td>500</td><td>100</td></tr>
+          <tr><td>Google, Bing, or premium + rendering</td><td>25</td><td>200</td><td>40</td></tr>
+          <tr><td>LinkedIn</td><td>30</td><td>166</td><td>33</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The bot-protected row is flagged because ScraperAPI's sources word it differently. Its credit list says 10 credits, while its pricing FAQ says such sites "add 10 credits per request." Measure those URLs instead of trusting the row.</p>
+    <p>The docs list <code>ultra_premium</code> as "only available with our Paid Plans," so do not plan on testing it during the trial. Combinations the docs do not price, such as Amazon with rendering, need a measured cost in the calculator's credits-per-request field.</p>
+    <p>Real tests usually mix types, so budget them by adding up. For example, 200 Amazon pages, 40 Google searches, 100 rendered pages, and 1,000 normal pages each use 1,000 credits. That totals 4,000 credits and leaves 1,000 for reruns.</p>
+
+    <!-- ad:after-answer -->
+
+    <h2>Is the trial enough for a real test?</h2>
+    <p>At these costs, 166 to 5,000 requests can be enough for a data-quality sample, but they are not a volume test. The whole allowance is 5% of one month on the cheapest paid plan, Hobby, which costs $49 for 100,000 credits.</p>
+    <p>Sustained concurrency is also hard to judge. The Free plan allows 5 concurrent threads and Hobby allows 20, but the pricing pages and docs checked for this page state no thread limit for the trial. A 429 means you sent too many simultaneous requests.</p>
+    <p>The same pages do not state the trial's geotargeting. Hobby lists US &amp; EU only, so a test from another country may not predict what that plan delivers.</p>
+    <p>A sensible way to spend the credits:</p>
+    <ul>
+      <li><strong>Look up costs first.</strong> The docs offer the Domain Multiplier in your dashboard and the <code>/account/urlcost</code> endpoint to check a URL's credit cost before you scrape.</li>
+      <li><strong>Confirm with real requests.</strong> Run a few per domain and enter the <code>sa-credit-cost</code> response header's value in the calculator.</li>
+      <li><strong>Cap the cost.</strong> Set <code>max_cost</code> so that a request above your limit is rejected with a 403. Exhausted credits also return a 403, but only the cap's message says "This request exceeds your max_cost." Check your balance after one rejected request to see whether it was charged.</li>
+      <li><strong>Check the output.</strong> Compare returned pages with what you need before you scale the sample.</li>
+    </ul>
+
+    <h2>What happens when the credits run out?</h2>
+    <p>ScraperAPI's pricing page says "scraping pauses until your credits renew." Its status-code docs list a 403, "You have exhausted the API Credits available in this monthly cycle." Neither mentions the trial specifically.</p>
+    <p>When the 7 days end, ScraperAPI says you can upgrade to a paid plan or keep scraping for free. The Free plan allows 1,000 credits a month.</p>
+    <p>The pages checked do not address unused trial credits, so plan as if they do not carry over.</p>
+    <p>If you need more room to finish a test, you have two published routes:</p>
+    <ul>
+      <li><strong>Ask for extra credits.</strong> The docs say to contact support if you need additional credits for testing. They publish no amount.</li>
+      <li><strong>Buy one month of Hobby.</strong> That is the paid route, at $49 for 100,000 credits.</li>
+    </ul>
+    <p>Separately, the pricing page states a general 7-day no-questions-asked refund policy.</p>
+
+    <h2>Do failed requests use trial credits?</h2>
+    <p>No, ScraperAPI says it charges only for successful requests, which it defines as 200 and 404 status codes. Two details still affect your budget:</p>
+    <ul>
+      <li><strong>A 404 costs credits.</strong> Clean your URL list before you test, or dead links will use up the allowance.</li>
+      <li><strong>Canceling early can cost credits.</strong> The docs also charge for requests you cancel before ScraperAPI has had 70 seconds to finish them, so keep your client timeout at 70 seconds or longer.</li>
+    </ul>
+
+    <h2>What these numbers do not cover</h2>
+    <p>The counts assume one request type, published credit costs, and no reruns. ScraperAPI's costs can differ for your exact target URL, which is why the header reading matters more than the table. Nothing here measures success rates or speed, because this page reports published terms and no benchmark has been run.</p>
+    <p>If your test passes, use the <a href="scraperapi-cost-calculator.html">ScraperAPI cost calculator</a> to size a monthly plan. To weigh it against a rival, see <a href="scraperapi-vs-scrapingbee.html">ScraperAPI vs ScrapingBee</a>.</p>
+
+    <div class="affiliate-card">
+      <span class="affiliate-card-label">Affiliate link</span>
+      <p class="affiliate-card-text">Ready to run your test? No card is required to start.</p>
+      <a class="btn" href="https://www.scraperapi.com/?fp_ref=sanjaya18" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="affiliate/scraperapi-trial" data-goatcounter-title="ScraperAPI affiliate CTA">Start a ScraperAPI trial</a>
+      <p class="affiliate-card-fine">ScrapeTools may earn a commission if you sign up through this link, at no extra cost to you. The figures above come from ScraperAPI's public pages. See the <a href="disclosure.html">full disclosure</a>.</p>
+    </div>
+
+    <h2>Sources</h2>
+    <p class="source-line">All checked Nov 5, 2026:</p>
+    <ul>
+      <li><a href="https://www.scraperapi.com/pricing/" target="_blank" rel="noopener">ScraperAPI pricing</a></li>
+      <li><a href="https://www.scraperapi.com/pricing.md" target="_blank" rel="noopener">ScraperAPI pricing.md</a></li>
+      <li><a href="https://docs.scraperapi.com/getting-started/quick-start/credits-and-requests-costs" target="_blank" rel="noopener">Credits and request costs docs</a></li>
+      <li><a href="https://docs.scraperapi.com/resources/faq/plans-and-billing" target="_blank" rel="noopener">Plans and billing FAQ</a></li>
+      <li><a href="https://docs.scraperapi.com/control-and-optimization/cost-control" target="_blank" rel="noopener">Cost control docs</a></li>
+      <li><a href="https://docs.scraperapi.com/handling-and-processing-responses/api-status-codes" target="_blank" rel="noopener">API status codes docs</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="methodology.html">Methodology</a></li>
+      <li><a href="disclosure.html">Affiliate Disclosure</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+    </ul>
+    <div class="footer-disclosure">
+      <strong>Affiliate disclosure:</strong> ScrapeTools is an independent comparison site published by Scaleturn. Some links to vendors are affiliate/referral links. If you sign up through one, we may earn a commission at no extra cost to you.
+    </div>
+    <p>&copy; 2026 ScrapeTools, published by Scaleturn. Pricing and features change. Always confirm current terms on the vendor's own site before buying.</p>
+  </div>
+</footer>
+<script>
+(function () {
+  "use strict";
+  var TRIAL_CREDITS = 5000;
+  var FREE_CREDITS = 1000;
+  var MAX_REQUESTS = 1000000000;
+  var MAX_COST = 1000000;
+  var typeSelect = document.getElementById("request-type");
+  var customInput = document.getElementById("custom-cost");
+  var sizeInput = document.getElementById("test-size");
+  var errorBox = document.getElementById("calc-error");
+  var resultOut = document.getElementById("trial-requests");
+  var verdictOut = document.getElementById("verdict");
+  var afterOut = document.getElementById("after-trial");
+  var measureNote = document.getElementById("measure-note");
+  var fmt = new Intl.NumberFormat("en-US");
+
+  function wholeRequests(credits, cost) {
+    return Math.floor(Number((credits / cost).toFixed(6)));
+  }
+
+  function showError(message) {
+    errorBox.textContent = message;
+    errorBox.hidden = false;
+    verdictOut.textContent = "";
+    verdictOut.hidden = true;
+  }
+
+  function showCostError(message) {
+    showError(message);
+    resultOut.textContent = "–";
+    afterOut.textContent = "";
+    afterOut.hidden = true;
+    measureNote.hidden = true;
+  }
+
+  function setVerdict(label, text) {
+    var strong = document.createElement("strong");
+    strong.textContent = label;
+    verdictOut.textContent = "";
+    verdictOut.appendChild(strong);
+    verdictOut.appendChild(document.createTextNode(" " + text));
+    verdictOut.hidden = false;
+  }
+
+  function update() {
+    var isCustom = typeSelect.value === "custom";
+    var cost = Number(isCustom ? customInput.value : typeSelect.value);
+    var sizeText = sizeInput.value.trim();
+    var size = Number(sizeText);
+
+    if (isCustom && (customInput.value.trim() === "" || !isFinite(cost) || cost < 1)) {
+      showCostError("Enter the credits one request costs: 1 or more.");
+      return;
+    }
+    if (cost > MAX_COST) {
+      showCostError("That credit cost is too large to calculate. Enter a smaller number.");
+      return;
+    }
+
+    var trialCount = wholeRequests(TRIAL_CREDITS, cost);
+    var freeCount = wholeRequests(FREE_CREDITS, cost);
+
+    resultOut.textContent = fmt.format(trialCount);
+
+    if (freeCount >= 1) {
+      afterOut.textContent = "Afterward, the Free plan's " + fmt.format(FREE_CREDITS) + " monthly credits buy " + fmt.format(freeCount) + " of these requests.";
+    } else {
+      afterOut.textContent = "Afterward, the Free plan's " + fmt.format(FREE_CREDITS) + " monthly credits would not cover one of these requests.";
+    }
+    afterOut.hidden = false;
+
+    var selected = typeSelect.options[typeSelect.selectedIndex];
+    measureNote.hidden = selected.getAttribute("data-measure") !== "1";
+
+    if (sizeText === "" || !isFinite(size) || size <= 0 || Math.floor(size) !== size) {
+      showError("Enter a whole number of requests above zero.");
+      return;
+    }
+    if (size > MAX_REQUESTS) {
+      showError("That test is too large to calculate. Enter a smaller number of requests.");
+      return;
+    }
+
+    errorBox.textContent = "";
+    errorBox.hidden = true;
+
+    var needed = Math.ceil(Number((size * cost).toFixed(6)));
+
+    if (needed <= TRIAL_CREDITS) {
+      setVerdict("Covered:", "this test needs " + fmt.format(needed) + " credits, leaving " + fmt.format(TRIAL_CREDITS - needed) + " of the " + fmt.format(TRIAL_CREDITS) + ".");
+    } else if (trialCount < 1) {
+      setVerdict("Not covered:", "one request at this cost is more than the " + fmt.format(TRIAL_CREDITS) + " trial credits. Ask support about extra test credits.");
+    } else {
+      setVerdict("Not covered:", "this test needs " + fmt.format(needed) + " credits, " + fmt.format(needed - TRIAL_CREDITS) + " more than the " + fmt.format(TRIAL_CREDITS) + ". Test a smaller sample or ask support about extra test credits.");
+    }
+  }
+
+  typeSelect.addEventListener("change", function () {
+    if (typeSelect.value !== "custom") {
+      customInput.value = typeSelect.value;
+    }
+    update();
+  });
+  customInput.addEventListener("input", function () {
+    typeSelect.value = "custom";
+    update();
+  });
+  sizeInput.addEventListener("input", update);
+  document.getElementById("trial-calculator").addEventListener("submit", function (e) { e.preventDefault(); });
+  update();
+}());
+</script>
+<script data-goatcounter="https://scaleturn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
