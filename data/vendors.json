@@ -1,13 +1,13 @@
 {
   "schema": 1,
   "currency": "USD",
-  "updated": "2026-08-14",
+  "updated": "2026-11-05",
   "unit": "basic request per month (no JavaScript rendering, standard proxies)",
   "vendors": [
     {
       "id": "scraperapi", "name": "ScraperAPI", "model": "credits", "comparable": true,
-      "verified": "2026-08-14", "source_url": "https://www.scraperapi.com/pricing/",
-      "free_included": 1000,
+      "verified": "2026-11-05", "source_url": "https://www.scraperapi.com/pricing/",
+      "js_credits_per_request": 10,
       "tiers": [
         {"name": "Hobby", "monthly_usd": 49, "included": 100000},
         {"name": "Startup", "monthly_usd": 149, "included": 1000000},
@@ -16,40 +16,53 @@
         {"name": "Professional", "monthly_usd": 975, "included": 10500000},
         {"name": "Advanced", "monthly_usd": 1975, "included": 21500000}
       ],
-      "note": "A normal request costs 1 credit; rendering, premium and SERP requests cost more."
+      "note": "A standard page costs 1 credit; Amazon, Google, LinkedIn and bot-protected sites cost more. render=true costs 10 credits. Professional and Advanced carry limited-offer bonus-credit labels; the page does not say whether the totals include them."
     },
     {
       "id": "scrapingbee", "name": "ScrapingBee", "model": "credits", "comparable": true,
-      "verified": "2026-07-25", "source_url": "https://www.scrapingbee.com/#pricing",
+      "verified": "2026-11-05", "source_url": "https://www.scrapingbee.com/pricing/",
+      "js_credits_per_request": 5,
       "tiers": [
-        {"name": "Entry", "monthly_usd": 49, "included": 250000},
-        {"name": "Top self-serve", "monthly_usd": 599, "included": 8000000}
+        {"name": "Hobby", "monthly_usd": 19, "included": 75000},
+        {"name": "Freelance", "monthly_usd": 49, "included": 250000},
+        {"name": "Startup", "monthly_usd": 99, "included": 1000000},
+        {"name": "Business", "monthly_usd": 249, "included": 3000000},
+        {"name": "Business +", "monthly_usd": 599, "included": 8000000},
+        {"name": "Enterprise 14", "monthly_usd": 999, "included": 14000000},
+        {"name": "Enterprise 24", "monthly_usd": 1599, "included": 24000000},
+        {"name": "Enterprise 41", "monthly_usd": 2399, "included": 41000000},
+        {"name": "Enterprise 69", "monthly_usd": 3599, "included": 69000000}
       ],
-      "note": "Credits counted at the base rate; JavaScript rendering and premium proxies use more credits."
+      "note": "Credits counted at the 1-credit classic-proxy rate without rendering, which requires render_js=false; JavaScript rendering is on by default at 5 credits. Larger plans exist on the vendor page and are not modeled here."
     },
     {
-      "id": "brightdata", "name": "Bright Data (Web Scraper API)", "model": "per-record", "comparable": true,
-      "verified": "2026-07-25", "source_url": "https://brightdata.com/pricing/web-scraper",
-      "free_included": 5000, "payg_per_1000_usd": 1.5,
-      "tiers": [{"name": "Monthly plan", "monthly_usd": 499, "included": 384000}],
-      "note": "Billed per successfully delivered record, not per request."
+      "id": "scrapfly", "name": "Scrapfly", "model": "credits", "comparable": true,
+      "verified": "2026-11-05", "source_url": "https://scrapfly.io/pricing",
+      "js_credits_per_request": 6,
+      "tiers": [
+        {"name": "Discovery", "monthly_usd": 30, "included": 200000},
+        {"name": "Pro", "monthly_usd": 100, "included": 1000000, "overage_usd": 3.5, "overage_per": 10000},
+        {"name": "Startup", "monthly_usd": 250, "included": 2500000, "overage_usd": 2, "overage_per": 10000},
+        {"name": "Enterprise", "monthly_usd": 500, "included": 5500000, "overage_usd": 1.2, "overage_per": 10000}
+      ],
+      "note": "A basic request costs 1 credit; residential proxies and browser rendering cost more, and bandwidth above 1MB on large responses is billed separately. Discovery hard-caps at quota and is treated as capped, although the table also shows $5.00 per 10,000 for it. Pro and above switch to pay-as-you-go; the billing docs (https://scrapfly.io/docs/billing) cap extra usage at 50% of monthly quota on non-custom plans, then suspend the account until renewal or upgrade, so overage is limited to 50% of included credits here. Custom plans from $1,200/mo and signup credits are not modeled."
     },
     {
       "id": "scrapingdog", "name": "ScrapingDog", "model": "credits", "comparable": true,
-      "verified": "2026-07-25", "source_url": "https://www.scrapingdog.com/pricing/",
-      "free_included": 200,
-      "tiers": [{"name": "Entry", "monthly_usd": 40, "included": 200000}],
-      "note": "Entry plan shown; larger plans exist on the vendor page and are not modeled here."
-    },
-    {
-      "id": "apify", "name": "Apify", "model": "compute-units", "comparable": false,
-      "verified": "2026-07-25", "source_url": "https://apify.com/pricing",
-      "note": "Priced per compute unit, so cost depends on the Actor you run, not on request count."
-    },
-    {
-      "id": "zyte", "name": "Zyte API", "model": "per-response", "comparable": false,
-      "verified": "2026-07-25", "source_url": "https://www.zyte.com/pricing/",
-      "note": "Volume-tiered per-response pricing; no single basic-request rate verified."
+      "verified": "2026-11-05", "source_url": "https://www.scrapingdog.com/pricing/",
+      "js_credits_per_request": 5,
+      "tiers": [
+        {"name": "Lite", "monthly_usd": 40, "included": 200000},
+        {"name": "Standard", "monthly_usd": 90, "included": 1000000},
+        {"name": "Pro", "monthly_usd": 200, "included": 3000000},
+        {"name": "Premium", "monthly_usd": 350, "included": 6000000},
+        {"name": "Business", "monthly_usd": 500, "included": 9000000},
+        {"name": "Business Plus", "monthly_usd": 1000, "included": 19000000},
+        {"name": "Business Pro", "monthly_usd": 1500, "included": 29000000},
+        {"name": "Corporate", "monthly_usd": 2000, "included": 42000000},
+        {"name": "Corporate Plus", "monthly_usd": 2500, "included": 55000000}
+      ],
+      "note": "Credits counted at the 1-credit rate, which requires dynamic=false; JavaScript rendering is on by default at 5 credits. Larger plans exist on the vendor page and are not modeled here. The free plan is not modeled."
     }
   ]
 }
