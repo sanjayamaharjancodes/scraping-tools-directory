@@ -116,3 +116,8 @@ call may be needed to re-enable enforcement.
 Live URLs:
 - GitHub Pages (works now): https://sanjayamaharjancodes.github.io/scraping-tools-directory/
 - Custom domain (pending DNS): https://scrapetools.scaleturn.com/
+
+## Tools
+
+- [ScraperAPI cost calculator](https://scrapetools.scaleturn.com/scraperapi-cost-calculator.html): monthly requests and request type to credits and the smallest plan.
+- [ScraperAPI free trial](https://scrapetools.scaleturn.com/scraperapi-free-trial.html): what 5,000 trial credits buy per request type.

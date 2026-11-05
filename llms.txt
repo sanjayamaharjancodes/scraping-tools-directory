@@ -1,6 +1,6 @@
 # ScrapeTools
 
-> Independent, sourced comparison of web scraping APIs, proxies and web-access tools for AI agents. Every price and limit is linked to the vendor's own page with the date it was checked. Some vendor links are affiliate links (see /disclosure.html). Pages are researched and drafted with AI tools and checked against vendor sources by an automated reviewer; they are not individually reviewed by a person (see /methodology.html).
+> Sourced comparison of web scraping APIs, proxies and web-access tools for AI agents. Every price and limit is linked to the vendor's own page with the date it was checked. Some vendor links are affiliate links (see /disclosure.html). Pages are researched and drafted with AI tools and checked against vendor sources by an automated reviewer; they are not individually reviewed by a person (see /methodology.html).
 
 ## Pages
 
