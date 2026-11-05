@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05",
+  "updated": "2026-11-04",
   "pages": [
     {
       "url": "https://scrapetools.scaleturn.com/about.html",
@@ -15,6 +15,11 @@
       "url": "https://scrapetools.scaleturn.com/disclosure.html",
       "title": "Affiliate Disclosure | ScrapeTools",
       "description": "Full affiliate disclosure for ScrapeTools — which links are affiliate links, which aren't, and how (and how not) that affects what we publish."
+    },
+    {
+      "url": "https://scrapetools.scaleturn.com/fixture-credit-math.html",
+      "title": "ScraperAPI Credits for a Million Requests | ScrapeTools",
+      "description": "Work out how many ScraperAPI credits a given request volume uses and which published plan covers it."
     },
     {
       "url": "https://scrapetools.scaleturn.com/",

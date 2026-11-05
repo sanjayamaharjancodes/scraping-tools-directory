@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ScraperAPI Credits for a Million Requests | ScrapeTools</title>
+<meta name="description" content="Work out how many ScraperAPI credits a given request volume uses and which published plan covers it.">
+<link rel="canonical" href="https://scrapetools.scaleturn.com/fixture-credit-math.html">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="widgets.css">
+<link rel="alternate" type="application/json" href="data/vendors.json" title="Vendor pricing data">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ScraperAPI credits for a million requests",
+  "description": "Credit math for ScraperAPI plans.",
+  "url": "https://scrapetools.scaleturn.com/fixture-credit-math.html",
+  "dateModified": "2026-11-04",
+  "inLanguage": "en-US",
+  "publisher": {"@type": "Organization", "name": "Scaleturn", "url": "https://scaleturn.com/"},
+  "isPartOf": {"@type": "WebSite", "name": "ScrapeTools", "url": "https://scrapetools.scaleturn.com/"}
+}
+</script>
+</head>
+<body>
+<div class="affiliate-banner">
+  This page may contain an affiliate link. If you sign up through it, we may earn a commission at no extra cost to you. <a href="disclosure.html">Full affiliate disclosure</a>.
+</div>
+<header class="site-header">
+  <div class="container">
+    <a class="site-logo" href="index.html">Scrape<span>Tools</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="scraperapi-vs-scrapingbee.html">ScraperAPI vs ScrapingBee</a></li>
+        <li><a href="scraperapi-vs-bright-data.html">ScraperAPI vs Bright Data</a></li>
+        <li><a href="cheapest-web-scraping-api.html">Cheapest API</a></li>
+        <li><a href="web-scraping-apis-with-free-tier.html">Free Tiers</a></li>
+        <li><a href="scraperapi-cost-calculator.html">Cost calculator</a></li>
+        <li><a href="methodology.html">Methodology</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<section class="hero">
+  <div class="container prose">
+    <span class="freshness-stamp">Pricing verified: 4 Nov 2026</span>
+    <h1>How Many ScraperAPI Credits Does a Million Requests Use?</h1>
+    <p>A small calculator that turns request volume and credit multipliers into a monthly plan.</p>
+  </div>
+</section>
+
+<main>
+  <div class="container prose">
+    <div class="answer-first">
+      <span class="answer-first-label">Short answer</span>
+      <p>One million standard requests use 1,000,000 credits, which fits the $149 Startup plan exactly with no headroom. Amazon requests cost 5 credits each, so 100,000 of them use 500,000 credits.</p>
+    </div>
+
+    <h2>Why the multiplier matters more than the request count</h2>
+    <p>A credit plan sells a pool of credits, not a count of pages. The Hobby plan costs $49 a month and includes 100,000 credits. Whether that is 100,000 pages or far fewer depends entirely on what each request asks the service to do. Plain requests cost one credit. Requests for protected retail pages cost more, and the vendor documents the multiplier for each category on its own credit page.</p>
+    <p>That is why the same monthly volume can land on very different plans. Budgeting from the headline number alone tends to under-count by a wide margin when rendering or retail targets are involved, so the safest habit is to multiply first and compare plans second. The calculator below does the multiplication and shows the plan that covers the result.</p>
+
+    <!-- ad:after-answer -->
+
+    <h2>Try your own volume</h2>
+    <form class="calculator" onsubmit="return false">
+      <label>Requests per month <input id="vol" type="number" value="100000" min="1"></label>
+      <button type="button" class="btn">Calculate</button>
+    </form>
+    <div class="table-wrap"><table><thead><tr><th>Workload</th><th>Calculation</th><th>Credits</th></tr></thead>
+    <tbody><tr><td>Amazon requests</td><td>100,000 x 5</td><td>500,000</td></tr></tbody></table></div>
+    <h2>Sources</h2>
+    <p class="source-line">ScraperAPI <a href="https://www.scraperapi.com/pricing/" target="_blank" rel="noopener">pricing page</a>, checked 4 Nov 2026. See also the <a href="scraperapi-cost-calculator.html">full calculator</a> and <a href="#sources-end">the end</a>.</p>
+    <span id="sources-end"></span>
+  </div>
+</main>
+
+
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="methodology.html">Methodology</a></li>
+      <li><a href="disclosure.html">Affiliate Disclosure</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+    </ul>
+    <div class="footer-disclosure">
+      <strong>Affiliate disclosure:</strong> ScrapeTools is an independent comparison site published by Scaleturn. Some links to vendors are affiliate/referral links. If you sign up through one, we may earn a commission at no extra cost to you.
+    </div>
+    <p>&copy; 2026 ScrapeTools, published by Scaleturn. Pricing and features change. Always confirm current terms on the vendor's own site before buying.</p>
+  </div>
+</footer>
+<script data-goatcounter="https://scaleturn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
