@@ -13,7 +13,7 @@
 - [ScraperAPI Credits & Pricing Calculator 2026 | ScrapeTools](https://scrapetools.scaleturn.com/scraperapi-cost-calculator.html): Calculate ScraperAPI credits, the smallest monthly plan that covers them, and its thread limit for normal, rendered, premium, Google, Amazon, and LinkedIn requests.
 - [ScraperAPI Free Trial: 5,000 Credits, What They Buy | ScrapeTools](https://scrapetools.scaleturn.com/scraperapi-free-trial.html): The ScraperAPI free trial gives 5,000 credits for 7 days: 5,000 normal requests but only 166 on LinkedIn. Calculate what your own test needs.
 - [ScraperAPI vs Bright Data (2026): Pricing & Which to Pick | ScrapeTools](https://scrapetools.scaleturn.com/scraperapi-vs-bright-data.html): ScraperAPI vs Bright Data compared on published pricing model, entry cost, and feature scope — a simple all-in-one API against an enterprise-grade data platform.
-- [ScraperAPI vs ScrapingBee (2026): Pricing, Credits & Features Compared | ScrapeTools](https://scrapetools.scaleturn.com/scraperapi-vs-scrapingbee.html): ScraperAPI vs ScrapingBee compared on published pricing, credit systems, concurrency, and features — with source links — for developers picking a web scraping API in 2026.
+- [ScraperAPI vs ScrapingBee: 2026 Pricing Compared | ScrapeTools](https://scrapetools.scaleturn.com/scraperapi-vs-scrapingbee.html): ScraperAPI vs ScrapingBee: $49 a month buys 100,000 credits at one and 250,000 at the other. See every published plan and price your own JS-rendering mix.
 - [Web Scraping APIs With a Free Tier (2026 Comparison) | ScrapeTools](https://scrapetools.scaleturn.com/web-scraping-apis-with-free-tier.html): Which web scraping APIs offer a genuine ongoing free tier versus a time-limited free trial in 2026 — an important distinction most roundups blur together.
 
 ## Data
@@ -21,4 +21,4 @@
 - [Vendor pricing data (JSON, no ads)](https://scrapetools.scaleturn.com/data/vendors.json): per-vendor plans, source URL and verification date.
 - [Page index (JSON)](https://scrapetools.scaleturn.com/data/pages.json): every indexable page with title and description.
 
-Last updated: 2026-11-05
+Last updated: 2026-11-06

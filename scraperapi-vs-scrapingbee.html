@@ -3,14 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ScraperAPI vs ScrapingBee (2026): Pricing, Credits &amp; Features Compared | ScrapeTools</title>
-<meta name="description" content="ScraperAPI vs ScrapingBee compared on published pricing, credit systems, concurrency, and features — with source links — for developers picking a web scraping API in 2026.">
+<title>ScraperAPI vs ScrapingBee: 2026 Pricing Compared | ScrapeTools</title>
+<meta name="description" content="ScraperAPI vs ScrapingBee: $49 a month buys 100,000 credits at one and 250,000 at the other. See every published plan and price your own JS-rendering mix.">
 <link rel="canonical" href="https://scrapetools.scaleturn.com/scraperapi-vs-scrapingbee.html">
+<link rel="icon" href="favicon.ico">
 <link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ScraperAPI vs ScrapingBee: Pricing, Credits and Limits",
+  "description": "ScraperAPI vs ScrapingBee: $49 a month buys 100,000 credits at one and 250,000 at the other. See every published plan and price your own JS-rendering mix.",
+  "url": "https://scrapetools.scaleturn.com/scraperapi-vs-scrapingbee.html",
+  "dateModified": "2026-11-06",
+  "inLanguage": "en-US",
+  "publisher": {"@type": "Organization", "name": "Scaleturn", "url": "https://scaleturn.com/"},
+  "isPartOf": {"@type": "WebSite", "name": "ScrapeTools", "url": "https://scrapetools.scaleturn.com/"}
+}
+</script>
 </head>
 <body>
 <div class="affiliate-banner">
-  This site may earn a commission from some vendor links, at no extra cost to you. <a href="disclosure.html">Full affiliate disclosure</a>.
+  This page may contain an affiliate link. If you sign up through it, we may earn a commission at no extra cost to you. <a href="disclosure.html">Full affiliate disclosure</a>.
 </div>
 <header class="site-header">
   <div class="container">
@@ -32,56 +46,119 @@
 
 <section class="hero">
   <div class="container prose">
-    <span class="freshness-stamp">Pricing verified: 25 Jul 2026</span>
-    <h1>ScraperAPI vs ScrapingBee</h1>
-    <p>Both are single-endpoint, credit-based web scraping APIs aimed at developers who don't want to run their own proxy and headless-browser infrastructure. They're close enough in positioning and price that the choice usually comes down to concurrency needs, geotargeting, and which vendor's credit costs fit your traffic mix.</p>
+    <span class="freshness-stamp">Pricing verified: Nov 6, 2026</span>
+    <h1>ScraperAPI vs ScrapingBee: Pricing, Credits and Limits</h1>
+    <p>Both are single-endpoint, credit-based scraping APIs. This page compares their published plans, credit costs and trials, and lets you price your own mix of plain and JavaScript-rendered pages.</p>
   </div>
 </section>
 
 <main>
   <div class="container prose">
+    <div class="answer-first">
+      <span class="answer-first-label">Short answer</span>
+      <p>In the ScraperAPI vs ScrapingBee comparison, at $49 a month, ScrapingBee gives more: 250,000 credits and 50 concurrent requests on its Freelance plan, against 100,000 credits and 20 threads on ScraperAPI's Hobby plan.</p>
+      <p>ScrapingBee also charges less for JavaScript rendering (5 credits a request vs 10), but it renders by default, so a plain page costs 1 credit only if you switch rendering off. ScraperAPI has the larger trial: 5,000 credits for 7 days, vs 1,000 credits at ScrapingBee.</p>
+    </div>
 
-    <h2>Side by side</h2>
+    <h2>Which is cheaper, ScraperAPI or ScrapingBee?</h2>
+    <p>ScrapingBee is cheaper at most published volumes, but ScraperAPI wins two bands: above 3,000,000 and up to 5,000,000 credits, and above 8,000,000 and up to 10,500,000 credits.</p>
+    <p>At the low end the gap is wide. Per 1,000 credits, ScraperAPI's Hobby plan works out to $0.49 and ScrapingBee's Freelance plan to $0.196. For 1,000,000 credits, ScrapingBee's Startup plan is $99 and ScraperAPI's Startup plan is $149, a $50 difference. For 3,000,000 credits the plans are $249 and $299, again $50 apart.</p>
+    <p>Just above 3,000,000 credits, ScrapingBee's next plan is Business + at $599, while ScraperAPI's Scaling plan covers up to 5,000,000 credits for $475, which is $124 less. Just above 8,000,000 credits, ScraperAPI's Professional plan at $975 is $24 below ScrapingBee's Enterprise 14 at $999. If you need more than 75,000 but no more than 100,000 credits, both cost $49.</p>
+    <p>ScrapingBee also has a smaller entry point: a $19 Hobby plan with 75,000 credits. ScraperAPI's cheapest paid plan is $49. ScraperAPI offers 10% off with yearly billing; ScrapingBee's pricing page does not mention an annual discount.</p>
+    <p>Credits are not pages, though. Both vendors charge more credits for rendering, premium proxies and hard targets, so the plan that looks cheaper per credit is only cheaper if your traffic mix stays close to plain requests. Price your own mix below.</p>
+
+    <!-- ad:after-answer -->
+
+    <div class="calculator" id="mix-calc">
+      <form id="mix-form" novalidate>
+        <div class="field-grid">
+          <div>
+            <label for="mix-pages">Pages per month</label>
+            <input id="mix-pages" name="pages" type="number" inputmode="numeric" min="1" step="1" value="200000">
+            <p class="field-help">Successful requests you expect to be billed for.</p>
+          </div>
+          <div>
+            <label for="mix-js">Percent that need JavaScript rendering</label>
+            <input id="mix-js" name="js" type="number" inputmode="numeric" min="0" max="100" step="1" value="20">
+            <p class="field-help">Whole percent, zero for none.</p>
+          </div>
+        </div>
+        <p class="form-error" id="mix-error" role="alert" hidden></p>
+        <div class="calculator-result" aria-live="polite">
+          <span class="result-label">Lowest monthly plan that covers this</span>
+          <span class="result-number" id="mix-result">Enter your volume</span>
+          <p id="mix-sa"></p>
+          <p id="mix-sb"></p>
+        </div>
+      </form>
+      <p class="field-help">Assumes standard pages on standard proxies, with ScrapingBee rendering switched off for the plain share. Premium proxies, protected domains and failed requests are not included. Only published monthly plans are used; volumes above the largest listed plan are not priced.</p>
+    </div>
+
+    <h2>Published plans side by side</h2>
+    <p>Monthly prices as listed on each vendor's pricing page. ScrapingBee states that all prices exclude VAT.</p>
     <div class="table-wrap">
       <table>
-        <thead>
-          <tr><th></th><th>ScraperAPI</th><th>ScrapingBee</th></tr>
-        </thead>
+        <caption>ScraperAPI plans</caption>
+        <thead><tr><th>Plan, price/mo</th><th>Credits</th><th>Threads</th></tr></thead>
         <tbody>
-          <tr><td>Pricing model</td><td>Credits, feature-weighted</td><td>Credits, feature-weighted</td></tr>
-          <tr><td>Entry paid plan</td><td class="price">$49/mo — 100,000 credits, 20 concurrent threads</td><td class="price">$49/mo — 250,000 credits, 50 concurrent requests</td></tr>
-          <tr><td>Top self-serve plan</td><td class="price">$1,975/mo — 21,500,000 credits, 500 threads</td><td class="price">$599/mo — 8,000,000 credits, 400 concurrent</td></tr>
-          <tr><td>Free tier / trial</td><td><span class="tier-pill trial">7-day trial</span> 5,000 credits, no card required</td><td><span class="tier-pill trial">One-time trial</span> 1,000 credits, no card required</td></tr>
-          <tr><td>Geotargeting</td><td>US &amp; EU only on entry two tiers; global from Business tier ($299/mo) up</td><td>Not itemized by tier on the pricing page — geotargeting listed as a feature, gated details not published</td></tr>
-          <tr><td>Compliance mentions</td><td>Not stated on pricing page</td><td>SOC 2 Type II, GDPR (stated on pricing page)</td></tr>
-          <tr><td>Support</td><td>Slack support from Business tier up</td><td>Priority email / dedicated account manager on higher tiers</td></tr>
+          <tr><td>Hobby, <span class="price">$49</span></td><td>100,000</td><td>20</td></tr>
+          <tr><td>Startup, <span class="price">$149</span></td><td>1,000,000</td><td>50</td></tr>
+          <tr><td>Business, <span class="price">$299</span></td><td>3,000,000</td><td>100</td></tr>
+          <tr><td>Scaling, <span class="price">$475</span></td><td>5,000,000</td><td>200</td></tr>
+          <tr><td>Professional, <span class="price">$975</span></td><td>10,500,000</td><td>300</td></tr>
+          <tr><td>Advanced, <span class="price">$1,975</span></td><td>21,500,000</td><td>500</td></tr>
+          <tr><td>Enterprise, custom</td><td>22,000,000+</td><td>500+</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="source-line">Sources (verified 25 Jul 2026): <a href="https://www.scraperapi.com/?fp_ref=sanjaya18" rel="sponsored nofollow noopener">scraperapi.com/pricing</a> · <a href="https://www.scrapingbee.com/#pricing" target="_blank" rel="noopener">scrapingbee.com (pricing section)</a>.</p>
-
-    <h2>Where they differ in practice</h2>
-    <p><strong>Entry-tier concurrency.</strong> At the $49/mo tier, ScrapingBee ships more concurrent requests (50) than ScraperAPI (20) and more credits (250,000 vs. 100,000) for the same headline price — useful if your bottleneck is parallel throughput rather than total monthly volume.</p>
-    <p><strong>Geotargeting gating.</strong> ScraperAPI explicitly restricts geotargeting to the US and EU on its two entry tiers (Hobby $49/mo, Startup $149/mo); global geotargeting requires the $299/mo Business tier or above. ScrapingBee's pricing page lists geotargeting as a feature without publishing which tiers unlock which regions — if geotargeting outside the US/EU matters at a low budget, confirm directly with ScrapingBee before committing.</p>
-    <p><strong>Both bill by weighted credit, not flat request count.</strong> On both vendors, a plain HTTP fetch costs the base credit rate; enabling JavaScript rendering, premium/rotating proxies, or extraction features costs more credits per request. Neither vendor publishes a single "cost per page" number that holds across all use cases — your real monthly cost depends on how often you need the expensive features, not the plan's headline credit count.</p>
-
-    <h2>Decision guide</h2>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Your situation</th><th>Lean toward</th></tr></thead>
+        <caption>ScrapingBee plans</caption>
+        <thead><tr><th>Plan, price/mo</th><th>Credits</th><th>Concurrent</th></tr></thead>
         <tbody>
-          <tr><td>Tight budget, need US/EU targets only, want the simplest setup</td><td>Either — pricing is a tie at $49/mo; compare credit costs for your specific feature mix before deciding</td></tr>
-          <tr><td>High concurrency needs at the entry tier</td><td>ScrapingBee (50 vs. 20 concurrent threads at $49/mo)</td></tr>
-          <tr><td>Need global geotargeting on a budget</td><td>Neither is clearly cheaper — ScraperAPI requires stepping up to $299/mo for global; ScrapingBee doesn't publish tier-level detail, so confirm directly</td></tr>
-          <tr><td>Compliance documentation matters (SOC 2, GDPR)</td><td>ScrapingBee — SOC 2 Type II and GDPR are stated directly on the pricing page</td></tr>
+          <tr><td>Hobby, <span class="price">$19</span></td><td>75,000</td><td>25</td></tr>
+          <tr><td>Freelance, <span class="price">$49</span></td><td>250,000</td><td>50</td></tr>
+          <tr><td>Startup, <span class="price">$99</span></td><td>1,000,000</td><td>100</td></tr>
+          <tr><td>Business, <span class="price">$249</span></td><td>3,000,000</td><td>200</td></tr>
+          <tr><td>Business +, <span class="price">$599</span></td><td>8,000,000</td><td>400</td></tr>
+          <tr><td>Enterprise 14, <span class="price">$999</span></td><td>14,000,000</td><td>500</td></tr>
+          <tr><td>Enterprise 24, <span class="price">$1,599</span></td><td>24,000,000</td><td>600</td></tr>
+          <tr><td>Enterprise 41, <span class="price">$2,399</span></td><td>41,000,000</td><td>700</td></tr>
+          <tr><td>Enterprise 69, <span class="price">$3,599</span></td><td>69,000,000</td><td>800</td></tr>
+          <tr><td>Enterprise 120, <span class="price">$5,799</span></td><td>120,000,000</td><td>900</td></tr>
         </tbody>
       </table>
     </div>
+    <p>ScraperAPI limits geotargeting to the US and EU on Hobby and Startup. Business and above list wider geotargeting (the plan cards say "Global", the comparison table says "Country-level"). ScrapingBee lists geotargeting on every plan, covering 200+ countries and territories, or 40+ on classic proxies.</p>
+    <p>ScraperAPI's Professional and Advanced cards carry limited-offer bonus-credit labels, and the page does not say whether the totals above include the bonus.</p>
 
-    <div class="disclaimer-box">
-      <strong>Facts only, no invented numbers.</strong> Every figure above is sourced from each vendor's own pricing page and verified on the date shown. We have not independently benchmarked either tool's success rate or speed — see the <a href="methodology.html">methodology page</a> for what's planned. Pricing changes; confirm current terms directly with the vendor before buying.
-    </div>
+    <h2>How much does JavaScript rendering cost on each?</h2>
+    <p>A rendered request costs 10 credits on ScraperAPI and 5 credits on ScrapingBee. A plain request costs 1 credit on both, but ScrapingBee fetches through a headless browser by default, so you have to turn rendering off to get the 1-credit rate.</p>
+    <p>That makes the $49 plans look very different for rendered pages: ScraperAPI's 100,000 credits cover 10,000 rendered pages, while ScrapingBee's 250,000 credits cover 50,000.</p>
+    <p>Premium proxies cost more on both. ScraperAPI lists 25 credits for premium proxies plus rendering. ScrapingBee lists 10 or 25 credits depending on rendering, and 75 credits for its stealth proxy. ScraperAPI also prices some domains higher: Amazon 5 credits, Google and Bing 25, LinkedIn 30, plus a 10-credit surcharge per request on sites its pricing page classes as bot-protected. For those, use the <a href="scraperapi-cost-calculator.html">ScraperAPI credits calculator</a>.</p>
 
+    <h2>Which has the better free trial?</h2>
+    <p>ScraperAPI's trial is larger: 5,000 credits for 7 days with no credit card, against 1,000 free credits at ScrapingBee, also with no card. Counted as rendered pages, that is 500 on ScraperAPI and 200 on ScrapingBee. ScraperAPI's FAQ separately mentions a free plan of 1,000 credits with up to 5 concurrent connections. See <a href="scraperapi-free-trial.html">what the ScraperAPI trial buys</a> and the <a href="web-scraping-apis-with-free-tier.html">free tier comparison</a>.</p>
+
+    <h2>What changed since the last check</h2>
+    <ul>
+      <li>ScrapingBee's cheapest plan is now listed as Hobby at $19; the previous version of this page started at the $49 tier.</li>
+      <li>ScrapingBee now publishes geotargeting coverage and lists plans well beyond Business +, up to Enterprise 120.</li>
+      <li>ScrapingBee's pricing page no longer states SOC 2 Type II. It links to a GDPR compliance page in the footer, which was not checked further.</li>
+      <li>ScraperAPI's plan cards show Slack support only on Enterprise, while its comparison table lists it for every plan. Because the page contradicts itself, support is no longer listed by tier here.</li>
+      <li>ScraperAPI's plan prices, credits and thread counts are unchanged.</li>
+    </ul>
+
+    <h2>What these numbers do not cover</h2>
+    <p>These are list prices and credit rules from each vendor's own pages. They say nothing about success rates, speed or how often a target needs premium proxies, and neither tool has been benchmarked here (see the <a href="methodology.html">methodology page</a>). ScraperAPI says it charges only for successful responses (200 and 404). Unused ScraperAPI credits reset at renewal. For other vendors and a wider ranking of entry prices, see the <a href="cheapest-web-scraping-api.html">cheapest scraping API</a> page.</p>
+
+    <h2>Sources</h2>
+    <p class="source-line">All checked Nov 6, 2026:
+      <a href="https://www.scraperapi.com/pricing/" target="_blank" rel="noopener">ScraperAPI pricing</a> ·
+      <a href="https://scraperapi.com/pricing.md" target="_blank" rel="noopener">ScraperAPI pricing (Markdown version)</a> ·
+      <a href="https://www.scrapingbee.com/pricing/" target="_blank" rel="noopener">ScrapingBee pricing</a> ·
+      <a href="https://www.scrapingbee.com/documentation/" target="_blank" rel="noopener">ScrapingBee API documentation</a>
+    </p>
   </div>
 </main>
 
@@ -94,11 +171,92 @@
       <li><a href="privacy.html">Privacy Policy</a></li>
     </ul>
     <div class="footer-disclosure">
-      <strong>Affiliate disclosure:</strong> ScrapeTools is a comparison site published by Scaleturn. Pages are researched and drafted with AI tools and checked against vendor sources by an automated reviewer; they are not individually reviewed by a person. Some links to vendors may be affiliate/referral links — if you sign up through one, we may earn a commission at no extra cost to you. This does not influence the pricing or feature facts we publish, which are sourced directly from each vendor's own pages and cited. Read the full <a href="disclosure.html">Affiliate Disclosure</a>.
+      <strong>Affiliate disclosure:</strong> ScrapeTools is a comparison site published by Scaleturn. Pages are researched and drafted with AI tools and checked against vendor sources by an automated reviewer; they are not individually reviewed by a person. Some links to vendors are affiliate/referral links. If you sign up through one, we may earn a commission at no extra cost to you.
     </div>
-    <p>&copy; 2026 ScrapeTools, published by Scaleturn. Pricing and features change — always confirm current terms on the vendor's own site before buying.</p>
+    <p>&copy; 2026 ScrapeTools, published by Scaleturn. Pricing and features change. Always confirm current terms on the vendor's own site before buying.</p>
   </div>
 </footer>
+<script>
+(function () {
+  var SA = { name: "ScraperAPI", plain: 1, js: 10, tiers: [
+    ["Hobby", 49, 100000], ["Startup", 149, 1000000], ["Business", 299, 3000000],
+    ["Scaling", 475, 5000000], ["Professional", 975, 10500000], ["Advanced", 1975, 21500000]
+  ]};
+  var SB = { name: "ScrapingBee", plain: 1, js: 5, tiers: [
+    ["Hobby", 19, 75000], ["Freelance", 49, 250000], ["Startup", 99, 1000000],
+    ["Business", 249, 3000000], ["Business +", 599, 8000000], ["Enterprise 14", 999, 14000000],
+    ["Enterprise 24", 1599, 24000000], ["Enterprise 41", 2399, 41000000],
+    ["Enterprise 69", 3599, 69000000], ["Enterprise 120", 5799, 120000000]
+  ]};
+  var pagesEl = document.getElementById("mix-pages");
+  var jsEl = document.getElementById("mix-js");
+  var errEl = document.getElementById("mix-error");
+  var resEl = document.getElementById("mix-result");
+  var saEl = document.getElementById("mix-sa");
+  var sbEl = document.getElementById("mix-sb");
+  function fmt(n) { return n.toLocaleString("en-US", { maximumFractionDigits: 0 }); }
+  function usd(n) { return "$" + n.toLocaleString("en-US"); }
+  function fit(v, credits) {
+    for (var i = 0; i < v.tiers.length; i++) {
+      if (v.tiers[i][2] >= credits) { return v.tiers[i]; }
+    }
+    return null;
+  }
+  function line(v, credits, t) {
+    var largest = v.tiers[v.tiers.length - 1];
+    if (!t) {
+      return v.name + ": " + fmt(credits) + " credits, more than the largest listed plan (" +
+        fmt(largest[2]) + " credits). Ask the vendor for a quote.";
+    }
+    return v.name + ": " + fmt(credits) + " credits, " + t[0] + " plan at " + usd(t[1]) +
+      "/mo (" + fmt(t[2]) + " credits).";
+  }
+  function showError(msg) {
+    errEl.textContent = msg;
+    errEl.hidden = false;
+    resEl.textContent = "Check your inputs";
+    saEl.textContent = "";
+    sbEl.textContent = "";
+  }
+  function calc() {
+    var pRaw = pagesEl.value.trim();
+    var jRaw = jsEl.value.trim();
+    var pages = Number(pRaw);
+    var pct = jRaw === "" ? 0 : Number(jRaw);
+    if (pRaw === "" || !isFinite(pages)) { showError("Enter the number of pages per month."); return; }
+    if (pages <= 0) { showError("Pages per month must be more than zero."); return; }
+    if (!isFinite(pct) || pct < 0 || pct > 100) { showError("Rendering share must be a percent between zero and one hundred."); return; }
+    errEl.textContent = "";
+    errEl.hidden = true;
+    pages = Math.ceil(pages);
+    var jsPages = Math.round(pages * pct / 100);
+    var plainPages = pages - jsPages;
+    var saCredits = plainPages * SA.plain + jsPages * SA.js;
+    var sbCredits = plainPages * SB.plain + jsPages * SB.js;
+    var saT = fit(SA, saCredits);
+    var sbT = fit(SB, sbCredits);
+    saEl.textContent = line(SA, saCredits, saT);
+    sbEl.textContent = line(SB, sbCredits, sbT);
+    if (!saT && !sbT) {
+      resEl.textContent = "Above both vendors' listed plans";
+    } else if (!saT) {
+      resEl.textContent = "ScrapingBee " + sbT[0] + ", " + usd(sbT[1]) + "/mo";
+    } else if (!sbT) {
+      resEl.textContent = "ScraperAPI " + saT[0] + ", " + usd(saT[1]) + "/mo";
+    } else if (saT[1] === sbT[1]) {
+      resEl.textContent = "Tie at " + usd(saT[1]) + "/mo";
+    } else if (sbT[1] < saT[1]) {
+      resEl.textContent = "ScrapingBee " + sbT[0] + ", " + usd(sbT[1]) + "/mo";
+    } else {
+      resEl.textContent = "ScraperAPI " + saT[0] + ", " + usd(saT[1]) + "/mo";
+    }
+  }
+  document.getElementById("mix-form").addEventListener("submit", function (e) { e.preventDefault(); calc(); });
+  pagesEl.addEventListener("input", calc);
+  jsEl.addEventListener("input", calc);
+  calc();
+})();
+</script>
 <script data-goatcounter="https://scaleturn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "pages": [
     {
       "url": "https://scrapetools.scaleturn.com/about.html",
@@ -48,8 +48,8 @@
     },
     {
       "url": "https://scrapetools.scaleturn.com/scraperapi-vs-scrapingbee.html",
-      "title": "ScraperAPI vs ScrapingBee (2026): Pricing, Credits & Features Compared | ScrapeTools",
-      "description": "ScraperAPI vs ScrapingBee compared on published pricing, credit systems, concurrency, and features — with source links — for developers picking a web scraping API in 2026."
+      "title": "ScraperAPI vs ScrapingBee: 2026 Pricing Compared | ScrapeTools",
+      "description": "ScraperAPI vs ScrapingBee: $49 a month buys 100,000 credits at one and 250,000 at the other. See every published plan and price your own JS-rendering mix."
     },
     {
       "url": "https://scrapetools.scaleturn.com/web-scraping-apis-with-free-tier.html",
