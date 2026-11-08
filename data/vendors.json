@@ -1,12 +1,12 @@
 {
   "schema": 1,
   "currency": "USD",
-  "updated": "2026-11-05",
+  "updated": "2026-11-08",
   "unit": "basic request per month (no JavaScript rendering, standard proxies)",
   "vendors": [
     {
       "id": "scraperapi", "name": "ScraperAPI", "model": "credits", "comparable": true,
-      "verified": "2026-11-05", "source_url": "https://www.scraperapi.com/pricing/",
+      "verified": "2026-11-08", "source_url": "https://www.scraperapi.com/pricing/",
       "js_credits_per_request": 10,
       "tiers": [
         {"name": "Hobby", "monthly_usd": 49, "included": 100000},
@@ -16,11 +16,11 @@
         {"name": "Professional", "monthly_usd": 975, "included": 10500000},
         {"name": "Advanced", "monthly_usd": 1975, "included": 21500000}
       ],
-      "note": "A standard page costs 1 credit; Amazon, Google, LinkedIn and bot-protected sites cost more. render=true costs 10 credits. Professional and Advanced carry limited-offer bonus-credit labels; the page does not say whether the totals include them."
+      "note": "A standard page costs 1 credit; Amazon, Google, Bing, LinkedIn and bot-protected sites cost more. render=true costs 10 credits (ScraperAPI docs). Hobby and Startup geotargeting is US and EU only."
     },
     {
       "id": "scrapingbee", "name": "ScrapingBee", "model": "credits", "comparable": true,
-      "verified": "2026-11-05", "source_url": "https://www.scrapingbee.com/pricing/",
+      "verified": "2026-11-08", "source_url": "https://www.scrapingbee.com/pricing/",
       "js_credits_per_request": 5,
       "tiers": [
         {"name": "Hobby", "monthly_usd": 19, "included": 75000},
@@ -31,25 +31,26 @@
         {"name": "Enterprise 14", "monthly_usd": 999, "included": 14000000},
         {"name": "Enterprise 24", "monthly_usd": 1599, "included": 24000000},
         {"name": "Enterprise 41", "monthly_usd": 2399, "included": 41000000},
-        {"name": "Enterprise 69", "monthly_usd": 3599, "included": 69000000}
+        {"name": "Enterprise 69", "monthly_usd": 3599, "included": 69000000},
+        {"name": "Enterprise 120", "monthly_usd": 5799, "included": 120000000}
       ],
-      "note": "Credits counted at the 1-credit classic-proxy rate without rendering, which requires render_js=false; JavaScript rendering is on by default at 5 credits. Larger plans exist on the vendor page and are not modeled here."
+      "note": "Counted at the 1-credit starting rate for a request without JavaScript rendering. A successful request with JS rendering costs 5 credits; premium proxies cost 10 or 25 credits."
     },
     {
       "id": "scrapfly", "name": "Scrapfly", "model": "credits", "comparable": true,
-      "verified": "2026-11-05", "source_url": "https://scrapfly.io/pricing",
+      "verified": "2026-11-08", "source_url": "https://scrapfly.io/pricing",
       "js_credits_per_request": 6,
       "tiers": [
-        {"name": "Discovery", "monthly_usd": 30, "included": 200000},
+        {"name": "Discovery", "monthly_usd": 30, "included": 200000, "overage_usd": 5, "overage_per": 10000},
         {"name": "Pro", "monthly_usd": 100, "included": 1000000, "overage_usd": 3.5, "overage_per": 10000},
         {"name": "Startup", "monthly_usd": 250, "included": 2500000, "overage_usd": 2, "overage_per": 10000},
         {"name": "Enterprise", "monthly_usd": 500, "included": 5500000, "overage_usd": 1.2, "overage_per": 10000}
       ],
-      "note": "A basic request costs 1 credit; residential proxies and browser rendering cost more, and bandwidth above 1MB on large responses is billed separately. Discovery hard-caps at quota and is treated as capped, although the table also shows $5.00 per 10,000 for it. Pro and above switch to pay-as-you-go; the billing docs (https://scrapfly.io/docs/billing) cap extra usage at 50% of monthly quota on non-custom plans, then suspend the account until renewal or upgrade, so overage is limited to 50% of included credits here. Custom plans from $1,200/mo and signup credits are not modeled."
+      "note": "A basic request (datacenter proxy, no browser rendering) costs 1 credit per the billing docs (https://scrapfly.io/docs/scrape-api/billing); rendering makes it 6 credits and a residential request 25. Overage is not modeled. Failed scrapes are billed if 30% or more over 24 hours are blocked without the Unblocker. Custom plans and the free plan are not modeled."
     },
     {
       "id": "scrapingdog", "name": "ScrapingDog", "model": "credits", "comparable": true,
-      "verified": "2026-11-05", "source_url": "https://www.scrapingdog.com/pricing/",
+      "verified": "2026-11-08", "source_url": "https://www.scrapingdog.com/pricing/",
       "js_credits_per_request": 5,
       "tiers": [
         {"name": "Lite", "monthly_usd": 40, "included": 200000},
@@ -62,7 +63,7 @@
         {"name": "Corporate", "monthly_usd": 2000, "included": 42000000},
         {"name": "Corporate Plus", "monthly_usd": 2500, "included": 55000000}
       ],
-      "note": "Credits counted at the 1-credit rate, which requires dynamic=false; JavaScript rendering is on by default at 5 credits. Larger plans exist on the vendor page and are not modeled here. The free plan is not modeled."
+      "note": "Counted at the 1-credit rotating-proxy rate; JavaScript rendering costs 5 credits. Failed requests are never charged. The 100-credit free plan is not modeled."
     }
   ]
 }

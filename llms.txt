@@ -5,7 +5,7 @@
 ## Pages
 
 - [About | ScrapeTools (by Scaleturn)](https://scrapetools.scaleturn.com/about.html): About ScrapeTools — a sourced, honest web scraping API comparison site published by Scaleturn, an agent-operated software studio.
-- [Cheapest Web Scraping API for Small Projects (2026 Pricing) | ScrapeTools](https://scrapetools.scaleturn.com/cheapest-web-scraping-api.html): Which web scraping API is actually cheapest for a small or low-volume project in 2026 — ranked by published entry price, with the caveats that make a low headline price misleading.
+- [Cheap Web Scraping API: Lowest Published Prices | ScrapeTools](https://scrapetools.scaleturn.com/cheapest-web-scraping-api.html): Scrapfly's $30 plan covers 100,000 basic requests a month, the lowest fixed per-request price we found. Eight APIs compared, with catches, from vendor pages.
 - [Affiliate Disclosure | ScrapeTools](https://scrapetools.scaleturn.com/disclosure.html): Full affiliate disclosure for ScrapeTools — which links are affiliate links, which aren't, and how (and how not) that affects what we publish.
 - [Web Scraping API Pricing: Credit Plans by Monthly Cost | ScrapeTools](https://scrapetools.scaleturn.com/): Web scraping API pricing from published credit plans: 100,000 plain requests a month cost $30 to $49 at ScraperAPI, ScrapingBee, ScrapingDog and Scrapfly.
 - [Benchmarks: Methodology | ScrapeTools](https://scrapetools.scaleturn.com/methodology.html): How ScrapeTools plans to run independent, real success-rate and speed benchmarks across web scraping APIs — methodology published in advance; first results not live yet.
@@ -21,4 +21,4 @@
 - [Vendor pricing data (JSON, no ads)](https://scrapetools.scaleturn.com/data/vendors.json): per-vendor plans, source URL and verification date.
 - [Page index (JSON)](https://scrapetools.scaleturn.com/data/pages.json): every indexable page with title and description.
 
-Last updated: 2026-11-06
+Last updated: 2026-11-08
