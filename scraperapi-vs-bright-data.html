@@ -3,14 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ScraperAPI vs Bright Data (2026): Pricing &amp; Which to Pick | ScrapeTools</title>
-<meta name="description" content="ScraperAPI vs Bright Data compared on published pricing model, entry cost, and feature scope — a simple all-in-one API against an enterprise-grade data platform.">
+<title>ScraperAPI vs Bright Data: 2026 Pricing Compared | ScrapeTools</title>
+<meta name="description" content="ScraperAPI vs Bright Data: 100,000 unprotected pages cost $49 a month at ScraperAPI and $150 on Bright Data's Web Unlocker; bot-protected sites flip the order.">
 <link rel="canonical" href="https://scrapetools.scaleturn.com/scraperapi-vs-bright-data.html">
+<link rel="icon" href="favicon.ico">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="widgets.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ScraperAPI vs Bright Data: Which Costs Less?",
+  "description": "ScraperAPI vs Bright Data: 100,000 unprotected pages cost $49 a month at ScraperAPI and $150 on Bright Data's Web Unlocker; bot-protected sites flip the order.",
+  "url": "https://scrapetools.scaleturn.com/scraperapi-vs-bright-data.html",
+  "dateModified": "2026-11-09",
+  "inLanguage": "en-US",
+  "publisher": {"@type": "Organization", "name": "Scaleturn", "url": "https://scaleturn.com/"},
+  "isPartOf": {"@type": "WebSite", "name": "ScrapeTools", "url": "https://scrapetools.scaleturn.com/"}
+}
+</script>
 </head>
 <body>
 <div class="affiliate-banner">
-  This site may earn a commission from some vendor links, at no extra cost to you. <a href="disclosure.html">Full affiliate disclosure</a>.
+  This page may contain an affiliate link. If you sign up through it, we may earn a commission at no extra cost to you. <a href="disclosure.html">Full affiliate disclosure</a>.
 </div>
 <header class="site-header">
   <div class="container">
@@ -32,55 +47,109 @@
 
 <section class="hero">
   <div class="container prose">
-    <span class="freshness-stamp">Pricing verified: 25 Jul 2026</span>
-    <h1>ScraperAPI vs Bright Data</h1>
-    <p>These two are not really pricing the same product. ScraperAPI sells one credit-metered API endpoint; Bright Data's Web Scraper API charges per successfully-delivered record and sits inside a much larger platform (proxy network, pre-built site scrapers, datasets). The comparison that matters is entry cost and how each model behaves as your volume grows.</p>
+    <span class="freshness-stamp">Pricing verified: Nov 9, 2026</span>
+    <h1>ScraperAPI vs Bright Data: Which Costs Less?</h1>
   </div>
 </section>
 
 <main>
   <div class="container prose">
+    <div class="answer-first">
+      <span class="answer-first-label">Short answer</span>
+      <p>At 100,000 requests a month, ScraperAPI is cheaper for unprotected pages: $49 on its Hobby plan against $150 on Bright Data's Web Unlocker ($1.50 per 1,000 list rate, pay as you go). Under 32,667 requests, Bright Data costs less. On bot-protected sites, Google or LinkedIn the order flips at that list rate, since 100,000 such pages need ScraperAPI's $299 Business plan. But Bright Data's docs say harder "premium domains" cost more (rate not published), so check the zone's Estimated cost before relying on the flip.</p>
+    </div>
+
+    <form class="calculator" id="cmp-form" novalidate>
+      <h2>Price your own monthly volume</h2>
+      <div class="field-grid">
+        <div>
+          <label for="cmp-volume">Requests per month</label>
+          <input type="number" id="cmp-volume" name="volume" min="1" step="1" inputmode="numeric" value="100000">
+          <p class="field-help">Successful page requests you expect each month.</p>
+        </div>
+        <div>
+          <label for="cmp-target">Target site type (ScraperAPI credits per request)</label>
+          <select id="cmp-target" name="target">
+            <option value="1">Standard page (1 credit)</option>
+            <option value="11">Bot-protected site (about 11 credits: 1 + 10 bypass, per pricing FAQ)</option>
+            <option value="5">Amazon, Walmart or eBay (5 credits)</option>
+            <option value="25">Google or Bing (25 credits)</option>
+            <option value="30">LinkedIn (30 credits)</option>
+          </select>
+          <p class="field-help">ScraperAPI's exact cost per site appears in its <code>sa-credit-cost</code> response header. Bright Data publishes one list rate; its docs say premium domains cost more.</p>
+        </div>
+      </div>
+      <p class="form-error" id="cmp-error" role="alert"></p>
+      <div class="calculator-result" aria-live="polite">
+        <span class="result-label">Lower published monthly price</span>
+        <span class="result-number" id="cmp-result">Enter a volume</span>
+        <p id="cmp-detail"></p>
+      </div>
+    </form>
+
+    <h2>Which is cheaper for 100,000 requests a month?</h2>
+    <p>It depends on the target site. ScraperAPI's docs list 1 credit for a standard page, 5 for Amazon, Walmart or eBay, 25 for Google and Bing, and 30 for LinkedIn. Its pricing FAQ says sites behind Cloudflare, Datadome or PerimeterX "add 10 credits per request when we bypass them". Bright Data's pricing page lists $1.50 per 1,000 requests, but its docs say "premium domains" that are harder to unblock are "priced at the higher rate", which is not published. Its docs also send Google, Bing and other search engines to its separate SERP API.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>100,000 pages a month on</th><th>ScraperAPI (smallest plan)</th><th>Bright Data Web Unlocker (list rate; premium domains cost more, rate not published)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Standard pages</td><td class="price">$49 Hobby</td><td class="price">$150</td></tr>
+          <tr><td>Bot-protected pages (1,100,000 credits)</td><td class="price">$299 Business</td><td class="price">$150</td></tr>
+          <tr><td>Amazon, Walmart or eBay (500,000 credits)</td><td class="price">$149 Startup</td><td class="price">$150</td></tr>
+          <tr><td>Google or Bing (2,500,000 credits)</td><td class="price">$299 Business</td><td class="price">$150</td></tr>
+          <tr><td>LinkedIn (3,000,000 credits)</td><td class="price">$299 Business</td><td class="price">$150</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>ScraperAPI's plans are fixed monthly bundles: Hobby $49 for 100,000 credits, Startup $149 for 1,000,000, Business $299 for 3,000,000, Scaling $475 for 5,000,000, Professional $975 for 10,500,000 and Advanced $1,975 for 21,500,000. Above that, Enterprise pricing is custom, so the calculator stops there.</p>
+    <p>Bright Data's Web Unlocker has a Scale plan at $499 a month with 383,000 requests included and $1.30 per 1,000 additional requests. It beats pay as you go above 332,667 requests a month.</p>
+
+    <!-- ad:after-answer -->
 
     <h2>Side by side</h2>
     <div class="table-wrap">
       <table>
         <thead>
-          <tr><th></th><th>ScraperAPI</th><th>Bright Data (Web Scraper API)</th></tr>
+          <tr><th></th><th>ScraperAPI</th><th>Bright Data</th></tr>
         </thead>
         <tbody>
-          <tr><td>Pricing model</td><td>Credits, feature-weighted, flat monthly plans</td><td>Per successfully-delivered record; pay-as-you-go or a metered monthly plan</td></tr>
-          <tr><td>Entry paid plan</td><td class="price">$49/mo — 100,000 credits</td><td class="price">$1.50/1,000 records pay-as-you-go, or $499/mo for 384,000 records included</td></tr>
-          <tr><td>Free tier / trial</td><td><span class="tier-pill trial">7-day trial</span> 5,000 credits, no card required</td><td><span class="tier-pill free">Free tier</span> 5,000 records/month, no card required, ongoing (not time-limited)</td></tr>
-          <tr><td>Charged for failed requests?</td><td>Not stated as a headline guarantee on the pricing page</td><td>No — Bright Data states you "only pay for what's successfully delivered"</td></tr>
-          <tr><td>Scope beyond raw fetching</td><td>Single scraping API endpoint (proxy + headless render + CAPTCHA handling)</td><td>Also sells a separate lower-level Web Unlocker API (from ~$1/1,000 requests), plus pre-built site-specific scrapers (LinkedIn, Amazon, Instagram, etc.), proxy products, and ready-made datasets</td></tr>
-          <tr><td>Support tier gating</td><td>Slack support from Business tier ($299/mo) up</td><td>Expert support available even on the free tier, per the pricing page</td></tr>
+          <tr><td>Billing unit</td><td>Credits in a monthly plan; cost per request depends on the target site</td><td>Per request (Web Unlocker) or per delivered record (Web Scraper API)</td></tr>
+          <tr><td>Entry paid option</td><td class="price">$49/mo, 100,000 credits</td><td class="price">$1.50 per 1,000, pay as you go</td></tr>
+          <tr><td>Free use</td><td><span class="tier-pill trial">7-day trial</span> 5,000 credits, no card; FAQ also mentions a 1,000-credit free plan</td><td><span class="tier-pill free">Free tier</span> 5,000 requests or records a month</td></tr>
+          <tr><td>Concurrency</td><td>20 threads on Hobby, up to 500 on Advanced</td><td>"Unlimited concurrency" on paid plans</td></tr>
+          <tr><td>Annual billing</td><td>10% off (Hobby $44.10/mo)</td><td>Not published on these pages</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="source-line">Sources (verified 25 Jul 2026): <a href="https://www.scraperapi.com/?fp_ref=sanjaya18" rel="sponsored nofollow noopener">scraperapi.com/pricing</a> · <a href="https://brightdata.com/pricing/web-scraper" target="_blank" rel="noopener">brightdata.com/pricing/web-scraper</a>.</p>
 
-    <h2>Where they differ in practice</h2>
-    <p><strong>Entry price for a small, low-volume project.</strong> Bright Data's free tier (5,000 records/month, ongoing, no time limit stated) is more generous for prototyping than ScraperAPI's 7-day trial. But once you need a paid plan, ScraperAPI's flat $49/mo for 100,000 credits is simple to budget against, while Bright Data's pay-as-you-go ($1.50/1,000 records) or $499/mo Scale plan is a bigger jump with no equivalent low-cost paid middle tier published on the pricing page.</p>
-    <p><strong>What you're actually buying.</strong> ScraperAPI is one API endpoint you call yourself. Bright Data's Web Scraper API sells pre-parsed <em>records</em> from specific target sites (its library covers LinkedIn profiles, Amazon products, Instagram data, and more) — closer to a managed-scraper marketplace than a raw fetch endpoint. If you need a generic "fetch any URL and hand me the HTML/rendered page," compare ScraperAPI against Bright Data's separate Web Unlocker API (not the Web Scraper API in the table above), which prices from roughly $1 per 1,000 requests.</p>
-    <p><strong>Failure economics.</strong> Bright Data's per-record pricing means a request that fails to return usable data isn't billed — the vendor states this directly. ScraperAPI's pricing page does not make an equivalent no-charge-on-failure guarantee for its credit system.</p>
+    <h2>Does either one charge for failed requests?</h2>
+    <p>Neither charges for failures, by their own statements. ScraperAPI's documentation says it only charges for successful requests, which it defines as 200 and 404 status codes; requests you cancel before 70 seconds are still charged. Bright Data says you "only pay for what's successfully delivered" on the Web Scraper API and lists "Pay only for success" on the Web Unlocker.</p>
 
-    <h2>Decision guide</h2>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Your situation</th><th>Lean toward</th></tr></thead>
-        <tbody>
-          <tr><td>Small project, want a simple flat monthly bill</td><td>ScraperAPI ($49/mo, predictable credit budget)</td></tr>
-          <tr><td>Want to prototype indefinitely at zero cost before committing</td><td>Bright Data (ongoing 5,000 records/month free tier vs. ScraperAPI's 7-day trial)</td></tr>
-          <tr><td>Need pre-built scrapers for specific sites (LinkedIn, Amazon, etc.) rather than a generic fetch API</td><td>Bright Data's scraper library</td></tr>
-          <tr><td>Want a raw fetch/unblock endpoint at the lowest possible per-request cost</td><td>Compare ScraperAPI against Bright Data's separate Web Unlocker API, not the Web Scraper API compared here</td></tr>
-        </tbody>
-      </table>
+    <h2>What is the difference between Bright Data's Web Scraper API and Web Unlocker?</h2>
+    <p>The Web Unlocker is the like-for-like rival to ScraperAPI: you send a URL and get the page back, billed per request. The Web Scraper API sells parsed records from specific sites instead. Bright Data says it has 1,400+ pre-built scrapers covering sites such as Amazon, LinkedIn, Instagram, Zillow and Walmart, with output in JSON, NDJSON or CSV.</p>
+    <p>Its record pricing currently mirrors the Unlocker: a free tier of 5,000 records a month, $1.50 per 1,000 records pay as you go, and a $499 Scale plan with 384,000 records included and $1.30 per 1,000 extra. A record is a parsed item, not a page fetch, so these prices are not directly comparable with ScraperAPI's credits.</p>
+
+    <h2>Which should you pick?</h2>
+    <ul>
+      <li><strong>Unprotected pages, roughly 32,667 to 21,500,000 a month:</strong> ScraperAPI's plans cost less. Below that range, Bright Data's pay as you go costs less.</li>
+      <li><strong>Mostly bot-protected sites, Google, Bing or LinkedIn:</strong> at its list rate, Bright Data's Web Unlocker is cheaper at 100,000 requests, because ScraperAPI bills these at 11 to 30 credits per request. Bright Data's docs say premium domains cost more (rate not published) and point search engines to its SERP API, so check the zone's Estimated cost first.</li>
+      <li><strong>Ongoing testing at zero cost:</strong> Bright Data's free tier renews monthly. ScraperAPI's headline offer is a 7-day, 5,000-credit trial. See <a href="web-scraping-apis-with-free-tier.html">free tiers vs free trials</a> and <a href="scraperapi-free-trial.html">what the ScraperAPI trial buys</a>.</li>
+      <li><strong>You want parsed data, not HTML:</strong> Bright Data's pre-built scrapers.</li>
+    </ul>
+    <p>For ScraperAPI with JavaScript rendering (its docs list 10 credits for <code>render=true</code>), use the <a href="scraperapi-cost-calculator.html">ScraperAPI cost calculator</a>. To compare more vendors, see the <a href="cheapest-web-scraping-api.html">cheapest web scraping API</a> page.</p>
+
+    <div class="note-box">
+      <p><strong>Affiliate link:</strong> <a href="https://www.scraperapi.com/?fp_ref=sanjaya18" rel="sponsored nofollow noopener">Visit ScraperAPI</a>. We may earn a commission if you sign up. It does not change the figures or the order above. Bright Data: <a href="https://brightdata.com/pricing/web-unlocker" rel="noopener">brightdata.com</a> (not an affiliate link).</p>
     </div>
 
     <div class="disclaimer-box">
-      <strong>Facts only, no invented numbers.</strong> Every figure above is sourced from each vendor's own pricing page and verified on the date shown. We have not independently benchmarked either tool's success rate or speed — see the <a href="methodology.html">methodology page</a> for what's planned. Pricing changes; confirm current terms directly with the vendor before buying.
+      <strong>What these numbers do not cover.</strong> Prices are list prices from each vendor's pricing page on Nov 9, 2026. They exclude taxes, promotions, Enterprise deals, and Bright Data's premium-domain and JavaScript-rendering costs (neither is priced on its pricing page). No benchmark of success rates or speed has been run (see the <a href="methodology.html">methodology page</a>).
     </div>
 
+    <h2>Sources</h2>
+    <p class="source-line">All checked Nov 9, 2026: <a href="https://www.scraperapi.com/pricing/" rel="noopener">ScraperAPI pricing</a> · <a href="https://docs.scraperapi.com/credits-and-requests" rel="noopener">ScraperAPI docs: credits and requests</a> · <a href="https://brightdata.com/pricing/web-unlocker" rel="noopener">Bright Data Web Unlocker pricing</a> · <a href="https://docs.brightdata.com/scraping-automation/web-unlocker/features" rel="noopener">Bright Data docs: Web Unlocker features (premium domains)</a> · <a href="https://docs.brightdata.com/scraping-automation/web-unlocker/introduction" rel="noopener">Bright Data docs: Web Unlocker introduction (SERP API)</a> · <a href="https://brightdata.com/pricing/web-scraper" rel="noopener">Bright Data Web Scraper API pricing</a> · <a href="https://brightdata.com/products/web-scraper" rel="noopener">Bright Data Web Scraper API product page</a>.</p>
   </div>
 </main>
 
@@ -93,11 +162,110 @@
       <li><a href="privacy.html">Privacy Policy</a></li>
     </ul>
     <div class="footer-disclosure">
-      <strong>Affiliate disclosure:</strong> ScrapeTools is a comparison site published by Scaleturn. Pages are researched and drafted with AI tools and checked against vendor sources by an automated reviewer; they are not individually reviewed by a person. Some links to vendors may be affiliate/referral links — if you sign up through one, we may earn a commission at no extra cost to you. This does not influence the pricing or feature facts we publish, which are sourced directly from each vendor's own pages and cited. Read the full <a href="disclosure.html">Affiliate Disclosure</a>.
+      <strong>Affiliate disclosure:</strong> ScrapeTools is a comparison site published by Scaleturn. Pages are researched and drafted with AI tools and checked against vendor sources by an automated reviewer; they are not individually reviewed by a person. Some links to vendors are affiliate/referral links. If you sign up through one, we may earn a commission at no extra cost to you.
     </div>
-    <p>&copy; 2026 ScrapeTools, published by Scaleturn. Pricing and features change — always confirm current terms on the vendor's own site before buying.</p>
+    <p>&copy; 2026 ScrapeTools, published by Scaleturn. Pricing and features change. Always confirm current terms on the vendor's own site before buying.</p>
   </div>
 </footer>
+<script>
+(function () {
+  var PLANS = [
+    ["Hobby", 49, 100000],
+    ["Startup", 149, 1000000],
+    ["Business", 299, 3000000],
+    ["Scaling", 475, 5000000],
+    ["Professional", 975, 10500000],
+    ["Advanced", 1975, 21500000]
+  ];
+  var BD_PAYG_PER_1K = 1.5, BD_SCALE_USD = 499, BD_SCALE_INCLUDED = 383000, BD_SCALE_OVER_PER_1K = 1.3;
+  var BD_FREE_REQUESTS = 5000;
+  var SA_FREE_CREDITS = 1000;
+  var DEFAULT_VOLUME = 100000;
+  var MAX_VOLUME = 1e9;
+
+  var form = document.getElementById("cmp-form");
+  var vol = document.getElementById("cmp-volume");
+  var tgt = document.getElementById("cmp-target");
+  var err = document.getElementById("cmp-error");
+  var out = document.getElementById("cmp-result");
+  var detail = document.getElementById("cmp-detail");
+
+  function money(x) {
+    var cents = Math.round(x * 100) / 100;
+    var whole = cents % 1 === 0;
+    return "$" + cents.toLocaleString("en-US", {
+      minimumFractionDigits: whole ? 0 : 2,
+      maximumFractionDigits: 2
+    });
+  }
+  function num(x) { return x.toLocaleString("en-US"); }
+
+  function clear(msg) {
+    err.textContent = msg;
+    out.textContent = "Enter a volume";
+    detail.textContent = "";
+  }
+
+  function run() {
+    var raw = String(vol.value).trim();
+    var n = Number(raw);
+    if (raw === "" || !isFinite(n)) { clear("Enter the number of requests per month, using digits only."); return; }
+    if (n <= 0) { clear("Enter a monthly volume above zero."); return; }
+    if (n > MAX_VOLUME) { clear("That is beyond any published plan. Enter one billion or fewer."); return; }
+    err.textContent = "";
+    n = Math.ceil(n);
+
+    var mult = Number(tgt.value) || 1;
+    var credits = n * mult;
+    var plan = null;
+    for (var i = 0; i < PLANS.length; i++) {
+      if (credits <= PLANS[i][2]) { plan = PLANS[i]; break; }
+    }
+
+    var payg = n / 1000 * BD_PAYG_PER_1K;
+    var scale = BD_SCALE_USD + Math.max(0, n - BD_SCALE_INCLUDED) / 1000 * BD_SCALE_OVER_PER_1K;
+    var bd = Math.min(payg, scale);
+    var bdName = scale < payg ? "Scale plan" : "pay as you go";
+    bd = Math.round(bd * 100) / 100;
+
+    var saText, bdText;
+    bdText = "Bright Data Web Unlocker: " + money(bd) + " a month at list rate (" + bdName + ").";
+    if (plan) {
+      saText = "ScraperAPI: " + plan[0] + " plan, " + money(plan[1]) + " a month for " + num(plan[2]) +
+        " credits (you need " + num(credits) + ").";
+    } else {
+      saText = "ScraperAPI: you need " + num(credits) +
+        " credits, more than its largest published plan, so Enterprise pricing (custom, not published) applies.";
+    }
+
+    if (n <= BD_FREE_REQUESTS) {
+      out.textContent = credits <= SA_FREE_CREDITS ? "Free at either" : "Bright Data free tier";
+      detail.textContent = "Bright Data's free tier covers 5,000 requests a month. ScraperAPI's pricing FAQ mentions a free plan with 1,000 credits; its headline offer is a 7-day, 5,000-credit trial. Paid prices: " +
+        saText + " " + bdText;
+      return;
+    }
+
+    if (!plan) {
+      out.textContent = "Bright Data " + money(bd) + "/mo";
+    } else if (plan[1] < bd) {
+      out.textContent = "ScraperAPI " + money(plan[1]) + "/mo";
+    } else if (plan[1] > bd) {
+      out.textContent = "Bright Data " + money(bd) + "/mo";
+    } else {
+      out.textContent = "A tie: " + money(bd) + "/mo";
+    }
+    detail.textContent = saText + " " + bdText;
+  }
+
+  form.addEventListener("submit", function (e) { e.preventDefault(); run(); });
+  vol.addEventListener("input", run);
+  tgt.addEventListener("change", function () {
+    if (String(vol.value).trim() === "" || !(Number(vol.value) > 0)) { vol.value = DEFAULT_VOLUME; }
+    run();
+  });
+  run();
+})();
+</script>
 <script data-goatcounter="https://scaleturn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
