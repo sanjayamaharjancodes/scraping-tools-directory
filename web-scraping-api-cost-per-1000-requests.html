@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Much Does Web Scraping API Cost per 1,000 Requests? | ScrapeTools</title>
+<meta name="description" content="Basic requests cost $0.30 to $0.49 per 1,000 at 100,000 a month and as little as $0.07 at 5,000,000. Calculator for your volume and rendering.">
+<link rel="canonical" href="https://scrapetools.scaleturn.com/web-scraping-api-cost-per-1000-requests.html">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="widgets.css">
+<link rel="alternate" type="application/json" href="data/vendors.json" title="Vendor pricing data">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How much does a web scraping API cost per 1,000 requests?",
+  "description": "Basic requests cost $0.30 to $0.49 per 1,000 at 100,000 a month and as little as $0.07 at 5,000,000. Calculator for your volume and rendering.",
+  "url": "https://scrapetools.scaleturn.com/web-scraping-api-cost-per-1000-requests.html",
+  "dateModified": "2026-11-10",
+  "inLanguage": "en-US",
+  "publisher": {"@type": "Organization", "name": "Scaleturn", "url": "https://scaleturn.com/"},
+  "isPartOf": {"@type": "WebSite", "name": "ScrapeTools", "url": "https://scrapetools.scaleturn.com/"}
+}
+</script>
+</head>
+<body>
+<div class="affiliate-banner">
+  This page may contain an affiliate link. If you sign up through it, we may earn a commission at no extra cost to you. <a href="disclosure.html">Full affiliate disclosure</a>.
+</div>
+<header class="site-header">
+  <div class="container">
+    <a class="site-logo" href="index.html">Scrape<span>Tools</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="scraperapi-vs-scrapingbee.html">ScraperAPI vs ScrapingBee</a></li>
+        <li><a href="scraperapi-vs-bright-data.html">ScraperAPI vs Bright Data</a></li>
+        <li><a href="cheapest-web-scraping-api.html">Cheapest API</a></li>
+        <li><a href="web-scraping-apis-with-free-tier.html">Free Tiers</a></li>
+        <li><a href="scraperapi-cost-calculator.html">Cost calculator</a></li>
+        <li><a href="methodology.html">Methodology</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container prose">
+    <span class="freshness-stamp">Pricing verified: Nov 10, 2026</span>
+    <h1>How much does a web scraping API cost per 1,000 requests?</h1>
+    <p>Four APIs, three volumes, from published plans.</p>
+  </div>
+</section>
+
+<main>
+  <div class="container prose">
+    <div class="answer-first">
+      <span class="answer-first-label">Short answer</span>
+      <p>A web scraping API costs $0.30 to $0.49 per 1,000 basic requests if you make 100,000 requests a month, on the published plans of ScraperAPI, ScrapingBee, Scrapfly and ScrapingDog. At 1,000,000 a month the range drops to $0.09 to $0.149, and at 5,000,000 to $0.07 to $0.12.</p>
+      <p>Basic means rendering off. ScrapingBee and ScrapingDog render JavaScript by default at 5 credits a page, so you need <code>render_js=false</code> or <code>dynamic=false</code> to get these rates. With rendering, 100,000 pages a month cost $0.90 to $1.49 per 1,000.</p>
+    </div>
+
+    <h2>Cost per 1,000 requests calculator</h2>
+    <p>Enter your monthly volume. The calculator picks each vendor's cheapest published monthly plan for it and divides the price by your requests.</p>
+    <div class="calculator" id="cpk">
+      <div class="field-grid">
+        <div>
+          <label for="cpk-vol">Requests per month</label>
+          <input id="cpk-vol" type="text" inputmode="numeric" value="100000" autocomplete="off">
+          <p class="field-help">Successful requests in one month, for example 250000.</p>
+        </div>
+        <div>
+          <label for="cpk-type">Request type</label>
+          <select id="cpk-type">
+            <option value="basic">Basic: rendering off (render_js=false / dynamic=false)</option>
+            <option value="js">With JavaScript rendering</option>
+          </select>
+        </div>
+      </div>
+      <p class="form-error" id="cpk-err" role="alert" hidden></p>
+      <div class="calculator-result" id="cpk-res" aria-live="polite">
+        <span class="result-label">Lowest published cost per 1,000 requests</span>
+        <span class="result-number" id="cpk-num"></span>
+        <p id="cpk-detail"></p>
+        <p class="field-help" id="cpk-others"></p>
+        <p class="field-help" id="cpk-note"></p>
+      </div>
+    </div>
+
+    <h2>What do 1,000 requests cost at different volumes?</h2>
+    <p>The price per 1,000 falls by two thirds to four fifths between 100,000 and 1,000,000 requests a month, because the bigger plans include far more credits for each extra dollar. Each cell shows the cost per 1,000 basic requests and the smallest plan that covers that volume.</p>
+    <div class="table-wrap">
+      <table class="stack-table">
+        <thead>
+          <tr><th>Vendor</th><th>100,000 a month</th><th>1,000,000 a month</th><th>5,000,000 a month</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="Vendor">ScraperAPI</td><td data-label="100,000 a month" class="price">$0.49 (Hobby, $49)</td><td data-label="1,000,000 a month" class="price">$0.149 (Startup, $149)</td><td data-label="5,000,000 a month" class="price">$0.095 (Scaling, $475)</td></tr>
+          <tr><td data-label="Vendor">ScrapingBee</td><td data-label="100,000 a month" class="price">$0.49 (Freelance, $49)</td><td data-label="1,000,000 a month" class="price">$0.099 (Startup, $99)</td><td data-label="5,000,000 a month" class="price">$0.1198 (Business +, $599)</td></tr>
+          <tr><td data-label="Vendor">Scrapfly</td><td data-label="100,000 a month" class="price">$0.30 (Discovery, $30)</td><td data-label="1,000,000 a month" class="price">$0.10 (Pro, $100)</td><td data-label="5,000,000 a month" class="price">$0.10 (Enterprise, $500)</td></tr>
+          <tr><td data-label="Vendor">ScrapingDog</td><td data-label="100,000 a month" class="price">$0.40 (Lite, $40)</td><td data-label="1,000,000 a month" class="price">$0.09 (Standard, $90)</td><td data-label="5,000,000 a month" class="price">$0.07 (Premium, $350)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>These rates assume 1 credit per request, which needs rendering off. <a href="https://www.scrapingbee.com/documentation/" target="_blank" rel="noopener">ScrapingBee</a> renders by default (render_js is True, 5 credits) until you send <code>render_js=false</code>. <a href="https://www.scrapingdog.com/documentation/javascript-rendering/" target="_blank" rel="noopener">ScrapingDog</a> renders by default (5 credits) until you send <code>dynamic=false</code>. ScraperAPI and Scrapfly charge 1 credit unless you turn rendering on. Prices are monthly list prices before annual discounts.</p>
+    <p>The figure is what you pay per request you make, not per credit you buy. ScrapingBee's Hobby plan ($19) includes only 75,000 credits, so 100,000 requests need the $49 Freelance plan with 250,000 credits. Likewise, Scrapfly's $250 Startup plan stops at 2,500,000 credits, so 5,000,000 requests land on its $500 Enterprise plan.</p>
+
+    <!-- ad:after-answer -->
+
+    <h2>How much more do JavaScript-rendered requests cost?</h2>
+    <p>Rendered requests use 5 to 10 times as many credits as basic ones. In dollars the jump at 100,000 a month is smaller, about 2 to 3.3 times, because the basic plans leave credits unused. At 100,000 rendered pages a month:</p>
+    <div class="table-wrap">
+      <table class="stack-table">
+        <thead>
+          <tr><th>Vendor</th><th>Credits per rendered page</th><th>Plan needed</th><th>Per 1,000</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="Vendor">ScraperAPI</td><td data-label="Credits per rendered page">10</td><td data-label="Plan needed">Startup, $149 (1,000,000 credits)</td><td data-label="Per 1,000" class="price">$1.49</td></tr>
+          <tr><td data-label="Vendor">ScrapingBee</td><td data-label="Credits per rendered page">5</td><td data-label="Plan needed">Startup, $99 (500,000 used)</td><td data-label="Per 1,000" class="price">$0.99</td></tr>
+          <tr><td data-label="Vendor">Scrapfly</td><td data-label="Credits per rendered page">6 (1 + 5)</td><td data-label="Plan needed">Pro, $100 (600,000 used)</td><td data-label="Per 1,000" class="price">$1.00</td></tr>
+          <tr><td data-label="Vendor">ScrapingDog</td><td data-label="Credits per rendered page">5</td><td data-label="Plan needed">Standard, $90 (500,000 used)</td><td data-label="Per 1,000" class="price">$0.90</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Rendering only where a site needs it is the biggest lever on cost. If only part of your traffic needs rendering, price the two parts separately in the calculator above, or use the <a href="scraperapi-cost-calculator.html">ScraperAPI credits calculator</a> for a mixed workload on that one vendor.</p>
+
+    <h2>Monthly bill by volume</h2>
+    <p>The widget shows the same published plans as a monthly bill rather than a per-1,000 rate. Drag the slider to see which plan each vendor needs for basic requests.</p>
+    <div class="vcw" data-src="data/vendors.json" data-default="100000" data-affiliate-url="https://www.scraperapi.com/?fp_ref=sanjaya18" data-affiliate-vendor="scraperapi"><noscript>This widget needs JavaScript. The volume table above lists the same published prices.</noscript></div>
+
+    <h2>What do these per-1,000 figures leave out?</h2>
+    <p>They cover plain pages on default proxies only. Several things raise or lower the real number:</p>
+    <ul>
+      <li><strong>Harder targets cost more credits.</strong> ScraperAPI charges 5 credits for Amazon, Walmart and eBay and 25 for Google and Bing. Premium proxies cost 10 credits at ScraperAPI and ScrapingDog, 10 or 25 at ScrapingBee, and a Scrapfly residential request costs 25.</li>
+      <li><strong>Failed requests.</strong> ScraperAPI's docs say it only charges for successful requests (status 200 and 404) and requests stopped before completion. ScrapingDog says failed requests are never charged. Scrapfly does not bill failed scrapes, but its docs say that protection is disabled and failed scrapes are billed if too many are blocked without its Unblocker. ScrapingBee's pricing page describes rendered and premium charges as applying to successful requests but does not state a rule for basic ones.</li>
+      <li><strong>Overage and custom plans.</strong> Scrapfly's Pro, Startup and Enterprise plans continue pay-as-you-go at $3.50, $2.00 and $1.20 per 10k extra credits; the calculator includes this. Other vendors' overage, enterprise quotes and annual discounts are not modeled.</li>
+      <li><strong>Free credits.</strong> ScrapingBee offers 1,000 free API credits and Scrapfly's Free plan includes 1,000 credits. They are too small to change a per-1,000 price at these volumes; see <a href="web-scraping-apis-with-free-tier.html">web scraping APIs with a free tier</a>.</li>
+    </ul>
+    <p>Price is not the only thing to compare. These figures say nothing about success rates or speed, and this site has not benchmarked them yet (see the <a href="methodology.html">methodology</a>). For the lowest-price ranking across more vendors, see the <a href="cheapest-web-scraping-api.html">cheapest web scraping API</a> comparison, and for two vendors side by side, <a href="scraperapi-vs-scrapingbee.html">ScraperAPI vs ScrapingBee</a>.</p>
+
+    <h2>Sources</h2>
+    <p class="source-line">All checked Nov 10, 2026:
+      <a href="https://www.scraperapi.com/pricing/" target="_blank" rel="noopener">ScraperAPI pricing</a>;
+      <a href="https://docs.scraperapi.com/getting-started/quick-start/credits-and-requests-costs" target="_blank" rel="noopener">ScraperAPI credits and request costs</a>;
+      <a href="https://www.scrapingbee.com/pricing/" target="_blank" rel="noopener">ScrapingBee pricing</a>;
+      <a href="https://www.scrapingbee.com/documentation/" target="_blank" rel="noopener">ScrapingBee documentation</a>;
+      <a href="https://scrapfly.io/pricing" target="_blank" rel="noopener">Scrapfly pricing</a>;
+      <a href="https://scrapfly.io/docs/scrape-api/billing" target="_blank" rel="noopener">Scrapfly billing docs</a>;
+      <a href="https://www.scrapingdog.com/pricing/" target="_blank" rel="noopener">ScrapingDog pricing</a>;
+      <a href="https://www.scrapingdog.com/documentation/javascript-rendering/" target="_blank" rel="noopener">ScrapingDog JavaScript rendering docs</a>.
+    </p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="methodology.html">Methodology</a></li>
+      <li><a href="disclosure.html">Affiliate Disclosure</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+    </ul>
+    <div class="footer-disclosure">
+      <strong>Affiliate disclosure:</strong> ScrapeTools is a comparison site published by Scaleturn. Pages are researched and drafted with AI tools and checked against vendor sources by an automated reviewer; they are not individually reviewed by a person. Some links to vendors are affiliate/referral links. If you sign up through one, we may earn a commission at no extra cost to you.
+    </div>
+    <p>&copy; 2026 ScrapeTools, published by Scaleturn. Pricing and features change. Always confirm current terms on the vendor's own site before buying.</p>
+  </div>
+</footer>
+<script>
+(function () {
+  "use strict";
+  /* Published monthly plans: [name, USD per month, credits included, optional USD per 10k extra credits].
+     Basic request = 1 credit (rendering off). */
+  var V = [
+    { n: "ScraperAPI", js: 10, t: [["Hobby", 49, 100000], ["Startup", 149, 1000000], ["Business", 299, 3000000], ["Scaling", 475, 5000000], ["Professional", 975, 10500000], ["Advanced", 1975, 21500000]] },
+    { n: "ScrapingBee", js: 5, t: [["Hobby", 19, 75000], ["Freelance", 49, 250000], ["Startup", 99, 1000000], ["Business", 249, 3000000], ["Business +", 599, 8000000], ["Enterprise 14", 999, 14000000], ["Enterprise 24", 1599, 24000000], ["Enterprise 41", 2399, 41000000], ["Enterprise 69", 3599, 69000000], ["Enterprise 120", 5799, 120000000]] },
+    { n: "Scrapfly", js: 6, t: [["Discovery", 30, 200000], ["Pro", 100, 1000000, 3.5], ["Startup", 250, 2500000, 2], ["Enterprise", 500, 5500000, 1.2]] },
+    { n: "ScrapingDog", js: 5, t: [["Lite", 40, 200000], ["Standard", 90, 1000000], ["Pro", 200, 3000000], ["Premium", 350, 6000000], ["Business", 500, 9000000], ["Business Plus", 1000, 19000000], ["Business Pro", 1500, 29000000], ["Corporate", 2000, 42000000], ["Corporate Plus", 2500, 55000000],
+      ["Corporate Pro", 3000, 65000000], ["Enterprise Starter", 4000, 90000000], ["Enterprise Plus", 5000, 120000000], ["Enterprise Pro", 6000, 150000000], ["Global Starter", 7000, 185000000], ["Global Plus", 8000, 220000000], ["Global Pro", 9000, 255000000], ["Global Elite", 10000, 295000000],
+      ["Ultra Starter", 12000, 360000000], ["Ultra Plus", 14000, 430000000], ["Ultra Pro", 16000, 500000000], ["Titan Starter", 18000, 580000000], ["Titan Plus", 20000, 660000000], ["Titan Pro", 22000, 740000000], ["Titan Elite", 24000, 830000000],
+      ["Nova Starter", 26000, 920000000], ["Nova Plus", 28000, 1010000000], ["Nova Pro", 30000, 1100000000]] }
+  ];
+  var vol = document.getElementById("cpk-vol");
+  var type = document.getElementById("cpk-type");
+  var err = document.getElementById("cpk-err");
+  var res = document.getElementById("cpk-res");
+  var num = document.getElementById("cpk-num");
+  var detail = document.getElementById("cpk-detail");
+  var others = document.getElementById("cpk-others");
+  var note = document.getElementById("cpk-note");
+  var nf = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
+
+  function money(x) {
+    var d = (x < 1 && Math.round(x * 1000) % 10 !== 0) ? 3 : 2;
+    return "$" + x.toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
+  }
+  function usd(x) {
+    return "$" + x.toLocaleString("en-US", { minimumFractionDigits: x % 1 ? 2 : 0, maximumFractionDigits: 2 });
+  }
+  function fail(msg) {
+    err.textContent = msg;
+    err.hidden = false;
+    res.hidden = true;
+  }
+  function calc() {
+    var raw = String(vol.value).replace(/[,\s_]/g, "");
+    if (raw === "") { fail("Enter how many requests you make per month."); return; }
+    if (!/^\d+(\.\d+)?$/.test(raw)) { fail("Use digits only, for example 250000."); return; }
+    var n = Math.ceil(Number(raw));
+    if (!isFinite(n) || n < 1) { fail("Enter at least 1 request per month."); return; }
+    var rendered = type.value === "js";
+    var rows = V.map(function (v) {
+      var credits = n * (rendered ? v.js : 1);
+      var best = null;
+      v.t.forEach(function (t) {
+        var cost = null, extra = 0;
+        if (t[2] >= credits) { cost = t[1]; }
+        else if (t[3]) { extra = credits - t[2]; cost = t[1] + extra / 10000 * t[3]; }
+        if (cost !== null && (!best || cost < best.cost)) { best = { t: t, cost: cost, extra: extra }; }
+      });
+      return { v: v, credits: credits, b: best, k: best ? best.cost / n * 1000 : null };
+    });
+    var ok = rows.filter(function (r) { return r.b; }).sort(function (a, b) {
+      return a.k - b.k || a.v.n.localeCompare(b.v.n);
+    });
+    var none = rows.filter(function (r) { return !r.b; });
+    err.hidden = true;
+    res.hidden = false;
+    note.textContent = rendered ? "" : "Basic rates need rendering off. ScrapingBee and ScrapingDog render by default at 5 credits a page unless you send render_js=false (ScrapingBee) or dynamic=false (ScrapingDog).";
+    if (!ok.length) {
+      num.textContent = "No published plan";
+      detail.textContent = "None of the four vendors lists a self-serve monthly plan large enough for " + nf.format(n) +
+        " requests a month. Above their published plans they quote custom prices.";
+      others.textContent = "";
+      return;
+    }
+    var b = ok[0], t = b.b.t;
+    num.textContent = money(b.k);
+    if (b.b.extra) {
+      detail.textContent = b.v.n + " " + t[0] + " plan: $" + nf.format(t[1]) + " a month for " + nf.format(t[2]) +
+        " credits, plus " + nf.format(b.b.extra) + " extra credits at $" + t[3].toFixed(2) + " per 10k, " + usd(b.b.cost) +
+        " in total. Your " + nf.format(n) + " requests use " + nf.format(b.credits) + " credits.";
+    } else {
+      detail.textContent = b.v.n + " " + t[0] + " plan: $" + nf.format(t[1]) + " a month for " + nf.format(t[2]) +
+        " credits. Your " + nf.format(n) + " requests use " + nf.format(b.credits) + " credits.";
+    }
+    var parts = ok.slice(1).map(function (r) {
+      return r.v.n + " " + money(r.k) + " (" + r.b.t[0] + (r.b.extra ? " + overage" : "") + ")";
+    });
+    none.forEach(function (r) { parts.push(r.v.n + ": no published plan this large"); });
+    others.textContent = parts.length ? "Others per 1,000: " + parts.join("; ") + "." : "";
+  }
+  vol.addEventListener("input", calc);
+  type.addEventListener("change", calc);
+  calc();
+}());
+</script>
+<script src="widgets.js" defer></script>
+<script data-goatcounter="https://scaleturn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

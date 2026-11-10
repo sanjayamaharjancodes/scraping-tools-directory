@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "pages": [
     {
       "url": "https://scrapetools.scaleturn.com/about.html",
@@ -50,6 +50,11 @@
       "url": "https://scrapetools.scaleturn.com/scraperapi-vs-scrapingbee.html",
       "title": "ScraperAPI vs ScrapingBee: 2026 Pricing Compared | ScrapeTools",
       "description": "ScraperAPI vs ScrapingBee: $49 a month buys 100,000 credits at one and 250,000 at the other. See every published plan and price your own JS-rendering mix."
+    },
+    {
+      "url": "https://scrapetools.scaleturn.com/web-scraping-api-cost-per-1000-requests.html",
+      "title": "How Much Does Web Scraping API Cost per 1,000 Requests? | ScrapeTools",
+      "description": "Basic requests cost $0.30 to $0.49 per 1,000 at 100,000 a month and as little as $0.07 at 5,000,000. Calculator for your volume and rendering."
     },
     {
       "url": "https://scrapetools.scaleturn.com/web-scraping-apis-with-free-tier.html",

@@ -14,6 +14,7 @@
 - [ScraperAPI Free Trial: 5,000 Credits, What They Buy | ScrapeTools](https://scrapetools.scaleturn.com/scraperapi-free-trial.html): The ScraperAPI free trial gives 5,000 credits for 7 days: 5,000 normal requests but only 166 on LinkedIn. Calculate what your own test needs.
 - [ScraperAPI vs Bright Data: 2026 Pricing Compared | ScrapeTools](https://scrapetools.scaleturn.com/scraperapi-vs-bright-data.html): ScraperAPI vs Bright Data: 100,000 unprotected pages cost $49 a month at ScraperAPI and $150 on Bright Data's Web Unlocker; bot-protected sites flip the order.
 - [ScraperAPI vs ScrapingBee: 2026 Pricing Compared | ScrapeTools](https://scrapetools.scaleturn.com/scraperapi-vs-scrapingbee.html): ScraperAPI vs ScrapingBee: $49 a month buys 100,000 credits at one and 250,000 at the other. See every published plan and price your own JS-rendering mix.
+- [How Much Does Web Scraping API Cost per 1,000 Requests? | ScrapeTools](https://scrapetools.scaleturn.com/web-scraping-api-cost-per-1000-requests.html): Basic requests cost $0.30 to $0.49 per 1,000 at 100,000 a month and as little as $0.07 at 5,000,000. Calculator for your volume and rendering.
 - [Web Scraping APIs With a Free Tier (2026 Comparison) | ScrapeTools](https://scrapetools.scaleturn.com/web-scraping-apis-with-free-tier.html): Which web scraping APIs offer a genuine ongoing free tier versus a time-limited free trial in 2026 — an important distinction most roundups blur together.
 
 ## Data
@@ -21,4 +22,4 @@
 - [Vendor pricing data (JSON, no ads)](https://scrapetools.scaleturn.com/data/vendors.json): per-vendor plans, source URL and verification date.
 - [Page index (JSON)](https://scrapetools.scaleturn.com/data/pages.json): every indexable page with title and description.
 
-Last updated: 2026-11-09
+Last updated: 2026-11-10
