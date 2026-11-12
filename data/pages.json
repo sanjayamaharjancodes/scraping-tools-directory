@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-12",
   "pages": [
     {
       "url": "https://scrapetools.scaleturn.com/about.html",
@@ -30,6 +30,11 @@
       "url": "https://scrapetools.scaleturn.com/privacy.html",
       "title": "Privacy Policy | ScrapeTools",
       "description": "What ScrapeTools collects, how page counts work, how affiliate links are tracked, and how advertising cookies are used and can be turned off."
+    },
+    {
+      "url": "https://scrapetools.scaleturn.com/scrapecreators-pricing.html",
+      "title": "ScrapeCreators Pricing: Cost per Credit by Pack | ScrapeTools",
+      "description": "ScrapeCreators sells one-time credit packs: $47 for 25,000 or $497 for 500,000. Enter the credits you need and see the cheapest pack mix and what is left over."
     },
     {
       "url": "https://scrapetools.scaleturn.com/scraperapi-cost-calculator.html",

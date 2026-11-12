@@ -10,6 +10,7 @@
 - [Web Scraping API Pricing: Credit Plans by Monthly Cost | ScrapeTools](https://scrapetools.scaleturn.com/): Web scraping API pricing from published credit plans: 100,000 plain requests a month cost $30 to $49 at ScraperAPI, ScrapingBee, ScrapingDog and Scrapfly.
 - [Benchmarks: Methodology | ScrapeTools](https://scrapetools.scaleturn.com/methodology.html): How ScrapeTools plans to run independent, real success-rate and speed benchmarks across web scraping APIs — methodology published in advance; first results not live yet.
 - [Privacy Policy | ScrapeTools](https://scrapetools.scaleturn.com/privacy.html): What ScrapeTools collects, how page counts work, how affiliate links are tracked, and how advertising cookies are used and can be turned off.
+- [ScrapeCreators Pricing: Cost per Credit by Pack | ScrapeTools](https://scrapetools.scaleturn.com/scrapecreators-pricing.html): ScrapeCreators sells one-time credit packs: $47 for 25,000 or $497 for 500,000. Enter the credits you need and see the cheapest pack mix and what is left over.
 - [ScraperAPI Credits & Pricing Calculator 2026 | ScrapeTools](https://scrapetools.scaleturn.com/scraperapi-cost-calculator.html): Calculate ScraperAPI credits, the smallest monthly plan that covers them, and its thread limit for normal, rendered, premium, Google, Amazon, and LinkedIn requests.
 - [ScraperAPI Free Trial: 5,000 Credits, What They Buy | ScrapeTools](https://scrapetools.scaleturn.com/scraperapi-free-trial.html): The ScraperAPI free trial gives 5,000 credits for 7 days: 5,000 normal requests but only 166 on LinkedIn. Calculate what your own test needs.
 - [ScraperAPI vs Bright Data: 2026 Pricing Compared | ScrapeTools](https://scrapetools.scaleturn.com/scraperapi-vs-bright-data.html): ScraperAPI vs Bright Data: 100,000 unprotected pages cost $49 a month at ScraperAPI and $150 on Bright Data's Web Unlocker; bot-protected sites flip the order.
@@ -22,4 +23,4 @@
 - [Vendor pricing data (JSON, no ads)](https://scrapetools.scaleturn.com/data/vendors.json): per-vendor plans, source URL and verification date.
 - [Page index (JSON)](https://scrapetools.scaleturn.com/data/pages.json): every indexable page with title and description.
 
-Last updated: 2026-11-10
+Last updated: 2026-11-12
