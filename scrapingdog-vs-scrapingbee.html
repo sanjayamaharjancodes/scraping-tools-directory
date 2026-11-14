@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scrapingdog vs ScrapingBee: Price and Credit Costs | ScrapeTools</title>
+<meta name="description" content="Scrapingdog vs ScrapingBee: 100,000 basic requests a month cost $40 vs $49, and both charge 5 credits for JS. Price your own volume and request type.">
+<link rel="canonical" href="https://scrapetools.scaleturn.com/scrapingdog-vs-scrapingbee.html">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="widgets.css">
+<link rel="alternate" type="application/json" href="data/vendors.json" title="Vendor pricing data">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Scrapingdog vs ScrapingBee: Monthly Cost by Volume",
+  "description": "Scrapingdog vs ScrapingBee: 100,000 basic requests a month cost $40 vs $49, and both charge 5 credits for JS. Price your own volume and request type.",
+  "url": "https://scrapetools.scaleturn.com/scrapingdog-vs-scrapingbee.html",
+  "dateModified": "2026-11-14",
+  "inLanguage": "en-US",
+  "publisher": {"@type": "Organization", "name": "Scaleturn", "url": "https://scaleturn.com/"},
+  "isPartOf": {"@type": "WebSite", "name": "ScrapeTools", "url": "https://scrapetools.scaleturn.com/"}
+}
+</script>
+</head>
+<body>
+<div class="affiliate-banner">
+  This page may contain an affiliate link. If you sign up through it, we may earn a commission at no extra cost to you. <a href="disclosure.html">Full affiliate disclosure</a>.
+</div>
+<header class="site-header">
+  <div class="container">
+    <a class="site-logo" href="index.html">Scrape<span>Tools</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="scraperapi-vs-scrapingbee.html">ScraperAPI vs ScrapingBee</a></li>
+        <li><a href="scraperapi-vs-bright-data.html">ScraperAPI vs Bright Data</a></li>
+        <li><a href="cheapest-web-scraping-api.html">Cheapest API</a></li>
+        <li><a href="web-scraping-api-cost-per-1000-requests.html">Cost per 1,000 requests</a></li>
+        <li><a href="web-scraping-apis-with-free-tier.html">Free Tiers</a></li>
+        <li><a href="scraperapi-free-trial.html">ScraperAPI free trial</a></li>
+        <li><a href="scraperapi-cost-calculator.html">Cost calculator</a></li>
+        <li><a href="methodology.html">Methodology</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container prose">
+    <span class="freshness-stamp">Pricing verified: Nov 14, 2026</span>
+    <h1>Scrapingdog vs ScrapingBee: Monthly Cost by Volume</h1>
+    <p>Both sell monthly credit plans for a general web scraping API. This page puts their published plans and credit costs side by side and prices your own monthly volume on each.</p>
+  </div>
+</section>
+
+<main>
+  <div class="container prose">
+    <div class="answer-first">
+      <span class="answer-first-label">Short answer</span>
+      <p>Scrapingdog is cheaper at most volumes than ScrapingBee: 100,000 basic requests a month cost $40 on its Lite plan and $49 on ScrapingBee's Freelance plan.</p>
+      <p>Both charge the same credits per request type (1 basic, 5 with JavaScript rendering, 10 or 25 with premium proxies), so the choice comes down to plan bands. ScrapingBee is cheaper only up to 75,000 credits ($19), just above 200,000 credits ($49 vs $90), and by $1 between 9,000,000 and 14,000,000 credits. Scrapingdog's $40 plan allows only 5 concurrent requests, against 50 on ScrapingBee's $49 plan.</p>
+    </div>
+
+    <div class="calculator" id="dvb-calc">
+      <form id="dvb-form" novalidate>
+        <div class="field-grid">
+          <div>
+            <label for="dvb-pages">Requests per month</label>
+            <input id="dvb-pages" name="pages" type="number" inputmode="numeric" min="1" step="1" value="100000">
+            <p class="field-help">Successful requests you expect each month.</p>
+          </div>
+          <div>
+            <label for="dvb-type">Request type</label>
+            <select id="dvb-type" name="type">
+              <option value="1" selected>Basic, no rendering (1 credit)</option>
+              <option value="5">JavaScript rendering (5 credits)</option>
+              <option value="10">Premium proxy, no rendering (10 credits)</option>
+              <option value="25">Premium proxy with rendering (25 credits)</option>
+            </select>
+            <p class="field-help">Same credit cost at both vendors.</p>
+          </div>
+        </div>
+        <p class="form-error" id="dvb-error" role="alert" hidden></p>
+        <div class="calculator-result" aria-live="polite">
+          <span class="result-label">Cheapest monthly plan for this volume</span>
+          <span class="result-number" id="dvb-result">Enter your volume</span>
+          <p id="dvb-dog"></p>
+          <p id="dvb-bee"></p>
+        </div>
+      </form>
+      <p class="field-help">Monthly plan prices only. Models Scrapingdog plans up to Business Plus and ScrapingBee plans up to Enterprise 24; above either vendor's modeled plans the result reads "not comparable". ScrapingBee renders JavaScript by default, so the basic rate needs rendering switched off. VAT, annual discounts and Scrapingdog's country-targeting surcharge are not included.</p>
+    </div>
+
+    <h2>Which is cheaper, Scrapingdog or ScrapingBee?</h2>
+    <p>Up to 19,000,000 credits, Scrapingdog is cheaper in every volume band except three, because its plans include more credits per dollar. The gap is $9 a month at 100,000 basic requests ($40 vs $49) and also $9 at 1,000,000 credits ($90 vs $99).</p>
+    <p>It widens at higher volumes. For 3,000,000 credits Scrapingdog's Pro plan is $200 and ScrapingBee's Business plan is $249, a $49 gap. Above 3,000,000 credits ScrapingBee's next plan is Business + at $599, while Scrapingdog's Premium plan covers up to 6,000,000 credits for $350, which is $249 less. Between 6,000,000 and 8,000,000 credits, Scrapingdog's Business plan at $500 is still $99 below ScrapingBee.</p>
+    <p>ScrapingBee wins three bands. Up to 75,000 credits its Hobby plan costs $19, against $40 for Scrapingdog's smallest paid plan. Above 200,000 and up to 250,000 credits, its Freelance plan at $49 is $41 cheaper than Scrapingdog's Standard plan at $90, because Scrapingdog has no plan between 200,000 and 1,000,000 credits. Between 9,000,000 and 14,000,000 credits, its Enterprise 14 plan at $999 is $1 below Scrapingdog's Business Plus at $1,000.</p>
+
+    <!-- ad:after-answer -->
+
+    <h2>Cost at common monthly volumes</h2>
+    <p>Each cell is the smallest published plan that covers the credits, from each vendor's pricing page.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Credits per month</th><th>Scrapingdog</th><th>ScrapingBee</th></tr></thead>
+        <tbody>
+          <tr><td>75,000</td><td>Lite, <span class="price">$40</span></td><td>Hobby, <span class="price">$19</span></td></tr>
+          <tr><td>100,000</td><td>Lite, <span class="price">$40</span></td><td>Freelance, <span class="price">$49</span></td></tr>
+          <tr><td>250,000</td><td>Standard, <span class="price">$90</span></td><td>Freelance, <span class="price">$49</span></td></tr>
+          <tr><td>1,000,000</td><td>Standard, <span class="price">$90</span></td><td>Startup, <span class="price">$99</span></td></tr>
+          <tr><td>3,000,000</td><td>Pro, <span class="price">$200</span></td><td>Business, <span class="price">$249</span></td></tr>
+          <tr><td>6,000,000</td><td>Premium, <span class="price">$350</span></td><td>Business +, <span class="price">$599</span></td></tr>
+          <tr><td>8,000,000</td><td>Business, <span class="price">$500</span></td><td>Business +, <span class="price">$599</span></td></tr>
+          <tr><td>14,000,000</td><td>Business Plus, <span class="price">$1,000</span></td><td>Enterprise 14 plan: <span class="price">$999</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Concurrency differs too. Scrapingdog lists 5 concurrent requests on Lite, 50 on Standard, 100 on Pro, 150 on Premium, 200 on Business and 250 on Business Plus (19,000,000 credits). ScrapingBee lists 25 on Hobby, 50 on Freelance, 100 on Startup, 200 on Business and 400 on Business +.</p>
+
+    <h2>How much does JavaScript rendering cost on each?</h2>
+    <p>JavaScript rendering costs 5 credits a request on both. Premium proxies cost 10 credits without rendering and 25 with it, again on both, so the request type never changes which vendor is cheaper per credit; it only multiplies the credits you need.</p>
+    <p>For example, 100,000 rendered pages need 500,000 credits: Scrapingdog's Standard plan at $90 or ScrapingBee's Startup plan at $99. On the entry plans, Scrapingdog's $40 Lite covers 40,000 rendered pages, ScrapingBee's $19 Hobby covers 15,000 and its $49 Freelance covers 50,000.</p>
+    <p>Two details differ. ScrapingBee's documentation says JavaScript rendering is the default and costs 5 credits, so you must turn it off to pay the 1-credit rate. Scrapingdog's pricing page charges 10 credits for requests with country or geo targeting; the ScrapingBee pages checked for this comparison do not state a separate geotargeting charge on classic proxies.</p>
+
+    <h2>Which has the better free plan?</h2>
+    <p>ScrapingBee gives more to test with: 1,000 free API credits with no credit card. Scrapingdog's Free plan gives 100 credits and 1 concurrent request, also with no card, and is listed as a free plan rather than a one-off trial. For other vendors, see the <a href="web-scraping-apis-with-free-tier.html">free tier comparison</a>.</p>
+
+    <h2>Billing terms that change the real cost</h2>
+    <ul>
+      <li><strong>Failed requests:</strong> Scrapingdog says failed, blocked and timed-out requests are refunded to your balance. ScrapingBee's pricing page charges credits per successful request. Neither page checked says how partial failures are billed.</li>
+      <li><strong>Unused credits:</strong> Scrapingdog carries unused credits into the next cycle from the Standard plan upward. ScrapingBee says its credits are valid for one month and don't roll over.</li>
+      <li><strong>Annual billing:</strong> Scrapingdog prices annual billing at ten months for twelve. ScrapingBee's pricing page does not list an annual discount.</li>
+      <li><strong>Running out and tax:</strong> Scrapingdog returns an over-limit response until your credits reset. ScrapingBee's prices exclude VAT.</li>
+    </ul>
+
+    <h2>What these numbers do not cover</h2>
+    <p>These are list prices and credit rules from each vendor's own pages. They say nothing about success rates, speed or how often a target needs premium proxies, and neither API has been benchmarked here (see the <a href="methodology.html">methodology page</a>). Both vendors also sell dedicated endpoints for search engines and marketplaces at other credit costs, which this page does not price. For a wider view, see <a href="scraperapi-vs-scrapingbee.html">ScraperAPI vs ScrapingBee</a>, <a href="web-scraping-api-cost-per-1000-requests.html">cost per 1,000 requests</a> and the <a href="cheapest-web-scraping-api.html">cheapest scraping API</a>.</p>
+
+    <h2>Sources</h2>
+    <p class="source-line">All checked Nov 14, 2026:
+      <a href="https://www.scrapingdog.com/pricing/" target="_blank" rel="noopener">Scrapingdog pricing</a> ·
+      <a href="https://www.scrapingbee.com/pricing/" target="_blank" rel="noopener">ScrapingBee pricing</a> ·
+      <a href="https://www.scrapingbee.com/documentation/" target="_blank" rel="noopener">ScrapingBee API documentation</a>
+    </p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="methodology.html">Methodology</a></li>
+      <li><a href="disclosure.html">Affiliate Disclosure</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+    </ul>
+    <div class="footer-disclosure">
+      <strong>Affiliate disclosure:</strong> ScrapeTools is a comparison site published by Scaleturn. Pages are researched and drafted with AI tools and checked against vendor sources by an automated reviewer; they are not individually reviewed by a person. Some links to vendors are affiliate/referral links. If you sign up through one, we may earn a commission at no extra cost to you.
+    </div>
+    <p>&copy; 2026 ScrapeTools, published by Scaleturn. Pricing and features change. Always confirm current terms on the vendor's own site before buying.</p>
+  </div>
+</footer>
+<script>
+(function () {
+  var DOG = { name: "Scrapingdog", tiers: [
+    ["Lite", 40, 200000], ["Standard", 90, 1000000], ["Pro", 200, 3000000],
+    ["Premium", 350, 6000000], ["Business", 500, 9000000], ["Business Plus", 1000, 19000000]
+  ]};
+  var BEE = { name: "ScrapingBee", tiers: [
+    ["Hobby", 19, 75000], ["Freelance", 49, 250000], ["Startup", 99, 1000000],
+    ["Business", 249, 3000000], ["Business +", 599, 8000000],
+    ["Enterprise 14", 999, 14000000], ["Enterprise 24", 1599, 24000000]
+  ]};
+  var pagesEl = document.getElementById("dvb-pages");
+  var typeEl = document.getElementById("dvb-type");
+  var errEl = document.getElementById("dvb-error");
+  var resEl = document.getElementById("dvb-result");
+  var dogEl = document.getElementById("dvb-dog");
+  var beeEl = document.getElementById("dvb-bee");
+  var lastValid = "100000";
+  function fmt(n) { return n.toLocaleString("en-US", { maximumFractionDigits: 0 }); }
+  function usd(n) { return "$" + n.toLocaleString("en-US"); }
+  function fit(v, credits) {
+    for (var i = 0; i < v.tiers.length; i++) {
+      if (v.tiers[i][2] >= credits) { return v.tiers[i]; }
+    }
+    return null;
+  }
+  function line(v, credits, t) {
+    if (!t) {
+      var largest = v.tiers[v.tiers.length - 1];
+      return v.name + ": " + fmt(credits) + " credits is more than the largest plan modeled here (" +
+        largest[0] + ", " + fmt(largest[2]) + " credits). See the vendor's pricing page.";
+    }
+    return v.name + ": " + fmt(credits) + " credits, " + t[0] + " plan at " + usd(t[1]) +
+      "/mo (" + fmt(t[2]) + " credits).";
+  }
+  function showError(msg) {
+    errEl.textContent = msg;
+    errEl.hidden = false;
+    resEl.textContent = "Check your input";
+    dogEl.textContent = "";
+    beeEl.textContent = "";
+  }
+  function validPages(raw) {
+    var n = Number(raw);
+    return raw !== "" && isFinite(n) && n > 0;
+  }
+  function calc() {
+    var raw = pagesEl.value.trim();
+    var pages = Number(raw);
+    var cost = Number(typeEl.value);
+    if (raw === "" || !isFinite(pages)) { showError("Enter the number of requests per month as a number."); return; }
+    if (pages <= 0) { showError("Requests per month must be more than zero."); return; }
+    if (!isFinite(cost) || cost <= 0) { cost = 1; }
+    pages = Math.ceil(pages);
+    var credits = pages * cost;
+    if (!isFinite(credits)) { showError("That number is too large to price."); return; }
+    errEl.textContent = "";
+    errEl.hidden = true;
+    lastValid = raw;
+    var d = fit(DOG, credits);
+    var b = fit(BEE, credits);
+    dogEl.textContent = line(DOG, credits, d);
+    beeEl.textContent = line(BEE, credits, b);
+    if (!d || !b) {
+      resEl.textContent = "Not comparable: above the plans modeled here";
+    } else if (d[1] === b[1]) {
+      resEl.textContent = "Tie at " + usd(d[1]) + "/mo";
+    } else if (d[1] < b[1]) {
+      resEl.textContent = "Scrapingdog " + d[0] + ", " + usd(d[1]) + "/mo";
+    } else {
+      resEl.textContent = "ScrapingBee " + b[0] + ", " + usd(b[1]) + "/mo";
+    }
+  }
+  document.getElementById("dvb-form").addEventListener("submit", function (e) { e.preventDefault(); calc(); });
+  pagesEl.addEventListener("input", calc);
+  pagesEl.addEventListener("blur", function () {
+    if (!validPages(pagesEl.value.trim())) { pagesEl.value = lastValid; calc(); }
+  });
+  typeEl.addEventListener("change", function () {
+    if (!validPages(pagesEl.value.trim())) { pagesEl.value = lastValid; }
+    calc();
+  });
+  calc();
+})();
+</script>
+<script data-goatcounter="https://scaleturn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
