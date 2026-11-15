@@ -1,4 +1,4 @@
-# md-004 hand-off (AdSense "Low value content": audit + content fixes)
+# md-004 hand-off (content audit + fixes across the three scaleturn.com sites)
 
 Status: work done, branches pushed, waiting for manager verify + merge. Manager rule (15 Nov): push only `md-004`
 branches, never main; the manager fast-forwards main (= deploy) and reads URLs back.
@@ -6,7 +6,7 @@ branches, never main; the manager fast-forwards main (= deploy) and reads URLs b
 Branches (all pushed to origin as `md-004`):
 - scaleturn-site: 7031988, 1081d21 (worktree F:/Lab/assets/scaleturn-site/.claude/worktrees/md-004)
 - getting-paid-nepal: 0da5371, d600632 (worktree F:/Lab/assets/getting-paid-nepal/.claude/worktrees/md-004)
-- scraping-tools-directory: 92f8a5c, 7b63e5f, 574a5ee + this note (local branch worktree-md-004)
+- scraping-tools-directory: 92f8a5c, 7b63e5f, 574a5ee, plus footer Contact + free-tier fixes and this note (local branch worktree-md-004)
 - mandala: 46849f5 (audit, committed first), 0a43365 (record section, fact-check, proofs)
 
 Proof folder: F:/Lab/mandala memory/business/assets/scrapetools-md-004/

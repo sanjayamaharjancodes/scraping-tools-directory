@@ -45,7 +45,7 @@
   <div class="container prose">
     <div class="answer-first">
       <span class="answer-first-label">Short answer</span>
-      <p>For plain requests without JavaScript rendering, the biggest free allowance is ScraperAPI's 7-day trial: 5,000 credits, which is 5,000 requests. The biggest one that renews is Bright Data's 5,000 records a month, but it counts records, not requests. JavaScript rendering cuts every credit allowance by 5 to 10 times. ScrapingBee renders by default, so its 1,000 free credits buy 200 requests unless you switch rendering off.</p>
+      <p>For plain requests without JavaScript rendering, the biggest free allowance is ScraperAPI's 7-day trial: 5,000 credits, which is 5,000 requests. The biggest one that renews is Bright Data's 5,000 records a month, but it counts records, not requests. JavaScript rendering cuts every credit allowance by 5 to 10 times. ScrapingBee and ScrapingDog render by default, so their free credits buy a fifth as many requests unless you switch rendering off: 200 instead of 1,000 at ScrapingBee.</p>
     </div>
 
     <h2 id="how-far">How far each free offer goes</h2>
@@ -58,15 +58,15 @@
           <tr><td data-label="Offer"><strong>ScraperAPI</strong> Free plan</td><td data-label="Free allowance">1,000 credits a month</td><td data-label="Plain requests">1,000 a month</td><td data-label="With JavaScript rendering">100 a month</td><td data-label="Renews?">Monthly</td></tr>
           <tr><td data-label="Offer"><strong>Scrapfly</strong></td><td data-label="Free allowance">1,000 credits on signup</td><td data-label="Plain requests">1,000</td><td data-label="With JavaScript rendering">166 (6 credits each)</td><td data-label="Renews?">Not stated</td></tr>
           <tr><td data-label="Offer"><strong>ScrapingBee</strong></td><td data-label="Free allowance">1,000 credits; plan on 7 days</td><td data-label="Plain requests">1,000 with rendering switched off</td><td data-label="With JavaScript rendering">200 (5 credits each; rendering is on by default)</td><td data-label="Renews?">No</td></tr>
-          <tr><td data-label="Offer"><strong>ScrapingDog</strong></td><td data-label="Free allowance">100 credits (pricing page)</td><td data-label="Plain requests">100</td><td data-label="With JavaScript rendering">20 (5 credits each)</td><td data-label="Renews?">"$0 forever" on the pricing page; its docs say 200 a month</td></tr>
-          <tr><td data-label="Offer"><strong>ScrapeCreators</strong> (social media APIs)</td><td data-label="Free allowance">100 credits on signup</td><td data-label="Plain requests">100 on most endpoints</td><td data-label="With JavaScript rendering">Not applicable</td><td data-label="Renews?">Credits do not expire, per its home page</td></tr>
+          <tr><td data-label="Offer"><strong>ScrapingDog</strong></td><td data-label="Free allowance">100 credits (pricing page)</td><td data-label="Plain requests">100 with rendering switched off</td><td data-label="With JavaScript rendering">20 (5 credits each; rendering is on by default)</td><td data-label="Renews?">"$0 forever" on the pricing page; its docs say 200 a month</td></tr>
+          <tr><td data-label="Offer"><strong>ScrapeCreators</strong> (social media APIs)</td><td data-label="Free allowance">100 credits on signup</td><td data-label="Plain requests">100 on most endpoints</td><td data-label="With JavaScript rendering">Not applicable</td><td data-label="Renews?">Not stated; its no-expiry promise covers purchased credits</td></tr>
           <tr><td data-label="Offer"><strong>Bright Data</strong> Web Scraper API</td><td data-label="Free allowance">5,000 records a month</td><td colspan="2" data-label="Requests">Counted in records, not requests</td><td data-label="Renews?">On the 1st of each month</td></tr>
           <tr><td data-label="Offer"><strong>Apify</strong></td><td data-label="Free allowance">$5 of platform credit a month</td><td colspan="2" data-label="Requests">25 compute units a month ($5 at $0.20 each); requests per unit depend on the Actor you run</td><td data-label="Renews?">Monthly</td></tr>
           <tr><td data-label="Offer"><strong>Zyte</strong>, <strong>Oxylabs</strong></td><td data-label="Free allowance">$5 credit</td><td colspan="2" data-label="Requests">Depends on the per-request price of the product you use</td><td data-label="Renews?">No</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="source-line">Credits per request, read 15 Nov 2026: <a href="https://docs.scraperapi.com/credits-and-requests" target="_blank" rel="noopener">ScraperAPI docs</a> ("Normal (flat) Requests 1", "render=true - 10 API Credits/req"; Amazon costs 5 and Google 25) · <a href="https://www.scrapingbee.com/pricing/" target="_blank" rel="noopener">ScrapingBee pricing</a> ("Requests start at 1 credit each", JS rendering "costs 5 API credits") and <a href="https://www.scrapingbee.com/documentation/" target="_blank" rel="noopener">docs</a> (rendering "is the default behavior and costs 5 credits per request") · <a href="https://scrapfly.io/docs/scrape-api/billing" target="_blank" rel="noopener">Scrapfly billing docs</a> ("1 + 5 = 6 credits" with rendering) · <a href="https://www.scrapingdog.com/pricing/" target="_blank" rel="noopener">ScrapingDog pricing</a> (1 credit, 5 with JavaScript rendering; its own table lists the free plan as 100 and 20 requests) · <a href="https://scrapecreators.com/" target="_blank" rel="noopener">ScrapeCreators</a> ("1 credit === 1 request (for most endpoints)"). Comparing two of these? See <a href="scrapingdog-vs-scrapingbee.html">ScrapingDog vs ScrapingBee</a> and <a href="scraperapi-vs-scrapingbee.html">ScraperAPI vs ScrapingBee</a>.</p>
+    <p class="source-line">Credits per request, read 15 Nov 2026: <a href="https://docs.scraperapi.com/credits-and-requests" target="_blank" rel="noopener">ScraperAPI docs</a> ("Normal (flat) Requests 1", "render=true - 10 API Credits/req"; Amazon costs 5 and Google 25) · <a href="https://www.scrapingbee.com/pricing/" target="_blank" rel="noopener">ScrapingBee pricing</a> ("Requests start at 1 credit each", JS rendering "costs 5 API credits") and <a href="https://www.scrapingbee.com/documentation/" target="_blank" rel="noopener">docs</a> (rendering "is the default behavior and costs 5 credits per request") · <a href="https://scrapfly.io/docs/scrape-api/billing" target="_blank" rel="noopener">Scrapfly billing docs</a> ("1 + 5 = 6 credits" with rendering) · <a href="https://www.scrapingdog.com/pricing/" target="_blank" rel="noopener">ScrapingDog pricing</a> (1 credit, 5 with JavaScript rendering; its own table lists the free plan as 100 and 20 requests) and <a href="https://www.scrapingdog.com/documentation/javascript-rendering/" target="_blank" rel="noopener">docs</a> ("Dynamic rendering is enabled by default") · <a href="https://scrapecreators.com/" target="_blank" rel="noopener">ScrapeCreators</a> ("1 credit === 1 request (for most endpoints)"). Comparing two of these? See <a href="scrapingdog-vs-scrapingbee.html">ScrapingDog vs ScrapingBee</a> and <a href="scraperapi-vs-scrapingbee.html">ScraperAPI vs ScrapingBee</a>.</p>
 
     <h2>Ongoing free tiers (no expiry stated)</h2>
     <div class="table-wrap">
@@ -78,7 +78,7 @@
           <tr><td><strong>Bright Data</strong> (Web Scraper API)</td><td>5,000 records/month (Free Tier on the pricing page). Its docs: renews on the 1st of each month, no rollover, one pool shared with its Unlocker and SERP APIs</td><td>No</td></tr>
           <tr><td><strong>Apify</strong></td><td>$0/mo Free plan, $5/mo platform credit at $0.20/compute unit</td><td>No</td></tr>
           <tr><td><strong>ScraperAPI</strong></td><td>Free plan after the trial below: 1,000 credits per month, 5 concurrent threads</td><td>No</td></tr>
-          <tr><td><strong>ScrapeCreators</strong></td><td>100 free credits on signup, plus up to 1,200 bonus credits for listed actions; its home page says credits never expire (<a href="scrapecreators-pricing.html">ScrapeCreators pricing explained</a>)</td><td>No</td></tr>
+          <tr><td><strong>ScrapeCreators</strong></td><td>100 free credits on signup, plus up to 1,200 bonus credits for listed actions; its "credits never expire" promise is stated for purchased credits (<a href="scrapecreators-pricing.html">ScrapeCreators pricing explained</a>)</td><td>No</td></tr>
         </tbody>
       </table>
     </div>
@@ -115,6 +115,7 @@
   <div class="container">
     <ul class="footer-links">
       <li><a href="about.html">About</a></li>
+      <li><a href="about.html#contact">Contact</a></li>
       <li><a href="methodology.html">Methodology</a></li>
       <li><a href="disclosure.html">Affiliate Disclosure</a></li>
       <li><a href="privacy.html">Privacy Policy</a></li>
