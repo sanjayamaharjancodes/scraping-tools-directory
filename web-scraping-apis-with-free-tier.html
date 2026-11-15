@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Web Scraping APIs With a Free Tier (2026 Comparison) | ScrapeTools</title>
-<meta name="description" content="Which web scraping APIs offer a genuine ongoing free tier versus a time-limited free trial in 2026 — an important distinction most roundups blur together.">
+<meta name="description" content="Which web scraping APIs have an ongoing free tier and which only a trial, and how many requests each free allowance actually covers, computed from each vendor's own credit costs.">
 <link rel="canonical" href="https://scrapetools.scaleturn.com/web-scraping-apis-with-free-tier.html">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="widgets.css">
 </head>
 <body>
 <div class="affiliate-banner">
@@ -34,7 +35,7 @@
 
 <section class="hero">
   <div class="container prose">
-    <span class="freshness-stamp">Pricing verified: 11 Nov 2026</span>
+    <span class="freshness-stamp">Pricing verified: 11 Nov 2026; credits per request checked 15 Nov 2026</span>
     <h1>Web Scraping APIs With a Free Tier</h1>
     <p>"Free tier" and "free trial" get used interchangeably in most roundups, but they're different offers: a free tier keeps working indefinitely at no cost (usually with a low request cap); a free trial gives you a larger allowance for a fixed window, then requires payment. If you're prototyping something you're not ready to pay for yet, this distinction decides which vendors actually fit.</p>
   </div>
@@ -42,6 +43,30 @@
 
 <main>
   <div class="container prose">
+    <div class="answer-first">
+      <span class="answer-first-label">Short answer</span>
+      <p>For plain requests without JavaScript rendering, the biggest free allowance is ScraperAPI's 7-day trial: 5,000 credits, which is 5,000 requests. The biggest one that renews is Bright Data's 5,000 records a month, but it counts records, not requests. JavaScript rendering cuts every credit allowance by 5 to 10 times. ScrapingBee renders by default, so its 1,000 free credits buy 200 requests unless you switch rendering off.</p>
+    </div>
+
+    <h2 id="how-far">How far each free offer goes</h2>
+    <p>Credits are not requests. We divided each free allowance by what one request costs on that vendor's own pricing or billing page, for a plain page and for a page that needs JavaScript rendering. Harder targets cost more per request, so treat these as the most each allowance can buy.</p>
+    <div class="table-wrap">
+      <table class="stack-table">
+        <thead><tr><th>Offer</th><th>Free allowance</th><th>Plain requests</th><th>With JavaScript rendering</th><th>Renews?</th></tr></thead>
+        <tbody>
+          <tr><td data-label="Offer"><strong>ScraperAPI</strong> trial</td><td data-label="Free allowance">5,000 credits, 7 days</td><td data-label="Plain requests">5,000</td><td data-label="With JavaScript rendering">500 (10 credits each)</td><td data-label="Renews?">No; the Free plan follows</td></tr>
+          <tr><td data-label="Offer"><strong>ScraperAPI</strong> Free plan</td><td data-label="Free allowance">1,000 credits a month</td><td data-label="Plain requests">1,000 a month</td><td data-label="With JavaScript rendering">100 a month</td><td data-label="Renews?">Monthly</td></tr>
+          <tr><td data-label="Offer"><strong>Scrapfly</strong></td><td data-label="Free allowance">1,000 credits on signup</td><td data-label="Plain requests">1,000</td><td data-label="With JavaScript rendering">166 (6 credits each)</td><td data-label="Renews?">Not stated</td></tr>
+          <tr><td data-label="Offer"><strong>ScrapingBee</strong></td><td data-label="Free allowance">1,000 credits; plan on 7 days</td><td data-label="Plain requests">1,000 with rendering switched off</td><td data-label="With JavaScript rendering">200 (5 credits each; rendering is on by default)</td><td data-label="Renews?">No</td></tr>
+          <tr><td data-label="Offer"><strong>ScrapingDog</strong></td><td data-label="Free allowance">100 credits (pricing page)</td><td data-label="Plain requests">100</td><td data-label="With JavaScript rendering">20 (5 credits each)</td><td data-label="Renews?">"$0 forever" on the pricing page; its docs say 200 a month</td></tr>
+          <tr><td data-label="Offer"><strong>ScrapeCreators</strong> (social media APIs)</td><td data-label="Free allowance">100 credits on signup</td><td data-label="Plain requests">100 on most endpoints</td><td data-label="With JavaScript rendering">Not applicable</td><td data-label="Renews?">Credits do not expire, per its home page</td></tr>
+          <tr><td data-label="Offer"><strong>Bright Data</strong> Web Scraper API</td><td data-label="Free allowance">5,000 records a month</td><td colspan="2" data-label="Requests">Counted in records, not requests</td><td data-label="Renews?">On the 1st of each month</td></tr>
+          <tr><td data-label="Offer"><strong>Apify</strong></td><td data-label="Free allowance">$5 of platform credit a month</td><td colspan="2" data-label="Requests">25 compute units a month ($5 at $0.20 each); requests per unit depend on the Actor you run</td><td data-label="Renews?">Monthly</td></tr>
+          <tr><td data-label="Offer"><strong>Zyte</strong>, <strong>Oxylabs</strong></td><td data-label="Free allowance">$5 credit</td><td colspan="2" data-label="Requests">Depends on the per-request price of the product you use</td><td data-label="Renews?">No</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="source-line">Credits per request, read 15 Nov 2026: <a href="https://docs.scraperapi.com/credits-and-requests" target="_blank" rel="noopener">ScraperAPI docs</a> ("Normal (flat) Requests 1", "render=true - 10 API Credits/req"; Amazon costs 5 and Google 25) · <a href="https://www.scrapingbee.com/pricing/" target="_blank" rel="noopener">ScrapingBee pricing</a> ("Requests start at 1 credit each", JS rendering "costs 5 API credits") and <a href="https://www.scrapingbee.com/documentation/" target="_blank" rel="noopener">docs</a> (rendering "is the default behavior and costs 5 credits per request") · <a href="https://scrapfly.io/docs/scrape-api/billing" target="_blank" rel="noopener">Scrapfly billing docs</a> ("1 + 5 = 6 credits" with rendering) · <a href="https://www.scrapingdog.com/pricing/" target="_blank" rel="noopener">ScrapingDog pricing</a> (1 credit, 5 with JavaScript rendering; its own table lists the free plan as 100 and 20 requests) · <a href="https://scrapecreators.com/" target="_blank" rel="noopener">ScrapeCreators</a> ("1 credit === 1 request (for most endpoints)"). Comparing two of these? See <a href="scrapingdog-vs-scrapingbee.html">ScrapingDog vs ScrapingBee</a> and <a href="scraperapi-vs-scrapingbee.html">ScraperAPI vs ScrapingBee</a>.</p>
 
     <h2>Ongoing free tiers (no expiry stated)</h2>
     <div class="table-wrap">
@@ -53,6 +78,7 @@
           <tr><td><strong>Bright Data</strong> (Web Scraper API)</td><td>5,000 records/month (Free Tier on the pricing page). Its docs: renews on the 1st of each month, no rollover, one pool shared with its Unlocker and SERP APIs</td><td>No</td></tr>
           <tr><td><strong>Apify</strong></td><td>$0/mo Free plan, $5/mo platform credit at $0.20/compute unit</td><td>No</td></tr>
           <tr><td><strong>ScraperAPI</strong></td><td>Free plan after the trial below: 1,000 credits per month, 5 concurrent threads</td><td>No</td></tr>
+          <tr><td><strong>ScrapeCreators</strong></td><td>100 free credits on signup, plus up to 1,200 bonus credits for listed actions; its home page says credits never expire (<a href="scrapecreators-pricing.html">ScrapeCreators pricing explained</a>)</td><td>No</td></tr>
         </tbody>
       </table>
     </div>
@@ -69,7 +95,7 @@
         </tbody>
       </table>
     </div>
-    <p class="source-line">Sources (verified 11 Nov 2026): <a href="https://www.scraperapi.com/?fp_ref=sanjaya18" rel="sponsored nofollow noopener">ScraperAPI</a> · <a href="https://brightdata.com/pricing/web-scraper" target="_blank" rel="noopener">Bright Data</a> (<a href="https://docs.brightdata.com/general/account/billing-and-pricing/free-tier" target="_blank" rel="noopener">free-tier docs</a>) · <a href="https://oxylabs.io/pricing" target="_blank" rel="noopener">Oxylabs</a> (<a href="https://developers.oxylabs.io/help-center/most-popular-questions/custom-pricing-or-a-free-trial" target="_blank" rel="noopener">help center</a>) · <a href="https://www.zyte.com/pricing/" target="_blank" rel="noopener">Zyte</a> · <a href="https://www.scrapingbee.com/#pricing" target="_blank" rel="noopener">ScrapingBee</a> (and its blog) · <a href="https://www.scrapingdog.com/pricing/" target="_blank" rel="noopener">ScrapingDog</a> (<a href="https://docs.scrapingdog.com/" target="_blank" rel="noopener">docs</a>) · <a href="https://apify.com/pricing" target="_blank" rel="noopener">Apify</a> · <a href="https://scrapfly.io/pricing" target="_blank" rel="noopener">Scrapfly</a>.</p>
+    <p class="source-line">Sources (verified 11 Nov 2026): <a href="https://www.scraperapi.com/?fp_ref=sanjaya18" rel="sponsored nofollow noopener">ScraperAPI</a> · <a href="https://brightdata.com/pricing/web-scraper" target="_blank" rel="noopener">Bright Data</a> (<a href="https://docs.brightdata.com/general/account/billing-and-pricing/free-tier" target="_blank" rel="noopener">free-tier docs</a>) · <a href="https://oxylabs.io/pricing" target="_blank" rel="noopener">Oxylabs</a> (<a href="https://developers.oxylabs.io/help-center/most-popular-questions/custom-pricing-or-a-free-trial" target="_blank" rel="noopener">help center</a>) · <a href="https://www.zyte.com/pricing/" target="_blank" rel="noopener">Zyte</a> · <a href="https://www.scrapingbee.com/#pricing" target="_blank" rel="noopener">ScrapingBee</a> (and its blog) · <a href="https://www.scrapingdog.com/pricing/" target="_blank" rel="noopener">ScrapingDog</a> (<a href="https://docs.scrapingdog.com/" target="_blank" rel="noopener">docs</a>) · <a href="https://apify.com/pricing" target="_blank" rel="noopener">Apify</a> · <a href="https://scrapfly.io/pricing" target="_blank" rel="noopener">Scrapfly</a> · <a href="https://scrapecreators.com/" target="_blank" rel="noopener">ScrapeCreators</a> (15 Nov 2026).</p>
 
     <h2>Which kind of "free" fits your situation</h2>
     <ul>
