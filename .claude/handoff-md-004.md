@@ -1,17 +1,21 @@
 # md-004 hand-off (AdSense "Low value content": audit + content fixes)
 
-Status: in progress. Manager rule (15 Nov): push only branch md-004 in each repo, never main; manager merges.
+Status: work done, branches pushed, waiting for manager verify + merge. Manager rule (15 Nov): push only `md-004`
+branches, never main; the manager fast-forwards main (= deploy) and reads URLs back.
 
-Worktrees (branch md-004 each):
-- scrapetools: F:/Lab/assets/scraping-tools-directory/.claude/worktrees/md-004 (branch worktree-md-004, push as md-004)
-- root site: F:/Lab/assets/scaleturn-site/.claude/worktrees/md-004
-- gettingpaid: F:/Lab/assets/getting-paid-nepal/.claude/worktrees/md-004
-- mandala record + audit: F:/Lab/mandala/.claude/worktrees/md-004 (memory/business/assets/scrapetools-md-004/)
+Branches (all pushed to origin as `md-004`):
+- scaleturn-site: 7031988, 1081d21 (worktree F:/Lab/assets/scaleturn-site/.claude/worktrees/md-004)
+- getting-paid-nepal: 0da5371, d600632 (worktree F:/Lab/assets/getting-paid-nepal/.claude/worktrees/md-004)
+- scraping-tools-directory: 92f8a5c, 7b63e5f, 574a5ee + this note (local branch worktree-md-004)
+- mandala: 46849f5 (audit, committed first), 0a43365 (record section, fact-check, proofs)
 
-Steps:
-1. Audit -> mandala scrapetools-md-004/audit.md (pending)
-2. Root fixes: about, contact, nav, stale 119-sound claim, deepen game-assets, guide deep links (pending)
-3. Subdomain footers link back to scaleturn.com (pending)
-4. ScrapeTools: body links to 2 low-inbound pages; deepen free-tier page with computed example (pending)
-5. gettingpaid: stale "sales paused" line; only primary-sourced additions (pending)
-6. Local checks + changed-URL list; push md-004 branches; record section (pending)
+Proof folder: F:/Lab/mandala memory/business/assets/scrapetools-md-004/
+- audit.md, factcheck.md, readback.py (35 changed URLs + expected text)
+- readback: 35/35 on local previews, 0/35 live before merge (expected)
+- sitelinks 697 links 0 problems; gp_examples PASS; st_freetier PASS; verify_gp 16/16; quotes 13/13
+
+After merge: `python -I readback.py` must print 35/35. Then remove the three site worktrees with
+`git -C <repo> worktree remove <repo>/.claude/worktrees/md-004`.
+
+Follow-ups (not md-004): autopilot template footer lacks scaleturn.com link; itch chiptune listing's
+"fails unless zero" claim; root favicon 404; re-review only after recrawl evidence (see record section).
