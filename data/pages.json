@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14",
+  "updated": "2026-11-16",
   "pages": [
     {
       "url": "https://scrapetools.scaleturn.com/about.html",
@@ -29,7 +29,7 @@
     {
       "url": "https://scrapetools.scaleturn.com/privacy.html",
       "title": "Privacy Policy | ScrapeTools",
-      "description": "What ScrapeTools collects, how page counts work, how affiliate links are tracked, and how advertising cookies are used and can be turned off."
+      "description": "What ScrapeTools collects, how page counts and affiliate links are tracked, and why this site sets no advertising cookies."
     },
     {
       "url": "https://scrapetools.scaleturn.com/scrapecreators-pricing.html",
