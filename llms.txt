@@ -24,4 +24,4 @@
 - [Vendor pricing data (JSON, no ads)](https://scrapetools.scaleturn.com/data/vendors.json): per-vendor plans, source URL and verification date.
 - [Page index (JSON)](https://scrapetools.scaleturn.com/data/pages.json): every indexable page with title and description.
 
-Last updated: 2026-11-14
+Last updated: 2026-11-16
