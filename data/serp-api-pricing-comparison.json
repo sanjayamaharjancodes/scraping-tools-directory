@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "currency": "USD",
+  "updated": "2026-11-17",
+  "unit": "Google search (one results page of up to 10 organic results) per month",
+  "vendors": [
+    {
+      "id": "serpapi", "name": "SerpApi", "model": "subscription", "comparable": true,
+      "verified": "2026-11-17", "source_url": "https://serpapi.com/pricing",
+      "free_included": 250,
+      "tiers": [
+        {"name": "Starter", "monthly_usd": 25, "included": 1000},
+        {"name": "Developer", "monthly_usd": 75, "included": 5000},
+        {"name": "Production", "monthly_usd": 150, "included": 15000},
+        {"name": "Big Data", "monthly_usd": 275, "included": 30000},
+        {"name": "Searcher", "monthly_usd": 725, "included": 100000},
+        {"name": "Volume", "monthly_usd": 1475, "included": 250000},
+        {"name": "Infrastructure", "monthly_usd": 2750, "included": 500000},
+        {"name": "Cloud 1M", "monthly_usd": 3750, "included": 1000000},
+        {"name": "Cloud 2M", "monthly_usd": 5675, "included": 2000000},
+        {"name": "Cloud 3M", "monthly_usd": 7600, "included": 3000000},
+        {"name": "Cloud 4M", "monthly_usd": 9550, "included": 4000000},
+        {"name": "Cloud 5M", "monthly_usd": 11475, "included": 5000000},
+        {"name": "Cloud 6M", "monthly_usd": 13400, "included": 6000000},
+        {"name": "Cloud 7M", "monthly_usd": 15325, "included": 7000000},
+        {"name": "Cloud 8M", "monthly_usd": 17250, "included": 8000000},
+        {"name": "Cloud 9M", "monthly_usd": 19200, "included": 9000000},
+        {"name": "Cloud 10M", "monthly_usd": 21125, "included": 10000000}
+      ],
+      "note": "Monthly plans. Only successful searches count; cached, errored and failed searches do not, and a response counts as one search however many results it returns."
+    },
+    {
+      "id": "dataforseo-standard", "name": "DataForSEO (Standard queue)", "model": "payg", "comparable": true,
+      "verified": "2026-11-17", "source_url": "https://dataforseo.com/pricing/serp/google-organic-serp-api",
+      "payg_per_1000_usd": 0.6,
+      "note": "Pay per SERP of up to 10 organic results; each additional 10 results is billed as another SERP. Queued tasks, not real-time."
+    },
+    {
+      "id": "dataforseo-priority", "name": "DataForSEO (Priority queue)", "model": "payg", "comparable": true,
+      "verified": "2026-11-17", "source_url": "https://dataforseo.com/pricing/serp/google-organic-serp-api",
+      "payg_per_1000_usd": 1.2,
+      "note": "Pay per SERP of up to 10 organic results; each additional 10 results is billed as another SERP."
+    },
+    {
+      "id": "dataforseo-live", "name": "DataForSEO (Live mode)", "model": "payg", "comparable": true,
+      "verified": "2026-11-17", "source_url": "https://dataforseo.com/pricing/serp/google-organic-serp-api",
+      "payg_per_1000_usd": 2.0,
+      "note": "Real-time results. Pay per SERP of up to 10 organic results; each additional 10 results is billed as another SERP."
+    },
+    {
+      "id": "serper", "name": "Serper", "model": "prepaid", "comparable": false,
+      "verified": "2026-11-17", "source_url": "https://serper.dev/",
+      "note": "Sells one-time credit packs that stay valid for six months, not monthly plans, so a monthly bar would misstate it. The calculator on this page converts its packs to an effective monthly cost."
+    }
+  ]
+}
