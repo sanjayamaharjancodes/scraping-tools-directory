@@ -126,6 +126,9 @@
       card.appendChild(el("p", "affiliate-card-fine",
         "We may earn a commission if you sign up through this link, at no cost to you. It does not change the order above."));
       root.appendChild(card);
+      // The card appears after the data loads, which can be after GoatCounter bound its click events: bind again
+      // (already-bound links are skipped; if count.js loads later, it binds the card itself).
+      if (window.goatcounter && window.goatcounter.bind_events) window.goatcounter.bind_events();
     }
 
     function update() {
