@@ -7,3 +7,5 @@ ct-002/index-snapshot/
 # ct-003: scratch (exploration scripts, captures, gate scratch)
 .tmp-ct003/
 __pycache__/
+# rx-001: clones of scaleturn-site, getting-paid-nepal and ats-job-feed, each on its own rx-001 branch (merged by the manager)
+.rx001-repos/
