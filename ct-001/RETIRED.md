@@ -2,9 +2,10 @@
 
 ## How the pages were measured
 
-`python -I ct-001/audit_pages.py --exclude ats-job-posting-api-crawl-data.html` measures every HTML file in the
-site root before this change (16 files: 15 pages in the sitemap plus Google's verification stub). Results are in
-`ct-001/page-audit.json`.
+`python -I ct-001/audit_pages.py --exclude ats-job-posting-api-crawl-data.html` measured every HTML file in the
+site root as it was before this change, at commit `82a424c` (16 files: 15 pages in the sitemap plus Google's
+verification stub). Results are in `ct-001/page-audit.json`. Running it on a later commit measures the retired
+pages with their notices and gives different numbers. To reproduce, check out `82a424c`'s pages and run it there.
 
 - **Words:** words in `<main>`.
 - **Facts:** distinct numbers in `<main>`, such as prices, credit counts and percentages. Dates and years are not
