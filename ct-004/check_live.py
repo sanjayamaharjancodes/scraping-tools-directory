@@ -15,8 +15,8 @@ Checks, each printed as PASS or FAIL:
 - https://scaleturn.com/ads.txt answers 200 and carries the publisher line;
 - the scaleturn.com home page: its first section after the hero is #data, it links the three data reports, and every
   number in each data card appears on the report it links;
-- the three privacy pages name AdSense, its cookie, the opt-outs and Google's EU consent requirement, and none says
-  the site loads no ad code; Getting Paid Nepal's About page does not either;
+- the three privacy pages name AdSense, its cookie, the opt-outs and Google's EU consent requirement; no page of the
+  three sites, nor ScrapeTools' llms.txt or data/pages.json, says the site loads no ad code;
 - ScrapeTools: each page that carries the ScraperAPI affiliate link still does (fp_ref=sanjaya18), every affiliate
   link has rel="sponsored nofollow", an affiliate/scraperapi-<page> click event and an "Affiliate link" label.
 Exit code 0 only when every check passes. Standard library only. Read-only: GET requests, or local files with --local.
@@ -56,8 +56,9 @@ PRIVACY = {"scrapetools": "privacy.html", "gettingpaid": "privacy-policy.html", 
 PRIVACY_NEEDS = ("AdSense", "__gads", "Consent in the EEA, the UK and Switzerland",
                  "https://support.google.com/adsense/answer/13790256", "https://www.google.com/settings/ads",
                  "https://www.aboutads.info/choices/", "https://www.google.com/policies/privacy/partners/")
-NO_ADS_CLAIMS = re.compile(r"loads? no advertising code|no page loads advertising code|sets? no advertising cookies|"
-                           r"do(?:es)? not load any advertising code|shows no (?:display )?ads", re.I)
+NO_ADS_CLAIMS = re.compile(r"loads? no (?:advertising|ad) code|no page loads advertising code|sets? no advertising cookies|"
+                           r"do(?:es)? not load any (?:advertising|ad) code|shows no (?:display )?ads", re.I)
+EXTRA_FILES = {"scrapetools": ("llms.txt", "data/pages.json")}      # changed in ct-004, read for stale ad claims
 NUM = re.compile(r"\d[\d,]*(?:\.\d+)?%?")
 
 
@@ -168,13 +169,17 @@ def main():
     for site, path in PRIVACY.items():
         html = pages.get((site, path)) or rd.get(site, path)[1]
         lacking = [x for x in PRIVACY_NEEDS if x not in html]
-        claim = NO_ADS_CLAIMS.search(text_of(html))
-        check(f"{SITES[site]}{path} names AdSense, its cookie, the opt-outs and Google's EU consent requirement, "
-              "and claims no ad-free site", not lacking and not claim,
-              f"lacks {lacking}" if lacking else (f'says "{claim.group(0)}"' if claim else ""))
-    about = pages.get(("gettingpaid", "about.html"), "")
-    claim = NO_ADS_CLAIMS.search(text_of(about))
-    check("gettingpaid.scaleturn.com/about.html claims no ad-free site", not claim, claim.group(0) if claim else "")
+        check(f"{SITES[site]}{path} names AdSense, its cookie, the opt-outs and Google's EU consent requirement",
+              not lacking, f"lacks {lacking}" if lacking else "")
+    texts = {(s, p): text_of(h) for (s, p), h in pages.items()}
+    for site, files in EXTRA_FILES.items():
+        for path in files:
+            st, body = rd.get(site, path)
+            texts[(site, path)] = body if st == 200 else ""
+            check(f"{SITES[site]}{path} answers 200", st == 200, str(st))
+    claims = [f"{SITES[s]}{p}: \"{m.group(0)}\"" for (s, p), t in texts.items() for m in [NO_ADS_CLAIMS.search(t)] if m]
+    check(f"no page or data file of the three sites says it loads no ad code ({len(texts)} read)", not claims,
+          "; ".join(claims))
 
     for path, form in AFFILIATE_PAGES.items():
         html = pages.get(("scrapetools", path), "")
