@@ -921,17 +921,17 @@
   },
   {
    "id": "guide-17",
-   "title": "Evals Engineer",
-   "variants": "evals engineer",
-   "boards": 0,
-   "listings": 0,
-   "ai_named_pct": null,
-   "greenhouse_boards": 0,
+   "title": "Evals / Evaluation Engineer",
+   "variants": "evals engineer; evaluation engineer; ai evals engineer; ai evaluation engineer",
+   "boards": 7,
+   "listings": 7,
+   "ai_named_pct": 71.4,
+   "greenhouse_boards": 3,
    "lever_boards": 0,
-   "ashby_boards": 0,
+   "ashby_boards": 3,
    "recruitee_boards": 0,
    "personio_boards": 0,
-   "workable_boards": 0
+   "workable_boards": 1
   },
   {
    "id": "guide-18",

@@ -14,6 +14,7 @@ Exit code 0 only when every check passes. Standard library only. Read-only: GET 
 import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.request
 
@@ -26,7 +27,7 @@ EARLIER_DATA = ("data/ats-board-crawl-2026-11.csv", "data/ats-board-crawl-2026-1
                 "data/job-posting-days-2026-11.csv", "data/job-posting-days-2026-11.json")
 
 
-def get(path):
+def get_once(path):
     req = urllib.request.Request(BASE + path, headers={"User-Agent": "Mozilla/5.0 (compatible; ct-003-live-check)",
                                                        "Cache-Control": "no-cache"})
     try:
@@ -36,6 +37,16 @@ def get(path):
         return e.code, b""
     except (urllib.error.URLError, OSError) as e:
         return None, str(e).encode()
+
+
+def get(path):
+    """One retry, 3 s later, on a 5xx or no response: GitHub Pages answered 503 once on 19 Nov for a path that gave
+    404 on the next two requests."""
+    st, body = get_once(path)
+    if st is None or st >= 500:
+        time.sleep(3)
+        st, body = get_once(path)
+    return st, body
 
 
 def main():

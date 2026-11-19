@@ -10001,12 +10001,16 @@
   },
   {
    "id": "guide-17",
-   "claim": "Evals Engineer: boards and listings",
+   "claim": "Evals / Evaluation Engineer: boards and listings",
    "source_url": "https://scrapetools.scaleturn.com/data/ai-job-titles-2026-11.json",
    "fetched": "2026-11-19",
-   "excerpt": "id=guide-17; title=Evals Engineer; boards=0; listings=0; greenhouse_boards=0; lever_boards=0; ashby_boards=0; recruitee_boards=0; personio_boards=0; workable_boards=0",
+   "excerpt": "id=guide-17; title=Evals / Evaluation Engineer; boards=7; listings=7; ai_named_pct=71.4; greenhouse_boards=3; lever_boards=0; ashby_boards=3; recruitee_boards=0; personio_boards=0; workable_boards=1",
    "numbers": [
-    "0"
+    "0",
+    "1",
+    "3",
+    "7",
+    "71.4"
    ]
   },
   {
