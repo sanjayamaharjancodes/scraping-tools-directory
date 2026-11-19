@@ -19,6 +19,7 @@
 - [Public ATS Job Posting APIs: A 30,928-Address Crawl | ScrapeTools](https://scrapetools.scaleturn.com/ats-job-posting-api-crawl-data.html): Our crawl of 30,928 public ATS job board addresses and 19,805 re-checks, 18-19 Nov 2026: dead boards, failures, rate limits and jobs per board, with a CSV.
 - [What Day Are Most Jobs Posted? Data on 117,153 Jobs | ScrapeTools](https://scrapetools.scaleturn.com/what-day-are-most-jobs-posted.html): Tuesday, narrowly: allowing for jobs that closed, 20.7% of postings on 12,228 company job boards fell on a Tuesday in the four weeks to 15 Nov 2026. With a CSV.
 - [AI Job Titles Companies Post: 19,600 Listings Counted | ScrapeTools](https://scrapetools.scaleturn.com/ai-job-titles.html): Machine Learning Engineer (556 boards) and AI Engineer (539) lead; 23.1% of AI-titled listings are AI-training gigs. Counts from 456,681 open jobs, with a CSV.
+- [Apply to a Job Posted 30 Days Ago? How Old Open Jobs Are | ScrapeTools](https://scrapetools.scaleturn.com/job-posting-age.html): Of 456,597 jobs open on employers' own career pages on 19 Nov 2026, 69.5% were posted 30 or more days earlier and 15.7% a year or more. Ages by ATS and role, with a CSV.
 
 ## Data
 
@@ -30,5 +31,7 @@
 - [Job posting days, full (JSON)](https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json): the same rows plus posting hours, the daily-refresh wait table, method and index file hashes.
 - [AI job titles, per role name (CSV)](https://scrapetools.scaleturn.com/data/ai-job-titles-2026-11.csv): every AI-named role name posted by two or more company boards, with boards, listings, group and region, 19 Nov 2026.
 - [AI job titles, full (JSON)](https://scrapetools.scaleturn.com/data/ai-job-titles-2026-11.json): the same rows plus role groups, guide titles by ATS, seniority, region, the matching rules and index file hashes.
+- [Job posting age, per group (CSV)](https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv): how long before 19 Nov 2026 open jobs were posted, by ATS, location, seniority word and role group: listings, boards, median age and shares older than 7 to 730 days.
+- [Job posting age, full (JSON)](https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json): the same rows plus age bands, open jobs by week posted, talent pools, the boards holding year-old listings, percentiles per group, the rules and index file hashes.
 
-Last updated: 2026-11-19
+Last updated: 2026-11-20

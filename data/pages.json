@@ -75,6 +75,11 @@
       "url": "https://scrapetools.scaleturn.com/ai-job-titles.html",
       "title": "AI Job Titles Companies Post: 19,600 Listings Counted | ScrapeTools",
       "description": "Machine Learning Engineer (556 boards) and AI Engineer (539) lead; 23.1% of AI-titled listings are AI-training gigs. Counts from 456,681 open jobs, with a CSV."
+    },
+    {
+      "url": "https://scrapetools.scaleturn.com/job-posting-age.html",
+      "title": "Apply to a Job Posted 30 Days Ago? How Old Open Jobs Are | ScrapeTools",
+      "description": "Of 456,597 jobs open on employers' own career pages on 19 Nov 2026, 69.5% were posted 30 or more days earlier and 15.7% a year or more. Ages by ATS and role, with a CSV."
     }
   ]
 }
