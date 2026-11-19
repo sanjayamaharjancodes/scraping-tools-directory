@@ -56,7 +56,12 @@ Reasons, condensed:
 | Publisher sells the index; AI-drafted | Kept: both disclosed on the page |
 | Prolific's 2,874 over the group's 4,521 is 63.6%, not the table's 63.4% | Correct catch of a wording gap: 9 of Prolific's 2,874 AI-named titles fall outside the training group. The text now says it posts 2,865 of the group's listings (63.4%) and 2,874 AI-named titles in all. The script now records each group's largest board by name |
 
-After these edits: `build_data.py --check` passes (108 table cells); `run_gate.py` gives 0 findings, 1,415 words and
+One more change after the review, from a self-check, not the reviewer: the reviewed page listed "Evals Engineer" at
+0 boards, an artifact of exact wording. With its Evaluation Engineer variants it is on 7 boards (7 listings), so the
+row now reads "Evals / Evaluation Engineer" and the zero list names AI Safety Engineer, AI Ethics Specialist and
+Chief AI Officer (0 under every rule tried).
+
+After these edits: `build_data.py --check` passes (108 table cells); `run_gate.py` gives 0 findings, 1,417 words and
 9.9 phone screens, with no JS errors.
 
 The reviewer's full reply (with every page's defects) is kept with the job's temporary files, not published;

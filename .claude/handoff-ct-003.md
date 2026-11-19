@@ -26,8 +26,10 @@ items 1, 2, 4, 5. Brief: D:/Lab/manager/briefs/ct-003.md. Linear SAN-127. Do not
   settings; reported blind. Ours (P) 1st of 6 on originality, usefulness and trustworthiness; the top 3 Google
   results ranked 4th-6th on originality. Two defects fixed after (3,958 boards explained; Prolific share reconciled);
   gate after fixes: 0 findings, 1,415 words, 9.9 phone screens.
-- `python -I ct-003/check_live.py` before the merge: 12 of 21 fail, as expected (page, data and wiring not live).
-  One probe of ct-003/build_data.py gave 503 once, then 404 twice (transient GitHub Pages response).
+- `python -I ct-003/check_live.py` before the merge: 11 of 21 fail, as expected (page, data and wiring not live).
+  A probe once gave 503 then 404 twice (transient GitHub Pages response); the check now retries once on a 5xx.
+- After review: Evals Engineer row counted with its Evaluation Engineer variants (7 boards, not 0).
+- Blind reviewer's raw reply: C:/Users/acer/.claude/jobs/72cf196d/tmp/review-ct003/verdict.txt (goes with the job).
 
 ## Post-merge (manager)
 1. Merge the site branch `worktree-ct-003` and content-autopilot branch `ct-003` together.
