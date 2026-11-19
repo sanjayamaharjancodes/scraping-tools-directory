@@ -1,0 +1,5 @@
+# GitHub Pages build settings. The site is plain static HTML; this file only keeps working folders out of the
+# published site. ct-001/ holds the script and notes behind ats-job-posting-api-crawl-data.html: it stays in the
+# repository (public on GitHub) but is not served as pages.
+exclude:
+  - ct-001

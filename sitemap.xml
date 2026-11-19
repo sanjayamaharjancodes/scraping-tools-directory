@@ -25,12 +25,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://scrapetools.scaleturn.com/web-scraping-apis-with-free-tier.html</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://scrapetools.scaleturn.com/scraperapi-cost-calculator.html</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
@@ -61,12 +55,6 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://scrapetools.scaleturn.com/scraperapi-free-trial.html</loc>
-    <lastmod>2026-11-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://scrapetools.scaleturn.com/web-scraping-api-cost-per-1000-requests.html</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -79,15 +67,15 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://scrapetools.scaleturn.com/scrapingdog-vs-scrapingbee.html</loc>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://scrapetools.scaleturn.com/serp-api-pricing-comparison.html</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapetools.scaleturn.com/ats-job-posting-api-crawl-data.html</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>

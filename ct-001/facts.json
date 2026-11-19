@@ -1,0 +1,648 @@
+{
+ "target_query": "ats public job posting api",
+ "facts": [
+  {
+   "id": "row-greenhouse",
+   "claim": "Greenhouse per-ATS crawl figures, 18-19 Nov 2026",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.csv",
+   "fetched": "2026-11-19",
+   "excerpt": "Greenhouse,10154,6500,3654,0,64.0,36.0,,6500,5555,191948,29.5,34.6,14.5,0,6500,yes,6494,6,0,0,99.9,,,,191815,29.5,0.08,521.4,-6,-133,-0.07,6494,191853,-38,",
+   "numbers": [
+    "133",
+    "38",
+    "6",
+    "0.07",
+    "0",
+    "0.08",
+    "6",
+    "14.5",
+    "29.5",
+    "34.6",
+    "36.0",
+    "64.0",
+    "99.9",
+    "521.4",
+    "3654",
+    "5555",
+    "6494",
+    "6500",
+    "10154",
+    "191815",
+    "191853",
+    "191948"
+   ]
+  },
+  {
+   "id": "row-lever",
+   "claim": "Lever per-ATS crawl figures, 18-19 Nov 2026",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.csv",
+   "fetched": "2026-11-19",
+   "excerpt": "Lever,3855,2295,1560,0,59.5,40.5,,2165,1665,64451,29.8,38.7,23.1,130,1000,no (1000 of 2295),950,,,,,,,,37259,39.2,2.51,2507.0,,,,,,,",
+   "numbers": [
+    "0",
+    "2.51",
+    "23.1",
+    "29.8",
+    "38.7",
+    "39.2",
+    "40.5",
+    "59.5",
+    "130",
+    "950",
+    "1000",
+    "1560",
+    "1665",
+    "2165",
+    "2295",
+    "2507.0",
+    "3855",
+    "37259",
+    "64451"
+   ]
+  },
+  {
+   "id": "row-ashby",
+   "claim": "Ashby per-ATS crawl figures, 18-19 Nov 2026",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.csv",
+   "fetched": "2026-11-19",
+   "excerpt": "Ashby,4915,3713,1202,0,75.5,24.5,,3692,3320,60132,16.3,18.1,10.1,21,3713,yes,3689,3,0,21,99.4,,,,60091,16.3,0.08,301.2,-3,-41,-0.07,3689,60125,-34,",
+   "numbers": [
+    "41",
+    "34",
+    "3",
+    "0.07",
+    "0",
+    "0.08",
+    "3",
+    "10.1",
+    "16.3",
+    "18.1",
+    "21",
+    "24.5",
+    "75.5",
+    "99.4",
+    "301.2",
+    "1202",
+    "3320",
+    "3689",
+    "3692",
+    "3713",
+    "4915",
+    "60091",
+    "60125",
+    "60132"
+   ]
+  },
+  {
+   "id": "row-recruitee",
+   "claim": "Recruitee per-ATS crawl figures, 18-19 Nov 2026",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.csv",
+   "fetched": "2026-11-19",
+   "excerpt": "Recruitee,4807,3179,1619,9,66.1,33.7,,3179,2748,46974,14.8,17.1,13.6,0,3188,yes,3171,8,9,0,99.5,,,,47020,14.8,0.26,822.4,-8,46,0.1,3171,47017,3,",
+   "numbers": [
+    "8",
+    "0",
+    "0.1",
+    "0.26",
+    "3",
+    "8",
+    "9",
+    "13.6",
+    "14.8",
+    "17.1",
+    "33.7",
+    "46",
+    "66.1",
+    "99.5",
+    "822.4",
+    "1619",
+    "2748",
+    "3171",
+    "3179",
+    "3188",
+    "4807",
+    "46974",
+    "47017",
+    "47020"
+   ]
+  },
+  {
+   "id": "row-personio",
+   "claim": "Personio per-ATS crawl figures, 18-19 Nov 2026",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.csv",
+   "fetched": "2026-11-19",
+   "excerpt": "Personio,7197,4109,3088,0,57.1,42.9,20 of its last 50 answers were HTTP 403 or 429,4094,3540,31860,7.8,9.0,13.5,15,4109,yes,4091,3,0,15,99.6,,,,31869,7.8,1.01,4169.8,-3,9,0.03,4091,31869,0,",
+   "numbers": [
+    "3",
+    "0",
+    "0.03",
+    "1.01",
+    "3",
+    "7.8",
+    "9.0",
+    "9",
+    "13.5",
+    "15",
+    "42.9",
+    "57.1",
+    "99.6",
+    "3088",
+    "3540",
+    "4091",
+    "4094",
+    "4109",
+    "4169.8",
+    "7197",
+    "31860",
+    "31869"
+   ]
+  },
+  {
+   "id": "row-workable",
+   "claim": "Workable per-ATS crawl figures, 18-19 Nov 2026",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.csv",
+   "fetched": "2026-11-19",
+   "excerpt": "Workable,10785,0,0,10785,0.0,0.0,HTTP 429 with Retry-After 84362 s,,,,,,,,10785,yes,3683,157,6945,0,34.1,3840,95.9,6785,67003,18.2,1.01,3866.3,,,,3681,67009,-6,3834",
+   "numbers": [
+    "6",
+    "0",
+    "0.0",
+    "1.01",
+    "18.2",
+    "34.1",
+    "95.9",
+    "157",
+    "3681",
+    "3683",
+    "3834",
+    "3840",
+    "3866.3",
+    "6785",
+    "6945",
+    "10785",
+    "67003",
+    "67009"
+   ]
+  },
+  {
+   "id": "candidates_validated_18nov_five_ats",
+   "claim": "candidates validated 18nov five ats",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"candidates_validated_18nov_five_ats\": 30928",
+   "numbers": [
+    "30928"
+   ]
+  },
+  {
+   "id": "live_18nov_five_ats",
+   "claim": "live 18nov five ats",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"live_18nov_five_ats\": 19796",
+   "numbers": [
+    "19796"
+   ]
+  },
+  {
+   "id": "not_a_board_18nov_five_ats",
+   "claim": "not a board 18nov five ats",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"not_a_board_18nov_five_ats\": 11123",
+   "numbers": [
+    "11123"
+   ]
+  },
+  {
+   "id": "not_a_board_pct_18nov_five_ats",
+   "claim": "not a board pct 18nov five ats",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"not_a_board_pct_18nov_five_ats\": 36.0",
+   "numbers": [
+    "36.0"
+   ]
+  },
+  {
+   "id": "workable_candidates_18nov",
+   "claim": "workable candidates 18nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"workable_candidates_18nov\": 10785",
+   "numbers": [
+    "10785"
+   ]
+  },
+  {
+   "id": "candidates_tried_18nov_six_ats",
+   "claim": "candidates tried 18nov six ats",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"candidates_tried_18nov_six_ats\": 41713",
+   "numbers": [
+    "41713"
+   ]
+  },
+  {
+   "id": "index_boards_18nov",
+   "claim": "index boards 18nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"index_boards_18nov\": 19630",
+   "numbers": [
+    "19630"
+   ]
+  },
+  {
+   "id": "index_boards_with_jobs_18nov",
+   "claim": "index boards with jobs 18nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"index_boards_with_jobs_18nov\": 16828",
+   "numbers": [
+    "16828"
+   ]
+  },
+  {
+   "id": "index_jobs_18nov",
+   "claim": "index jobs 18nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"index_jobs_18nov\": 395365",
+   "numbers": [
+    "395365"
+   ]
+  },
+  {
+   "id": "index_empty_board_pct_18nov",
+   "claim": "index empty board pct 18nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"index_empty_board_pct_18nov\": 14.3",
+   "numbers": [
+    "14.3"
+   ]
+  },
+  {
+   "id": "checked_19nov",
+   "claim": "checked 19nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"checked_19nov\": 30590",
+   "numbers": [
+    "30590"
+   ]
+  },
+  {
+   "id": "live_19nov",
+   "claim": "live 19nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"live_19nov\": 22078",
+   "numbers": [
+    "22078"
+   ]
+  },
+  {
+   "id": "jobs_19nov",
+   "claim": "jobs 19nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"jobs_19nov\": 435057",
+   "numbers": [
+    "435057"
+   ]
+  },
+  {
+   "id": "hours_between_19nov_passes",
+   "claim": "hours between 19nov passes",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hours_between_19nov_passes\": 2.4",
+   "numbers": [
+    "2.4"
+   ]
+  },
+  {
+   "id": "workable_retry_after_s_18nov",
+   "claim": "workable retry after s 18nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"workable_retry_after_s_18nov\": 84362",
+   "numbers": [
+    "84362"
+   ]
+  },
+  {
+   "id": "workable_retry_after_hours_18nov",
+   "claim": "workable retry after hours 18nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"workable_retry_after_hours_18nov\": 23.4",
+   "numbers": [
+    "23.4"
+   ]
+  },
+  {
+   "id": "personio_stop_blocked_18nov",
+   "claim": "personio stop blocked 18nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_stop_blocked_18nov\": 20",
+   "numbers": [
+    "20"
+   ]
+  },
+  {
+   "id": "personio_stop_window_18nov",
+   "claim": "personio stop window 18nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_stop_window_18nov\": 50",
+   "numbers": [
+    "50"
+   ]
+  },
+  {
+   "id": "personio_pass_a_answered_18nov",
+   "claim": "personio pass a answered 18nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_pass_a_answered_18nov\": 515",
+   "numbers": [
+    "515"
+   ]
+  },
+  {
+   "id": "personio_pass_a_seconds_18nov",
+   "claim": "personio pass a seconds 18nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_pass_a_seconds_18nov\": 114",
+   "numbers": [
+    "114"
+   ]
+  },
+  {
+   "id": "personio_pass_b_checked_18nov",
+   "claim": "personio pass b checked 18nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_pass_b_checked_18nov\": 6682",
+   "numbers": [
+    "6682"
+   ]
+  },
+  {
+   "id": "personio_pass_b_errors_18nov",
+   "claim": "personio pass b errors 18nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_pass_b_errors_18nov\": 0",
+   "numbers": [
+    "0"
+   ]
+  },
+  {
+   "id": "personio_pass_b_hours_18nov",
+   "claim": "personio pass b hours 18nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_pass_b_hours_18nov\": 2.8",
+   "numbers": [
+    "2.8"
+   ]
+  },
+  {
+   "id": "lane_greenhouse_concurrency",
+   "claim": "lane greenhouse concurrency",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"lane_greenhouse_concurrency\": 4",
+   "numbers": [
+    "4"
+   ]
+  },
+  {
+   "id": "lane_lever_concurrency",
+   "claim": "lane lever concurrency",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"lane_lever_concurrency\": 1",
+   "numbers": [
+    "1"
+   ]
+  },
+  {
+   "id": "lane_lever_min_interval_ms",
+   "claim": "lane lever min interval ms",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"lane_lever_min_interval_ms\": 1000",
+   "numbers": [
+    "1000"
+   ]
+  },
+  {
+   "id": "lane_ashby_concurrency",
+   "claim": "lane ashby concurrency",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"lane_ashby_concurrency\": 4",
+   "numbers": [
+    "4"
+   ]
+  },
+  {
+   "id": "lane_recruitee_concurrency",
+   "claim": "lane recruitee concurrency",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"lane_recruitee_concurrency\": 4",
+   "numbers": [
+    "4"
+   ]
+  },
+  {
+   "id": "lane_personio_concurrency",
+   "claim": "lane personio concurrency",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"lane_personio_concurrency\": 1",
+   "numbers": [
+    "1"
+   ]
+  },
+  {
+   "id": "lane_personio_min_interval_ms",
+   "claim": "lane personio min interval ms",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"lane_personio_min_interval_ms\": 1000",
+   "numbers": [
+    "1000"
+   ]
+  },
+  {
+   "id": "lane_workable_concurrency",
+   "claim": "lane workable concurrency",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"lane_workable_concurrency\": 1",
+   "numbers": [
+    "1"
+   ]
+  },
+  {
+   "id": "lane_workable_min_interval_ms",
+   "claim": "lane workable min interval ms",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"lane_workable_min_interval_ms\": 1000",
+   "numbers": [
+    "1000"
+   ]
+  },
+  {
+   "id": "stop_window",
+   "claim": "stop window",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"stop_window\": 50",
+   "numbers": [
+    "50"
+   ]
+  },
+  {
+   "id": "stop_blocked",
+   "claim": "stop blocked",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"stop_blocked\": 20",
+   "numbers": [
+    "20"
+   ]
+  },
+  {
+   "id": "stop_retry_after_s",
+   "claim": "stop retry after s",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"stop_retry_after_s\": 3600",
+   "numbers": [
+    "3600"
+   ]
+  },
+  {
+   "id": "personio_pass_a_checked",
+   "claim": "personio pass a checked",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_pass_a_checked\": 7197",
+   "numbers": [
+    "7197"
+   ]
+  },
+  {
+   "id": "personio_pass_a_ok",
+   "claim": "personio pass a ok",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_pass_a_ok\": 344",
+   "numbers": [
+    "344"
+   ]
+  },
+  {
+   "id": "personio_pass_a_gone",
+   "claim": "personio pass a gone",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_pass_a_gone\": 171",
+   "numbers": [
+    "171"
+   ]
+  },
+  {
+   "id": "personio_pass_a_error",
+   "claim": "personio pass a error",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_pass_a_error\": 6682",
+   "numbers": [
+    "6682"
+   ]
+  },
+  {
+   "id": "personio_pass_a_seconds",
+   "claim": "personio pass a seconds",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_pass_a_seconds\": 114",
+   "numbers": [
+    "114"
+   ]
+  },
+  {
+   "id": "personio_pass_a_answered",
+   "claim": "personio pass a answered",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_pass_a_answered\": 515",
+   "numbers": [
+    "515"
+   ]
+  },
+  {
+   "id": "personio_pass_b_checked",
+   "claim": "personio pass b checked",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_pass_b_checked\": 6682",
+   "numbers": [
+    "6682"
+   ]
+  },
+  {
+   "id": "personio_pass_b_ok",
+   "claim": "personio pass b ok",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_pass_b_ok\": 3765",
+   "numbers": [
+    "3765"
+   ]
+  },
+  {
+   "id": "personio_pass_b_gone",
+   "claim": "personio pass b gone",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_pass_b_gone\": 2917",
+   "numbers": [
+    "2917"
+   ]
+  },
+  {
+   "id": "personio_pass_b_error",
+   "claim": "personio pass b error",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_pass_b_error\": 0",
+   "numbers": [
+    "0"
+   ]
+  },
+  {
+   "id": "personio_pass_b_seconds",
+   "claim": "personio pass b seconds",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_pass_b_seconds\": 10046",
+   "numbers": [
+    "10046"
+   ]
+  }
+ ]
+}
