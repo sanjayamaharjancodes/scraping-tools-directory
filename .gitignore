@@ -6,3 +6,4 @@ ct-002/index-snapshot/
 .tmp-ct002/
 # ct-003: scratch (exploration scripts, captures, gate scratch)
 .tmp-ct003/
+__pycache__/

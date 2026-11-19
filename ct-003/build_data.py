@@ -41,6 +41,7 @@ ROOT = os.path.dirname(HERE)
 
 # The same build as ct-002's page: its verify_inputs refuses any other build by SHA-256, and its region() reads the
 # location text. Loaded from the file, so both pages use one definition.
+sys.dont_write_bytecode = True        # no __pycache__ left in ct-002/
 _spec = importlib.util.spec_from_file_location("ct002_build", os.path.join(ROOT, "ct-002", "build_data.py"))
 ct002 = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(ct002)
