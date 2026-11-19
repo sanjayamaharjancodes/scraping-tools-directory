@@ -22,7 +22,19 @@ items 1, 2, 4, 5. Brief: D:/Lab/manager/briefs/ct-003.md. Linear SAN-127. Do not
   1,399 words, 9.8 phone screens, interaction ok.
 - ct-002 after its one-link edit: build_data --check 65 cells PASS; run_gate PASSED.
 - content-autopilot ct-003: tests/test_data_pages.py 7 passed; full suite 191 passed (twice).
-- Blind review: next.
+- Blind review (ct-003/REVIEW.md): headless `claude -p` in the job tmp folder, Read only, no MCP, no user
+  settings; reported blind. Ours (P) 1st of 6 on originality, usefulness and trustworthiness; the top 3 Google
+  results ranked 4th-6th on originality. Two defects fixed after (3,958 boards explained; Prolific share reconciled);
+  gate after fixes: 0 findings, 1,415 words, 9.9 phone screens.
+- `python -I ct-003/check_live.py` before the merge: 12 of 21 fail, as expected (page, data and wiring not live).
+  One probe of ct-003/build_data.py gave 503 once, then 404 twice (transient GitHub Pages response).
+
+## Post-merge (manager)
+1. Merge the site branch `worktree-ct-003` and content-autopilot branch `ct-003` together.
+2. `python -I ct-003/check_live.py` must print ALL PASS.
+3. Facts expire after 3 days: `python -I ct-003/build_data.py --refresh-facts --check ai-job-titles.html`, then
+   `python -I ct-003/run_gate.py --autopilot <content-autopilot> --live`.
+4. The index snapshot is already durable at F:/Backups/ct-002-index-snapshot-20261119 (same build as ct-002).
 
 ## Attempts
 - Classifier: 3 audit rounds (freelance rule, LLM = Master of Laws, founder/chief-of-staff, spaced-slash split,
