@@ -22,12 +22,14 @@ This README lives in `.github/` so the Pages build does not publish it; GitHub s
   relationship is named on `disclosure.html`, and a banner at the top of every vendor page says a commission may be
   earned through its vendor links and links to that disclosure. Other vendor links are plain. The content-autopilot's
   gate fails a refresh that drops a page's affiliate link (`kept_affiliate`, since ct-004).
-- **AdSense code on every page.** Each page's `<head>` loads Google's AdSense auto-ads loader, byte for byte as on
-  scaleturn.com (`adsbygoogle.js?client=ca-pub-5554189148912369`, async, just before `style.css`); copy it into any
-  new page. Google places any ads itself once it approves the site; no ad units are placed by hand. `privacy.html`
-  makes Google's advertising disclosures. The `ads.txt` at scaleturn.com covers this subdomain. `ct-004/` holds
-  `check_live.py` (every page carries the loader once, in `<head>`) and `consent_probe.mjs` (whether Google's EU
-  consent message shows, with ad requests blocked); `_config.yml` keeps it out of the Pages build.
+- **AdSense code on every page except `privacy.html`.** Each page's `<head>` loads Google's AdSense auto-ads loader,
+  byte for byte as on scaleturn.com (`adsbygoogle.js?client=ca-pub-5554189148912369`, async, just before
+  `style.css`); copy it into any new page. Google places any ads itself once it approves the site; no ad units are
+  placed by hand. `privacy.html` makes Google's advertising disclosures and loads no ad code: Google asks that
+  privacy pages linked from its consent message host no ad tags (AdSense Help, answer 10961370). The `ads.txt` at
+  scaleturn.com covers this subdomain. `ct-004/` holds `check_live.py` (every page carries the loader once, in
+  `<head>`, and the privacy pages none) and `consent_probe.mjs` (whether Google's EU consent message shows, with ad
+  requests blocked); `_config.yml` keeps it out of the Pages build.
 - **No benchmark results yet.** `methodology.html` describes the planned benchmark and says none has been run. Pages
   report vendor-published facts, never "we tested".
 - **One first-hand data page.** `ats-job-posting-api-crawl-data.html` reports our own job-index refresh (18-19 Nov

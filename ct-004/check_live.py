@@ -9,7 +9,8 @@ Usage:
 
 Checks, each printed as PASS or FAIL:
 - every page answers 200 and loads the AdSense loader exactly once, inside <head>, byte for byte as scaleturn.com
-  does (async, client=ca-pub-5554189148912369). Pages: ScrapeTools = every .html file in this repository except the
+  does (async, client=ca-pub-5554189148912369), except each site's privacy page, which must load no ad code at all
+  (Google, AdSense Help 10961370: privacy pages linked from its consent message host no ad tags). Pages: ScrapeTools = every .html file in this repository except the
   Search Console file (the three noindex retired pages included) plus anything in its sitemap; Getting Paid Nepal and
   scaleturn.com = a fixed list plus anything in their sitemaps;
 - https://scaleturn.com/ads.txt answers 200 and carries the publisher line;
@@ -56,8 +57,10 @@ PRIVACY = {"scrapetools": "privacy.html", "gettingpaid": "privacy-policy.html", 
 PRIVACY_NEEDS = ("AdSense", "__gads", "Consent in the EEA, the UK and Switzerland",
                  "https://support.google.com/adsense/answer/13790256", "https://www.google.com/settings/ads",
                  "https://www.aboutads.info/choices/", "https://www.google.com/policies/privacy/partners/")
-NO_ADS_CLAIMS = re.compile(r"loads? no (?:advertising|ad) code|no page loads advertising code|sets? no advertising cookies|"
-                           r"do(?:es)? not load any (?:advertising|ad) code|shows no (?:display )?ads", re.I)
+# Site-wide "no ads" claims. A privacy page may say "This page loads no ad code" of itself (it carries none).
+NO_ADS_CLAIMS = re.compile(r"(?<!this page )loads? no (?:advertising|ad) code|no page loads advertising code|"
+                           r"sets? no advertising cookies|do(?:es)? not load any (?:advertising|ad) code|"
+                           r"shows no (?:display )?ads", re.I)
 EXTRA_FILES = {"scrapetools": ("llms.txt", "data/pages.json")}      # changed in ct-004, read for stale ad claims
 NUM = re.compile(r"\d[\d,]*(?:\.\d+)?%?")
 
@@ -136,6 +139,12 @@ def main():
             head = html[:html.find("</head>")] if "</head>" in html else ""
             live = re.sub(r"<!--.*?-->", "", head, flags=re.S)
             n_all = html.count(LOADER)
+            if PRIVACY.get(site) == path:
+                # Google (AdSense Help 10961370): privacy pages linked from its consent message host no ad tags.
+                ok = st == 200 and n_all == 0 and not re.search(r"adsbygoogle|googlesyndication", html)
+                check(f"{SITES[site]}{path} answers 200 and loads no ad code (privacy page)", ok,
+                      "" if ok else f"status {st}, {n_all} loader(s) in page")
+                continue
             ok = st == 200 and n_all == 1 and live.count(LOADER) == 1
             check(f"{SITES[site]}{path} answers 200 and loads the AdSense loader once, in <head>", ok,
                   "" if ok else f"status {st}, {n_all} in page, {live.count(LOADER)} live in <head>")
