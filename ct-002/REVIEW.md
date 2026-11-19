@@ -23,7 +23,7 @@ any of our tools (the Chrome extension and the web fetcher both refuse reddit.co
 | Tuesday tops only 2 of 6 ATSs | Already shown (Top day, Weeks led columns, "read close shares as a tie"); kept |
 | 12,228 boards in the title against 23,287 in the body | The weekday section now says 12,228 of the 23,287 boards posted the 117,153 jobs |
 | US share 46.5% "of open jobs" against 61,239 of 117,153 in the window | Region note gives both bases |
-| Hour chart: no values without hover (phones), defaults to UTC | Bars respond to a tap; the chart opens on US-located jobs in US Eastern time |
+| Hour chart: no values without hover (phones), defaults to UTC | Bars respond to a tap; the chart opens on US-located jobs in US Eastern time. Checked at 412 px with touch: the default group was "US-located jobs (US Eastern time)", and tapping the 14:00 bar showed "14:00 to 14:59: 9.4% (4,966 jobs)" |
 | Advice for job seekers is one sentence | Added: by 17:00 Eastern 78.1% of a day's US postings are up (78.4% by 17:00 CET in Europe) |
 | Index not published, no named author, AI drafting, own product promoted | Kept: the CSV/JSON carry every count, the script and hashes are public, AI drafting is disclosed, links are labelled as Scaleturn's |
 | First phone screen is the site navigation | Site-wide chrome shared by every page; not changed here |
@@ -47,7 +47,8 @@ any of our tools (the Chrome extension and the web fetcher both refuse reddit.co
   - caps of 16 desktop and 12 phone tiles, none exceeded.
 - **Files viewed (reported):** 78 tiles, P 16, Q 17, R 13, S 10, T 22, and all five text files in full.
 - **Blindness (reported):** "Nothing in my instructions or environment said who commissioned this review or which
-  page belongs to whom."
+  page belongs to whom." It added that its environment held the user's general working rules and account details,
+  and that none of them named or referred to any of these sites, companies or pages.
 
 ### Verdict
 

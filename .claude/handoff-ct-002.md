@@ -29,6 +29,9 @@ registry, publish.py keeping data lines in llms.txt). Brief: D:/Lab/manager/brie
     retired pages).
 
 ## Post-merge (manager)
+0. Copy `ct-002/index-snapshot/` (13 MB, 7 files) somewhere durable before this worktree is removed. It is the
+   only copy of the 19 Nov 04:03 UTC build, and `--index` cannot be re-run without it. The CSV/JSON and
+   `--check`/`--refresh-facts` keep working without it. Do not commit it to the public repo.
 1. Merge the site branch and content-autopilot `ct-002-leftovers` together: the gate compares a page's nav with
    the skeleton.
 2. `python -I ct-002/check_live.py` must print ALL PASS.
