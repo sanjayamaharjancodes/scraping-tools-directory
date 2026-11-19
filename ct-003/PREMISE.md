@@ -21,8 +21,8 @@ query). No volume figures are claimed.
 | Remote share by ATS | **Weak.** `remote` comes from a vendor field on Lever, Ashby, Recruitee and Workable and from the word "remote" in the location on Greenhouse and Personio (Workable: 24.1% flagged, 3.6% by the word in title or location). Shares across ATSs would compare definitions | `what percentage of jobs are remote` (Google, 19 Nov): 1 Minneapolis Fed, 2 Robert Half (its own analysis of job postings, Q3 2026), 3 Reddit. Two of three are first-hand data | Dropped: invalid across ATSs, and no originality edge |
 | **AI job titles** | **Yes.** A title is the employer's own text. The share of titles that name AI within one ATS's boards, the role names used, their seniority words and their locations do not depend on how many boards of each ATS we found. Cross-ATS totals are stated as "these boards", not the market | `ai job titles`: see below | **Chosen** |
 
-Demand evidence for `ai job titles` (Google, US English, `hl=en&gl=us&pws=0`, read twice on 19 Nov 2026 with the
-same top 7 both times):
+Demand evidence for `ai job titles` (Google, US English, `hl=en&gl=us&pws=0`, read three times on 19 Nov 2026; the
+top 8 organic results were the same, in the same order, every time):
 - an AI Overview answers it with a grouped list of titles, citing Syracuse iSchool, Drew Breunig and ivanturkovic.com;
 - "People also ask": "What are the top 10 AI jobs?", "What is a $900000 AI job?", "What types of AI jobs are
   there?", "What job titles are AI proof?";
