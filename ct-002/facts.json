@@ -1,0 +1,1451 @@
+{
+ "target_query": "what day are most jobs posted",
+ "facts": [
+  {
+   "id": "row-all",
+   "claim": "All six ATSs: jobs posted per weekday (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.csv",
+   "fetched": "2026-11-19",
+   "excerpt": "all: label=All six ATSs; clock=UTC (Workable: its own date); window=2026-10-19 to 2026-11-15; jobs=117153; boards=12228; mon_jobs=20962; tue_jobs=23523; wed_jobs=21521; thu_jobs=23830; fri_jobs=23542; sat_jobs=1964; sun_jobs=1811; mon_pct=17.9; tue_pct=20.1; wed_pct=18.4; thu_pct=20.3; fri_pct=20.1; sat_pct=1.7; sun_pct=1.5; mon_board_pct=18.4; tue_board_pct=21.1; wed_board_pct=19.1; thu_board_pct=19.4; fri_board_pct=19.6; sat_board_pct=1.3; sun_board_pct=1.0; mon_wed_pct=56.3; mon_thu_pct=76.7; weekend_pct=3.2; weekend_board_pct=2.3; top_day=Thursday; top_day_pct=20.3; top_day_boards=Tuesday; mon_adj_pct=18.9; tue_adj_pct=20.7; wed_adj_pct=18.6; thu_adj_pct=19.9; fri_adj_pct=19.1; sat_adj_pct=1.5; sun_adj_pct=1.4; mon_wed_adj_pct=58.1; weekend_adj_pct=2.9; top_day_adj=Tuesday; top_day_adj_pct=20.7; other_weekdays_adj_min_pct=18.6; other_weekdays_adj_max_pct=19.9; closure_rate_per_day_pct=2.12; same_weekday_decline_per_week_pct=13.9",
+   "numbers": [
+    "1.0",
+    "1.3",
+    "1.4",
+    "1.5",
+    "1.7",
+    "2.12",
+    "2.3",
+    "2.9",
+    "3.2",
+    "13.9",
+    "17.9",
+    "18.4",
+    "18.6",
+    "18.9",
+    "19.1",
+    "19.4",
+    "19.6",
+    "19.9",
+    "20.1",
+    "20.3",
+    "20.7",
+    "21.1",
+    "56.3",
+    "58.1",
+    "76.7",
+    "1811",
+    "1964",
+    "12228",
+    "20962",
+    "21521",
+    "23523",
+    "23542",
+    "23830",
+    "117153"
+   ]
+  },
+  {
+   "id": "row-greenhouse",
+   "claim": "Greenhouse: jobs posted per weekday (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.csv",
+   "fetched": "2026-11-19",
+   "excerpt": "greenhouse: label=Greenhouse; clock=UTC; window=2026-10-19 to 2026-11-15; jobs=52601; boards=4104; mon_jobs=9628; tue_jobs=11152; wed_jobs=9803; thu_jobs=10426; fri_jobs=10526; sat_jobs=666; sun_jobs=400; mon_pct=18.3; tue_pct=21.2; wed_pct=18.6; thu_pct=19.8; fri_pct=20.0; sat_pct=1.3; sun_pct=0.8; mon_board_pct=18.3; tue_board_pct=21.2; wed_board_pct=19.2; thu_board_pct=19.0; fri_board_pct=20.4; sat_board_pct=1.3; sun_board_pct=0.6; mon_wed_pct=58.1; mon_thu_pct=78.0; weekend_pct=2.0; weekend_board_pct=1.9; top_day=Tuesday; top_day_pct=21.2; top_day_boards=Tuesday; mon_adj_pct=18.9; tue_adj_pct=21.5; wed_adj_pct=18.8; thu_adj_pct=19.5; fri_adj_pct=19.4; sat_adj_pct=1.2; sun_adj_pct=0.7; mon_wed_adj_pct=59.1; weekend_adj_pct=1.9; top_day_adj=Tuesday; top_day_adj_pct=21.5; other_weekdays_adj_min_pct=18.8; other_weekdays_adj_max_pct=19.5; closure_rate_per_day_pct=1.31; same_weekday_decline_per_week_pct=8.8",
+   "numbers": [
+    "0.6",
+    "0.7",
+    "0.8",
+    "1.2",
+    "1.3",
+    "1.31",
+    "1.9",
+    "2.0",
+    "8.8",
+    "18.3",
+    "18.6",
+    "18.8",
+    "18.9",
+    "19.0",
+    "19.2",
+    "19.4",
+    "19.5",
+    "19.8",
+    "20.0",
+    "20.4",
+    "21.2",
+    "21.5",
+    "58.1",
+    "59.1",
+    "78.0",
+    "400",
+    "666",
+    "4104",
+    "9628",
+    "9803",
+    "10426",
+    "10526",
+    "11152",
+    "52601"
+   ]
+  },
+  {
+   "id": "row-lever",
+   "claim": "Lever: jobs posted per weekday (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.csv",
+   "fetched": "2026-11-19",
+   "excerpt": "lever: label=Lever; clock=UTC; window=2026-10-19 to 2026-11-15; jobs=14796; boards=1189; mon_jobs=2210; tue_jobs=2520; wed_jobs=2485; thu_jobs=2998; fri_jobs=3436; sat_jobs=531; sun_jobs=616; mon_pct=14.9; tue_pct=17.0; wed_pct=16.8; thu_pct=20.3; fri_pct=23.2; sat_pct=3.6; sun_pct=4.2; mon_board_pct=19.0; tue_board_pct=20.2; wed_board_pct=19.8; thu_board_pct=18.6; fri_board_pct=20.2; sat_board_pct=1.0; sun_board_pct=1.2; mon_wed_pct=48.8; mon_thu_pct=69.0; weekend_pct=7.8; weekend_board_pct=2.2; top_day=Friday; top_day_pct=23.2; top_day_boards=Friday; mon_adj_pct=17.8; tue_adj_pct=19.0; wed_adj_pct=17.5; thu_adj_pct=19.2; fri_adj_pct=21.1; sat_adj_pct=2.6; sun_adj_pct=2.8; mon_wed_adj_pct=54.3; weekend_adj_pct=5.4; top_day_adj=Friday; top_day_adj_pct=21.1; other_weekdays_adj_min_pct=17.5; other_weekdays_adj_max_pct=19.2; closure_rate_per_day_pct=3.99; same_weekday_decline_per_week_pct=24.8",
+   "numbers": [
+    "1.0",
+    "1.2",
+    "2.2",
+    "2.6",
+    "2.8",
+    "3.6",
+    "3.99",
+    "4.2",
+    "5.4",
+    "7.8",
+    "14.9",
+    "16.8",
+    "17.0",
+    "17.5",
+    "17.8",
+    "18.6",
+    "19.0",
+    "19.2",
+    "19.8",
+    "20.2",
+    "20.3",
+    "21.1",
+    "23.2",
+    "24.8",
+    "48.8",
+    "54.3",
+    "69.0",
+    "531",
+    "616",
+    "1189",
+    "2210",
+    "2485",
+    "2520",
+    "2998",
+    "3436",
+    "14796"
+   ]
+  },
+  {
+   "id": "row-ashby",
+   "claim": "Ashby: jobs posted per weekday (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.csv",
+   "fetched": "2026-11-19",
+   "excerpt": "ashby: label=Ashby; clock=UTC; window=2026-10-19 to 2026-11-15; jobs=17439; boards=2260; mon_jobs=3023; tue_jobs=3616; wed_jobs=3288; thu_jobs=3717; fri_jobs=3148; sat_jobs=376; sun_jobs=271; mon_pct=17.3; tue_pct=20.7; wed_pct=18.9; thu_pct=21.3; fri_pct=18.1; sat_pct=2.2; sun_pct=1.6; mon_board_pct=18.3; tue_board_pct=20.8; wed_board_pct=18.6; thu_board_pct=20.1; fri_board_pct=18.7; sat_board_pct=2.1; sun_board_pct=1.5; mon_wed_pct=56.9; mon_thu_pct=78.2; weekend_pct=3.7; weekend_board_pct=3.6; top_day=Thursday; top_day_pct=21.3; top_day_boards=Tuesday; mon_adj_pct=18.0; tue_adj_pct=21.0; wed_adj_pct=18.9; thu_adj_pct=21.2; fri_adj_pct=17.5; sat_adj_pct=2.0; sun_adj_pct=1.4; mon_wed_adj_pct=57.9; weekend_adj_pct=3.4; top_day_adj=Thursday; top_day_adj_pct=21.2; other_weekdays_adj_min_pct=17.5; other_weekdays_adj_max_pct=21.0; closure_rate_per_day_pct=1.61; same_weekday_decline_per_week_pct=10.7",
+   "numbers": [
+    "1.4",
+    "1.5",
+    "1.6",
+    "1.61",
+    "2.0",
+    "2.1",
+    "2.2",
+    "3.4",
+    "3.6",
+    "3.7",
+    "10.7",
+    "17.3",
+    "17.5",
+    "18.0",
+    "18.1",
+    "18.3",
+    "18.6",
+    "18.7",
+    "18.9",
+    "20.1",
+    "20.7",
+    "20.8",
+    "21.0",
+    "21.2",
+    "21.3",
+    "56.9",
+    "57.9",
+    "78.2",
+    "271",
+    "376",
+    "2260",
+    "3023",
+    "3148",
+    "3288",
+    "3616",
+    "3717",
+    "17439"
+   ]
+  },
+  {
+   "id": "row-recruitee",
+   "claim": "Recruitee: jobs posted per weekday (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.csv",
+   "fetched": "2026-11-19",
+   "excerpt": "recruitee: label=Recruitee; clock=UTC; window=2026-10-19 to 2026-11-15; jobs=9387; boards=1487; mon_jobs=1887; tue_jobs=1903; wed_jobs=1702; thu_jobs=1844; fri_jobs=1935; sat_jobs=31; sun_jobs=85; mon_pct=20.1; tue_pct=20.3; wed_pct=18.1; thu_pct=19.6; fri_pct=20.6; sat_pct=0.3; sun_pct=0.9; mon_board_pct=19.7; tue_board_pct=22.2; wed_board_pct=17.9; thu_board_pct=19.9; fri_board_pct=18.8; sat_board_pct=0.6; sun_board_pct=0.9; mon_wed_pct=58.5; mon_thu_pct=78.2; weekend_pct=1.2; weekend_board_pct=1.5; top_day=Friday; top_day_pct=20.6; top_day_boards=Tuesday; mon_adj_pct=21.3; tue_adj_pct=20.9; wed_adj_pct=18.4; thu_adj_pct=18.9; fri_adj_pct=19.4; sat_adj_pct=0.3; sun_adj_pct=0.8; mon_wed_adj_pct=60.5; weekend_adj_pct=1.1; top_day_adj=Monday; top_day_adj_pct=21.3; other_weekdays_adj_min_pct=18.4; other_weekdays_adj_max_pct=20.9; closure_rate_per_day_pct=2.75; same_weekday_decline_per_week_pct=17.7",
+   "numbers": [
+    "0.3",
+    "0.6",
+    "0.8",
+    "0.9",
+    "1.1",
+    "1.2",
+    "1.5",
+    "2.75",
+    "17.7",
+    "17.9",
+    "18.1",
+    "18.4",
+    "18.8",
+    "18.9",
+    "19.4",
+    "19.6",
+    "19.7",
+    "19.9",
+    "20.1",
+    "20.3",
+    "20.6",
+    "20.9",
+    "21.3",
+    "22.2",
+    "31",
+    "58.5",
+    "60.5",
+    "78.2",
+    "85",
+    "1487",
+    "1702",
+    "1844",
+    "1887",
+    "1903",
+    "1935",
+    "9387"
+   ]
+  },
+  {
+   "id": "row-personio",
+   "claim": "Personio: jobs posted per weekday (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.csv",
+   "fetched": "2026-11-19",
+   "excerpt": "personio: label=Personio; clock=UTC; window=2026-10-19 to 2026-11-15; jobs=4625; boards=1557; mon_jobs=844; tue_jobs=959; wed_jobs=917; thu_jobs=974; fri_jobs=867; sat_jobs=26; sun_jobs=38; mon_pct=18.2; tue_pct=20.7; wed_pct=19.8; thu_pct=21.1; fri_pct=18.7; sat_pct=0.6; sun_pct=0.8; mon_board_pct=18.1; tue_board_pct=21.5; wed_board_pct=20.5; thu_board_pct=20.2; fri_board_pct=17.9; sat_board_pct=0.8; sun_board_pct=1.0; mon_wed_pct=58.8; mon_thu_pct=79.9; weekend_pct=1.4; weekend_board_pct=1.8; top_day=Thursday; top_day_pct=21.1; top_day_boards=Tuesday; mon_adj_pct=18.7; tue_adj_pct=20.9; wed_adj_pct=19.9; thu_adj_pct=20.7; fri_adj_pct=18.5; sat_adj_pct=0.5; sun_adj_pct=0.8; mon_wed_adj_pct=59.4; weekend_adj_pct=1.4; top_day_adj=Tuesday; top_day_adj_pct=20.9; other_weekdays_adj_min_pct=18.5; other_weekdays_adj_max_pct=20.7; closure_rate_per_day_pct=0.99; same_weekday_decline_per_week_pct=6.7",
+   "numbers": [
+    "0.5",
+    "0.6",
+    "0.8",
+    "0.99",
+    "1.0",
+    "1.4",
+    "1.8",
+    "6.7",
+    "17.9",
+    "18.1",
+    "18.2",
+    "18.5",
+    "18.7",
+    "19.8",
+    "19.9",
+    "20.2",
+    "20.5",
+    "20.7",
+    "20.9",
+    "21.1",
+    "21.5",
+    "26",
+    "38",
+    "58.8",
+    "59.4",
+    "79.9",
+    "844",
+    "867",
+    "917",
+    "959",
+    "974",
+    "1557",
+    "4625"
+   ]
+  },
+  {
+   "id": "row-workable",
+   "claim": "Workable: jobs posted per weekday (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.csv",
+   "fetched": "2026-11-19",
+   "excerpt": "workable: label=Workable; clock=UTC (Workable: its own date); window=2026-10-19 to 2026-11-15; jobs=18305; boards=1631; mon_jobs=3370; tue_jobs=3373; wed_jobs=3326; thu_jobs=3871; fri_jobs=3630; sat_jobs=334; sun_jobs=401; mon_pct=18.4; tue_pct=18.4; wed_pct=18.2; thu_pct=21.1; fri_pct=19.8; sat_pct=1.8; sun_pct=2.2; mon_board_pct=17.8; tue_board_pct=21.0; wed_board_pct=19.0; thu_board_pct=19.0; fri_board_pct=20.2; sat_board_pct=1.6; sun_board_pct=1.5; mon_wed_pct=55.0; mon_thu_pct=76.2; weekend_pct=4.0; weekend_board_pct=3.1; top_day=Thursday; top_day_pct=21.1; top_day_boards=Tuesday; mon_adj_pct=19.7; tue_adj_pct=19.3; wed_adj_pct=18.5; thu_adj_pct=20.2; fri_adj_pct=18.4; sat_adj_pct=1.6; sun_adj_pct=2.3; mon_wed_adj_pct=57.4; weekend_adj_pct=3.9; top_day_adj=Thursday; top_day_adj_pct=20.2; other_weekdays_adj_min_pct=18.4; other_weekdays_adj_max_pct=19.7; closure_rate_per_day_pct=3.18; same_weekday_decline_per_week_pct=20.2",
+   "numbers": [
+    "1.5",
+    "1.6",
+    "1.8",
+    "2.2",
+    "2.3",
+    "3.1",
+    "3.18",
+    "3.9",
+    "4.0",
+    "17.8",
+    "18.2",
+    "18.4",
+    "18.5",
+    "19.0",
+    "19.3",
+    "19.7",
+    "19.8",
+    "20.2",
+    "21.0",
+    "21.1",
+    "55.0",
+    "57.4",
+    "76.2",
+    "334",
+    "401",
+    "1631",
+    "3326",
+    "3370",
+    "3373",
+    "3630",
+    "3871",
+    "18305"
+   ]
+  },
+  {
+   "id": "row-us",
+   "claim": "Jobs located in the US: jobs posted per weekday (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.csv",
+   "fetched": "2026-11-19",
+   "excerpt": "us: label=Jobs located in the US; clock=US Eastern time (Workable: its own date); window=2026-10-19 to 2026-11-15; jobs=61239; boards=6335; mon_jobs=11567; tue_jobs=12398; wed_jobs=11034; thu_jobs=12061; fri_jobs=11940; sat_jobs=953; sun_jobs=1286; mon_pct=18.9; tue_pct=20.2; wed_pct=18.0; thu_pct=19.7; fri_pct=19.5; sat_pct=1.6; sun_pct=2.1; mon_board_pct=19.7; tue_board_pct=20.9; wed_board_pct=18.6; thu_board_pct=18.5; fri_board_pct=20.3; sat_board_pct=0.9; sun_board_pct=1.1; mon_wed_pct=57.2; mon_thu_pct=76.8; weekend_pct=3.7; weekend_board_pct=2.0; top_day=Tuesday; top_day_pct=20.2; top_day_boards=Tuesday; mon_adj_pct=20.0; tue_adj_pct=20.8; wed_adj_pct=18.3; thu_adj_pct=19.2; fri_adj_pct=18.5; sat_adj_pct=1.3; sun_adj_pct=1.9; mon_wed_adj_pct=59.2; weekend_adj_pct=3.2; top_day_adj=Tuesday; top_day_adj_pct=20.8; other_weekdays_adj_min_pct=18.3; other_weekdays_adj_max_pct=20.0; closure_rate_per_day_pct=2.45; same_weekday_decline_per_week_pct=15.9",
+   "numbers": [
+    "0.9",
+    "1.1",
+    "1.3",
+    "1.6",
+    "1.9",
+    "2.0",
+    "2.1",
+    "2.45",
+    "3.2",
+    "3.7",
+    "15.9",
+    "18.0",
+    "18.3",
+    "18.5",
+    "18.6",
+    "18.9",
+    "19.2",
+    "19.5",
+    "19.7",
+    "20.0",
+    "20.2",
+    "20.3",
+    "20.8",
+    "20.9",
+    "57.2",
+    "59.2",
+    "76.8",
+    "953",
+    "1286",
+    "6335",
+    "11034",
+    "11567",
+    "11940",
+    "12061",
+    "12398",
+    "61239"
+   ]
+  },
+  {
+   "id": "row-europe",
+   "claim": "Jobs located in Europe: jobs posted per weekday (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.csv",
+   "fetched": "2026-11-19",
+   "excerpt": "europe: label=Jobs located in Europe; clock=Central European time (Workable: its own date); window=2026-10-19 to 2026-11-15; jobs=25641; boards=4635; mon_jobs=4769; tue_jobs=5219; wed_jobs=4549; thu_jobs=5467; fri_jobs=5234; sat_jobs=192; sun_jobs=211; mon_pct=18.6; tue_pct=20.4; wed_pct=17.7; thu_pct=21.3; fri_pct=20.4; sat_pct=0.7; sun_pct=0.8; mon_board_pct=18.3; tue_board_pct=21.5; wed_board_pct=19.2; thu_board_pct=19.8; fri_board_pct=19.5; sat_board_pct=0.8; sun_board_pct=0.9; mon_wed_pct=56.7; mon_thu_pct=78.0; weekend_pct=1.6; weekend_board_pct=1.7; top_day=Thursday; top_day_pct=21.3; top_day_boards=Tuesday; mon_adj_pct=19.5; tue_adj_pct=20.9; wed_adj_pct=18.0; thu_adj_pct=20.6; fri_adj_pct=19.6; sat_adj_pct=0.7; sun_adj_pct=0.8; mon_wed_adj_pct=58.4; weekend_adj_pct=1.4; top_day_adj=Tuesday; top_day_adj_pct=20.9; other_weekdays_adj_min_pct=18.0; other_weekdays_adj_max_pct=20.6; closure_rate_per_day_pct=2.04; same_weekday_decline_per_week_pct=13.4",
+   "numbers": [
+    "0.7",
+    "0.8",
+    "0.9",
+    "1.4",
+    "1.6",
+    "1.7",
+    "2.04",
+    "13.4",
+    "17.7",
+    "18.0",
+    "18.3",
+    "18.6",
+    "19.2",
+    "19.5",
+    "19.6",
+    "19.8",
+    "20.4",
+    "20.6",
+    "20.9",
+    "21.3",
+    "21.5",
+    "56.7",
+    "58.4",
+    "78.0",
+    "192",
+    "211",
+    "4549",
+    "4635",
+    "4769",
+    "5219",
+    "5234",
+    "5467",
+    "25641"
+   ]
+  },
+  {
+   "id": "row-all_open",
+   "claim": "All open jobs, any posting date: jobs posted per weekday (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.csv",
+   "fetched": "2026-11-19",
+   "excerpt": "all_open: label=All open jobs, any posting date; clock=UTC (Workable: its own date); window=all open jobs; jobs=456597; boards=18767; mon_jobs=81209; tue_jobs=94913; wed_jobs=95022; thu_jobs=85921; fri_jobs=81783; sat_jobs=11165; sun_jobs=6584; mon_pct=17.8; tue_pct=20.8; wed_pct=20.8; thu_pct=18.8; fri_pct=17.9; sat_pct=2.4; sun_pct=1.4; mon_board_pct=18.6; tue_board_pct=21.5; wed_board_pct=20.8; thu_board_pct=18.8; fri_board_pct=17.5; sat_board_pct=1.4; sun_board_pct=1.4; mon_wed_pct=59.4; mon_thu_pct=78.2; weekend_pct=3.9; weekend_board_pct=2.8; top_day=Wednesday; top_day_pct=20.8; top_day_boards=Tuesday",
+   "numbers": [
+    "1.4",
+    "2.4",
+    "2.8",
+    "3.9",
+    "17.5",
+    "17.8",
+    "17.9",
+    "18.6",
+    "18.8",
+    "20.8",
+    "21.5",
+    "59.4",
+    "78.2",
+    "6584",
+    "11165",
+    "18767",
+    "81209",
+    "81783",
+    "85921",
+    "94913",
+    "95022",
+    "456597"
+   ]
+  },
+  {
+   "id": "hours-all",
+   "claim": "All six ATSs: posting hour (UTC)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hours\" / \"all\": timed_jobs=98848; peak_hour=15; peak_hour_pct=8.5; share_9_to_17_pct=44.9; share_0_to_6_pct=7.7; busiest_three_hours_start=15; weekday_peak_hour=15; busiest_three_hours_pct=23.9; hour_00_pct=2.1; hour_01_pct=1.3; hour_02_pct=1.2; hour_03_pct=1.4; hour_04_pct=0.8; hour_05_pct=0.9; hour_06_pct=1.1; hour_07_pct=2.0; hour_08_pct=3.0; hour_09_pct=3.5; hour_10_pct=3.4; hour_11_pct=2.9; hour_12_pct=3.6; hour_13_pct=7.8; hour_14_pct=7.3; hour_15_pct=8.5; hour_16_pct=7.9; hour_17_pct=7.5; hour_18_pct=6.8; hour_19_pct=6.7; hour_20_pct=6.3; hour_21_pct=6.1; hour_22_pct=4.5; hour_23_pct=3.3",
+   "numbers": [
+    "0.8",
+    "0.9",
+    "1.1",
+    "1.2",
+    "1.3",
+    "1.4",
+    "2.0",
+    "2.1",
+    "2.9",
+    "3.0",
+    "3.3",
+    "3.4",
+    "3.5",
+    "3.6",
+    "4.5",
+    "6.1",
+    "6.3",
+    "6.7",
+    "6.8",
+    "7.3",
+    "7.5",
+    "7.7",
+    "7.8",
+    "7.9",
+    "8.5",
+    "15",
+    "23.9",
+    "44.9",
+    "98848"
+   ]
+  },
+  {
+   "id": "hours-greenhouse",
+   "claim": "Greenhouse: posting hour (UTC)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hours\" / \"greenhouse\": timed_jobs=52601; peak_hour=16; peak_hour_pct=9.0; share_9_to_17_pct=38.1; share_0_to_6_pct=8.3; busiest_three_hours_start=15; weekday_peak_hour=16; busiest_three_hours_pct=26.7; hour_00_pct=2.3; hour_01_pct=1.4; hour_02_pct=1.3; hour_03_pct=1.7; hour_04_pct=0.8; hour_05_pct=0.8; hour_06_pct=0.9; hour_07_pct=1.1; hour_08_pct=1.6; hour_09_pct=1.9; hour_10_pct=1.8; hour_11_pct=1.8; hour_12_pct=2.6; hour_13_pct=5.0; hour_14_pct=7.1; hour_15_pct=9.0; hour_16_pct=9.0; hour_17_pct=8.7; hour_18_pct=8.4; hour_19_pct=8.3; hour_20_pct=8.1; hour_21_pct=7.5; hour_22_pct=5.3; hour_23_pct=3.7",
+   "numbers": [
+    "0.8",
+    "0.9",
+    "1.1",
+    "1.3",
+    "1.4",
+    "1.6",
+    "1.7",
+    "1.8",
+    "1.9",
+    "2.3",
+    "2.6",
+    "3.7",
+    "5.0",
+    "5.3",
+    "7.1",
+    "7.5",
+    "8.1",
+    "8.3",
+    "8.4",
+    "8.7",
+    "9.0",
+    "15",
+    "16",
+    "26.7",
+    "38.1",
+    "52601"
+   ]
+  },
+  {
+   "id": "hours-lever",
+   "claim": "Lever: posting hour (UTC)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hours\" / \"lever\": timed_jobs=14796; peak_hour=13; peak_hour_pct=18.9; share_9_to_17_pct=48.8; share_0_to_6_pct=8.7; busiest_three_hours_start=13; weekday_peak_hour=13; busiest_three_hours_pct=31.6; hour_00_pct=1.9; hour_01_pct=0.7; hour_02_pct=1.5; hour_03_pct=1.7; hour_04_pct=1.2; hour_05_pct=1.6; hour_06_pct=1.8; hour_07_pct=2.1; hour_08_pct=3.5; hour_09_pct=3.2; hour_10_pct=2.9; hour_11_pct=2.4; hour_12_pct=2.4; hour_13_pct=18.9; hour_14_pct=6.1; hour_15_pct=6.6; hour_16_pct=6.2; hour_17_pct=6.0; hour_18_pct=5.5; hour_19_pct=5.3; hour_20_pct=5.4; hour_21_pct=5.7; hour_22_pct=4.0; hour_23_pct=3.4",
+   "numbers": [
+    "0.7",
+    "1.2",
+    "1.5",
+    "1.6",
+    "1.7",
+    "1.8",
+    "1.9",
+    "2.1",
+    "2.4",
+    "2.9",
+    "3.2",
+    "3.4",
+    "3.5",
+    "4.0",
+    "5.3",
+    "5.4",
+    "5.5",
+    "5.7",
+    "6.0",
+    "6.1",
+    "6.2",
+    "6.6",
+    "8.7",
+    "13",
+    "18.9",
+    "31.6",
+    "48.8",
+    "14796"
+   ]
+  },
+  {
+   "id": "hours-ashby",
+   "claim": "Ashby: posting hour (UTC)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hours\" / \"ashby\": timed_jobs=17439; peak_hour=17; peak_hour_pct=8.8; share_9_to_17_pct=37.1; share_0_to_6_pct=9.9; busiest_three_hours_start=15; weekday_peak_hour=17; busiest_three_hours_pct=23.8; hour_00_pct=3.0; hour_01_pct=2.1; hour_02_pct=1.7; hour_03_pct=1.2; hour_04_pct=0.9; hour_05_pct=1.0; hour_06_pct=1.3; hour_07_pct=3.0; hour_08_pct=2.6; hour_09_pct=3.1; hour_10_pct=3.0; hour_11_pct=2.5; hour_12_pct=3.1; hour_13_pct=4.1; hour_14_pct=6.5; hour_15_pct=7.5; hour_16_pct=7.5; hour_17_pct=8.8; hour_18_pct=7.0; hour_19_pct=7.3; hour_20_pct=6.1; hour_21_pct=6.8; hour_22_pct=5.6; hour_23_pct=4.5",
+   "numbers": [
+    "0.9",
+    "1.0",
+    "1.2",
+    "1.3",
+    "1.7",
+    "2.1",
+    "2.5",
+    "2.6",
+    "3.0",
+    "3.1",
+    "4.1",
+    "4.5",
+    "5.6",
+    "6.1",
+    "6.5",
+    "6.8",
+    "7.0",
+    "7.3",
+    "7.5",
+    "8.8",
+    "9.9",
+    "15",
+    "17",
+    "23.8",
+    "37.1",
+    "17439"
+   ]
+  },
+  {
+   "id": "hours-recruitee",
+   "claim": "Recruitee: posting hour (UTC)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hours\" / \"recruitee\": timed_jobs=9387; peak_hour=9; peak_hour_pct=10.8; share_9_to_17_pct=71.8; share_0_to_6_pct=2.1; busiest_three_hours_start=8; weekday_peak_hour=9; busiest_three_hours_pct=31.0; hour_00_pct=0.4; hour_01_pct=0.2; hour_02_pct=0.2; hour_03_pct=0.2; hour_04_pct=0.4; hour_05_pct=0.7; hour_06_pct=1.8; hour_07_pct=5.2; hour_08_pct=9.8; hour_09_pct=10.8; hour_10_pct=10.5; hour_11_pct=7.3; hour_12_pct=9.6; hour_13_pct=10.7; hour_14_pct=10.1; hour_15_pct=8.4; hour_16_pct=4.4; hour_17_pct=2.4; hour_18_pct=1.4; hour_19_pct=1.7; hour_20_pct=1.0; hour_21_pct=1.0; hour_22_pct=1.1; hour_23_pct=0.7",
+   "numbers": [
+    "0.2",
+    "0.4",
+    "0.7",
+    "1.0",
+    "1.1",
+    "1.4",
+    "1.7",
+    "1.8",
+    "2.1",
+    "2.4",
+    "4.4",
+    "5.2",
+    "7.3",
+    "8",
+    "8.4",
+    "9",
+    "9.6",
+    "9.8",
+    "10.1",
+    "10.5",
+    "10.7",
+    "10.8",
+    "31.0",
+    "71.8",
+    "9387"
+   ]
+  },
+  {
+   "id": "hours-personio",
+   "claim": "Personio: posting hour (UTC)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hours\" / \"personio\": timed_jobs=4625; peak_hour=15; peak_hour_pct=12.3; share_9_to_17_pct=83.2; share_0_to_6_pct=0.3; busiest_three_hours_start=13; weekday_peak_hour=15; busiest_three_hours_pct=34.9; hour_00_pct=0.1; hour_01_pct=0.1; hour_02_pct=0.0; hour_03_pct=0.0; hour_04_pct=0.0; hour_05_pct=0.1; hour_06_pct=0.2; hour_07_pct=1.8; hour_08_pct=5.3; hour_09_pct=9.0; hour_10_pct=10.7; hour_11_pct=10.9; hour_12_pct=8.3; hour_13_pct=11.4; hour_14_pct=11.2; hour_15_pct=12.3; hour_16_pct=9.4; hour_17_pct=5.3; hour_18_pct=1.6; hour_19_pct=0.9; hour_20_pct=0.6; hour_21_pct=0.3; hour_22_pct=0.3; hour_23_pct=0.3",
+   "numbers": [
+    "0.0",
+    "0.1",
+    "0.2",
+    "0.3",
+    "0.6",
+    "0.9",
+    "1.6",
+    "1.8",
+    "5.3",
+    "8.3",
+    "9.0",
+    "9.4",
+    "10.7",
+    "10.9",
+    "11.2",
+    "11.4",
+    "12.3",
+    "13",
+    "15",
+    "34.9",
+    "83.2",
+    "4625"
+   ]
+  },
+  {
+   "id": "hours-us",
+   "claim": "Jobs located in the US: posting hour (US Eastern time)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hours\" / \"us\": timed_jobs=52986; peak_hour=14; peak_hour_pct=9.4; share_9_to_17_pct=68.2; share_0_to_6_pct=2.4; busiest_three_hours_start=12; weekday_peak_hour=14; busiest_three_hours_pct=27.9; hour_00_pct=0.5; hour_01_pct=0.4; hour_02_pct=0.4; hour_03_pct=0.3; hour_04_pct=0.4; hour_05_pct=0.5; hour_06_pct=0.5; hour_07_pct=0.6; hour_08_pct=6.4; hour_09_pct=5.6; hour_10_pct=7.8; hour_11_pct=8.6; hour_12_pct=9.3; hour_13_pct=9.3; hour_14_pct=9.4; hour_15_pct=9.0; hour_16_pct=9.3; hour_17_pct=7.4; hour_18_pct=5.2; hour_19_pct=3.8; hour_20_pct=2.2; hour_21_pct=1.3; hour_22_pct=1.2; hour_23_pct=0.9",
+   "numbers": [
+    "0.3",
+    "0.4",
+    "0.5",
+    "0.6",
+    "0.9",
+    "1.2",
+    "1.3",
+    "2.2",
+    "2.4",
+    "3.8",
+    "5.2",
+    "5.6",
+    "6.4",
+    "7.4",
+    "7.8",
+    "8.6",
+    "9.0",
+    "9.3",
+    "9.4",
+    "12",
+    "14",
+    "27.9",
+    "68.2",
+    "52986"
+   ]
+  },
+  {
+   "id": "hours-europe",
+   "claim": "Jobs located in Europe: posting hour (Central European time)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hours\" / \"europe\": timed_jobs=21415; peak_hour=15; peak_hour_pct=10.3; share_9_to_17_pct=71.6; share_0_to_6_pct=2.1; busiest_three_hours_start=14; weekday_peak_hour=15; busiest_three_hours_pct=30.0; hour_00_pct=0.8; hour_01_pct=0.5; hour_02_pct=0.2; hour_03_pct=0.1; hour_04_pct=0.3; hour_05_pct=0.3; hour_06_pct=0.4; hour_07_pct=1.0; hour_08_pct=3.3; hour_09_pct=7.2; hour_10_pct=9.2; hour_11_pct=9.6; hour_12_pct=7.8; hour_13_pct=7.8; hour_14_pct=9.7; hour_15_pct=10.3; hour_16_pct=10.0; hour_17_pct=8.2; hour_18_pct=4.9; hour_19_pct=2.3; hour_20_pct=1.8; hour_21_pct=1.4; hour_22_pct=1.4; hour_23_pct=1.5",
+   "numbers": [
+    "0.1",
+    "0.2",
+    "0.3",
+    "0.4",
+    "0.5",
+    "0.8",
+    "1.0",
+    "1.4",
+    "1.5",
+    "1.8",
+    "2.1",
+    "2.3",
+    "3.3",
+    "4.9",
+    "7.2",
+    "7.8",
+    "8.2",
+    "9.2",
+    "9.6",
+    "9.7",
+    "10.0",
+    "10.3",
+    "14",
+    "15",
+    "30.0",
+    "71.6",
+    "21415"
+   ]
+  },
+  {
+   "id": "hours-all_open",
+   "claim": "All open jobs, any posting date: posting hour (UTC)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hours\" / \"all_open\": timed_jobs=389605; peak_hour=15; peak_hour_pct=7.9; share_9_to_17_pct=46.2; share_0_to_6_pct=8.8; busiest_three_hours_start=14; weekday_peak_hour=15; busiest_three_hours_pct=22.7; hour_00_pct=2.0; hour_01_pct=1.6; hour_02_pct=1.7; hour_03_pct=1.5; hour_04_pct=1.0; hour_05_pct=1.1; hour_06_pct=1.5; hour_07_pct=2.8; hour_08_pct=3.5; hour_09_pct=4.2; hour_10_pct=4.1; hour_11_pct=3.8; hour_12_pct=4.4; hour_13_pct=7.0; hour_14_pct=7.4; hour_15_pct=7.9; hour_16_pct=7.4; hour_17_pct=6.7; hour_18_pct=6.0; hour_19_pct=6.0; hour_20_pct=6.1; hour_21_pct=5.3; hour_22_pct=3.9; hour_23_pct=3.2",
+   "numbers": [
+    "1.0",
+    "1.1",
+    "1.5",
+    "1.6",
+    "1.7",
+    "2.0",
+    "2.8",
+    "3.2",
+    "3.5",
+    "3.8",
+    "3.9",
+    "4.1",
+    "4.2",
+    "4.4",
+    "5.3",
+    "6.0",
+    "6.1",
+    "6.7",
+    "7.0",
+    "7.4",
+    "7.9",
+    "8.8",
+    "14",
+    "15",
+    "22.7",
+    "46.2",
+    "389605"
+   ]
+  },
+  {
+   "id": "refresh-00",
+   "claim": "daily refresh at 00:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 0, \"mean_wait_h\": 8.8, \"within_6h_pct\": 33.8",
+   "numbers": [
+    "0",
+    "8.8",
+    "33.8"
+   ]
+  },
+  {
+   "id": "refresh-01",
+   "claim": "daily refresh at 01:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 1, \"mean_wait_h\": 9.3, \"within_6h_pct\": 29.1",
+   "numbers": [
+    "1",
+    "9.3",
+    "29.1"
+   ]
+  },
+  {
+   "id": "refresh-02",
+   "claim": "daily refresh at 02:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 2, \"mean_wait_h\": 10.0, \"within_6h_pct\": 23.7",
+   "numbers": [
+    "2",
+    "10.0",
+    "23.7"
+   ]
+  },
+  {
+   "id": "refresh-03",
+   "claim": "daily refresh at 03:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 3, \"mean_wait_h\": 10.7, \"within_6h_pct\": 18.6",
+   "numbers": [
+    "3",
+    "10.7",
+    "18.6"
+   ]
+  },
+  {
+   "id": "refresh-04",
+   "claim": "daily refresh at 04:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 4, \"mean_wait_h\": 11.4, \"within_6h_pct\": 13.8",
+   "numbers": [
+    "4",
+    "11.4",
+    "13.8"
+   ]
+  },
+  {
+   "id": "refresh-05",
+   "claim": "daily refresh at 05:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 5, \"mean_wait_h\": 12.2, \"within_6h_pct\": 10.1",
+   "numbers": [
+    "5",
+    "10.1",
+    "12.2"
+   ]
+  },
+  {
+   "id": "refresh-06",
+   "claim": "daily refresh at 06:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 6, \"mean_wait_h\": 13.0, \"within_6h_pct\": 7.7",
+   "numbers": [
+    "6",
+    "7.7",
+    "13.0"
+   ]
+  },
+  {
+   "id": "refresh-07",
+   "claim": "daily refresh at 07:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 7, \"mean_wait_h\": 13.7, \"within_6h_pct\": 6.8",
+   "numbers": [
+    "6.8",
+    "7",
+    "13.7"
+   ]
+  },
+  {
+   "id": "refresh-08",
+   "claim": "daily refresh at 08:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 8, \"mean_wait_h\": 14.2, \"within_6h_pct\": 7.5",
+   "numbers": [
+    "7.5",
+    "8",
+    "14.2"
+   ]
+  },
+  {
+   "id": "refresh-09",
+   "claim": "daily refresh at 09:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 9, \"mean_wait_h\": 14.5, \"within_6h_pct\": 9.3",
+   "numbers": [
+    "9",
+    "9.3",
+    "14.5"
+   ]
+  },
+  {
+   "id": "refresh-10",
+   "claim": "daily refresh at 10:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 10, \"mean_wait_h\": 14.7, \"within_6h_pct\": 11.4",
+   "numbers": [
+    "10",
+    "11.4",
+    "14.7"
+   ]
+  },
+  {
+   "id": "refresh-11",
+   "claim": "daily refresh at 11:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 11, \"mean_wait_h\": 14.9, \"within_6h_pct\": 14.0",
+   "numbers": [
+    "11",
+    "14.0",
+    "14.9"
+   ]
+  },
+  {
+   "id": "refresh-12",
+   "claim": "daily refresh at 12:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 12, \"mean_wait_h\": 15.2, \"within_6h_pct\": 16.1",
+   "numbers": [
+    "12",
+    "15.2",
+    "16.1"
+   ]
+  },
+  {
+   "id": "refresh-13",
+   "claim": "daily refresh at 13:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 13, \"mean_wait_h\": 15.3, \"within_6h_pct\": 18.5",
+   "numbers": [
+    "13",
+    "15.3",
+    "18.5"
+   ]
+  },
+  {
+   "id": "refresh-14",
+   "claim": "daily refresh at 14:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 14, \"mean_wait_h\": 14.4, \"within_6h_pct\": 24.3",
+   "numbers": [
+    "14",
+    "14.4",
+    "24.3"
+   ]
+  },
+  {
+   "id": "refresh-15",
+   "claim": "daily refresh at 15:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 15, \"mean_wait_h\": 13.7, \"within_6h_pct\": 28.6",
+   "numbers": [
+    "13.7",
+    "15",
+    "28.6"
+   ]
+  },
+  {
+   "id": "refresh-16",
+   "claim": "daily refresh at 16:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 16, \"mean_wait_h\": 12.6, \"within_6h_pct\": 33.6",
+   "numbers": [
+    "12.6",
+    "16",
+    "33.6"
+   ]
+  },
+  {
+   "id": "refresh-17",
+   "claim": "daily refresh at 17:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 17, \"mean_wait_h\": 11.7, \"within_6h_pct\": 38.1",
+   "numbers": [
+    "11.7",
+    "17",
+    "38.1"
+   ]
+  },
+  {
+   "id": "refresh-18",
+   "claim": "daily refresh at 18:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 18, \"mean_wait_h\": 10.9, \"within_6h_pct\": 42.7",
+   "numbers": [
+    "10.9",
+    "18",
+    "42.7"
+   ]
+  },
+  {
+   "id": "refresh-19",
+   "claim": "daily refresh at 19:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 19, \"mean_wait_h\": 10.3, \"within_6h_pct\": 45.9",
+   "numbers": [
+    "10.3",
+    "19",
+    "45.9"
+   ]
+  },
+  {
+   "id": "refresh-20",
+   "claim": "daily refresh at 20:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 20, \"mean_wait_h\": 9.7, \"within_6h_pct\": 44.8",
+   "numbers": [
+    "9.7",
+    "20",
+    "44.8"
+   ]
+  },
+  {
+   "id": "refresh-21",
+   "claim": "daily refresh at 21:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 21, \"mean_wait_h\": 9.2, \"within_6h_pct\": 43.8",
+   "numbers": [
+    "9.2",
+    "21",
+    "43.8"
+   ]
+  },
+  {
+   "id": "refresh-22",
+   "claim": "daily refresh at 22:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 22, \"mean_wait_h\": 8.7, \"within_6h_pct\": 41.4",
+   "numbers": [
+    "8.7",
+    "22",
+    "41.4"
+   ]
+  },
+  {
+   "id": "refresh-23",
+   "claim": "daily refresh at 23:00 UTC",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"hour_utc\": 23, \"mean_wait_h\": 8.6, \"within_6h_pct\": 38.0",
+   "numbers": [
+    "8.6",
+    "23",
+    "38.0"
+   ]
+  },
+  {
+   "id": "window_days",
+   "claim": "window days",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"window_days\": 28",
+   "numbers": [
+    "28"
+   ]
+  },
+  {
+   "id": "window_weeks",
+   "claim": "window weeks",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"window_weeks\": 4",
+   "numbers": [
+    "4"
+   ]
+  },
+  {
+   "id": "index_boards",
+   "claim": "index boards",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"index_boards\": 23287",
+   "numbers": [
+    "23287"
+   ]
+  },
+  {
+   "id": "index_jobs",
+   "claim": "index jobs",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"index_jobs\": 461985",
+   "numbers": [
+    "461985"
+   ]
+  },
+  {
+   "id": "jobs_counted",
+   "claim": "jobs counted",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"jobs_counted\": 461985",
+   "numbers": [
+    "461985"
+   ]
+  },
+  {
+   "id": "jobs_without_date",
+   "claim": "jobs without date",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"jobs_without_date\": 84",
+   "numbers": [
+    "84"
+   ]
+  },
+  {
+   "id": "jobs_dated",
+   "claim": "jobs dated",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"jobs_dated\": 461901",
+   "numbers": [
+    "461901"
+   ]
+  },
+  {
+   "id": "copies_dropped",
+   "claim": "copies dropped",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"copies_dropped\": 5304",
+   "numbers": [
+    "5304"
+   ]
+  },
+  {
+   "id": "jobs_after_copies",
+   "claim": "jobs after copies",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"jobs_after_copies\": 456597",
+   "numbers": [
+    "456597"
+   ]
+  },
+  {
+   "id": "window_jobs",
+   "claim": "window jobs",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"window_jobs\": 117153",
+   "numbers": [
+    "117153"
+   ]
+  },
+  {
+   "id": "window_boards",
+   "claim": "window boards",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"window_boards\": 12228",
+   "numbers": [
+    "12228"
+   ]
+  },
+  {
+   "id": "window_share_of_open_pct",
+   "claim": "window share of open pct",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"window_share_of_open_pct\": 25.7",
+   "numbers": [
+    "25.7"
+   ]
+  },
+  {
+   "id": "window_timed_jobs",
+   "claim": "window timed jobs",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"window_timed_jobs\": 98848",
+   "numbers": [
+    "98848"
+   ]
+  },
+  {
+   "id": "region_us_jobs",
+   "claim": "region us jobs",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"region_us_jobs\": 212299",
+   "numbers": [
+    "212299"
+   ]
+  },
+  {
+   "id": "region_europe_jobs",
+   "claim": "region europe jobs",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"region_europe_jobs\": 105521",
+   "numbers": [
+    "105521"
+   ]
+  },
+  {
+   "id": "region_other_jobs",
+   "claim": "region other jobs",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"region_other_jobs\": 138777",
+   "numbers": [
+    "138777"
+   ]
+  },
+  {
+   "id": "region_us_pct",
+   "claim": "region us pct",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"region_us_pct\": 46.5",
+   "numbers": [
+    "46.5"
+   ]
+  },
+  {
+   "id": "region_europe_pct",
+   "claim": "region europe pct",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"region_europe_pct\": 23.1",
+   "numbers": [
+    "23.1"
+   ]
+  },
+  {
+   "id": "region_other_pct",
+   "claim": "region other pct",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"region_other_pct\": 30.4",
+   "numbers": [
+    "30.4"
+   ]
+  },
+  {
+   "id": "window_region_us_jobs",
+   "claim": "window region us jobs",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"window_region_us_jobs\": 61206",
+   "numbers": [
+    "61206"
+   ]
+  },
+  {
+   "id": "window_region_europe_jobs",
+   "claim": "window region europe jobs",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"window_region_europe_jobs\": 25641",
+   "numbers": [
+    "25641"
+   ]
+  },
+  {
+   "id": "refresh_best_hour_utc",
+   "claim": "refresh best hour utc",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"refresh_best_hour_utc\": 23",
+   "numbers": [
+    "23"
+   ]
+  },
+  {
+   "id": "refresh_best_mean_wait_h",
+   "claim": "refresh best mean wait h",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"refresh_best_mean_wait_h\": 8.6",
+   "numbers": [
+    "8.6"
+   ]
+  },
+  {
+   "id": "refresh_best_within_6h_pct",
+   "claim": "refresh best within 6h pct",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"refresh_best_within_6h_pct\": 38.0",
+   "numbers": [
+    "38.0"
+   ]
+  },
+  {
+   "id": "refresh_worst_hour_utc",
+   "claim": "refresh worst hour utc",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"refresh_worst_hour_utc\": 13",
+   "numbers": [
+    "13"
+   ]
+  },
+  {
+   "id": "refresh_worst_mean_wait_h",
+   "claim": "refresh worst mean wait h",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"refresh_worst_mean_wait_h\": 15.3",
+   "numbers": [
+    "15.3"
+   ]
+  },
+  {
+   "id": "refresh_worst_within_6h_pct",
+   "claim": "refresh worst within 6h pct",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"refresh_worst_within_6h_pct\": 18.5",
+   "numbers": [
+    "18.5"
+   ]
+  },
+  {
+   "id": "refresh_at_index_build_hour_utc",
+   "claim": "refresh at index build hour utc",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"refresh_at_index_build_hour_utc\": 4",
+   "numbers": [
+    "4"
+   ]
+  },
+  {
+   "id": "refresh_at_index_build_mean_wait_h",
+   "claim": "refresh at index build mean wait h",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"refresh_at_index_build_mean_wait_h\": 11.4",
+   "numbers": [
+    "11.4"
+   ]
+  },
+  {
+   "id": "refresh_at_index_build_within_6h_pct",
+   "claim": "refresh at index build within 6h pct",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"refresh_at_index_build_within_6h_pct\": 13.8",
+   "numbers": [
+    "13.8"
+   ]
+  },
+  {
+   "id": "copies_dropped_greenhouse",
+   "claim": "copies dropped greenhouse",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"copies_dropped_greenhouse\": 499",
+   "numbers": [
+    "499"
+   ]
+  },
+  {
+   "id": "jobs_without_date_greenhouse",
+   "claim": "jobs without date greenhouse",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"jobs_without_date_greenhouse\": 84",
+   "numbers": [
+    "84"
+   ]
+  },
+  {
+   "id": "copies_dropped_lever",
+   "claim": "copies dropped lever",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"copies_dropped_lever\": 1",
+   "numbers": [
+    "1"
+   ]
+  },
+  {
+   "id": "jobs_without_date_lever",
+   "claim": "jobs without date lever",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"jobs_without_date_lever\": 0",
+   "numbers": [
+    "0"
+   ]
+  },
+  {
+   "id": "copies_dropped_ashby",
+   "claim": "copies dropped ashby",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"copies_dropped_ashby\": 0",
+   "numbers": [
+    "0"
+   ]
+  },
+  {
+   "id": "jobs_without_date_ashby",
+   "claim": "jobs without date ashby",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"jobs_without_date_ashby\": 0",
+   "numbers": [
+    "0"
+   ]
+  },
+  {
+   "id": "copies_dropped_recruitee",
+   "claim": "copies dropped recruitee",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"copies_dropped_recruitee\": 4757",
+   "numbers": [
+    "4757"
+   ]
+  },
+  {
+   "id": "jobs_without_date_recruitee",
+   "claim": "jobs without date recruitee",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"jobs_without_date_recruitee\": 0",
+   "numbers": [
+    "0"
+   ]
+  },
+  {
+   "id": "copies_dropped_personio",
+   "claim": "copies dropped personio",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"copies_dropped_personio\": 30",
+   "numbers": [
+    "30"
+   ]
+  },
+  {
+   "id": "jobs_without_date_personio",
+   "claim": "jobs without date personio",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"jobs_without_date_personio\": 0",
+   "numbers": [
+    "0"
+   ]
+  },
+  {
+   "id": "copies_dropped_workable",
+   "claim": "copies dropped workable",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"copies_dropped_workable\": 17",
+   "numbers": [
+    "17"
+   ]
+  },
+  {
+   "id": "jobs_without_date_workable",
+   "claim": "jobs without date workable",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"jobs_without_date_workable\": 0",
+   "numbers": [
+    "0"
+   ]
+  }
+ ]
+}
