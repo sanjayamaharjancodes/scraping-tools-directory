@@ -32,6 +32,52 @@ any of our tools (the Chrome extension and the web fetcher both refuse reddit.co
   hero image did not load. Both were fixed for attempt 2: every page got the same banner removal (nothing clicked
   or accepted) and a scroll-through before the capture.
 
-## Attempt 2: blind
+## Attempt 2: blind (counts for the gate)
 
-(in progress)
+- **Method change, and why:** a subagent inherits the session's repository context, so the reviewer ran as a
+  separate headless Claude (`claude -p`) started in a neutral folder outside any repository, under this job's
+  temporary directory. User settings and hooks (`--setting-sources project`) and MCP servers
+  (`--strict-mcp-config`) were left out, with the Read tool only and no saved session. The prompt and files named no
+  site or owner. Pages were relabelled at random: P ours, Q ChiefJobs, R Recruiter.com, S Facebook, T CNBC.
+- **Inputs, the same for every page:**
+  - desktop tiles (1280 px, 900 px tall) and phone tiles (412 CSS px at 2x, 780 CSS px tall), with each page's
+    full text;
+  - the same cookie and consent banner removal on every page, with nothing clicked or accepted;
+  - a scroll-through before each capture so that lazy images load;
+  - caps of 16 desktop and 12 phone tiles, none exceeded.
+- **Files viewed (reported):** 78 tiles, P 16, Q 17, R 13, S 10, T 22, and all five text files in full.
+- **Blindness (reported):** "Nothing in my instructions or environment said who commissioned this review or which
+  page belongs to whom."
+
+### Verdict
+
+| Criterion | Order (1st to 5th) | Ours (P) |
+|---|---|---|
+| Originality | P > T > R > S > Q | **1st** |
+| Usefulness | P > T > R > Q > S | **1st** |
+| Trustworthiness | P > T > R > Q > S | **1st** |
+
+**Gate (ours first on originality against the top Google results): PASSED.**
+
+Reasons, condensed:
+- **Originality:** P is "the only page with first-hand data". It also does its own analysis: the closure
+  correction, one vote per board, the split by ATS, posting hours and the refresh model. T passes on ZipRecruiter's
+  figures. R restates a 2015 SmartRecruiters study. S is a Meta AI summary of anecdotes. Q is advice with no data.
+- **Usefulness:** P answers in its first box, hedges ("but only just, and not every week") and gives job seekers,
+  recruiters and feed builders something to act on.
+- **Trustworthiness:** P dates and sizes everything, names the vendor field it reads, and states its limits. Its
+  counts sum to 117,153 and the shares match the counts.
+
+### Its defects in our page, and what was done (after the verdict, not re-reviewed)
+
+| Defect | Action |
+|---|---|
+| Tuesday's pooled lead rests on Greenhouse (52,601 of 117,153 jobs); by jobs Tuesday tops only Greenhouse and Personio | The ATS note says so, and adds that counting each board once Tuesday tops five of the six ATSs |
+| Sample skew not flagged: six ATSs, one autumn window | Method now says employers on other systems (Workday, iCIMS) are not covered, so the shares describe these boards, not the whole job market. The four-week window was already stated |
+| Lever and Personio `createdAt` may be creation, not publication | Method says so |
+| 461,985 becomes 456,597 without reconciliation | Method says: 5,304 copies and 84 undated jobs left out, leaving 456,597 |
+| The 9:00-10:00 Eastern dip is not discussed | Left: the chart shows it and the JSON has every hour |
+| Index not published; AI-drafted; own product promoted (disclosed) | Kept as in attempt 1 |
+
+After these edits: `build_data.py --check` passes (65 table cells); `run_gate.py` gives 0 findings, 1,478 words and
+9.0 phone screens, with no JS errors.
