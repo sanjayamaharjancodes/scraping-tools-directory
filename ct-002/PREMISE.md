@@ -38,13 +38,19 @@ Demand evidence for the chosen query (Google, US English, `hl=en&gl=us&pws=0`, 1
 The first organic result is a Reddit thread (r/jobsearchhacks, "What time do recruiters usually post new job
 openings..."). None of our tools can read it: the Chrome extension refuses reddit.com for safety reasons, and the
 web fetcher refuses reddit.com and old.reddit.com. Its Google snippet shows a discussion of personal impressions.
-The review therefore uses the first three organic results that can be read, results 2 to 4:
+Google's order below the first three changed between reads on 19 Nov (same query and parameters): in two reads
+result 4 was CNBC (cnbc.com/make-it/2023/08/15/best-day-of-the-week-to-apply-for-a-new-job-according-to-ziprecruiter),
+and in one read it was ChiefJobs, with CNBC absent from the top 8. Results 1 to 3 were the same in all three reads.
+The review therefore compares five pages: ours, results 2 and 3, and both pages that appeared at 4. That is one page
+more than the brief's three. It also stands in for the unreadable Reddit thread, and CNBC is the harder comparison
+on originality, because it reports ZipRecruiter's own posting data.
 
 | # | Page | What it gives the reader | What it does not have |
 |---|---|---|---|
 | 2 | recruiter.com/recruiter-today/why-tuesday-is-a-job-seekers-favorite-day (6 Apr 2015) | A summary of SmartRecruiters' 2015 analysis of 270,000 US and Canadian jobs: Tuesday is the top posting day, 58% of jobs are posted Monday to Wednesday, and posting peaks around 11 AM. Then a Q&A with that vendor's CEO | Data from 2015, from one vendor's customers. No time zone for "11 AM", no per-day table, no breakdown by ATS or region, and the data is not published |
 | 3 | facebook.com/fb-answers/what-day-of-the-week-are-most-jobs-posted ("Summarized by Meta AI") | An AI summary that says Wednesday and Friday, beside users' posts (one recruiter says Amazon posts on Fridays) | No data of its own. It contradicts result 2, and its sources are anecdotes |
 | 4 | chiefjobs.com/the-best-days-and-times-of-the-week-to-post-on-job-boards (Dec 2024, updated Jul 2025) | Advice for employers on posting times, based on job-seeker behaviour | Says "studies indicate" but names no study and gives no numbers |
+| 4 | cnbc.com/make-it/2023/08/15/... (15 Aug 2023) | A news article on ZipRecruiter's own figures: Tuesday is the day the most new jobs are added to that site, and advice to apply early | One job site's figures from 2023, reported second-hand. No method, no hours, no breakdown by employer platform or region, and no data to download |
 
 ## What our page will have that they don't
 
@@ -55,7 +61,9 @@ time comes from the vendor's own feed.
 1. **Weekday shares of current postings.** Jobs posted in the last four full weeks before the snapshot, by weekday,
    so every weekday is counted four times, with all open jobs alongside.
 2. **Hour of day**, in UTC and, for jobs located in the US, in US Eastern time, so "11 AM" has a time zone. A
-   selector shifts the hours to the reader's own time zone.
+   chart shows the hours for each ATS, region and weekday. (Planned as a time-zone shifter; built as ATS, region
+   and day selectors, because a fixed-offset shift would be wrong by an hour across the daylight-saving changes
+   inside the four weeks.)
 3. **By ATS and region.** The posting day and hour for each of the six ATSs, and for US-located against other jobs.
 4. **Weighting stated.** Shares are job-weighted, with each board counted once alongside, because the top 1% of
    boards hold 16-45% of each ATS's jobs. Jobs listed identically on more than one board are counted once.
