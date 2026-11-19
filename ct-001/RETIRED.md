@@ -73,5 +73,12 @@ its own (per-1,000 prices at each volume), twice the free-trial page's 5. So it 
   comparison". Those links work.
 - **The content-autopilot's page registry still lists the three pages.** Before it resumes, mark them retired there,
   or its refresh rule (facts older than 30 days) could rewrite one and put it back in the sitemap.
+- **Its publish step rebuilds three things this change edited by hand.** `publish.py` regenerates `llms.txt` and
+  `data/pages.json` from the site's pages:
+  - **llms.txt / pages.json:** it skips noindex pages, so the retired pages stay out and the new page is picked up.
+    Its fixed "Data" section would drop the two crawl-data lines in `llms.txt`.
+  - **Home-page cards:** it rebuilds the "More guides" block from its own registry, so the new page's card stays
+    only if the page is registered there.
+  Register the new page and keep those two lines before lifting STOP.
 - Per the 19 Nov rule (every public page carries something only we have), none of the three was rewritten or merged
   into another page. Each points to an existing page.

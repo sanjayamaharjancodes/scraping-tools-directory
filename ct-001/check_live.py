@@ -6,7 +6,7 @@ Checks, each printed as PASS or FAIL:
 - sitemap.xml lists the new page and none of the three retired pages;
 - the published CSV and JSON answer 200 and are byte-identical to this repository's copies;
 - each retired page answers 200, is noindex, and links its replacement;
-- ct-001/ is not served (the Pages build excludes it).
+- ct-001/ is not served (the Pages build excludes it): a raw file and a rendered Markdown name both answer 404.
 Exit code 0 only when every check passes. Standard library only.
 """
 import os
@@ -63,8 +63,10 @@ def main():
         check(f"{old} answers 200, noindex, links {new}",
               st == 200 and bool(re.search(r'<meta name="robots" content="noindex', h)) and f'href="{new}"' in h,
               str(st))
-    st, _ = get("ct-001/PREMISE.md")
-    check("ct-001/ is not served", st == 404, str(st))
+    # Pages may render .md as .html, so probe both a raw file and the rendered name; both must be absent.
+    for rel in ("ct-001/build_data.py", "ct-001/PREMISE.html"):
+        st, _ = get(rel)
+        check(f"{rel} is not served (Pages build excludes ct-001/)", st == 404, str(st))
     print("ALL PASS" if all(results) else f"{results.count(False)} FAILED")
     sys.exit(0 if all(results) else 1)
 
