@@ -90,15 +90,15 @@
   <div class="container prose">
     <div class="answer-first">
       <span class="answer-first-label">Short answer</span>
-      <p>Most jobs are posted on a Tuesday, but only just. Of the 117,153 jobs that 12,228 companies posted on their career pages from 19 Oct to 15 Nov 2026, 20.7% went up on a Tuesday once jobs that had already closed are allowed for. Each other weekday had 18.6% to 19.9%, and Saturday and Sunday together 2.9%. Jobs go up during working hours: 68.2% of US jobs with a posting time went up between 9:00 and 17:00 US Eastern time.</p>
+      <p>Most jobs are posted on a Tuesday, but only just. Of the 117,153 jobs that 12,228 companies posted on their career pages from 19 Oct 2026 to 15 Nov 2026, 20.7% went up on a Tuesday once jobs that had already closed are allowed for. Each other weekday had 18.6% to 19.9%, and Saturday and Sunday together 2.9%. Jobs go up during working hours: 68.2% of US jobs with a posting time went up between 9:00 and 17:00 US Eastern time.</p>
     </div>
     <p class="data-links">Download the numbers: <a href="data/job-posting-days-2026-11.csv" data-goatcounter-click="download/job-posting-days-csv">CSV</a> · <a href="data/job-posting-days-2026-11.json" data-goatcounter-click="download/job-posting-days-json">JSON</a></p>
 
     <h2>Jobs posted on each weekday</h2>
-    <p>The index was built at 04:03 UTC on 19 Nov 2026 from 23,287 company job boards holding 461,985 open jobs. This table counts the jobs posted in the last four full weeks before that, Monday 19 Oct to Sunday 15 Nov, so every weekday appears four times.</p>
+    <p>The index was built at 04:03 UTC on 19 Nov 2026 from 23,287 company job boards holding 461,985 open jobs. This table counts the jobs posted in the last four full weeks before that, Monday 19 Oct 2026 to Sunday 15 Nov 2026, so every weekday appears four times.</p>
     <div class="table-wrap">
       <table class="day-table">
-        <caption>Jobs posted on each weekday, 19 Oct to 15 Nov 2026, still open on 19 Nov</caption>
+        <caption>Jobs posted on each weekday, 19 Oct 2026 to 15 Nov 2026, still open on 19 Nov 2026</caption>
         <thead><tr><th>Day</th><th>Jobs</th><th>Raw share</th><th>Adjusted</th><th>Each board once</th><th>US, Eastern</th><th>Europe, CET</th></tr></thead>
         <tbody>
           <tr><td data-label="Day">Mon</td><td data-label="Jobs">20,962</td><td data-label="Raw share">17.9%</td><td data-label="Adjusted">18.9%</td><td data-label="Each board once">18.4%</td><td data-label="US, Eastern">20.0%</td><td data-label="Europe, CET">19.5%</td></tr>
@@ -111,7 +111,7 @@
         </tbody>
       </table>
     </div>
-    <p class="table-note"><strong>Raw share</strong> counts the jobs still open on 19 Nov, in UTC. <strong>Adjusted</strong> corrects for jobs that closed before the snapshot (below). <strong>Each board once</strong> gives every company board one vote, so a board that posted hundreds of jobs counts as much as one that posted a single job. The last two columns are adjusted shares in local time: 61,239 US-located jobs in US Eastern time, and 25,641 Europe-located jobs in Central European time (CET).</p>
+    <p class="table-note"><strong>Raw share</strong> counts the jobs still open on 19 Nov 2026, in UTC. <strong>Adjusted</strong> corrects for jobs that closed before the snapshot (below). <strong>Each board once</strong> gives every company board one vote, so a board that posted hundreds of jobs counts as much as one that posted a single job. The last two columns are adjusted shares in local time: 61,239 US-located jobs in US Eastern time, and 25,641 Europe-located jobs in Central European time (CET).</p>
 
     <!-- ad:after-answer -->
 
@@ -123,7 +123,7 @@
     <h2>Posting day by ATS</h2>
     <div class="table-wrap">
       <table class="day-table">
-        <caption>Posting day by ATS, closure-adjusted, 19 Oct to 15 Nov 2026</caption>
+        <caption>Posting day by ATS, closure-adjusted, 19 Oct 2026 to 15 Nov 2026</caption>
         <thead><tr><th>ATS</th><th>Jobs</th><th>Top day</th><th>Mon-Wed</th><th>Weekend</th><th>Each board once</th></tr></thead>
         <tbody>
           <tr><td data-label="ATS">Greenhouse</td><td data-label="Jobs">52,601</td><td data-label="Top day">Tuesday 21.5%</td><td data-label="Mon-Wed">59.1%</td><td data-label="Weekend">1.9%</td><td data-label="Each board once">Tuesday</td></tr>
@@ -175,7 +175,7 @@
       <li><strong>Posting time:</strong> the vendor's own field: Greenhouse <code>first_published</code>, Lever <code>createdAt</code>, Ashby <code>publishedAt</code>, Recruitee <code>published_at</code>, Personio <code>createdAt</code>, Workable <code>published_on</code> (a date only). 84 jobs had no date.</li>
       <li><strong>Copies:</strong> a job with the same title, location and posting time on two boards of one ATS counts once. That removed 5,304 jobs, 4,757 of them on Recruitee.</li>
       <li><strong>Closure adjustment:</strong> the daily rate is fitted from how each weekday's count falls from week to week, then each day's jobs are weighted by it. If posting volume itself changed over the four weeks, the rate absorbs that too.</li>
-      <li><strong>Region:</strong> read from the location text. 46.5% of open jobs name a US place, 23.1% a European one; the other 30.4% name another region, several regions or no place we recognize. US Eastern and CET include their daylight-saving changes on 1 Nov and 25 Oct.</li>
+      <li><strong>Region:</strong> read from the location text. 46.5% of open jobs name a US place, 23.1% a European one; the other 30.4% name another region, several regions or no place we recognize. US Eastern and CET include their daylight-saving changes on 1 Nov 2026 and 25 Oct 2026.</li>
       <li><strong>Reproducible:</strong> <a href="https://github.com/sanjayamaharjancodes/scraping-tools-directory/blob/main/ct-002/build_data.py">build_data.py</a> rebuilds the CSV and JSON from the index files, refuses any other index build by its SHA-256 hashes, and fails if a number on this page is not in that data. The index files are not published; the CSV and JSON carry every count used. This page was drafted with AI tools from that data.</li>
     </ul>
 
