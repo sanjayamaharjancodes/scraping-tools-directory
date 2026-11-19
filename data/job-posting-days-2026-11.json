@@ -565,7 +565,7 @@
  ],
  "hours": {
   "all": {
-   "label": "All six ATSs",
+   "label": "Greenhouse, Lever, Ashby, Recruitee and Personio",
    "clock": "UTC",
    "timed_jobs": 98848,
    "by_weekday_hour": [
@@ -784,7 +784,10 @@
    "share_0_to_6_pct": 7.7,
    "busiest_three_hours_start": 15,
    "weekday_peak_hour": 15,
-   "busiest_three_hours_pct": 23.9
+   "busiest_three_hours_end": 18,
+   "busiest_three_hours_pct": 23.9,
+   "working_hours_start": 9,
+   "working_hours_end": 17
   },
   "greenhouse": {
    "label": "Greenhouse",
@@ -1006,7 +1009,10 @@
    "share_0_to_6_pct": 8.3,
    "busiest_three_hours_start": 15,
    "weekday_peak_hour": 16,
-   "busiest_three_hours_pct": 26.7
+   "busiest_three_hours_end": 18,
+   "busiest_three_hours_pct": 26.7,
+   "working_hours_start": 9,
+   "working_hours_end": 17
   },
   "lever": {
    "label": "Lever",
@@ -1228,7 +1234,10 @@
    "share_0_to_6_pct": 8.7,
    "busiest_three_hours_start": 13,
    "weekday_peak_hour": 13,
-   "busiest_three_hours_pct": 31.6
+   "busiest_three_hours_end": 16,
+   "busiest_three_hours_pct": 31.6,
+   "working_hours_start": 9,
+   "working_hours_end": 17
   },
   "ashby": {
    "label": "Ashby",
@@ -1450,7 +1459,10 @@
    "share_0_to_6_pct": 9.9,
    "busiest_three_hours_start": 15,
    "weekday_peak_hour": 17,
-   "busiest_three_hours_pct": 23.8
+   "busiest_three_hours_end": 18,
+   "busiest_three_hours_pct": 23.8,
+   "working_hours_start": 9,
+   "working_hours_end": 17
   },
   "recruitee": {
    "label": "Recruitee",
@@ -1672,7 +1684,10 @@
    "share_0_to_6_pct": 2.1,
    "busiest_three_hours_start": 8,
    "weekday_peak_hour": 9,
-   "busiest_three_hours_pct": 31.0
+   "busiest_three_hours_end": 11,
+   "busiest_three_hours_pct": 31.0,
+   "working_hours_start": 9,
+   "working_hours_end": 17
   },
   "personio": {
    "label": "Personio",
@@ -1894,10 +1909,13 @@
    "share_0_to_6_pct": 0.3,
    "busiest_three_hours_start": 13,
    "weekday_peak_hour": 15,
-   "busiest_three_hours_pct": 34.9
+   "busiest_three_hours_end": 16,
+   "busiest_three_hours_pct": 34.9,
+   "working_hours_start": 9,
+   "working_hours_end": 17
   },
   "us": {
-   "label": "Jobs located in the US",
+   "label": "Jobs located in the US, without Workable",
    "clock": "US Eastern time",
    "timed_jobs": 52986,
    "by_weekday_hour": [
@@ -2116,10 +2134,13 @@
    "share_0_to_6_pct": 2.4,
    "busiest_three_hours_start": 12,
    "weekday_peak_hour": 14,
-   "busiest_three_hours_pct": 27.9
+   "busiest_three_hours_end": 15,
+   "busiest_three_hours_pct": 27.9,
+   "working_hours_start": 9,
+   "working_hours_end": 17
   },
   "europe": {
-   "label": "Jobs located in Europe",
+   "label": "Jobs located in Europe, without Workable",
    "clock": "Central European time",
    "timed_jobs": 21415,
    "by_weekday_hour": [
@@ -2338,10 +2359,13 @@
    "share_0_to_6_pct": 2.1,
    "busiest_three_hours_start": 14,
    "weekday_peak_hour": 15,
-   "busiest_three_hours_pct": 30.0
+   "busiest_three_hours_end": 17,
+   "busiest_three_hours_pct": 30.0,
+   "working_hours_start": 9,
+   "working_hours_end": 17
   },
   "all_open": {
-   "label": "All open jobs, any posting date",
+   "label": "All open jobs, any posting date, without Workable",
    "clock": "UTC",
    "timed_jobs": 389605,
    "by_weekday_hour": [
@@ -2560,7 +2584,10 @@
    "share_0_to_6_pct": 8.8,
    "busiest_three_hours_start": 14,
    "weekday_peak_hour": 15,
-   "busiest_three_hours_pct": 22.7
+   "busiest_three_hours_end": 17,
+   "busiest_three_hours_pct": 22.7,
+   "working_hours_start": 9,
+   "working_hours_end": 17
   }
  },
  "by_date": {
@@ -3008,7 +3035,7 @@
   ],
   "groups": {
    "all": {
-    "label": "All six ATSs",
+    "label": "Greenhouse, Lever, Ashby, Recruitee and Personio",
     "clock": "UTC",
     "jobs": 98848,
     "wh": [
@@ -4142,7 +4169,7 @@
     ]
    },
    "us": {
-    "label": "Jobs located in the US",
+    "label": "Jobs located in the US, without Workable",
     "clock": "US Eastern time",
     "jobs": 52986,
     "wh": [
@@ -4331,7 +4358,7 @@
     ]
    },
    "europe": {
-    "label": "Jobs located in Europe",
+    "label": "Jobs located in Europe, without Workable",
     "clock": "Central European time",
     "jobs": 21415,
     "wh": [

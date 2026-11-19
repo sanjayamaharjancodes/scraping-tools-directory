@@ -15,7 +15,7 @@ Writes (paths relative to the site root, the parent of ct-002/):
     data/job-posting-days-2026-11.json   the same plus hour-of-day counts, the refresh-time table, method and hashes
     ct-002/facts.json                    the content-autopilot gate's facts file (each number traced to the files above)
 With --check, it fails if any number visible on the page is not in the data, if a table cell does not hold its own
-row's value, or if the chart data embedded in the page differs from the JSON.
+row's value, or if the page's chart does not load the JSON (whose chart block must match its own hours).
 
 Standard library only. Nothing is fetched from the network. Each shard is read and released in turn.
 """
@@ -330,7 +330,9 @@ def build(index_dir):
             ph = max(range(24), key=lambda h: by_hour[h])
             weekday_hours = [sum(hours[w][h] for w in range(5)) for h in range(24)]
             out_hours[gid] = {
-                "label": label, "clock": CLOCK_NAME[clock], "timed_jobs": timed,
+                "label": ("Greenhouse, Lever, Ashby, Recruitee and Personio" if gid == "all" else
+                          label + ", without Workable" if "workable" in atss else label),
+                "clock": CLOCK_NAME[clock], "timed_jobs": timed,
                 "by_weekday_hour": hours, "hour_pct": [pct(x, timed) for x in by_hour],
                 "peak_hour": ph, "peak_hour_pct": pct(by_hour[ph], timed),
                 "share_9_to_17_pct": pct(sum(by_hour[9:17]), timed),
@@ -339,7 +341,9 @@ def build(index_dir):
                 "weekday_peak_hour": max(range(24), key=lambda h: weekday_hours[h]),
             }
             b3 = out_hours[gid]["busiest_three_hours_start"]
+            out_hours[gid]["busiest_three_hours_end"] = b3 + 3
             out_hours[gid]["busiest_three_hours_pct"] = pct(sum(by_hour[b3:b3 + 3]), timed)
+            out_hours[gid]["working_hours_start"], out_hours[gid]["working_hours_end"] = 9, 17
 
     # Refresh time: one daily refresh at hour H (UTC) picks up each job posted since the last one. Mean wait from
     # posting to that refresh, and the share picked up within 6 hours, over every timed job of the window.
@@ -548,8 +552,8 @@ def check_page(page, data):
 # Table caption prefix -> {column label: row field}. Each cell must hold its own row's value.
 TABLES = {
     "Jobs posted on each weekday": "weekday",
-    "Posting day by ATS": {"Jobs": "jobs", "Top day": "top_day_pct", "Mon-Thu": "mon_thu_pct",
-                           "Weekend": "weekend_pct"},
+    "Posting day by ATS": {"Jobs": "jobs", "Top day": "top_day_adj_pct", "Mon-Wed": "mon_wed_adj_pct",
+                           "Weekend": "weekend_adj_pct", "Each board once": "top_day_boards"},
 }
 
 
@@ -567,10 +571,12 @@ def check_tables(page, data):
             if TABLES[key] == "weekday":
                 # columns: one per group id (data-label is the group label); rows: weekdays
                 day = cells.get("Day", "")
-                if day not in DAYS:
+                short = [d[:3] for d in DAYS]
+                if day not in DAYS and day not in short:
                     bad.append(f"{key}: unknown row {day!r}")
                     continue
-                spec = {lab: (gid, f"{DAY_KEYS[DAYS.index(day)]}_{fld}") for lab, (gid, fld) in WEEKDAY_COLS.items()}
+                i = DAYS.index(day) if day in DAYS else short.index(day)
+                spec = {lab: (gid, f"{DAY_KEYS[i]}_{fld}") for lab, (gid, fld) in WEEKDAY_COLS.items()}
             else:
                 gid = next((r["id"] for r in data["rows"] if r["label"] == cells.get("ATS")), None)
                 if not gid:
@@ -581,29 +587,38 @@ def check_tables(page, data):
                 if label not in cells:
                     bad.append(f"{key} / {label}: column missing")
                     continue
-                m = re.search(r"\d[\d,]*(?:\.\d+)?", cells[label])
-                want = rows[gid].get(field)
-                got = float(m.group(0).replace(",", "")) if m else None
                 seen += 1
+                want = rows[gid].get(field)
+                if isinstance(want, str):          # a weekday name, e.g. the top day when each board counts once
+                    if cells[label] != want:
+                        bad.append(f"{key} / {gid} / {label}: page {cells[label]!r}, data {field}={want!r}")
+                    continue
+                m = re.search(r"\d[\d,]*(?:\.\d+)?", cells[label])
+                got = float(m.group(0).replace(",", "")) if m else None
                 if want is None or got is None or abs(got - float(want)) > 1e-9:
                     bad.append(f"{key} / {cells.get('Day') or cells.get('ATS')} / {label}: page {got}, "
                                f"data {gid}.{field}={want}")
-                if field == "top_day_pct" and rows[gid]["top_day"] not in cells[label]:
-                    bad.append(f"{key} / {gid}: top day on page {cells[label]!r}, data {rows[gid]['top_day']}")
+                if field == "top_day_adj_pct" and not cells[label].startswith(rows[gid]["top_day_adj"]):
+                    bad.append(f"{key} / {gid}: top day on page {cells[label]!r}, data {rows[gid]['top_day_adj']}")
     return bad, seen
 
 
 # Weekday table columns: data-label -> (group id, field suffix)
-WEEKDAY_COLS = {"Jobs": ("all", "jobs"), "Share": ("all", "pct"), "Each board once": ("all", "board_pct"),
-                "US jobs, Eastern": ("us", "pct"), "All open jobs": ("all_open", "pct")}
+WEEKDAY_COLS = {"Jobs": ("all", "jobs"), "Raw share": ("all", "pct"), "Adjusted": ("all", "adj_pct"),
+                "Each board once": ("all", "board_pct"), "US, Eastern": ("us", "adj_pct"),
+                "Europe, CET": ("europe", "adj_pct")}
 
 
 def check_widget(page, data):
+    """The chart reads the published JSON's "widget" block at run time; it must load that file, and the block
+    must be what this script derives from the JSON's own hours and refresh table."""
     html = open(page, encoding="utf-8").read()
-    m = re.search(r'<script type="application/json" id="posting-data">(.*?)</script>', html, re.S)
-    if not m:
-        return ["no <script id=\"posting-data\"> block"]
-    return [] if json.loads(m.group(1)) == data["widget"] else ["the page's chart data differs from the JSON"]
+    bad = []
+    if f'fetch("{JSON_REL}")' not in html:
+        bad.append(f"the page does not fetch {JSON_REL}")
+    if data.get("widget") != widget_data(data):
+        bad.append("the JSON's widget block does not match its own hours")
+    return bad
 
 
 def main():
@@ -636,7 +651,8 @@ def main():
                f"CHECK FAIL: {len(bad)} numbers on the page are not in the data: " + ", ".join(bad)))
         print((f"TABLE CHECK PASS: {seen} table cells match their own row and column" if seen and not tbad else
                f"TABLE CHECK FAIL ({seen} cells): " + ("; ".join(tbad) or "no table cells found")))
-        print("WIDGET CHECK PASS: the chart data equals the JSON" if not wbad else "WIDGET CHECK FAIL: " + wbad[0])
+        print("WIDGET CHECK PASS: the chart loads the JSON, whose widget block matches its hours" if not wbad
+              else "WIDGET CHECK FAIL: " + "; ".join(wbad))
         if bad or tbad or not seen or wbad:
             sys.exit(1)
 

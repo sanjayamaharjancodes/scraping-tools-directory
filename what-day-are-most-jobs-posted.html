@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Day Are Most Jobs Posted? Data on 117,153 Jobs | ScrapeTools</title>
+<meta name="description" content="Tuesday, narrowly: 20.7% of 117,153 jobs that 12,228 company job boards posted in four weeks to 15 Nov 2026. Posting hours by ATS and region, with a CSV.">
+<link rel="canonical" href="https://scrapetools.scaleturn.com/what-day-are-most-jobs-posted.html">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="widgets.css">
+<link rel="alternate" type="application/json" href="data/job-posting-days-2026-11.json" title="Job posting day and hour data">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "What day are most jobs posted? Four weeks of new jobs on 12,228 company job boards",
+      "description": "Tuesday, narrowly: 20.7% of 117,153 jobs that 12,228 company job boards posted in four weeks to 15 Nov 2026. Posting hours by ATS and region, with a CSV.",
+      "url": "https://scrapetools.scaleturn.com/what-day-are-most-jobs-posted.html",
+      "datePublished": "2026-11-19",
+      "dateModified": "2026-11-19",
+      "inLanguage": "en-US",
+      "publisher": {"@type": "Organization", "name": "Scaleturn", "url": "https://scaleturn.com/"},
+      "isPartOf": {"@type": "WebSite", "name": "ScrapeTools", "url": "https://scrapetools.scaleturn.com/"}
+    },
+    {
+      "@type": "Dataset",
+      "name": "Job posting weekday and hour on company job boards, October-November 2026",
+      "description": "Jobs posted per weekday and per hour on company job boards hosted by Greenhouse, Lever, Ashby, Recruitee, Personio and Workable, from the job index of ATS Jobs Search built on 19 Nov 2026: raw, closure-adjusted and per-board shares, by ATS and region.",
+      "url": "https://scrapetools.scaleturn.com/what-day-are-most-jobs-posted.html",
+      "temporalCoverage": "2026-10-19/2026-11-15",
+      "isAccessibleForFree": true,
+      "creator": {"@type": "Organization", "name": "Scaleturn", "url": "https://scaleturn.com/"},
+      "distribution": [
+        {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.csv"},
+        {"@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.json"}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  .day-table th, .day-table td { padding-left: 0.35rem; padding-right: 0.35rem; font-size: 0.92em; }
+  .day-table td + td, .day-table th + th { text-align: right; }
+  .day-table tr.lead-row td { font-weight: 700; }
+  .data-links { font-weight: 600; }
+  .table-note { font-size: 0.9em; }
+  .hour-chart { display: flex; align-items: flex-end; gap: 2px; height: 160px; margin: 0.75rem 0 0.25rem;
+    border-bottom: 1px solid var(--color-border); }
+  .hour-chart .bar { flex: 1 1 0; min-width: 0; min-height: 1px; background: var(--color-primary);
+    border-radius: 4px 4px 0 0; }
+  .hour-chart .bar:hover { background: var(--color-primary-dark); }
+  .hour-axis { display: flex; gap: 2px; font-size: 0.75rem; color: var(--color-text-muted); }
+  .hour-axis span { flex: 1 1 0; min-width: 0; text-align: left; white-space: nowrap; overflow: visible; }
+  .chart-caption { font-size: 0.9em; color: var(--color-text-muted); margin-top: 0.5rem; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="site-logo" href="index.html">Scrape<span>Tools</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="scraperapi-vs-scrapingbee.html">ScraperAPI vs ScrapingBee</a></li>
+        <li><a href="scraperapi-vs-bright-data.html">ScraperAPI vs Bright Data</a></li>
+        <li><a href="cheapest-web-scraping-api.html">Cheapest API</a></li>
+        <li><a href="web-scraping-api-cost-per-1000-requests.html">Cost per 1,000 requests</a></li>
+        <li><a href="scraperapi-cost-calculator.html">Cost calculator</a></li>
+        <li><a href="ats-job-posting-api-crawl-data.html">ATS API crawl data</a></li>
+        <li><a href="what-day-are-most-jobs-posted.html">Job posting days</a></li>
+        <li><a href="methodology.html">Methodology</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container prose">
+    <span class="freshness-stamp">Job index built: 19 Nov 2026</span>
+    <h1>What day are most jobs posted? Four weeks of new jobs on 12,228 company job boards</h1>
+    <p>First-hand counts from the job index behind <a href="https://apify.com/scaleturn/ats-jobs-search" data-goatcounter-click="apify/ats-jobs-search-scrapetools-days">ATS Jobs Search</a>, made by Scaleturn, which publishes this site. The index reads employers' own career pages on six applicant tracking systems (ATS), and each job carries the posting time from the vendor's feed.</p>
+  </div>
+</section>
+
+<main>
+  <div class="container prose">
+    <div class="answer-first">
+      <span class="answer-first-label">Short answer</span>
+      <p>Most jobs are posted on a Tuesday, but only just. Of the 117,153 jobs that 12,228 companies posted on their career pages from 19 Oct to 15 Nov 2026, 20.7% went up on a Tuesday once jobs that had already closed are allowed for. Each other weekday had 18.6% to 19.9%, and Saturday and Sunday together 2.9%. Jobs go up during working hours: 68.2% of US jobs with a posting time went up between 9:00 and 17:00 US Eastern time.</p>
+    </div>
+    <p class="data-links">Download the numbers: <a href="data/job-posting-days-2026-11.csv" data-goatcounter-click="download/job-posting-days-csv">CSV</a> · <a href="data/job-posting-days-2026-11.json" data-goatcounter-click="download/job-posting-days-json">JSON</a></p>
+
+    <h2>Jobs posted on each weekday</h2>
+    <p>The index was built at 04:03 UTC on 19 Nov 2026 from 23,287 company job boards holding 461,985 open jobs. This table counts the jobs posted in the last four full weeks before that, Monday 19 Oct to Sunday 15 Nov, so every weekday appears four times.</p>
+    <div class="table-wrap">
+      <table class="day-table">
+        <caption>Jobs posted on each weekday, 19 Oct to 15 Nov 2026, still open on 19 Nov</caption>
+        <thead><tr><th>Day</th><th>Jobs</th><th>Raw share</th><th>Adjusted</th><th>Each board once</th><th>US, Eastern</th><th>Europe, CET</th></tr></thead>
+        <tbody>
+          <tr><td data-label="Day">Mon</td><td data-label="Jobs">20,962</td><td data-label="Raw share">17.9%</td><td data-label="Adjusted">18.9%</td><td data-label="Each board once">18.4%</td><td data-label="US, Eastern">20.0%</td><td data-label="Europe, CET">19.5%</td></tr>
+          <tr class="lead-row"><td data-label="Day">Tue</td><td data-label="Jobs">23,523</td><td data-label="Raw share">20.1%</td><td data-label="Adjusted">20.7%</td><td data-label="Each board once">21.1%</td><td data-label="US, Eastern">20.8%</td><td data-label="Europe, CET">20.9%</td></tr>
+          <tr><td data-label="Day">Wed</td><td data-label="Jobs">21,521</td><td data-label="Raw share">18.4%</td><td data-label="Adjusted">18.6%</td><td data-label="Each board once">19.1%</td><td data-label="US, Eastern">18.3%</td><td data-label="Europe, CET">18.0%</td></tr>
+          <tr><td data-label="Day">Thu</td><td data-label="Jobs">23,830</td><td data-label="Raw share">20.3%</td><td data-label="Adjusted">19.9%</td><td data-label="Each board once">19.4%</td><td data-label="US, Eastern">19.2%</td><td data-label="Europe, CET">20.6%</td></tr>
+          <tr><td data-label="Day">Fri</td><td data-label="Jobs">23,542</td><td data-label="Raw share">20.1%</td><td data-label="Adjusted">19.1%</td><td data-label="Each board once">19.6%</td><td data-label="US, Eastern">18.5%</td><td data-label="Europe, CET">19.6%</td></tr>
+          <tr><td data-label="Day">Sat</td><td data-label="Jobs">1,964</td><td data-label="Raw share">1.7%</td><td data-label="Adjusted">1.5%</td><td data-label="Each board once">1.3%</td><td data-label="US, Eastern">1.3%</td><td data-label="Europe, CET">0.7%</td></tr>
+          <tr><td data-label="Day">Sun</td><td data-label="Jobs">1,811</td><td data-label="Raw share">1.5%</td><td data-label="Adjusted">1.4%</td><td data-label="Each board once">1.0%</td><td data-label="US, Eastern">1.9%</td><td data-label="Europe, CET">0.8%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note"><strong>Raw share</strong> counts the jobs still open on 19 Nov, in UTC. <strong>Adjusted</strong> corrects for jobs that closed before the snapshot (below). <strong>Each board once</strong> gives every company board one vote, so a board that posted hundreds of jobs counts as much as one that posted a single job. The last two columns are adjusted shares in local time: 61,239 US-located jobs in US Eastern time, and 25,641 Europe-located jobs in Central European time (CET).</p>
+
+    <!-- ad:after-answer -->
+
+    <h2>Why the raw count is not the answer</h2>
+    <p>A snapshot only holds jobs that are still open, and a job posted on a Monday has had four more days to be filled or taken down than one posted that Friday. That makes later weekdays look busier. In the raw count, Thursday leads with 20.3%, a hair ahead of Tuesday and Friday at 20.1%.</p>
+    <p>The data shows how large the effect is. The number of jobs from the same weekday falls 13.9% for each week of age, about 2.12% a day. After weighting each day's jobs by that rate, Tuesday leads with 20.7%. Tuesday also leads when each board counts once (21.1%), for US jobs in Eastern time (20.8%) and for European jobs in CET (20.9%). Across all 456,597 open jobs, whatever their age, Tuesday and Wednesday tie at 20.8%. Monday to Wednesday together take 58.1% of the adjusted count.</p>
+    <p>So the familiar advice that Tuesday is the top posting day holds, but the margin is under one percentage point. For a job seeker, the useful pattern is broader: new jobs arrive on every weekday at a similar rate and almost never at the weekend.</p>
+
+    <h2>Posting day by ATS</h2>
+    <div class="table-wrap">
+      <table class="day-table">
+        <caption>Posting day by ATS, closure-adjusted, 19 Oct to 15 Nov 2026</caption>
+        <thead><tr><th>ATS</th><th>Jobs</th><th>Top day</th><th>Mon-Wed</th><th>Weekend</th><th>Each board once</th></tr></thead>
+        <tbody>
+          <tr><td data-label="ATS">Greenhouse</td><td data-label="Jobs">52,601</td><td data-label="Top day">Tuesday 21.5%</td><td data-label="Mon-Wed">59.1%</td><td data-label="Weekend">1.9%</td><td data-label="Each board once">Tuesday</td></tr>
+          <tr><td data-label="ATS">Lever</td><td data-label="Jobs">14,796</td><td data-label="Top day">Friday 21.1%</td><td data-label="Mon-Wed">54.3%</td><td data-label="Weekend">5.4%</td><td data-label="Each board once">Friday</td></tr>
+          <tr><td data-label="ATS">Ashby</td><td data-label="Jobs">17,439</td><td data-label="Top day">Thursday 21.2%</td><td data-label="Mon-Wed">57.9%</td><td data-label="Weekend">3.4%</td><td data-label="Each board once">Tuesday</td></tr>
+          <tr><td data-label="ATS">Recruitee</td><td data-label="Jobs">9,387</td><td data-label="Top day">Monday 21.3%</td><td data-label="Mon-Wed">60.5%</td><td data-label="Weekend">1.1%</td><td data-label="Each board once">Tuesday</td></tr>
+          <tr><td data-label="ATS">Personio</td><td data-label="Jobs">4,625</td><td data-label="Top day">Tuesday 20.9%</td><td data-label="Mon-Wed">59.4%</td><td data-label="Weekend">1.4%</td><td data-label="Each board once">Tuesday</td></tr>
+          <tr><td data-label="ATS">Workable</td><td data-label="Jobs">18,305</td><td data-label="Top day">Thursday 20.2%</td><td data-label="Mon-Wed">57.4%</td><td data-label="Weekend">3.9%</td><td data-label="Each board once">Tuesday</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Each ATS's own closure rate is used. "Each board once" names the top day when every board counts equally. Lever's weekend share comes mostly from boards that post many jobs: with each board counted once it is 2.2%, against 5.4% by jobs.</p>
+
+    <h2>What time are jobs posted?</h2>
+    <p>US jobs go up through the US working day. Few appear before 8:00 Eastern time (0.6% in the hour from 7:00), then 6.4% arrive between 8:00 and 9:00. From 10:00 to 17:00 every hour holds 7.8% to 9.4%, and the busiest three hours run from 12:00 to 15:00 (27.9%). The often-quoted "post at 11 AM" is not a peak here. European jobs follow office hours in CET: 71.6% between 9:00 and 17:00, with the most at 15:00 (10.3%). Workable gives only a date, so it is left out of the hours.</p>
+    <div class="calculator" id="hc">
+      <div class="field-grid">
+        <div>
+          <label for="hc-group">Jobs</label>
+          <select id="hc-group"></select>
+        </div>
+        <div>
+          <label for="hc-day">Day</label>
+          <select id="hc-day"><option value="all">Every day</option></select>
+        </div>
+      </div>
+      <p class="form-error" id="hc-error" role="alert" hidden></p>
+      <div class="hour-chart" id="hc-chart" role="img" aria-label="Share of jobs posted in each hour of the day"></div>
+      <div class="hour-axis" id="hc-axis" aria-hidden="true"></div>
+      <p class="chart-caption" id="hc-caption"></p>
+      <noscript><p>The chart needs JavaScript. The JSON download holds every hour's count.</p></noscript>
+    </div>
+
+    <h2>For job-feed builders: when to refresh</h2>
+    <p>If a feed or job board re-reads career pages once a day, the refresh time decides how long a new job waits to be picked up. Across the five ATSs with posting times, postings peak at 15:00 UTC (8.5% in that hour). A daily refresh at 23:00 UTC gives the shortest mean wait, 8.6 hours, and picks up 38.0% of jobs within 6 hours. At 13:00 UTC, just before the US rush, the mean wait is 15.3 hours. A refresh at 19:00 UTC picks up the most within 6 hours, 45.9%. Our own index is built at about 04:00 UTC: a mean wait of 11.4 hours.</p>
+    <div class="calculator" id="rf">
+      <label for="rf-hour">Daily refresh at (UTC)</label>
+      <select id="rf-hour"></select>
+      <div class="calculator-result" aria-live="polite">
+        <p class="result-label">For jobs posted in the four weeks</p>
+        <p class="result-number" id="rf-wait"></p>
+        <p id="rf-six"></p>
+      </div>
+    </div>
+
+    <h2>Method and limits</h2>
+    <ul>
+      <li><strong>Source:</strong> the ATS Jobs Search index built at 04:03 UTC on 19 Nov 2026 from employers' public job feeds on Greenhouse, Lever, Ashby, Recruitee, Personio and Workable. It covers the boards that crawl found and could read, not every employer. The board and job totals are its size, not ATS market share.</li>
+      <li><strong>Posting time:</strong> the vendor's own field: Greenhouse <code>first_published</code>, Lever <code>createdAt</code>, Ashby <code>publishedAt</code>, Recruitee <code>published_at</code>, Personio <code>createdAt</code>, Workable <code>published_on</code> (a date only). 84 jobs had no date.</li>
+      <li><strong>Copies:</strong> a job with the same title, location and posting time on two boards of one ATS counts once. That removed 5,304 jobs, 4,757 of them on Recruitee.</li>
+      <li><strong>Closure adjustment:</strong> the daily rate is fitted from how each weekday's count falls from week to week, then each day's jobs are weighted by it. If posting volume itself changed over the four weeks, the rate absorbs that too.</li>
+      <li><strong>Region:</strong> read from the location text. 46.5% of open jobs name a US place, 23.1% a European one; the other 30.4% name another region, several regions or no place we recognize. US Eastern and CET include their daylight-saving changes on 1 Nov and 25 Oct.</li>
+      <li><strong>Reproducible:</strong> <a href="https://github.com/sanjayamaharjancodes/scraping-tools-directory/blob/main/ct-002/build_data.py">build_data.py</a> rebuilds the CSV and JSON from the index files, refuses any other index build by its SHA-256 hashes, and fails if a number on this page is not in that data. The index files are not published; the CSV and JSON carry every count used. This page was drafted with AI tools from that data.</li>
+    </ul>
+
+    <h2>Search these jobs yourself</h2>
+    <p><a href="https://apify.com/scaleturn/ats-jobs-search" data-goatcounter-click="apify/ats-jobs-search-scrapetools-days-2">ATS Jobs Search</a> searches the same index by title, location and posting date; with its "only jobs not returned before" option, a scheduled run becomes a daily feed of new jobs. Developers can read the feeds directly with the open-source <a href="https://github.com/sanjayamaharjancodes/ats-job-feed" data-goatcounter-click="github/ats-job-feed-scrapetools-days">ats-job-feed</a> library. Scaleturn makes both; these are not affiliate links. How reliable those public feeds are at scale is on our <a href="ats-job-posting-api-crawl-data.html">ATS job posting API crawl data</a> page.</p>
+
+    <h2>Sources</h2>
+    <p class="source-line">ATS Jobs Search job index, built 19 Nov 2026, summarized in <a href="data/job-posting-days-2026-11.csv">job-posting-days-2026-11.csv</a> and <a href="data/job-posting-days-2026-11.json">job-posting-days-2026-11.json</a>.<br>
+    Posting-time fields as read by the index from each vendor's public job feed.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="about.html#contact">Contact</a></li>
+      <li><a href="methodology.html">Methodology</a></li>
+      <li><a href="disclosure.html">Affiliate Disclosure</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+    </ul>
+    <div class="footer-disclosure">
+      <strong>Affiliate disclosure:</strong> ScrapeTools is a comparison site published by Scaleturn. Pages are researched and drafted with AI tools and checked against vendor sources by an automated reviewer; they are not individually reviewed by a person. Some links to vendors are affiliate/referral links. If you sign up through one, we may earn a commission at no extra cost to you.
+    </div>
+    <p>&copy; 2026 ScrapeTools, published by <a href="https://scaleturn.com/">Scaleturn</a>. Pricing and features change. Always confirm current terms on the vendor's own site before buying.</p>
+  </div>
+</footer>
+<script>
+(function () {
+  "use strict";
+  function $(id) { return document.getElementById(id); }
+  var groupSel = $("hc-group"), daySel = $("hc-day"), chart = $("hc-chart"), axis = $("hc-axis"),
+    caption = $("hc-caption"), err = $("hc-error"), hourSel = $("rf-hour"), waitOut = $("rf-wait"), sixOut = $("rf-six");
+  var nf = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
+  var w = null;
+  function pad(h) { return (h < 10 ? "0" : "") + h + ":00"; }
+  function drawHours() {
+    var g = w.groups[groupSel.value], d = daySel.value, counts = [], total = 0, h, k;
+    for (h = 0; h < 24; h++) {
+      var c = 0;
+      for (k = 0; k < 7; k++) if (d === "all" || Number(d) === k) c += g.wh[k][h];
+      counts.push(c); total += c;
+    }
+    chart.textContent = "";
+    var max = Math.max.apply(null, counts) || 1, peak = counts.indexOf(Math.max.apply(null, counts));
+    counts.forEach(function (c, i) {
+      var bar = document.createElement("div"), share = total ? 100 * c / total : 0;
+      bar.className = "bar";
+      bar.style.height = (100 * c / max) + "%";
+      bar.title = pad(i) + " to " + pad(i).slice(0, 2) + ":59: " + share.toFixed(1) + "% (" + nf.format(c) + " jobs)";
+      chart.appendChild(bar);
+    });
+    chart.setAttribute("aria-label", "Share of jobs posted in each hour, " + g.clock + "; busiest hour " + pad(peak));
+    var dayText = d === "all" ? "every day" : w.days[Number(d)];
+    caption.textContent = g.label + ", " + dayText + ", " + g.clock + ": " + nf.format(total) + " jobs. Busiest hour " +
+      pad(peak) + " (" + (total ? (100 * counts[peak] / total).toFixed(1) : "0") + "%). Hover a bar for its share.";
+  }
+  function drawRefresh() {
+    var r = w.refresh[Number(hourSel.value)];
+    waitOut.textContent = "Mean wait " + r[1].toFixed(1) + " hours";
+    sixOut.textContent = r[2].toFixed(1) + "% of jobs are picked up within 6 hours of being posted.";
+  }
+  function init(data) {
+    w = data.widget;
+    Object.keys(w.groups).forEach(function (id) {
+      var o = document.createElement("option");
+      o.value = id; o.textContent = w.groups[id].label + " (" + w.groups[id].clock + ")";
+      groupSel.appendChild(o);
+    });
+    w.days.forEach(function (name, i) {
+      var o = document.createElement("option"); o.value = String(i); o.textContent = name; daySel.appendChild(o);
+    });
+    for (var h = 0; h < 24; h++) {
+      var o = document.createElement("option"); o.value = String(h); o.textContent = pad(h); hourSel.appendChild(o);
+      var s = document.createElement("span"); s.textContent = h % 6 === 0 ? String(h) : ""; axis.appendChild(s);
+    }
+    hourSel.value = "23";
+    [groupSel, daySel].forEach(function (el) { el.addEventListener("change", drawHours); el.addEventListener("input", drawHours); });
+    hourSel.addEventListener("change", drawRefresh); hourSel.addEventListener("input", drawRefresh);
+    drawHours(); drawRefresh();
+  }
+  fetch("data/job-posting-days-2026-11.json")
+    .then(function (res) { if (!res.ok) throw new Error("HTTP " + res.status); return res.json(); })
+    .then(init)
+    .catch(function () {
+      err.textContent = "The data file did not load. The JSON download holds every hour's count.";
+      err.hidden = false;
+    });
+})();
+</script>
+<script>window.goatcounter = {path: function(p) { return location.host + p }}</script>
+<script data-goatcounter="https://scaleturn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
