@@ -1,0 +1,656 @@
+kind,rank,title,group,boards,listings,us,europe,other_region,junior_word,senior_word,top_ats
+ai_in_role_name,1,Machine Learning Engineer,Engineering,556,1161,594,259,308,7,674,Greenhouse
+ai_in_role_name,2,AI Engineer,Engineering,539,842,277,236,329,12,441,Greenhouse
+ai_in_role_name,3,Applied AI Engineer,Engineering,147,293,136,66,91,4,77,Ashby
+ai_in_role_name,4,AI/ML Engineer,Engineering,88,134,54,35,45,3,70,Greenhouse
+ai_in_role_name,5,AI Product Manager,Product and design,59,85,36,26,23,1,31,Greenhouse
+ai_in_role_name,6,AI Platform Engineer,Engineering,57,77,24,26,27,1,32,Greenhouse
+ai_in_role_name,7,AI Software Engineer,Engineering,55,71,29,19,23,0,31,Greenhouse
+ai_in_role_name,8,MLOps Engineer,Engineering,47,51,10,20,21,0,23,Greenhouse
+ai_in_role_name,9,Machine Learning Scientist,Research,45,79,42,23,14,0,51,Greenhouse
+ai_in_role_name,10,AI Architect,Engineering,44,61,24,17,20,0,19,Greenhouse
+ai_in_role_name,11,Computer Vision Engineer,Engineering,41,62,21,22,19,1,26,Ashby
+ai_in_role_name,12,AI Product Engineer,Engineering,40,56,24,9,23,1,14,Ashby
+ai_in_role_name,13,AI Solutions Engineer,Customer-facing and consulting,33,42,17,11,14,0,11,Greenhouse
+ai_in_role_name,14,AI Research Engineer,Research,32,77,26,15,36,1,22,Recruitee
+ai_in_role_name,15,AI Researcher,Research,32,51,24,10,17,4,17,Ashby
+ai_in_role_name,16,Forward Deployed AI Engineer,Customer-facing and consulting,32,44,20,11,13,0,11,Greenhouse
+ai_in_role_name,17,AI Security Engineer,Engineering,31,35,12,5,18,1,13,Greenhouse
+ai_in_role_name,18,Machine Learning Researcher,Research,28,43,21,11,11,1,5,Ashby
+ai_in_role_name,19,AI Infrastructure Engineer,Engineering,27,34,21,3,10,0,14,Ashby
+ai_in_role_name,20,AI Developer,Engineering,26,34,3,6,25,0,9,Workable
+ai_in_role_name,21,Machine Learning Research Engineer,Research,23,31,17,10,4,0,7,Greenhouse
+ai_in_role_name,22,Machine Learning Infrastructure Engineer,Engineering,21,25,22,1,2,1,9,Greenhouse
+ai_in_role_name,23,GenAI Engineer,Engineering,20,40,2,18,20,0,15,Greenhouse
+ai_in_role_name,24,Full-Stack AI Engineer,Engineering,20,29,7,5,17,0,10,Greenhouse
+ai_in_role_name,25,AI Research Scientist,Research,20,23,15,4,4,1,3,Ashby
+ai_in_role_name,26,AI Strategist,Other roles,19,44,28,8,8,1,10,Ashby
+ai_in_role_name,27,AI Scientist,Research,18,35,16,10,9,1,10,Ashby
+ai_in_role_name,28,Agentic AI Engineer,Engineering,18,22,1,4,17,0,8,Greenhouse
+ai_in_role_name,29,AI Enablement Engineer,Engineering,18,22,14,4,4,0,13,Ashby
+ai_in_role_name,30,Applied ML Engineer,Engineering,17,19,11,2,6,0,8,Ashby
+ai_in_role_name,31,AI Deployment Strategist,Customer-facing and consulting,16,43,13,23,7,1,4,Ashby
+ai_in_role_name,32,ML Research Scientist,Research,16,27,19,1,7,0,10,Greenhouse
+ai_in_role_name,33,Data & AI Engineer,Engineering,16,26,7,9,10,2,12,Workable
+ai_in_role_name,34,AI Consultant,Customer-facing and consulting,16,24,2,14,8,4,5,Lever
+ai_in_role_name,35,AI Automation Engineer,Engineering,16,16,2,6,8,0,1,Ashby
+ai_in_role_name,36,ML Platform Engineer,Engineering,14,22,12,5,5,0,17,Ashby
+ai_in_role_name,37,AI Solutions Architect,Customer-facing and consulting,14,18,13,3,2,0,5,Greenhouse
+ai_in_role_name,38,AI Specialist,Other roles,13,15,0,7,8,1,3,Greenhouse
+ai_in_role_name,39,AI Transformation Lead,Other roles,12,22,11,6,5,0,22,Ashby
+ai_in_role_name,40,AI Systems Engineer,Engineering,12,18,6,3,9,0,7,Lever
+ai_in_role_name,41,AI Agent Engineer,Engineering,12,17,13,1,3,1,8,Greenhouse
+ai_in_role_name,42,Agentic Engineer,Engineering,12,15,5,4,6,0,7,Greenhouse
+ai_in_role_name,43,AI,Engineering,12,15,3,6,6,0,7,Personio
+ai_in_role_name,44,Applied AI Scientist,Research,11,20,6,10,4,0,11,Ashby
+ai_in_role_name,45,AI Data Engineer,Engineering,11,15,0,5,10,0,7,Greenhouse
+ai_in_role_name,46,ML Systems Engineer,Engineering,11,14,10,2,2,0,8,Greenhouse
+ai_in_role_name,47,AI-Native Engineer,Engineering,10,14,5,0,9,2,6,Greenhouse
+ai_in_role_name,48,Machine Learning Engineering Manager,Engineering,10,13,4,8,1,0,2,Lever
+ai_in_role_name,49,AI Application Engineer,Engineering,10,11,3,4,4,1,4,Greenhouse
+ai_in_role_name,50,Machine Learning Engineer Intern,Engineering,10,10,6,2,2,10,0,Greenhouse
+ai_in_role_name,51,AI Builder,Engineering,9,16,9,1,6,0,7,Greenhouse
+ai_in_role_name,52,AI Product Owner,Product and design,9,11,3,2,6,0,1,Greenhouse
+ai_in_role_name,53,AI Solution Architect,Customer-facing and consulting,9,10,1,3,6,0,1,Greenhouse
+ai_in_role_name,54,AI Transformation Consultant,Customer-facing and consulting,9,10,1,6,3,0,5,Personio
+ai_in_role_name,55,AI & ML Engineer,Engineering,9,9,2,3,4,0,1,Ashby
+ai_in_role_name,56,Applied AI Researcher,Research,8,25,11,1,13,0,11,Ashby
+ai_in_role_name,57,AI-Native Software Engineer,Engineering,8,14,2,3,9,0,4,Greenhouse
+ai_in_role_name,58,AI Engineering Intern,Engineering,8,13,2,3,8,13,0,Greenhouse
+ai_in_role_name,59,Machine Learning Intern,Other roles,8,12,5,2,5,12,0,Greenhouse
+ai_in_role_name,60,AI Research Intern,Research,8,10,8,1,1,10,0,Greenhouse
+ai_in_role_name,61,Applied ML Scientist,Research,8,10,8,0,2,0,8,Ashby
+ai_in_role_name,62,Data & AI Consultant,Customer-facing and consulting,8,10,0,8,2,1,5,Greenhouse
+ai_in_role_name,63,Deep Learning Engineer,Engineering,8,10,3,2,5,0,3,Ashby
+ai_in_role_name,64,AI Intern,Other roles,8,8,3,1,4,8,0,Greenhouse
+ai_in_role_name,65,Applied AI,Customer-facing and consulting,7,18,6,10,2,2,6,Ashby
+ai_in_role_name,66,Machine Learning,Other roles,7,10,7,1,2,1,3,Ashby
+ai_in_role_name,67,Machine Learning Software Engineer,Engineering,7,8,3,1,4,0,1,Lever
+ai_in_role_name,68,AI Enablement Lead,Other roles,7,7,5,1,1,0,7,Ashby
+ai_in_role_name,69,AI Full Stack Engineer,Engineering,7,7,1,5,1,0,0,Ashby
+ai_in_role_name,70,AI Operations Engineer,Engineering,7,7,3,2,2,0,1,Greenhouse
+ai_in_role_name,71,Head of AI,Leadership and founders,7,7,4,1,2,0,7,Ashby
+ai_in_role_name,72,Machine Learning Data Scientist,Data science and analytics,7,7,5,1,1,0,4,Ashby
+ai_in_role_name,73,Machine Learning Engineering Intern,Engineering,7,7,3,1,3,7,0,Greenhouse
+ai_in_role_name,74,Machine Learning Operations Engineer,Engineering,7,7,3,1,3,0,4,Greenhouse
+ai_in_role_name,75,AI Deployment Lead,Customer-facing and consulting,6,11,5,1,5,0,11,Ashby
+ai_in_role_name,76,AI Automation Specialist,Other roles,6,10,1,3,6,0,0,Workable
+ai_in_role_name,77,Machine Learning Manager,Other roles,6,9,5,1,3,0,3,Greenhouse
+ai_in_role_name,78,Machine Learning Performance Engineer,Engineering,6,9,7,1,1,0,2,Greenhouse
+ai_in_role_name,79,LLM Engineer,Engineering,6,8,2,3,3,0,1,Ashby
+ai_in_role_name,80,AI & Automation Engineer,Engineering,6,7,1,5,1,0,0,Lever
+ai_in_role_name,81,AI & Data Engineer,Engineering,6,7,1,5,1,0,3,Greenhouse
+ai_in_role_name,82,AI/ML Architect,Engineering,6,7,1,0,6,0,3,Ashby
+ai_in_role_name,83,Applied AI/ML Engineer,Engineering,6,7,5,1,1,0,2,Ashby
+ai_in_role_name,84,AI Analyst,Data science and analytics,6,6,1,2,3,0,2,Greenhouse
+ai_in_role_name,85,AI Solution Engineer,Customer-facing and consulting,6,6,2,1,3,0,3,Greenhouse
+ai_in_role_name,86,AI Tech Lead,Other roles,6,6,0,0,6,0,6,Greenhouse
+ai_in_role_name,87,ML/AI Engineer,Engineering,6,6,3,1,2,0,3,Greenhouse
+ai_in_role_name,88,AI Trainer,AI training and data work,5,554,1,0,553,0,1,Greenhouse
+ai_in_role_name,89,Applied AI Architect,Customer-facing and consulting,5,54,26,12,16,0,0,Greenhouse
+ai_in_role_name,90,AI Video Editor,"Sales, marketing and content",5,14,0,10,4,0,1,Workable
+ai_in_role_name,91,AI Deployment Manager,Customer-facing and consulting,5,13,9,1,3,0,1,Ashby
+ai_in_role_name,92,AI Transformation Engineer,Engineering,5,9,8,0,1,0,6,Greenhouse
+ai_in_role_name,93,Deep Learning Researcher,Research,5,9,3,2,4,2,2,Greenhouse
+ai_in_role_name,94,Agentic Software Engineer,Engineering,5,7,0,2,5,0,5,Greenhouse
+ai_in_role_name,95,AI Operations Specialist,Other roles,5,7,1,2,4,0,0,Workable
+ai_in_role_name,96,AI Product Builder,Engineering,5,7,4,2,1,0,4,Greenhouse
+ai_in_role_name,97,AI Software Developer,Engineering,5,7,0,3,4,0,2,Greenhouse
+ai_in_role_name,98,AI Applied Scientist,Research,5,6,1,2,3,0,2,Greenhouse
+ai_in_role_name,99,AI Artist,Other roles,5,6,2,1,3,0,1,Greenhouse
+ai_in_role_name,100,AI Engineering Manager,Engineering,5,6,0,5,1,0,1,Ashby
+ai_in_role_name,101,AI Implementation Specialist,Customer-facing and consulting,5,6,1,2,3,1,0,Ashby
+ai_in_role_name,102,AI Integration Engineer,Engineering,5,6,3,0,3,1,1,Workable
+ai_in_role_name,103,AI Product Designer,Product and design,5,6,1,3,2,0,2,Greenhouse
+ai_in_role_name,104,AI Associate,Other roles,5,5,1,3,1,0,0,Ashby
+ai_in_role_name,105,AI Data Scientist,Data science and analytics,5,5,1,0,4,0,1,Greenhouse
+ai_in_role_name,106,AI Strategy Intern,Other roles,5,5,0,5,0,5,0,Greenhouse
+ai_in_role_name,107,Applied AI Research Engineer,Research,5,5,2,0,3,0,1,Greenhouse
+ai_in_role_name,108,Data & AI Architect,Engineering,5,5,0,5,0,0,3,Recruitee
+ai_in_role_name,109,Director of AI,Leadership and founders,5,5,4,0,1,0,5,Greenhouse
+ai_in_role_name,110,Embedded AI Engineer,Engineering,5,5,2,1,2,0,1,Ashby
+ai_in_role_name,111,Head of Applied AI,Leadership and founders,5,5,3,2,0,0,5,Ashby
+ai_in_role_name,112,Machine Learning Specialist,Other roles,5,5,2,0,3,0,1,Ashby
+ai_in_role_name,113,NLP Engineer,Engineering,4,28,2,14,12,0,1,Lever
+ai_in_role_name,114,AI Operations Lead,Other roles,4,23,3,9,11,0,23,Lever
+ai_in_role_name,115,Applied AI/ML Scientist,Research,4,14,12,0,2,1,12,Greenhouse
+ai_in_role_name,116,AI Content Creator,"Sales, marketing and content",4,13,1,12,0,0,1,Lever
+ai_in_role_name,117,ML Infra Engineer,Engineering,4,7,7,0,0,0,1,Ashby
+ai_in_role_name,118,AI-Native Product Designer,Product and design,4,6,1,2,3,0,1,Greenhouse
+ai_in_role_name,119,Enterprise AI Architect,Engineering,4,6,2,4,0,0,1,Greenhouse
+ai_in_role_name,120,AI Engineering Lead,Engineering,4,5,2,1,2,0,5,Ashby
+ai_in_role_name,121,AI Operations Associate,Other roles,4,5,2,2,1,0,0,Ashby
+ai_in_role_name,122,Data & AI Strategy Consultant,Customer-facing and consulting,4,5,0,5,0,0,3,Personio
+ai_in_role_name,123,AI Account Executive,"Sales, marketing and content",4,4,1,0,3,0,0,Ashby
+ai_in_role_name,124,AI Growth Engineer,Engineering,4,4,2,2,0,1,1,Ashby
+ai_in_role_name,125,AI Lead,Other roles,4,4,0,3,1,0,4,Workable
+ai_in_role_name,126,AI Product Lead,Product and design,4,4,1,1,2,0,4,Lever
+ai_in_role_name,127,AI Program Manager,Product and design,4,4,0,3,1,0,0,Greenhouse
+ai_in_role_name,128,AI Security Architect,Engineering,4,4,1,2,1,0,1,Greenhouse
+ai_in_role_name,129,AI Solutions Consultant,Customer-facing and consulting,4,4,0,3,1,0,2,Recruitee
+ai_in_role_name,130,AI Workflow Engineer,Engineering,4,4,3,0,1,0,0,Ashby
+ai_in_role_name,131,AI/Machine Learning Engineer,Engineering,4,4,3,1,0,0,0,Greenhouse
+ai_in_role_name,132,Prompt Engineer,Engineering,4,4,0,1,3,0,0,Workable
+ai_in_role_name,133,AI Data Specialist,AI training and data work,3,22,1,4,17,0,0,Lever
+ai_in_role_name,134,AI Support Engineer,Engineering,3,18,5,3,10,0,1,Ashby
+ai_in_role_name,135,Deployed AI Engineer,Engineering,3,8,0,1,7,0,7,Greenhouse
+ai_in_role_name,136,AI Deployment Engineer,Engineering,3,7,3,2,2,0,4,Greenhouse
+ai_in_role_name,137,AI Field Engineer,Engineering,3,7,5,1,1,0,0,Ashby
+ai_in_role_name,138,AI Engineer Intern,Engineering,3,6,1,3,2,6,0,Ashby
+ai_in_role_name,139,AI Performance Engineer,Engineering,3,6,6,0,0,1,4,Greenhouse
+ai_in_role_name,140,AI/ML Software Engineer,Engineering,3,6,5,0,1,0,0,Workable
+ai_in_role_name,141,Agentic Product Manager,Product and design,3,5,0,3,2,0,3,Ashby
+ai_in_role_name,142,AI & Agentic Engineer,Engineering,3,5,0,0,5,0,5,Greenhouse
+ai_in_role_name,143,AI Engagement Lead,Other roles,3,5,3,1,1,0,5,Ashby
+ai_in_role_name,144,AI Security,Customer-facing and consulting,3,5,0,1,4,0,3,Greenhouse
+ai_in_role_name,145,Robotics AI Engineer,Engineering,3,5,4,0,1,0,1,Lever
+ai_in_role_name,146,AI Business Analyst,Data science and analytics,3,4,0,0,4,0,0,Greenhouse
+ai_in_role_name,147,AI Engagement Manager,Other roles,3,4,4,0,0,0,1,Ashby
+ai_in_role_name,148,AI Project Manager,Product and design,3,4,0,3,1,0,0,Ashby
+ai_in_role_name,149,AI Research Internship,Research,3,4,3,1,0,4,0,Lever
+ai_in_role_name,150,AI Search Strategist,Other roles,3,4,3,1,0,0,0,Ashby
+ai_in_role_name,151,AI Solutions Manager,Other roles,3,4,1,1,2,0,1,Ashby
+ai_in_role_name,152,AI/LLM Engineer,Engineering,3,4,1,1,2,0,3,Greenhouse
+ai_in_role_name,153,Conversational AI Engineer,Engineering,3,4,0,0,4,0,0,Lever
+ai_in_role_name,154,Data Scientist/Machine Learning Engineer,Engineering,3,4,4,0,0,0,1,Workable
+ai_in_role_name,155,Perception Machine Learning Engineer,Engineering,3,4,4,0,0,0,1,Greenhouse
+ai_in_role_name,156,Agentic AI Architect,Engineering,3,3,0,2,1,0,0,Workable
+ai_in_role_name,157,Agentic Systems Engineer,Engineering,3,3,1,0,2,0,0,Ashby
+ai_in_role_name,158,AI & Data Consulting,Customer-facing and consulting,3,3,3,0,0,0,3,Greenhouse
+ai_in_role_name,159,AI & Data Science,Data science and analytics,3,3,0,0,3,0,3,Greenhouse
+ai_in_role_name,160,AI Automation Analyst,Data science and analytics,3,3,0,1,2,0,0,Greenhouse
+ai_in_role_name,161,AI Content Specialist,"Sales, marketing and content",3,3,1,1,1,0,0,Ashby
+ai_in_role_name,162,AI Creative Strategist,Other roles,3,3,1,0,2,0,0,Ashby
+ai_in_role_name,163,AI Data Analyst,Data science and analytics,3,3,1,0,2,0,2,Greenhouse
+ai_in_role_name,164,AI Designer,Product and design,3,3,0,2,1,0,2,Greenhouse
+ai_in_role_name,165,AI Engineering,Engineering,3,3,2,1,0,0,1,Greenhouse
+ai_in_role_name,166,AI Filmmaker,Other roles,3,3,0,0,3,0,0,Recruitee
+ai_in_role_name,167,AI Fullstack Engineer,Engineering,3,3,0,1,2,0,2,Greenhouse
+ai_in_role_name,168,AI GTM Engineer,Engineering,3,3,0,2,1,0,2,Ashby
+ai_in_role_name,169,AI Implementation Consultant,Customer-facing and consulting,3,3,0,2,1,0,0,Ashby
+ai_in_role_name,170,AI Implementation Engineer,Customer-facing and consulting,3,3,1,1,1,0,2,Ashby
+ai_in_role_name,171,AI Operations,Other roles,3,3,2,1,0,0,0,Ashby
+ai_in_role_name,172,AI Operations Analyst,Data science and analytics,3,3,1,1,1,0,0,Ashby
+ai_in_role_name,173,AI Operations Manager,Other roles,3,3,1,0,2,0,0,Greenhouse
+ai_in_role_name,174,AI Product Intern,Other roles,3,3,2,0,1,3,0,Workable
+ai_in_role_name,175,AI Prompt Engineer,Engineering,3,3,2,0,1,1,0,Greenhouse
+ai_in_role_name,176,AI QA Engineer,Engineering,3,3,0,1,2,0,2,Greenhouse
+ai_in_role_name,177,AI Resident,Other roles,3,3,2,0,1,0,0,Ashby
+ai_in_role_name,178,AI Security Researcher,Research,3,3,1,0,2,0,1,Ashby
+ai_in_role_name,179,AI Solutions Analyst,Data science and analytics,3,3,2,0,1,0,0,Greenhouse
+ai_in_role_name,180,AI Strategy Manager,Other roles,3,3,0,2,1,0,0,Workable
+ai_in_role_name,181,AI Technical Lead,Other roles,3,3,1,0,2,0,3,Workable
+ai_in_role_name,182,AI Tools Engineer,Engineering,3,3,3,0,0,0,2,Greenhouse
+ai_in_role_name,183,AI Transformation Manager,Other roles,3,3,1,1,1,0,0,Ashby
+ai_in_role_name,184,AI/ML Engineering Intern,Engineering,3,3,1,0,2,3,0,Greenhouse
+ai_in_role_name,185,AI/ML Security Specialist,Other roles,3,3,3,0,0,1,0,Greenhouse
+ai_in_role_name,186,Applied AI Engineer Intern,Engineering,3,3,2,1,0,3,0,Ashby
+ai_in_role_name,187,Associate AI Engineer,Engineering,3,3,2,0,1,0,0,Ashby
+ai_in_role_name,188,Conversational AI Specialist,Other roles,3,3,1,2,0,0,0,Lever
+ai_in_role_name,189,Forward Deployed ML Engineer,Customer-facing and consulting,3,3,1,1,1,0,1,Workable
+ai_in_role_name,190,GenAI Architect,Engineering,3,3,0,0,3,0,0,Workable
+ai_in_role_name,191,Head of Machine Learning,Leadership and founders,3,3,2,0,1,0,3,Ashby
+ai_in_role_name,192,KI-Manager,Other roles,3,3,0,1,2,0,0,Personio
+ai_in_role_name,193,LLMOps Engineer,Engineering,3,3,0,1,2,0,2,Greenhouse
+ai_in_role_name,194,Machine Learning Engineer Manager,Engineering,3,3,1,1,1,0,1,Ashby
+ai_in_role_name,195,ML Research Intern,Research,3,3,3,0,0,3,0,Greenhouse
+ai_in_role_name,196,Manager AI Architect,Engineering,3,3,0,3,0,0,0,Greenhouse
+ai_in_role_name,197,Product Manager AI,Product and design,3,3,1,2,0,0,2,Ashby
+ai_in_role_name,198,Werkstudent KI & Automatisierung,Other roles,3,3,0,2,1,3,0,Personio
+ai_in_role_name,199,FP&A AI Research Contributor,AI training and data work,2,37,1,24,12,0,0,Lever
+ai_in_role_name,200,AI Security Specialist,Other roles,2,7,3,2,2,0,6,Greenhouse
+ai_in_role_name,201,Legal Counsel AI & GDPR,"Governance, policy and safety",2,7,0,7,0,0,0,Lever
+ai_in_role_name,202,AI Forward Deployed Engineer,Customer-facing and consulting,2,6,0,5,1,0,0,Greenhouse
+ai_in_role_name,203,Forward Deployed AI Architect,Customer-facing and consulting,2,6,6,0,0,0,3,Lever
+ai_in_role_name,204,AI Creative Specialist,Other roles,2,5,0,0,5,0,0,Greenhouse
+ai_in_role_name,205,AI Motion Designer,Product and design,2,5,0,1,4,2,0,Ashby
+ai_in_role_name,206,AI Onboarding Specialist,Other roles,2,5,4,1,0,0,0,Greenhouse
+ai_in_role_name,207,Customer AI Engineer,Engineering,2,5,2,1,2,0,5,Greenhouse
+ai_in_role_name,208,AI Algorithm Engineer,Engineering,2,4,0,0,4,0,1,Lever
+ai_in_role_name,209,AI Compiler Engineer,Engineering,2,4,0,2,2,0,2,Greenhouse
+ai_in_role_name,210,AI DevOps Engineer,Engineering,2,4,4,0,0,0,3,Greenhouse
+ai_in_role_name,211,AI Enterprise Senior Technical Lead,Other roles,2,4,0,4,0,0,4,Greenhouse
+ai_in_role_name,212,Artificial Intelligence Machine Learning Engineer,Engineering,2,4,3,0,1,0,0,Greenhouse
+ai_in_role_name,213,AI Native,Engineering,2,4,0,4,0,0,1,Ashby
+ai_in_role_name,214,AI Platform Support Engineer,Engineering,2,4,2,1,1,0,0,Greenhouse
+ai_in_role_name,215,AI Red Teamer,Other roles,2,4,4,0,0,0,0,Ashby
+ai_in_role_name,216,AI Sales Engineer,Customer-facing and consulting,2,4,3,0,1,0,0,Ashby
+ai_in_role_name,217,AI Training Specialist,AI training and data work,2,4,4,0,0,0,0,Workable
+ai_in_role_name,218,AI Transformation,Other roles,2,4,4,0,0,0,4,Ashby
+ai_in_role_name,219,AI Voice Evaluation Specialist,Other roles,2,4,2,0,2,0,0,Greenhouse
+ai_in_role_name,220,AI/Computer Vision Engineer,Engineering,2,4,0,2,2,0,2,Greenhouse
+ai_in_role_name,221,AI/ML Software Developer,Engineering,2,4,4,0,0,0,2,Workable
+ai_in_role_name,222,Deep Learning Research Engineer,Research,2,4,0,2,2,0,3,Ashby
+ai_in_role_name,223,Edge AI Engineer,Engineering,2,4,0,2,2,0,2,Ashby
+ai_in_role_name,224,Full Stack AI Developer,Engineering,2,4,0,1,3,0,0,Workable
+ai_in_role_name,225,GenAI,Engineering,2,4,0,0,4,0,0,Greenhouse
+ai_in_role_name,226,Machine Learning Ops Engineer,Engineering,2,4,0,2,2,0,3,Ashby
+ai_in_role_name,227,Marketing AI Engineer,Engineering,2,4,1,2,1,0,0,Lever
+ai_in_role_name,228,Middle AI Platform Engineer,Engineering,2,4,0,0,4,0,0,Greenhouse
+ai_in_role_name,229,Agentic Product Engineer,Engineering,2,3,1,2,0,0,2,Ashby
+ai_in_role_name,230,AI & Automation Lead,Other roles,2,3,0,3,0,0,3,Lever
+ai_in_role_name,231,AI adoption lead,Other roles,2,3,2,0,1,0,3,Ashby
+ai_in_role_name,232,AI Agent Product Manager,Product and design,2,3,3,0,0,0,0,Ashby
+ai_in_role_name,233,AI Creator,Other roles,2,3,0,2,1,0,0,Ashby
+ai_in_role_name,234,AI Forward Engineer,Engineering,2,3,2,0,1,1,0,Greenhouse
+ai_in_role_name,235,AI Full-Stack Developer,Engineering,2,3,0,1,2,0,0,Greenhouse
+ai_in_role_name,236,AI Infrastructure Systems Engineer,Engineering,2,3,2,1,0,0,1,Greenhouse
+ai_in_role_name,237,AI Marketing Strategist,"Sales, marketing and content",2,3,2,1,0,2,0,Ashby
+ai_in_role_name,238,AI Ops Engineer,Engineering,2,3,2,0,1,0,1,Ashby
+ai_in_role_name,239,AI Research Resident,Research,2,3,1,0,2,0,0,Ashby
+ai_in_role_name,240,AI Solutions Lead,Other roles,2,3,1,1,1,0,3,Ashby
+ai_in_role_name,241,AI Strategy,Other roles,2,3,2,1,0,0,2,Ashby
+ai_in_role_name,242,AI Success Manager,Other roles,2,3,1,0,2,0,0,Greenhouse
+ai_in_role_name,243,AI Technical Architect,Engineering,2,3,2,1,0,0,1,Greenhouse
+ai_in_role_name,244,Applied AI Strategist,Other roles,2,3,3,0,0,0,0,Ashby
+ai_in_role_name,245,Backend & AI Engineer,Engineering,2,3,0,3,0,0,3,Ashby
+ai_in_role_name,246,Backend AI Engineer,Engineering,2,3,1,0,2,0,0,Ashby
+ai_in_role_name,247,Cleared AI/ML Engineer,Engineering,2,3,3,0,0,0,0,Greenhouse
+ai_in_role_name,248,Cyber AI Partner Director,Leadership and founders,2,3,3,0,0,0,3,Ashby
+ai_in_role_name,249,Data & ML Engineer,Engineering,2,3,0,1,2,0,2,Lever
+ai_in_role_name,250,Data and AI Engineer,Engineering,2,3,3,0,0,0,1,Greenhouse
+ai_in_role_name,251,Data Scientist GenAI,Data science and analytics,2,3,0,2,1,0,3,Lever
+ai_in_role_name,252,Full Stack Agentic Developer,Engineering,2,3,1,2,0,1,1,Workable
+ai_in_role_name,253,Fullstack AI Engineer,Engineering,2,3,0,2,1,0,3,Ashby
+ai_in_role_name,254,GenAI Data Engineer,Engineering,2,3,2,0,1,0,1,Workable
+ai_in_role_name,255,Machine Learning Compiler Engineer,Engineering,2,3,2,1,0,0,1,Greenhouse
+ai_in_role_name,256,Machine Learning Engineer Lead,Engineering,2,3,0,0,3,0,3,Greenhouse
+ai_in_role_name,257,Middle AI Agent & Developer Experience Engineer,Engineering,2,3,0,0,3,0,0,Greenhouse
+ai_in_role_name,258,Mission Operations & AI Enablement Lead,Other roles,2,3,1,0,2,0,3,Greenhouse
+ai_in_role_name,259,Werkstudent AI Engineering,Engineering,2,3,0,1,2,3,0,Personio
+ai_in_role_name,260,A.26.ML.MS.16 CCU Verpleegkundige Hartbewaking,Other roles,2,2,0,2,0,0,0,Recruitee
+ai_in_role_name,261,Agentic AI Developer,Engineering,2,2,1,0,1,0,1,Greenhouse
+ai_in_role_name,262,Agentic AI Software Engineer,Engineering,2,2,1,1,0,0,1,Greenhouse
+ai_in_role_name,263,Agentic Engineering Platform,Engineering,2,2,2,0,0,0,2,Greenhouse
+ai_in_role_name,264,Agentic QA Engineer,Engineering,2,2,0,1,1,0,0,Greenhouse
+ai_in_role_name,265,AI & Automation Analyst,Data science and analytics,2,2,1,1,0,0,0,Greenhouse
+ai_in_role_name,266,AI & Automation Specialist,Other roles,2,2,0,0,2,0,0,Personio
+ai_in_role_name,267,AI Acceleration Engineer,Engineering,2,2,2,0,0,0,1,Ashby
+ai_in_role_name,268,AI Agent Architect,Engineering,2,2,0,1,1,0,1,Greenhouse
+ai_in_role_name,269,AI Agent Developer,Engineering,2,2,0,0,2,0,0,Greenhouse
+ai_in_role_name,270,AI and Automation Engineer,Engineering,2,2,2,0,0,1,0,Ashby
+ai_in_role_name,271,AI Application Packaging Engineer,Engineering,2,2,0,0,2,0,0,Greenhouse
+ai_in_role_name,272,AI Applied Researcher,Research,2,2,0,1,1,0,0,Ashby
+ai_in_role_name,273,AI-Augmented Software Engineer,Engineering,2,2,0,0,2,0,1,Workable
+ai_in_role_name,274,AI Automation Consultant,Customer-facing and consulting,2,2,0,2,0,0,0,Personio
+ai_in_role_name,275,AI Backend Engineer,Engineering,2,2,0,0,2,0,0,Recruitee
+ai_in_role_name,276,AI Coach,Other roles,2,2,0,0,2,0,0,Greenhouse
+ai_in_role_name,277,AI Compute Engineer,Engineering,2,2,1,0,1,0,1,Ashby
+ai_in_role_name,278,AI Computer Vision Engineer,Engineering,2,2,0,1,1,0,0,Recruitee
+ai_in_role_name,279,AI Delivery Engineer,Engineering,2,2,2,0,0,0,1,Greenhouse
+ai_in_role_name,280,AI Delivery Manager,Customer-facing and consulting,2,2,1,0,1,0,0,Workable
+ai_in_role_name,281,AI Developer Experience Engineer,Engineering,2,2,2,0,0,0,1,Greenhouse
+ai_in_role_name,282,AI Enablement Manager,Other roles,2,2,2,0,0,0,1,Ashby
+ai_in_role_name,283,AI Engineer Internship,Engineering,2,2,0,0,2,2,0,Greenhouse
+ai_in_role_name,284,AI Engineer Manager,Engineering,2,2,0,0,2,0,0,Greenhouse
+ai_in_role_name,285,AI Engineering Architect,Engineering,2,2,2,0,0,0,2,Greenhouse
+ai_in_role_name,286,AI Evals Engineer,Engineering,2,2,1,0,1,0,1,Ashby
+ai_in_role_name,287,AI Evaluation Engineer,Engineering,2,2,2,0,0,0,0,Ashby
+ai_in_role_name,288,AI Evangelist,Other roles,2,2,1,1,0,0,0,Ashby
+ai_in_role_name,289,AI Governance Advisor,Customer-facing and consulting,2,2,1,1,0,0,0,Ashby
+ai_in_role_name,290,AI Growth Marketer,"Sales, marketing and content",2,2,2,0,0,0,1,Ashby
+ai_in_role_name,291,AI Implementation Analyst,Customer-facing and consulting,2,2,1,1,0,0,0,Ashby
+ai_in_role_name,292,AI Infrastructure System Engineer,Engineering,2,2,0,0,2,0,0,Greenhouse
+ai_in_role_name,293,AI Innovation Engineer,Engineering,2,2,0,1,1,0,0,Ashby
+ai_in_role_name,294,AI Instructor,Other roles,2,2,2,0,0,0,0,Greenhouse
+ai_in_role_name,295,AI Lead Engineer,Engineering,2,2,1,1,0,0,2,Greenhouse
+ai_in_role_name,296,AI Marketing Specialist,"Sales, marketing and content",2,2,0,1,1,0,0,Ashby
+ai_in_role_name,297,AI Native Account Executive,"Sales, marketing and content",2,2,1,0,1,0,0,Ashby
+ai_in_role_name,298,AI-Native Data Engineer,Engineering,2,2,1,1,0,0,1,Ashby
+ai_in_role_name,299,AI Operations Team Lead,Other roles,2,2,1,0,1,0,2,Greenhouse
+ai_in_role_name,300,AI Platform Architect,Engineering,2,2,1,1,0,0,0,Greenhouse
+ai_in_role_name,301,AI Platform Lead,Other roles,2,2,0,2,0,0,2,Greenhouse
+ai_in_role_name,302,AI Product Management Intern,Product and design,2,2,2,0,0,2,0,Ashby
+ai_in_role_name,303,AI Quality Engineer,Engineering,2,2,0,0,2,0,0,Ashby
+ai_in_role_name,304,AI Research Scientist/Engineer,Research,2,2,0,1,1,0,1,Ashby
+ai_in_role_name,305,AI Scientist Intern,Research,2,2,1,0,1,2,0,Ashby
+ai_in_role_name,306,AI Security Analyst,Data science and analytics,2,2,0,0,2,1,1,Greenhouse
+ai_in_role_name,307,AI Solutions Builder,Engineering,2,2,0,0,2,0,1,Ashby
+ai_in_role_name,308,AI Solutions Specialist,Customer-facing and consulting,2,2,1,1,0,0,0,Ashby
+ai_in_role_name,309,AI Solutions Strategist,Other roles,2,2,2,0,0,0,0,Ashby
+ai_in_role_name,310,AI STRATEGY CONSULTANT,Customer-facing and consulting,2,2,0,2,0,0,0,Personio
+ai_in_role_name,311,AI System Engineer,Engineering,2,2,1,0,1,0,1,Greenhouse
+ai_in_role_name,312,AI Systems Architect,Engineering,2,2,1,0,1,0,1,Ashby
+ai_in_role_name,313,AI Tooling Engineer,Engineering,2,2,1,0,1,0,0,Greenhouse
+ai_in_role_name,314,AI Transformation Analyst,Data science and analytics,2,2,1,1,0,0,1,Greenhouse
+ai_in_role_name,315,AI Transformation Director,Leadership and founders,2,2,0,2,0,0,2,Ashby
+ai_in_role_name,316,AI Transformation Leader,Other roles,2,2,2,0,0,0,0,Ashby
+ai_in_role_name,317,AI Video Creator,Other roles,2,2,1,1,0,0,0,Ashby
+ai_in_role_name,318,AI Workflow Associate,Other roles,2,2,1,0,1,0,0,Greenhouse
+ai_in_role_name,319,AI Workflow Specialist,Other roles,2,2,1,1,0,0,0,Greenhouse
+ai_in_role_name,320,AI/Data Engineer,Engineering,2,2,0,0,2,0,2,Lever
+ai_in_role_name,321,AI/ML Developer,Engineering,2,2,0,0,2,0,2,Ashby
+ai_in_role_name,322,AI/ML Solutions Architect,Customer-facing and consulting,2,2,0,0,2,0,0,Lever
+ai_in_role_name,323,Applied AI Analyst,Data science and analytics,2,2,2,0,0,0,0,Greenhouse
+ai_in_role_name,324,Applied AI Software Engineer,Engineering,2,2,1,1,0,0,1,Ashby
+ai_in_role_name,325,Applied AI Solutions Architect,Customer-facing and consulting,2,2,1,0,1,0,0,Ashby
+ai_in_role_name,326,Applied AI Specialist,Engineering,2,2,0,1,1,0,0,Ashby
+ai_in_role_name,327,Backend/AI Engineer,Engineering,2,2,2,0,0,0,1,Ashby
+ai_in_role_name,328,Clinical AI Lead,Other roles,2,2,1,1,0,0,2,Ashby
+ai_in_role_name,329,Clinical AI Specialist,Other roles,2,2,0,0,2,0,0,Ashby
+ai_in_role_name,330,Computer Vision Intern,Other roles,2,2,1,0,1,2,0,Greenhouse
+ai_in_role_name,331,Consultant AI Strategy,Customer-facing and consulting,2,2,0,2,0,1,1,Personio
+ai_in_role_name,332,Consultant Data & AI,Customer-facing and consulting,2,2,0,2,0,0,2,Personio
+ai_in_role_name,333,Data & AI Analyst,Data science and analytics,2,2,1,1,0,1,0,Ashby
+ai_in_role_name,334,Data & AI Intern,Other roles,2,2,0,1,1,2,0,Ashby
+ai_in_role_name,335,Data & AI Manager,Other roles,2,2,0,1,1,0,0,Recruitee
+ai_in_role_name,336,Data & AI Scientist,Research,2,2,0,0,2,0,2,Greenhouse
+ai_in_role_name,337,Data Scientist/AI Engineer,Engineering,2,2,1,0,1,0,0,Greenhouse
+ai_in_role_name,338,Data/AI Engineer,Engineering,2,2,0,1,1,0,1,Greenhouse
+ai_in_role_name,339,Director AI Native Product Builder,Leadership and founders,2,2,0,0,2,0,2,Greenhouse
+ai_in_role_name,340,Director of AI Engineering,Leadership and founders,2,2,1,0,1,0,2,Greenhouse
+ai_in_role_name,341,Director of AI Research,Leadership and founders,2,2,1,0,1,0,2,Greenhouse
+ai_in_role_name,342,Director of AI SecOps,Leadership and founders,2,2,2,0,0,0,2,Greenhouse
+ai_in_role_name,343,Director of Applied AI,Leadership and founders,2,2,2,0,0,0,2,Ashby
+ai_in_role_name,344,Director of Machine Learning,Leadership and founders,2,2,1,1,0,0,2,Ashby
+ai_in_role_name,345,Embedded Computer Vision Engineer,Engineering,2,2,1,1,0,0,1,Ashby
+ai_in_role_name,346,Enterprise AI Business Analyst,Data science and analytics,2,2,2,0,0,0,0,Greenhouse
+ai_in_role_name,347,Enterprise AI Feature Engineer,Engineering,2,2,2,0,0,0,0,Greenhouse
+ai_in_role_name,348,Freelance AI Artist,Other roles,2,2,0,1,1,0,0,Ashby
+ai_in_role_name,349,Front End AI Engineer,Engineering,2,2,1,0,1,0,0,Ashby
+ai_in_role_name,350,Game AI Engineer,Engineering,2,2,2,0,0,0,2,Greenhouse
+ai_in_role_name,351,GenAI Forward Deployed Engineer,Customer-facing and consulting,2,2,1,0,1,0,0,Lever
+ai_in_role_name,352,GenAi Specialist,Other roles,2,2,2,0,0,0,0,Greenhouse
+ai_in_role_name,353,Head of AI & Automation,Leadership and founders,2,2,0,0,2,0,2,Ashby
+ai_in_role_name,354,Head of AI Deployment,Leadership and founders,2,2,2,0,0,0,2,Ashby
+ai_in_role_name,355,Head of AI Research,Leadership and founders,2,2,1,1,0,0,2,Ashby
+ai_in_role_name,356,Head of AI Transformation,Leadership and founders,2,2,2,0,0,0,2,Greenhouse
+ai_in_role_name,357,LLM Inference Engineer,Engineering,2,2,1,0,1,0,1,Ashby
+ai_in_role_name,358,Machine Learning Architect,Engineering,2,2,2,0,0,0,1,Greenhouse
+ai_in_role_name,359,ML Data Engineer,Engineering,2,2,0,1,1,1,0,Lever
+ai_in_role_name,360,ML Data Infrastructure Engineer,Engineering,2,2,2,0,0,0,1,Greenhouse
+ai_in_role_name,361,Machine Learning Developer,Engineering,2,2,0,0,2,0,2,Ashby
+ai_in_role_name,362,ML Engineering Lead,Engineering,2,2,1,1,0,0,2,Ashby
+ai_in_role_name,363,Machine Learning Research,Research,2,2,1,1,0,1,0,Ashby
+ai_in_role_name,364,ML Scientist/Engineer,Research,2,2,1,0,1,0,1,Ashby
+ai_in_role_name,365,ML Systems,Engineering,2,2,2,0,0,0,0,Ashby
+ai_in_role_name,366,Manager AI Delivery,Other roles,2,2,1,1,0,0,0,Personio
+ai_in_role_name,367,Medior AI Engineer,Engineering,2,2,0,2,0,1,0,Recruitee
+ai_in_role_name,368,Microsoft AI Consultant,Customer-facing and consulting,2,2,0,2,0,0,0,Recruitee
+ai_in_role_name,369,ML/AI Platform Engineer,Engineering,2,2,1,1,0,0,2,Ashby
+ai_in_role_name,370,ML Ops,Engineering,2,2,0,2,0,0,2,Ashby
+ai_in_role_name,371,ML Ops & Data Engineer,Engineering,2,2,0,1,1,0,0,Ashby
+ai_in_role_name,372,Partner AI Strategy & Transformation,Other roles,2,2,0,2,0,0,0,Greenhouse
+ai_in_role_name,373,Robotics Machine Learning Engineer,Engineering,2,2,2,0,0,0,0,Ashby
+ai_in_role_name,374,SEO & AI Search Specialist,"Sales, marketing and content",2,2,0,2,0,0,1,Greenhouse
+ai_in_role_name,375,Software AI Engineer,Engineering,2,2,0,0,2,0,1,Lever
+ai_in_role_name,376,Software and AI Engineer,Engineering,2,2,1,0,1,0,0,Ashby
+ai_in_role_name,377,Software Engineer AI,Engineering,2,2,1,0,1,0,1,Greenhouse
+ai_in_role_name,378,Technical AI Product Manager,Product and design,2,2,1,1,0,0,0,Lever
+ai_in_role_name,379,Werkstudent:in AI & Automation,Other roles,2,2,0,2,0,2,0,Personio
+ai_in_suffix,1,Software Engineer,Engineering,465,1213,535,167,511,6,632,Greenhouse
+ai_in_suffix,2,Product Manager,Product and design,247,477,203,106,168,1,266,Greenhouse
+ai_in_suffix,3,Director,Leadership and founders,106,142,98,10,34,0,142,Greenhouse
+ai_in_suffix,4,Engineer,Engineering,102,196,90,28,78,1,191,Greenhouse
+ai_in_suffix,5,Manager,Engineering,82,130,78,24,28,0,56,Greenhouse
+ai_in_suffix,6,Engineering Manager,Engineering,71,123,44,18,61,0,25,Ashby
+ai_in_suffix,7,Member of Technical Staff,Engineering,64,114,70,18,26,0,7,Ashby
+ai_in_suffix,8,Forward Deployed Engineer,Customer-facing and consulting,56,111,44,29,38,0,31,Ashby
+ai_in_suffix,9,Data Scientist,Data science and analytics,48,85,24,28,33,0,60,Lever
+ai_in_suffix,10,Research Engineer,Research,42,54,28,9,17,0,11,Ashby
+ai_in_suffix,11,Product Designer,Product and design,41,53,27,9,17,0,44,Ashby
+ai_in_suffix,12,Full Stack Engineer,Engineering,33,52,14,17,21,0,41,Ashby
+ai_in_suffix,13,Backend Engineer,Engineering,32,45,17,15,13,0,36,Ashby
+ai_in_suffix,14,Technical Program Manager,Product and design,31,44,25,6,13,0,22,Ashby
+ai_in_suffix,15,Research Scientist,Research,30,40,21,9,10,0,14,Ashby
+ai_in_suffix,16,Data Engineer,Engineering,27,43,13,8,22,0,24,Greenhouse
+ai_in_suffix,17,Account Executive,"Sales, marketing and content",27,42,25,3,14,0,10,Greenhouse
+ai_in_suffix,18,Security Engineer,Engineering,27,38,20,3,15,0,32,Greenhouse
+ai_in_suffix,19,Product Engineer,Engineering,26,118,15,45,58,0,15,Ashby
+ai_in_suffix,20,Consultant,Customer-facing and consulting,26,45,7,28,10,0,38,Greenhouse
+ai_in_suffix,21,Technical Product Manager,Product and design,24,113,16,40,57,0,12,Ashby
+ai_in_suffix,22,Platform Engineer,Engineering,21,28,15,7,6,0,10,Greenhouse
+ai_in_suffix,23,Associate,Customer-facing and consulting,19,30,8,10,12,0,15,Greenhouse
+ai_in_suffix,24,Product Owner,Product and design,18,107,7,48,52,1,6,Ashby
+ai_in_suffix,25,Solutions Engineer,Customer-facing and consulting,17,18,10,3,5,0,6,Ashby
+ai_in_suffix,26,Fullstack Engineer,Engineering,16,33,11,6,16,0,19,Ashby
+ai_in_suffix,27,Full-Stack Developer,Engineering,15,30,2,17,11,2,9,Ashby
+ai_in_suffix,28,Product Marketing Manager,Product and design,15,20,13,5,2,0,14,Ashby
+ai_in_suffix,29,Project Manager,Product and design,15,20,3,7,10,6,2,Greenhouse
+ai_in_suffix,30,Sales Engineer,Customer-facing and consulting,15,18,11,4,3,1,9,Greenhouse
+ai_in_suffix,31,Business Analyst,Data science and analytics,15,15,2,6,7,0,8,Greenhouse
+ai_in_suffix,32,Tech Lead,Other roles,13,18,10,3,5,0,18,Greenhouse
+ai_in_suffix,33,Solutions Architect,Customer-facing and consulting,12,27,14,10,3,0,18,Greenhouse
+ai_in_suffix,34,Customer Success Manager,Customer-facing and consulting,12,18,7,7,4,1,0,Personio
+ai_in_suffix,35,Sales Manager,"Sales, marketing and content",12,13,4,4,5,0,6,Personio
+ai_in_suffix,36,Solution Architect,Customer-facing and consulting,12,13,7,2,4,0,1,Greenhouse
+ai_in_suffix,37,Werkstudent,Other roles,12,13,0,6,7,13,0,Personio
+ai_in_suffix,38,Site Reliability Engineer,Engineering,11,20,15,2,3,0,14,Greenhouse
+ai_in_suffix,39,Applied Scientist,Research,11,16,4,5,7,0,12,Greenhouse
+ai_in_suffix,40,Architect,Engineering,11,14,7,2,5,0,11,Greenhouse
+ai_in_suffix,41,Technical Lead,Other roles,11,13,3,1,9,0,13,Lever
+ai_in_suffix,42,Scientist,Research,10,17,13,3,1,0,13,Greenhouse
+ai_in_suffix,43,Program Manager,Product and design,10,13,8,0,5,0,5,Greenhouse
+ai_in_suffix,44,Business Development Manager,"Sales, marketing and content",10,12,4,6,2,0,2,Ashby
+ai_in_suffix,45,Full Stack Software Engineer,Engineering,9,55,5,23,27,0,4,Lever
+ai_in_suffix,46,Backend Software Engineer,Engineering,9,32,7,10,15,0,4,Ashby
+ai_in_suffix,47,Intern,Engineering,9,15,9,2,4,15,0,Greenhouse
+ai_in_suffix,48,Associate Director,Leadership and founders,9,10,8,0,2,0,10,Greenhouse
+ai_in_suffix,49,QA Engineer,Engineering,9,9,3,0,6,0,5,Greenhouse
+ai_in_suffix,50,Sales Development Representative,"Sales, marketing and content",8,13,2,3,8,1,2,Workable
+ai_in_suffix,51,Enterprise Account Executive,"Sales, marketing and content",8,11,5,4,2,0,3,Greenhouse
+ai_in_suffix,52,Vice President,Leadership and founders,8,10,6,0,4,0,10,Greenhouse
+ai_in_suffix,53,Analyst,Data science and analytics,8,9,2,0,7,2,4,Greenhouse
+ai_in_suffix,54,Software Developer,Engineering,8,9,2,3,4,0,6,Greenhouse
+ai_in_suffix,55,Product Lead,Product and design,7,97,6,38,53,0,97,Ashby
+ai_in_suffix,56,Engagement Manager,Other roles,7,16,3,3,10,0,0,Recruitee
+ai_in_suffix,57,Systems Engineer,Engineering,7,11,8,0,3,0,7,Greenhouse
+ai_in_suffix,58,Quality Engineer,Engineering,7,9,4,3,2,0,5,Greenhouse
+ai_in_suffix,59,Infrastructure Engineer,Engineering,7,8,4,3,1,0,3,Ashby
+ai_in_suffix,60,Internship,Engineering,7,8,1,5,2,8,0,Ashby
+ai_in_suffix,61,Business Development Representative,"Sales, marketing and content",7,7,3,3,1,0,0,Greenhouse
+ai_in_suffix,62,Group Product Manager,Product and design,7,7,6,0,1,0,1,Greenhouse
+ai_in_suffix,63,Legal Counsel,"Governance, policy and safety",7,7,1,3,3,0,2,Ashby
+ai_in_suffix,64,Sales Director,Leadership and founders,7,7,3,2,2,0,7,Greenhouse
+ai_in_suffix,65,Technical Project Manager,Product and design,7,7,4,0,3,0,4,Ashby
+ai_in_suffix,66,Technical Recruiter,Other roles,7,7,7,0,0,0,2,Greenhouse
+ai_in_suffix,67,Software Development Engineer,Engineering,6,15,6,1,8,0,11,Greenhouse
+ai_in_suffix,68,Software Architect,Engineering,6,8,3,3,2,0,1,Ashby
+ai_in_suffix,69,Software Engineering Manager,Engineering,6,8,7,0,1,0,0,Ashby
+ai_in_suffix,70,Technical Account Manager,Customer-facing and consulting,6,8,4,1,3,0,0,Ashby
+ai_in_suffix,71,Marketing Manager,"Sales, marketing and content",6,7,2,2,3,1,0,Personio
+ai_in_suffix,72,VP,Leadership and founders,6,7,5,0,2,0,7,Greenhouse
+ai_in_suffix,73,Director of Engineering,Leadership and founders,6,6,5,0,1,0,6,Ashby
+ai_in_suffix,74,Head of Product,Leadership and founders,6,6,1,0,5,0,6,Ashby
+ai_in_suffix,75,Stage,Other roles,6,6,0,6,0,6,0,Recruitee
+ai_in_suffix,76,Strategic Account Executive,"Sales, marketing and content",6,6,6,0,0,0,0,Ashby
+ai_in_suffix,77,Tech Lead Manager,Other roles,6,6,6,0,0,0,6,Greenhouse
+ai_in_suffix,78,Frontend Engineer,Engineering,5,7,5,1,1,0,3,Ashby
+ai_in_suffix,79,Fullstack Developer,Engineering,5,7,0,2,5,1,2,Workable
+ai_in_suffix,80,Working Student,Other roles,5,7,0,7,0,7,0,Greenhouse
+ai_in_suffix,81,Analytics Engineer,Engineering,5,6,4,0,2,0,4,Greenhouse
+ai_in_suffix,82,Chief of Staff,Other roles,5,6,2,3,1,0,0,Greenhouse
+ai_in_suffix,83,Counsel,"Governance, policy and safety",5,6,4,1,1,0,4,Ashby
+ai_in_suffix,84,Security Architect,Engineering,5,6,1,4,1,0,0,Ashby
+ai_in_suffix,85,Business Development Lead,"Sales, marketing and content",5,5,5,0,0,0,5,Ashby
+ai_in_suffix,86,Delivery Manager,Customer-facing and consulting,5,5,0,1,4,0,2,Ashby
+ai_in_suffix,87,DevOps Engineer,Engineering,5,5,0,0,5,0,3,Ashby
+ai_in_suffix,88,Founders Associate,Other roles,5,5,0,3,2,0,0,Personio
+ai_in_suffix,89,Growth Marketing Manager,"Sales, marketing and content",5,5,2,3,0,0,2,Ashby
+ai_in_suffix,90,Python Developer,Engineering,5,5,0,2,3,0,0,Recruitee
+ai_in_suffix,91,Research Intern,Research,5,5,2,0,3,5,0,Ashby
+ai_in_suffix,92,Software Engineer Intern,Engineering,5,5,2,1,2,5,0,Greenhouse
+ai_in_suffix,93,Network Engineer,Engineering,4,11,8,0,3,0,7,Greenhouse
+ai_in_suffix,94,Software Development Engineer in Test,Engineering,4,10,5,0,5,0,8,Ashby
+ai_in_suffix,95,Data Platform Engineer,Engineering,4,6,4,0,2,0,5,Ashby
+ai_in_suffix,96,Growth Marketer,"Sales, marketing and content",4,6,5,1,0,0,2,Lever
+ai_in_suffix,97,Mechanical Engineer,Engineering,4,6,6,0,0,0,1,Greenhouse
+ai_in_suffix,98,Partner Manager,Other roles,4,6,3,2,1,0,3,Greenhouse
+ai_in_suffix,99,Managing Director,Leadership and founders,4,5,2,1,2,0,5,Ashby
+ai_in_suffix,100,Recruiter,Other roles,4,5,3,1,1,0,2,Greenhouse
+ai_in_suffix,101,Technical Lead Manager,Other roles,4,5,4,0,1,0,5,Greenhouse
+ai_in_suffix,102,Co-Founder & CTO,Leadership and founders,4,4,0,2,2,0,0,Workable
+ai_in_suffix,103,Director of Product Management,Leadership and founders,4,4,3,0,1,0,4,Greenhouse
+ai_in_suffix,104,Fullstack Software Engineer,Engineering,4,4,2,2,0,0,1,Ashby
+ai_in_suffix,105,Partner,Other roles,4,4,2,1,1,0,1,Ashby
+ai_in_suffix,106,R&D Intern,Other roles,4,4,0,4,0,4,0,Greenhouse
+ai_in_suffix,107,Robotics Engineer,Engineering,4,4,2,1,1,0,2,Ashby
+ai_in_suffix,108,SVP,Other roles,4,4,4,0,0,0,1,Greenhouse
+ai_in_suffix,109,Technical Product Owner,Product and design,4,4,3,0,1,0,0,Lever
+ai_in_suffix,110,Dutch,AI training and data work,3,69,0,1,68,0,0,Greenhouse
+ai_in_suffix,111,Researcher,Research,3,36,1,0,35,0,15,Recruitee
+ai_in_suffix,112,CDI,Engineering,3,24,0,24,0,0,9,Greenhouse
+ai_in_suffix,113,CEO,Leadership and founders,3,18,6,4,8,0,0,Ashby
+ai_in_suffix,114,Cybersecurity Engineer,Engineering,3,7,0,0,7,0,3,Workable
+ai_in_suffix,115,Developer,Engineering,3,7,3,0,4,1,5,Greenhouse
+ai_in_suffix,116,Strategy Consultant,Customer-facing and consulting,3,7,0,5,2,2,0,Personio
+ai_in_suffix,117,Applied Researcher,Research,3,6,1,0,5,0,2,Ashby
+ai_in_suffix,118,Design Verification Engineer,Engineering,3,6,2,2,2,0,4,Greenhouse
+ai_in_suffix,119,Consulting Manager,Customer-facing and consulting,3,5,0,5,0,0,0,Greenhouse
+ai_in_suffix,120,Data Product Manager,Product and design,3,5,1,0,4,0,2,Greenhouse
+ai_in_suffix,121,Product Director,Leadership and founders,3,5,1,1,3,0,5,Greenhouse
+ai_in_suffix,122,Customer Engineer,Customer-facing and consulting,3,4,2,0,2,0,3,Greenhouse
+ai_in_suffix,123,Infrastructure Software Engineer,Engineering,3,4,3,0,1,0,1,Ashby
+ai_in_suffix,124,Manager/Senior Manager,Other roles,3,4,3,0,1,0,4,Workable
+ai_in_suffix,125,Quantitative Researcher,Research,3,4,1,0,3,1,0,Greenhouse
+ai_in_suffix,126,Stage Communication,Other roles,3,4,0,4,0,4,0,Greenhouse
+ai_in_suffix,127,Account Manager,"Sales, marketing and content",3,3,0,2,1,0,0,Ashby
+ai_in_suffix,128,Associate Director/Director,Leadership and founders,3,3,3,0,0,0,3,Greenhouse
+ai_in_suffix,129,Automation Engineer,Engineering,3,3,0,1,2,0,2,Greenhouse
+ai_in_suffix,130,Business Development,"Sales, marketing and content",3,3,2,1,0,0,0,Greenhouse
+ai_in_suffix,131,Creative Technologist,Other roles,3,3,2,1,0,0,0,Ashby
+ai_in_suffix,132,Deployment Strategist,Customer-facing and consulting,3,3,2,1,0,0,0,Ashby
+ai_in_suffix,133,Designer,Product and design,3,3,0,2,1,1,1,Ashby
+ai_in_suffix,134,Developer Advocate,Engineering,3,3,2,1,0,0,2,Greenhouse
+ai_in_suffix,135,Director/Senior Director,Leadership and founders,3,3,3,0,0,0,3,Greenhouse
+ai_in_suffix,136,Engineering Director,Leadership and founders,3,3,3,0,0,0,3,Ashby
+ai_in_suffix,137,Engineering Lead,Engineering,3,3,0,3,0,0,3,Greenhouse
+ai_in_suffix,138,Enterprise Architect,Engineering,3,3,1,1,1,0,3,Ashby
+ai_in_suffix,139,Enterprise Sales Lead,"Sales, marketing and content",3,3,1,1,1,0,3,Ashby
+ai_in_suffix,140,General Manager,Other roles,3,3,3,0,0,0,0,Ashby
+ai_in_suffix,141,Head of GTM,Leadership and founders,3,3,1,0,2,0,3,Ashby
+ai_in_suffix,142,Security Researcher,Research,3,3,0,0,3,0,3,Greenhouse
+ai_in_suffix,143,Software Engineer in Test,Engineering,3,3,0,1,2,0,2,Greenhouse
+ai_in_suffix,144,Specialist,Other roles,3,3,1,0,2,0,2,Greenhouse
+ai_in_suffix,145,Strategic Projects Lead,"Governance, policy and safety",3,3,3,0,0,0,3,Ashby
+ai_in_suffix,146,Team Lead,Other roles,3,3,0,2,1,0,3,Ashby
+ai_in_suffix,147,Technical Director,Leadership and founders,3,3,2,0,1,0,3,Greenhouse
+ai_in_suffix,148,UX/UI Designer,Product and design,3,3,2,0,1,1,2,Greenhouse
+ai_in_suffix,149,Spanish,AI training and data work,2,64,0,0,64,0,0,Greenhouse
+ai_in_suffix,150,Hindi,AI training and data work,2,31,0,0,31,0,0,Greenhouse
+ai_in_suffix,151,Python,AI training and data work,2,27,0,0,27,0,27,Greenhouse
+ai_in_suffix,152,Mobile Engineer,Engineering,2,24,1,10,13,0,1,Ashby
+ai_in_suffix,153,Biology Expert,AI training and data work,2,23,1,13,9,0,0,Ashby
+ai_in_suffix,154,2027 Summer Intern,Research,2,22,19,2,1,22,0,Greenhouse
+ai_in_suffix,155,Arabic,AI training and data work,2,20,0,0,20,0,0,Greenhouse
+ai_in_suffix,156,French,AI training and data work,2,19,0,0,19,0,0,Greenhouse
+ai_in_suffix,157,Instructor,Other roles,2,15,14,0,1,0,1,Workable
+ai_in_suffix,158,Data Annotator,AI training and data work,2,10,9,0,1,0,0,Workable
+ai_in_suffix,159,Technical Consultant,Customer-facing and consulting,2,10,1,1,8,0,8,Lever
+ai_in_suffix,160,Industrial Plant Reliability & Maintenance Expert,Other roles,2,8,0,7,1,0,0,Lever
+ai_in_suffix,161,Co-op,Other roles,2,7,7,0,0,7,0,Greenhouse
+ai_in_suffix,162,Sales Specialist,"Sales, marketing and content",2,6,6,0,0,0,0,Greenhouse
+ai_in_suffix,163,Radiologist,AI training and data work,2,5,2,1,2,0,0,Ashby
+ai_in_suffix,164,Staff+ Software Engineer,Engineering,2,5,4,0,1,0,5,Greenhouse
+ai_in_suffix,165,Thermal Engineer,Engineering,2,5,5,0,0,0,4,Greenhouse
+ai_in_suffix,166,Cyber Security Engineer,Engineering,2,4,0,2,2,0,0,Greenhouse
+ai_in_suffix,167,Delivery Director,Leadership and founders,2,4,3,1,0,0,4,Greenhouse
+ai_in_suffix,168,Physician,Other roles,2,4,2,1,1,0,0,Ashby
+ai_in_suffix,169,Privacy Review Specialist,"Governance, policy and safety",2,4,4,0,0,0,4,Greenhouse
+ai_in_suffix,170,SDE,Engineering,2,4,0,0,4,0,0,Greenhouse
+ai_in_suffix,171,Software Development Test Engineer,Engineering,2,4,1,0,3,0,4,Ashby
+ai_in_suffix,172,Technical Customer Success Manager,Customer-facing and consulting,2,4,0,1,3,0,0,Lever
+ai_in_suffix,173,Accountant,AI training and data work,2,3,0,3,0,0,1,Ashby
+ai_in_suffix,174,Algorithm Engineer,Engineering,2,3,2,0,1,1,2,Greenhouse
+ai_in_suffix,175,Associate Consultant,Customer-facing and consulting,2,3,0,3,0,0,0,Greenhouse
+ai_in_suffix,176,Backend Developer,AI training and data work,2,3,0,2,1,0,1,Ashby
+ai_in_suffix,177,Business Development Director,Leadership and founders,2,3,2,1,0,0,3,Greenhouse
+ai_in_suffix,178,Chemistry Expert,AI training and data work,2,3,1,0,2,0,0,Ashby
+ai_in_suffix,179,Customer Support Specialist,Other roles,2,3,0,0,3,0,0,Workable
+ai_in_suffix,180,Engineering Intern,Engineering,2,3,1,0,2,3,0,Lever
+ai_in_suffix,181,Enterprise Sales Executive,"Sales, marketing and content",2,3,1,0,2,0,0,Lever
+ai_in_suffix,182,Field CTO,Leadership and founders,2,3,3,0,0,0,0,Greenhouse
+ai_in_suffix,183,Firmware Engineer,Engineering,2,3,2,0,1,0,3,Lever
+ai_in_suffix,184,Forward Deployed Product Manager,Customer-facing and consulting,2,3,2,1,0,0,0,Greenhouse
+ai_in_suffix,185,Growth Product Manager,Product and design,2,3,0,2,1,0,1,Ashby
+ai_in_suffix,186,Hardware Engineer,Engineering,2,3,1,0,2,0,1,Greenhouse
+ai_in_suffix,187,Hardware Intern,Other roles,2,3,1,0,2,3,0,Greenhouse
+ai_in_suffix,188,Legal Research Attorney,AI training and data work,2,3,1,0,2,0,0,Lever
+ai_in_suffix,189,Member of the Technical Staff,Other roles,2,3,3,0,0,0,3,Ashby
+ai_in_suffix,190,Perception Engineer,Engineering,2,3,1,0,2,0,2,Ashby
+ai_in_suffix,191,Python Engineer,Engineering,2,3,0,3,0,0,2,Lever
+ai_in_suffix,192,Research Internship,Research,2,3,2,0,1,3,0,Greenhouse
+ai_in_suffix,193,Software Engineer I/II,Engineering,2,3,2,0,1,0,3,Greenhouse
+ai_in_suffix,194,Solutions Consultant,Customer-facing and consulting,2,3,1,1,1,0,2,Lever
+ai_in_suffix,195,Sourcing Manager,Other roles,2,3,3,0,0,0,0,Greenhouse
+ai_in_suffix,196,Surgeon,AI training and data work,2,3,1,1,1,0,0,Greenhouse
+ai_in_suffix,197,System Software Engineer,Engineering,2,3,2,0,1,0,1,Ashby
+ai_in_suffix,198,Technical Co-Founder,Leadership and founders,2,3,1,0,2,0,0,Lever
+ai_in_suffix,199,Technical Product Marketing Manager,Product and design,2,3,3,0,0,0,2,Workable
+ai_in_suffix,200,Technical Trainer,Engineering,2,3,3,0,0,0,2,Ashby
+ai_in_suffix,201,Accounting Manager,Other roles,2,2,1,0,1,0,0,Lever
+ai_in_suffix,202,Application Security Engineer,Engineering,2,2,2,0,0,0,1,Greenhouse
+ai_in_suffix,203,Associate Creative Director,Leadership and founders,2,2,0,1,1,0,2,Greenhouse
+ai_in_suffix,204,Brand Designer,Product and design,2,2,0,1,1,0,1,Ashby
+ai_in_suffix,205,Chief Technology Officer,Leadership and founders,2,2,0,1,1,0,2,Ashby
+ai_in_suffix,206,Client Partner,"Sales, marketing and content",2,2,2,0,0,0,1,Greenhouse
+ai_in_suffix,207,Cloud Architect,Engineering,2,2,0,2,0,0,1,Ashby
+ai_in_suffix,208,Cloud Engineer,Engineering,2,2,2,0,0,0,1,Greenhouse
+ai_in_suffix,209,Cloud Platform,Engineering,2,2,2,0,0,0,0,Greenhouse
+ai_in_suffix,210,Compliance Analyst,Data science and analytics,2,2,0,0,2,0,0,Greenhouse
+ai_in_suffix,211,Consulting Partner in Pharma & Life Science,Customer-facing and consulting,2,2,0,2,0,0,0,Greenhouse
+ai_in_suffix,212,Consulting Partner Romandie,Customer-facing and consulting,2,2,0,2,0,0,0,Greenhouse
+ai_in_suffix,213,Content Designer,Product and design,2,2,2,0,0,0,1,Ashby
+ai_in_suffix,214,Content Marketing Manager,"Sales, marketing and content",2,2,1,0,1,0,1,Ashby
+ai_in_suffix,215,Controller,Other roles,2,2,1,1,0,1,0,Greenhouse
+ai_in_suffix,216,Creative Director,Leadership and founders,2,2,0,0,2,0,2,Greenhouse
+ai_in_suffix,217,Data Analyst,Data science and analytics,2,2,0,1,1,0,1,Ashby
+ai_in_suffix,218,Data Engineering Lead,Engineering,2,2,0,1,1,0,2,Lever
+ai_in_suffix,219,Delivery Lead,Customer-facing and consulting,2,2,0,0,2,0,2,Greenhouse
+ai_in_suffix,220,Director of Product,Leadership and founders,2,2,2,0,0,0,2,Ashby
+ai_in_suffix,221,Director of Sales,Leadership and founders,2,2,1,0,1,0,2,Ashby
+ai_in_suffix,222,Economists,AI training and data work,2,2,0,0,2,0,0,Ashby
+ai_in_suffix,223,Electrical Engineer,Engineering,2,2,2,0,0,0,1,Greenhouse
+ai_in_suffix,224,Executive Assistant,Other roles,2,2,1,0,1,0,1,Greenhouse
+ai_in_suffix,225,Executive Director,Leadership and founders,2,2,2,0,0,0,2,Greenhouse
+ai_in_suffix,226,Financial Controller,Other roles,2,2,0,2,0,0,0,Ashby
+ai_in_suffix,227,FireFly,Other roles,2,2,0,0,2,0,0,Greenhouse
+ai_in_suffix,228,Founder's Associate Intern,"Sales, marketing and content",2,2,0,2,0,2,0,Ashby
+ai_in_suffix,229,Full Stack Product Engineer,Engineering,2,2,1,1,0,0,0,Ashby
+ai_in_suffix,230,Graphic Designer,Product and design,2,2,0,1,1,0,1,Ashby
+ai_in_suffix,231,Head of Design,Leadership and founders,2,2,1,1,0,0,2,Ashby
+ai_in_suffix,232,Head of Engineering,Leadership and founders,2,2,1,0,1,0,2,Greenhouse
+ai_in_suffix,233,Head of Growth,Leadership and founders,2,2,2,0,0,0,2,Ashby
+ai_in_suffix,234,InDomo,"Sales, marketing and content",2,2,0,2,0,2,0,Greenhouse
+ai_in_suffix,235,IT Administrator,Other roles,2,2,0,2,0,0,0,Ashby
+ai_in_suffix,236,IT Manager,"Governance, policy and safety",2,2,0,1,1,0,1,Personio
+ai_in_suffix,237,Join our Talent Pool,Other roles,2,2,0,1,1,0,0,Greenhouse
+ai_in_suffix,238,Legal Engineer,Engineering,2,2,0,1,1,0,0,Ashby
+ai_in_suffix,239,Medical Director,Leadership and founders,2,2,1,0,1,0,2,Greenhouse
+ai_in_suffix,240,MTS,Other roles,2,2,2,0,0,0,0,Ashby
+ai_in_suffix,241,P&C Insurance Professionals,AI training and data work,2,2,1,0,1,0,0,Ashby
+ai_in_suffix,242,Partner Development Manager,"Sales, marketing and content",2,2,1,1,0,0,0,Greenhouse
+ai_in_suffix,243,Partner Marketing Manager,"Sales, marketing and content",2,2,2,0,0,0,2,Greenhouse
+ai_in_suffix,244,Partnerships Lead,"Sales, marketing and content",2,2,1,0,1,0,2,Ashby
+ai_in_suffix,245,Platform Security Engineer,Engineering,2,2,0,2,0,0,2,Greenhouse
+ai_in_suffix,246,PMO,Other roles,2,2,0,0,2,0,0,Greenhouse
+ai_in_suffix,247,Power Systems Architect,Engineering,2,2,1,0,1,0,1,Greenhouse
+ai_in_suffix,248,Product,"Governance, policy and safety",2,2,0,0,2,0,1,Greenhouse
+ai_in_suffix,249,Product Builder,Engineering,2,2,1,1,0,0,0,Ashby
+ai_in_suffix,250,Product Management Director,Leadership and founders,2,2,0,0,2,0,2,Lever
+ai_in_suffix,251,Product Management Intern,Product and design,2,2,1,0,1,2,0,Ashby
+ai_in_suffix,252,Professional Services Consultant,Customer-facing and consulting,2,2,1,1,0,0,1,Greenhouse
+ai_in_suffix,253,Programme Manager,Product and design,2,2,0,1,1,0,1,Greenhouse
+ai_in_suffix,254,Project Lead,Other roles,2,2,0,1,1,0,2,Ashby
+ai_in_suffix,255,QA Automation Engineer,Engineering,2,2,0,0,2,0,2,Recruitee
+ai_in_suffix,256,Registered Nurse,Other roles,2,2,1,0,1,0,0,Ashby
+ai_in_suffix,257,Research Engineer Intern,Research,2,2,0,0,2,2,0,Ashby
+ai_in_suffix,258,Research Engineer/Scientist,Research,2,2,0,2,0,0,0,Lever
+ai_in_suffix,259,SDET,Other roles,2,2,0,0,2,0,2,Greenhouse
+ai_in_suffix,260,Software Engineer/Tech Lead,Engineering,2,2,1,1,0,0,2,Greenhouse
+ai_in_suffix,261,Solution Engineer,Customer-facing and consulting,2,2,1,1,0,0,1,Personio
+ai_in_suffix,262,Stagiair,Other roles,2,2,0,2,0,0,0,Recruitee
+ai_in_suffix,263,Summer 2027,Research,2,2,1,0,1,2,0,Ashby
+ai_in_suffix,264,Support Engineer,Engineering,2,2,2,0,0,0,0,Ashby
+ai_in_suffix,265,Technical Architect,Engineering,2,2,0,1,1,0,0,Greenhouse
+ai_in_suffix,266,Technical Artist,Other roles,2,2,0,1,1,0,0,Ashby
+ai_in_suffix,267,Technical Marketing Manager,"Sales, marketing and content",2,2,2,0,0,0,1,Ashby
+ai_in_suffix,268,Technical Product Marketing Lead,Product and design,2,2,2,0,0,0,2,Ashby
+ai_in_suffix,269,Technical Specialist,"Governance, policy and safety",2,2,0,0,2,0,1,Greenhouse
+ai_in_suffix,270,Technical Support Engineer,Engineering,2,2,0,0,2,0,1,Greenhouse
+ai_in_suffix,271,Technology Consultant,Customer-facing and consulting,2,2,0,1,1,0,0,Personio
+ai_in_suffix,272,UX Designer,Product and design,2,2,0,1,1,0,2,Greenhouse
+ai_in_suffix,273,Venture Development,Engineering,2,2,0,2,0,1,0,Ashby
+ai_in_suffix,274,Video Editor,"Sales, marketing and content",2,2,0,0,2,0,2,Workable
+ai_in_suffix,275,Virtual Assistant,"Sales, marketing and content",2,2,0,0,2,0,0,Greenhouse
+ai_in_suffix,276,Visual Designer,Product and design,2,2,1,1,0,0,0,Ashby
