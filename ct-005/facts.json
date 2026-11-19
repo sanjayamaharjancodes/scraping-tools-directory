@@ -1,0 +1,1778 @@
+{
+ "target_query": "should i apply to a job posted 30 days ago",
+ "facts": [
+  {
+   "id": "seg-all",
+   "claim": "All open jobs: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=456597; boards=18767; median_days=69.5; p25_days=22.5; p75_days=209.5; older_7d_pct=90.4; older_14d_pct=83.4; older_30d_pct=69.5; older_60d_pct=53.6; older_90d_pct=43.8; older_180d_pct=28.3; older_365d_pct=15.7; older_730d_pct=8.1; board_median_days=71.5; boards_median_over_30d_pct=79.9",
+   "numbers": [
+    "8.1",
+    "15.7",
+    "22.5",
+    "28.3",
+    "43.8",
+    "53.6",
+    "69.5",
+    "71.5",
+    "79.9",
+    "83.4",
+    "90.4",
+    "209.5",
+    "18767",
+    "456597"
+   ]
+  },
+  {
+   "id": "seg-ats-greenhouse",
+   "claim": "Greenhouse: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=191270; boards=5544; median_days=63.0; p25_days=22.5; p75_days=174.3; older_7d_pct=91.4; older_14d_pct=84.2; older_30d_pct=68.5; older_60d_pct=51.3; older_90d_pct=40.3; older_180d_pct=24.5; older_365d_pct=13.0; older_730d_pct=5.9; board_median_days=55.5; boards_median_over_30d_pct=76.9",
+   "numbers": [
+    "5.9",
+    "13.0",
+    "22.5",
+    "24.5",
+    "40.3",
+    "51.3",
+    "55.5",
+    "63.0",
+    "68.5",
+    "76.9",
+    "84.2",
+    "91.4",
+    "174.3",
+    "5544",
+    "191270"
+   ]
+  },
+  {
+   "id": "seg-ats-lever",
+   "claim": "Lever: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=64111; boards=1663; median_days=90.9; p25_days=20.2; p75_days=370.9; older_7d_pct=85.1; older_14d_pct=79.5; older_30d_pct=69.1; older_60d_pct=58.1; older_90d_pct=50.3; older_180d_pct=37.8; older_365d_pct=25.2; older_730d_pct=18.1; board_median_days=77.0; boards_median_over_30d_pct=82.7",
+   "numbers": [
+    "18.1",
+    "20.2",
+    "25.2",
+    "37.8",
+    "50.3",
+    "58.1",
+    "69.1",
+    "77.0",
+    "79.5",
+    "82.7",
+    "85.1",
+    "90.9",
+    "370.9",
+    "1663",
+    "64111"
+   ]
+  },
+  {
+   "id": "seg-ats-ashby",
+   "claim": "Ashby: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=60125; boards=3321; median_days=49.8; p25_days=19.4; p75_days=120.5; older_7d_pct=88.1; older_14d_pct=80.2; older_30d_pct=63.8; older_60d_pct=44.9; older_90d_pct=33.5; older_180d_pct=15.3; older_365d_pct=4.3; older_730d_pct=0.9; board_median_days=61.3; boards_median_over_30d_pct=77.5",
+   "numbers": [
+    "0.9",
+    "4.3",
+    "15.3",
+    "19.4",
+    "33.5",
+    "44.9",
+    "49.8",
+    "61.3",
+    "63.8",
+    "77.5",
+    "80.2",
+    "88.1",
+    "120.5",
+    "3321",
+    "60125"
+   ]
+  },
+  {
+   "id": "seg-ats-recruitee",
+   "claim": "Recruitee: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=42260; boards=2562; median_days=90.8; p25_days=28.6; p75_days=259.6; older_7d_pct=91.8; older_14d_pct=85.1; older_30d_pct=73.5; older_60d_pct=59.0; older_90d_pct=50.2; older_180d_pct=33.9; older_365d_pct=18.2; older_730d_pct=6.8; board_median_days=98.7; boards_median_over_30d_pct=82.3",
+   "numbers": [
+    "6.8",
+    "18.2",
+    "28.6",
+    "33.9",
+    "50.2",
+    "59.0",
+    "73.5",
+    "82.3",
+    "85.1",
+    "90.8",
+    "91.8",
+    "98.7",
+    "259.6",
+    "2562",
+    "42260"
+   ]
+  },
+  {
+   "id": "seg-ats-personio",
+   "claim": "Personio: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=31839; boards=3531; median_days=184.8; p25_days=54.6; p75_days=593.6; older_7d_pct=96.3; older_14d_pct=92.4; older_30d_pct=84.0; older_60d_pct=72.8; older_90d_pct=65.3; older_180d_pct=50.8; older_365d_pct=35.2; older_730d_pct=20.0; board_median_days=217.8; boards_median_over_30d_pct=91.6",
+   "numbers": [
+    "20.0",
+    "35.2",
+    "50.8",
+    "54.6",
+    "65.3",
+    "72.8",
+    "84.0",
+    "91.6",
+    "92.4",
+    "96.3",
+    "184.8",
+    "217.8",
+    "593.6",
+    "3531",
+    "31839"
+   ]
+  },
+  {
+   "id": "seg-ats-workable",
+   "claim": "Workable: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=66992; boards=2146; median_days=64.2; p25_days=21.2; p75_days=203.2; older_7d_pct=91.4; older_14d_pct=82.3; older_30d_pct=68.2; older_60d_pct=51.1; older_90d_pct=42.6; older_180d_pct=27.5; older_365d_pct=13.6; older_730d_pct=6.6; board_median_days=48.2; boards_median_over_30d_pct=67.7",
+   "numbers": [
+    "6.6",
+    "13.6",
+    "21.2",
+    "27.5",
+    "42.6",
+    "48.2",
+    "51.1",
+    "64.2",
+    "67.7",
+    "68.2",
+    "82.3",
+    "91.4",
+    "203.2",
+    "2146",
+    "66992"
+   ]
+  },
+  {
+   "id": "seg-region-us",
+   "claim": "Located in the US: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=212299; boards=9394; median_days=58.2; p25_days=20.3; p75_days=168.6; older_7d_pct=89.7; older_14d_pct=81.7; older_30d_pct=66.2; older_60d_pct=49.4; older_90d_pct=39.0; older_180d_pct=24.0; older_365d_pct=12.8; older_730d_pct=7.6; board_median_days=56.8; boards_median_over_30d_pct=75.0",
+   "numbers": [
+    "7.6",
+    "12.8",
+    "20.3",
+    "24.0",
+    "39.0",
+    "49.4",
+    "56.8",
+    "58.2",
+    "66.2",
+    "75.0",
+    "81.7",
+    "89.7",
+    "168.6",
+    "9394",
+    "212299"
+   ]
+  },
+  {
+   "id": "seg-region-europe",
+   "claim": "Located in Europe: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=105521; boards=8175; median_days=76.2; p25_days=23.7; p75_days=240.7; older_7d_pct=90.9; older_14d_pct=83.9; older_30d_pct=70.8; older_60d_pct=55.1; older_90d_pct=46.5; older_180d_pct=30.9; older_365d_pct=18.1; older_730d_pct=8.6; board_median_days=78.6; boards_median_over_30d_pct=79.2",
+   "numbers": [
+    "8.6",
+    "18.1",
+    "23.7",
+    "30.9",
+    "46.5",
+    "55.1",
+    "70.8",
+    "76.2",
+    "78.6",
+    "79.2",
+    "83.9",
+    "90.9",
+    "240.7",
+    "8175",
+    "105521"
+   ]
+  },
+  {
+   "id": "seg-region-other",
+   "claim": "Other or unclear location: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=138777; boards=9928; median_days=85.8; p25_days=28.2; p75_days=245.7; older_7d_pct=91.3; older_14d_pct=85.5; older_30d_pct=73.5; older_60d_pct=58.7; older_90d_pct=49.1; older_180d_pct=32.9; older_365d_pct=18.2; older_730d_pct=8.6; board_median_days=78.3; boards_median_over_30d_pct=79.3",
+   "numbers": [
+    "8.6",
+    "18.2",
+    "28.2",
+    "32.9",
+    "49.1",
+    "58.7",
+    "73.5",
+    "78.3",
+    "79.3",
+    "85.5",
+    "85.8",
+    "91.3",
+    "245.7",
+    "9928",
+    "138777"
+   ]
+  },
+  {
+   "id": "seg-seniority-junior",
+   "claim": "Junior, intern or student word: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=19901; boards=5082; median_days=69.7; p25_days=24.2; p75_days=217.9; older_7d_pct=92.6; older_14d_pct=85.6; older_30d_pct=71.1; older_60d_pct=54.9; older_90d_pct=41.3; older_180d_pct=28.5; older_365d_pct=17.9; older_730d_pct=10.6; board_median_days=72.2; boards_median_over_30d_pct=72.6",
+   "numbers": [
+    "10.6",
+    "17.9",
+    "24.2",
+    "28.5",
+    "41.3",
+    "54.9",
+    "69.7",
+    "71.1",
+    "72.2",
+    "72.6",
+    "85.6",
+    "92.6",
+    "217.9",
+    "5082",
+    "19901"
+   ]
+  },
+  {
+   "id": "seg-seniority-neither",
+   "claim": "No seniority word: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=331527; boards=17595; median_days=77.2; p25_days=22.7; p75_days=243.2; older_7d_pct=90.5; older_14d_pct=83.4; older_30d_pct=70.0; older_60d_pct=55.3; older_90d_pct=46.4; older_180d_pct=31.4; older_365d_pct=18.2; older_730d_pct=9.7; board_median_days=77.7; boards_median_over_30d_pct=79.3",
+   "numbers": [
+    "9.7",
+    "18.2",
+    "22.7",
+    "31.4",
+    "46.4",
+    "55.3",
+    "70.0",
+    "77.2",
+    "77.7",
+    "79.3",
+    "83.4",
+    "90.5",
+    "243.2",
+    "17595",
+    "331527"
+   ]
+  },
+  {
+   "id": "seg-seniority-senior",
+   "claim": "Senior, lead or higher word: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=105169; boards=11789; median_days=56.3; p25_days=21.6; p75_days=133.2; older_7d_pct=90.0; older_14d_pct=82.8; older_30d_pct=67.5; older_60d_pct=47.8; older_90d_pct=36.1; older_180d_pct=18.6; older_365d_pct=7.3; older_730d_pct=2.9; board_median_days=57.5; boards_median_over_30d_pct=74.8",
+   "numbers": [
+    "2.9",
+    "7.3",
+    "18.6",
+    "21.6",
+    "36.1",
+    "47.8",
+    "56.3",
+    "57.5",
+    "67.5",
+    "74.8",
+    "82.8",
+    "90.0",
+    "133.2",
+    "11789",
+    "105169"
+   ]
+  },
+  {
+   "id": "seg-group-pool",
+   "claim": "Talent pools and general applications: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=5552; boards=3667; median_days=547.7; p25_days=204.9; p75_days=1203.3; older_7d_pct=98.4; older_14d_pct=97.1; older_30d_pct=94.4; older_60d_pct=90.1; older_90d_pct=86.5; older_180d_pct=77.1; older_365d_pct=63.0; older_730d_pct=40.4; board_median_days=660.6; boards_median_over_30d_pct=96.4",
+   "numbers": [
+    "40.4",
+    "63.0",
+    "77.1",
+    "86.5",
+    "90.1",
+    "94.4",
+    "96.4",
+    "97.1",
+    "98.4",
+    "204.9",
+    "547.7",
+    "660.6",
+    "1203.3",
+    "3667",
+    "5552"
+   ]
+  },
+  {
+   "id": "seg-group-health",
+   "claim": "Healthcare and care: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=41851; boards=1923; median_days=50.5; p25_days=16.2; p75_days=163.2; older_7d_pct=88.9; older_14d_pct=79.5; older_30d_pct=61.4; older_60d_pct=46.8; older_90d_pct=37.8; older_180d_pct=23.2; older_365d_pct=11.5; older_730d_pct=4.1; board_median_days=61.9; boards_median_over_30d_pct=72.6",
+   "numbers": [
+    "4.1",
+    "11.5",
+    "16.2",
+    "23.2",
+    "37.8",
+    "46.8",
+    "50.5",
+    "61.4",
+    "61.9",
+    "72.6",
+    "79.5",
+    "88.9",
+    "163.2",
+    "1923",
+    "41851"
+   ]
+  },
+  {
+   "id": "seg-group-sales",
+   "claim": "Sales and business development: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=44675; boards=7688; median_days=62.9; p25_days=22.5; p75_days=182.5; older_7d_pct=90.8; older_14d_pct=83.5; older_30d_pct=68.5; older_60d_pct=51.2; older_90d_pct=40.3; older_180d_pct=25.3; older_365d_pct=14.7; older_730d_pct=8.9; board_median_days=62.7; boards_median_over_30d_pct=73.1",
+   "numbers": [
+    "8.9",
+    "14.7",
+    "22.5",
+    "25.3",
+    "40.3",
+    "51.2",
+    "62.7",
+    "62.9",
+    "68.5",
+    "73.1",
+    "83.5",
+    "90.8",
+    "182.5",
+    "7688",
+    "44675"
+   ]
+  },
+  {
+   "id": "seg-group-support",
+   "claim": "Customer support and success: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=11563; boards=3633; median_days=54.6; p25_days=17.2; p75_days=184.8; older_7d_pct=87.2; older_14d_pct=79.4; older_30d_pct=64.1; older_60d_pct=47.2; older_90d_pct=38.4; older_180d_pct=25.7; older_365d_pct=15.2; older_730d_pct=7.8; board_median_days=47.4; boards_median_over_30d_pct=64.2",
+   "numbers": [
+    "7.8",
+    "15.2",
+    "17.2",
+    "25.7",
+    "38.4",
+    "47.2",
+    "47.4",
+    "54.6",
+    "64.1",
+    "64.2",
+    "79.4",
+    "87.2",
+    "184.8",
+    "3633",
+    "11563"
+   ]
+  },
+  {
+   "id": "seg-group-marketing",
+   "claim": "Marketing and content: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=19095; boards=5502; median_days=48.7; p25_days=16.8; p75_days=125.2; older_7d_pct=88.4; older_14d_pct=80.0; older_30d_pct=62.3; older_60d_pct=43.3; older_90d_pct=32.9; older_180d_pct=18.4; older_365d_pct=9.3; older_730d_pct=4.9; board_median_days=46.5; boards_median_over_30d_pct=64.8",
+   "numbers": [
+    "4.9",
+    "9.3",
+    "16.8",
+    "18.4",
+    "32.9",
+    "43.3",
+    "46.5",
+    "48.7",
+    "62.3",
+    "64.8",
+    "80.0",
+    "88.4",
+    "125.2",
+    "5502",
+    "19095"
+   ]
+  },
+  {
+   "id": "seg-group-product",
+   "claim": "Product and design: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=15059; boards=4672; median_days=55.2; p25_days=20.5; p75_days=141.2; older_7d_pct=87.5; older_14d_pct=80.4; older_30d_pct=65.7; older_60d_pct=47.5; older_90d_pct=36.2; older_180d_pct=20.3; older_365d_pct=8.6; older_730d_pct=3.6; board_median_days=56.3; boards_median_over_30d_pct=71.3",
+   "numbers": [
+    "3.6",
+    "8.6",
+    "20.3",
+    "20.5",
+    "36.2",
+    "47.5",
+    "55.2",
+    "56.3",
+    "65.7",
+    "71.3",
+    "80.4",
+    "87.5",
+    "141.2",
+    "4672",
+    "15059"
+   ]
+  },
+  {
+   "id": "seg-group-software",
+   "claim": "Software and IT: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=54390; boards=8434; median_days=70.5; p25_days=27.3; p75_days=180.4; older_7d_pct=91.0; older_14d_pct=85.1; older_30d_pct=72.3; older_60d_pct=54.9; older_90d_pct=43.5; older_180d_pct=25.1; older_365d_pct=11.4; older_730d_pct=5.0; board_median_days=74.2; boards_median_over_30d_pct=78.1",
+   "numbers": [
+    "5.0",
+    "11.4",
+    "25.1",
+    "27.3",
+    "43.5",
+    "54.9",
+    "70.5",
+    "72.3",
+    "74.2",
+    "78.1",
+    "85.1",
+    "91.0",
+    "180.4",
+    "8434",
+    "54390"
+   ]
+  },
+  {
+   "id": "seg-group-data",
+   "claim": "Data and AI: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=23497; boards=4576; median_days=98.7; p25_days=30.2; p75_days=225.3; older_7d_pct=91.6; older_14d_pct=86.3; older_30d_pct=75.2; older_60d_pct=61.7; older_90d_pct=52.9; older_180d_pct=36.0; older_365d_pct=16.1; older_730d_pct=7.5; board_median_days=62.5; boards_median_over_30d_pct=74.1",
+   "numbers": [
+    "7.5",
+    "16.1",
+    "30.2",
+    "36.0",
+    "52.9",
+    "61.7",
+    "62.5",
+    "74.1",
+    "75.2",
+    "86.3",
+    "91.6",
+    "98.7",
+    "225.3",
+    "4576",
+    "23497"
+   ]
+  },
+  {
+   "id": "seg-group-engineering",
+   "claim": "Other engineering and technical: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=40274; boards=6069; median_days=66.0; p25_days=24.2; p75_days=162.7; older_7d_pct=92.2; older_14d_pct=85.5; older_30d_pct=71.1; older_60d_pct=53.1; older_90d_pct=41.4; older_180d_pct=23.0; older_365d_pct=9.5; older_730d_pct=4.1; board_median_days=68.3; boards_median_over_30d_pct=75.6",
+   "numbers": [
+    "4.1",
+    "9.5",
+    "23.0",
+    "24.2",
+    "41.4",
+    "53.1",
+    "66.0",
+    "68.3",
+    "71.1",
+    "75.6",
+    "85.5",
+    "92.2",
+    "162.7",
+    "6069",
+    "40274"
+   ]
+  },
+  {
+   "id": "seg-group-finance",
+   "claim": "Finance and accounting: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=14741; boards=4702; median_days=57.2; p25_days=21.5; p75_days=168.6; older_7d_pct=90.7; older_14d_pct=82.8; older_30d_pct=67.1; older_60d_pct=48.7; older_90d_pct=38.7; older_180d_pct=23.9; older_365d_pct=13.3; older_730d_pct=5.7; board_median_days=47.8; boards_median_over_30d_pct=65.1",
+   "numbers": [
+    "5.7",
+    "13.3",
+    "21.5",
+    "23.9",
+    "38.7",
+    "47.8",
+    "48.7",
+    "57.2",
+    "65.1",
+    "67.1",
+    "82.8",
+    "90.7",
+    "168.6",
+    "4702",
+    "14741"
+   ]
+  },
+  {
+   "id": "seg-group-people",
+   "claim": "People and recruiting: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=6939; boards=2935; median_days=43.5; p25_days=15.5; p75_days=119.6; older_7d_pct=87.7; older_14d_pct=77.8; older_30d_pct=60.6; older_60d_pct=40.7; older_90d_pct=31.4; older_180d_pct=18.0; older_365d_pct=10.1; older_730d_pct=4.8; board_median_days=41.4; boards_median_over_30d_pct=60.0",
+   "numbers": [
+    "4.8",
+    "10.1",
+    "15.5",
+    "18.0",
+    "31.4",
+    "40.7",
+    "41.4",
+    "43.5",
+    "60.0",
+    "60.6",
+    "77.8",
+    "87.7",
+    "119.6",
+    "2935",
+    "6939"
+   ]
+  },
+  {
+   "id": "seg-group-legal",
+   "claim": "Legal and compliance: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=6361; boards=2213; median_days=54.5; p25_days=21.2; p75_days=147.2; older_7d_pct=89.9; older_14d_pct=82.6; older_30d_pct=66.7; older_60d_pct=46.6; older_90d_pct=36.3; older_180d_pct=21.8; older_365d_pct=8.8; older_730d_pct=3.3; board_median_days=44.3; boards_median_over_30d_pct=64.6",
+   "numbers": [
+    "3.3",
+    "8.8",
+    "21.2",
+    "21.8",
+    "36.3",
+    "44.3",
+    "46.6",
+    "54.5",
+    "64.6",
+    "66.7",
+    "82.6",
+    "89.9",
+    "147.2",
+    "2213",
+    "6361"
+   ]
+  },
+  {
+   "id": "seg-group-operations",
+   "claim": "Operations and logistics: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=33704; boards=6834; median_days=62.5; p25_days=21.6; p75_days=195.2; older_7d_pct=90.3; older_14d_pct=83.0; older_30d_pct=67.8; older_60d_pct=50.8; older_90d_pct=40.6; older_180d_pct=26.2; older_365d_pct=16.3; older_730d_pct=9.1; board_median_days=44.6; boards_median_over_30d_pct=64.9",
+   "numbers": [
+    "9.1",
+    "16.3",
+    "21.6",
+    "26.2",
+    "40.6",
+    "44.6",
+    "50.8",
+    "62.5",
+    "64.9",
+    "67.8",
+    "83.0",
+    "90.3",
+    "195.2",
+    "6834",
+    "33704"
+   ]
+  },
+  {
+   "id": "seg-group-education",
+   "claim": "Education and teaching: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=4704; boards=444; median_days=139.5; p25_days=26.2; p75_days=253.2; older_7d_pct=90.2; older_14d_pct=85.2; older_30d_pct=73.0; older_60d_pct=63.4; older_90d_pct=58.4; older_180d_pct=45.0; older_365d_pct=18.8; older_730d_pct=7.9; board_median_days=95.9; boards_median_over_30d_pct=70.9",
+   "numbers": [
+    "7.9",
+    "18.8",
+    "26.2",
+    "45.0",
+    "58.4",
+    "63.4",
+    "70.9",
+    "73.0",
+    "85.2",
+    "90.2",
+    "95.9",
+    "139.5",
+    "253.2",
+    "444",
+    "4704"
+   ]
+  },
+  {
+   "id": "seg-group-frontline",
+   "claim": "Hospitality, retail and trades: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=8546; boards=1294; median_days=85.4; p25_days=23.2; p75_days=233.3; older_7d_pct=92.7; older_14d_pct=84.7; older_30d_pct=70.8; older_60d_pct=56.6; older_90d_pct=49.3; older_180d_pct=31.2; older_365d_pct=18.4; older_730d_pct=12.2; board_median_days=62.8; boards_median_over_30d_pct=69.5",
+   "numbers": [
+    "12.2",
+    "18.4",
+    "23.2",
+    "31.2",
+    "49.3",
+    "56.6",
+    "62.8",
+    "69.5",
+    "70.8",
+    "84.7",
+    "85.4",
+    "92.7",
+    "233.3",
+    "1294",
+    "8546"
+   ]
+  },
+  {
+   "id": "seg-group-other",
+   "claim": "Other roles: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=125646; boards=12586; median_days=85.5; p25_days=25.2; p75_days=286.4; older_7d_pct=90.5; older_14d_pct=83.7; older_30d_pct=71.7; older_60d_pct=57.8; older_90d_pct=49.0; older_180d_pct=34.4; older_365d_pct=21.4; older_730d_pct=11.8; board_median_days=71.9; boards_median_over_30d_pct=76.0",
+   "numbers": [
+    "11.8",
+    "21.4",
+    "25.2",
+    "34.4",
+    "49.0",
+    "57.8",
+    "71.7",
+    "71.9",
+    "76.0",
+    "83.7",
+    "85.5",
+    "90.5",
+    "286.4",
+    "12586",
+    "125646"
+   ]
+  },
+  {
+   "id": "seg-kind-vacancy",
+   "claim": "Specific vacancies: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=451045; boards=18366; median_days=68.5; p25_days=22.4; p75_days=204.2; older_7d_pct=90.4; older_14d_pct=83.2; older_30d_pct=69.2; older_60d_pct=53.1; older_90d_pct=43.3; older_180d_pct=27.7; older_365d_pct=15.1; older_730d_pct=7.7; board_median_days=65.6; boards_median_over_30d_pct=78.5",
+   "numbers": [
+    "7.7",
+    "15.1",
+    "22.4",
+    "27.7",
+    "43.3",
+    "53.1",
+    "65.6",
+    "68.5",
+    "69.2",
+    "78.5",
+    "83.2",
+    "90.4",
+    "204.2",
+    "18366",
+    "451045"
+   ]
+  },
+  {
+   "id": "seg-kind-pool",
+   "claim": "Talent pools and general applications: age of open listings (CSV row)",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.csv",
+   "fetched": "2026-11-20",
+   "excerpt": "listings=5552; boards=3667; median_days=547.7; p25_days=204.9; p75_days=1203.3; older_7d_pct=98.4; older_14d_pct=97.1; older_30d_pct=94.4; older_60d_pct=90.1; older_90d_pct=86.5; older_180d_pct=77.1; older_365d_pct=63.0; older_730d_pct=40.4; board_median_days=660.6; boards_median_over_30d_pct=96.4",
+   "numbers": [
+    "40.4",
+    "63.0",
+    "77.1",
+    "86.5",
+    "90.1",
+    "94.4",
+    "96.4",
+    "97.1",
+    "98.4",
+    "204.9",
+    "547.7",
+    "660.6",
+    "1203.3",
+    "3667",
+    "5552"
+   ]
+  },
+  {
+   "id": "band-0",
+   "claim": "open listings posted Under 1 week before the build",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "from_days=0; to_days=7; listings=43610; share_pct=9.6",
+   "numbers": [
+    "0",
+    "7",
+    "9.6",
+    "43610"
+   ]
+  },
+  {
+   "id": "band-1",
+   "claim": "open listings posted 1 to 2 weeks before the build",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "from_days=7; to_days=14; listings=32222; share_pct=7.1",
+   "numbers": [
+    "7",
+    "7.1",
+    "14",
+    "32222"
+   ]
+  },
+  {
+   "id": "band-2",
+   "claim": "open listings posted 2 weeks to 30 days before the build",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "from_days=14; to_days=30; listings=63565; share_pct=13.9",
+   "numbers": [
+    "13.9",
+    "14",
+    "30",
+    "63565"
+   ]
+  },
+  {
+   "id": "band-3",
+   "claim": "open listings posted 30 days to 2 months before the build",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "from_days=30; to_days=60; listings=72609; share_pct=15.9",
+   "numbers": [
+    "15.9",
+    "30",
+    "60",
+    "72609"
+   ]
+  },
+  {
+   "id": "band-4",
+   "claim": "open listings posted 2 to 3 months before the build",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "from_days=60; to_days=90; listings=44653; share_pct=9.8",
+   "numbers": [
+    "9.8",
+    "60",
+    "90",
+    "44653"
+   ]
+  },
+  {
+   "id": "band-5",
+   "claim": "open listings posted 3 to 6 months before the build",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "from_days=90; to_days=180; listings=70758; share_pct=15.5",
+   "numbers": [
+    "15.5",
+    "90",
+    "180",
+    "70758"
+   ]
+  },
+  {
+   "id": "band-6",
+   "claim": "open listings posted 6 to 12 months before the build",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "from_days=180; to_days=365; listings=57608; share_pct=12.6",
+   "numbers": [
+    "12.6",
+    "180",
+    "365",
+    "57608"
+   ]
+  },
+  {
+   "id": "band-7",
+   "claim": "open listings posted 1 to 2 years before the build",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "from_days=365; to_days=730; listings=34422; share_pct=7.5",
+   "numbers": [
+    "7.5",
+    "365",
+    "730",
+    "34422"
+   ]
+  },
+  {
+   "id": "band-8",
+   "claim": "open listings posted 2 years or more before the build",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "from_days=730; listings=37150; share_pct=8.1",
+   "numbers": [
+    "8.1",
+    "730",
+    "37150"
+   ]
+  },
+  {
+   "id": "cohort-0",
+   "claim": "listings posted Last 7 days still open",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "week=0; from_days=0; to_days=7; open=36710; per_100_pct=100.0; vacancies_open=36622; vacancies_per_100_pct=100.0; open_incl_reposting=43610; per_100_incl_reposting_pct=100.0; greenhouse_per_100_pct=100.0; lever_per_100_pct=100.0; ashby_per_100_pct=100.0; recruitee_per_100_pct=100.0; personio_per_100_pct=100.0; workable_per_100_pct=100.0",
+   "numbers": [
+    "0",
+    "7",
+    "100.0",
+    "36622",
+    "36710",
+    "43610"
+   ]
+  },
+  {
+   "id": "cohort-1",
+   "claim": "listings posted 1 week earlier still open",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "week=1; from_days=7; to_days=14; open=31264; per_100_pct=85.2; vacancies_open=31196; vacancies_per_100_pct=85.2; open_incl_reposting=32222; per_100_incl_reposting_pct=73.9; greenhouse_per_100_pct=82.8; lever_per_100_pct=83.2; ashby_per_100_pct=68.0; recruitee_per_100_pct=93.8; personio_per_100_pct=104.2; workable_per_100_pct=105.6",
+   "numbers": [
+    "1",
+    "7",
+    "14",
+    "68.0",
+    "73.9",
+    "82.8",
+    "83.2",
+    "85.2",
+    "93.8",
+    "104.2",
+    "105.6",
+    "31196",
+    "31264",
+    "32222"
+   ]
+  },
+  {
+   "id": "cohort-2",
+   "claim": "listings posted 2 weeks earlier still open",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "week=2; from_days=14; to_days=21; open=29866; per_100_pct=81.4; vacancies_open=29812; vacancies_per_100_pct=81.4; open_incl_reposting=29866; per_100_incl_reposting_pct=68.5; greenhouse_per_100_pct=84.2; lever_per_100_pct=103.6; ashby_per_100_pct=66.9; recruitee_per_100_pct=77.9; personio_per_100_pct=96.0; workable_per_100_pct=76.8",
+   "numbers": [
+    "2",
+    "14",
+    "21",
+    "66.9",
+    "68.5",
+    "76.8",
+    "77.9",
+    "81.4",
+    "84.2",
+    "96.0",
+    "103.6",
+    "29812",
+    "29866"
+   ]
+  },
+  {
+   "id": "cohort-3",
+   "claim": "listings posted 3 weeks earlier still open",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "week=3; from_days=21; to_days=28; open=24628; per_100_pct=67.1; vacancies_open=24557; vacancies_per_100_pct=67.1; open_incl_reposting=24628; per_100_incl_reposting_pct=56.5; greenhouse_per_100_pct=70.9; lever_per_100_pct=73.1; ashby_per_100_pct=53.3; recruitee_per_100_pct=64.1; personio_per_100_pct=98.4; workable_per_100_pct=64.7",
+   "numbers": [
+    "3",
+    "21",
+    "28",
+    "53.3",
+    "56.5",
+    "64.1",
+    "64.7",
+    "67.1",
+    "70.9",
+    "73.1",
+    "98.4",
+    "24557",
+    "24628"
+   ]
+  },
+  {
+   "id": "cohort-4",
+   "claim": "listings posted 4 weeks earlier still open",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "week=4; from_days=28; to_days=35; open=22151; per_100_pct=60.3; vacancies_open=22083; vacancies_per_100_pct=60.3; open_incl_reposting=22151; per_100_incl_reposting_pct=50.8; greenhouse_per_100_pct=65.3; lever_per_100_pct=64.2; ashby_per_100_pct=47.7; recruitee_per_100_pct=56.8; personio_per_100_pct=83.0; workable_per_100_pct=56.5",
+   "numbers": [
+    "4",
+    "28",
+    "35",
+    "47.7",
+    "50.8",
+    "56.5",
+    "56.8",
+    "60.3",
+    "64.2",
+    "65.3",
+    "83.0",
+    "22083",
+    "22151"
+   ]
+  },
+  {
+   "id": "cohort-6",
+   "claim": "listings posted 6 weeks earlier still open",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "week=6; from_days=42; to_days=49; open=17635; per_100_pct=48.0; vacancies_open=17570; vacancies_per_100_pct=48.0; open_incl_reposting=17635; per_100_incl_reposting_pct=40.4; greenhouse_per_100_pct=48.8; lever_per_100_pct=51.4; ashby_per_100_pct=40.6; recruitee_per_100_pct=49.4; personio_per_100_pct=72.0; workable_per_100_pct=47.3",
+   "numbers": [
+    "6",
+    "40.4",
+    "40.6",
+    "42",
+    "47.3",
+    "48.0",
+    "48.8",
+    "49",
+    "49.4",
+    "51.4",
+    "72.0",
+    "17570",
+    "17635"
+   ]
+  },
+  {
+   "id": "cohort-8",
+   "claim": "listings posted 8 weeks earlier still open",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "week=8; from_days=56; to_days=63; open=13331; per_100_pct=36.3; vacancies_open=13288; vacancies_per_100_pct=36.3; open_incl_reposting=13331; per_100_incl_reposting_pct=30.6; greenhouse_per_100_pct=37.0; lever_per_100_pct=44.9; ashby_per_100_pct=28.7; recruitee_per_100_pct=36.6; personio_per_100_pct=67.5; workable_per_100_pct=32.1",
+   "numbers": [
+    "8",
+    "28.7",
+    "30.6",
+    "32.1",
+    "36.3",
+    "36.6",
+    "37.0",
+    "44.9",
+    "56",
+    "63",
+    "67.5",
+    "13288",
+    "13331"
+   ]
+  },
+  {
+   "id": "cohort-13",
+   "claim": "listings posted 13 weeks earlier still open",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "week=13; from_days=91; to_days=98; open=9161; per_100_pct=25.0; vacancies_open=9131; vacancies_per_100_pct=24.9; open_incl_reposting=9161; per_100_incl_reposting_pct=21.0; greenhouse_per_100_pct=27.5; lever_per_100_pct=28.5; ashby_per_100_pct=19.6; recruitee_per_100_pct=22.4; personio_per_100_pct=38.5; workable_per_100_pct=20.7",
+   "numbers": [
+    "13",
+    "19.6",
+    "20.7",
+    "21.0",
+    "22.4",
+    "24.9",
+    "25.0",
+    "27.5",
+    "28.5",
+    "38.5",
+    "91",
+    "98",
+    "9131",
+    "9161"
+   ]
+  },
+  {
+   "id": "cohort-26",
+   "claim": "listings posted 26 weeks earlier still open",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "week=26; from_days=182; to_days=189; open=3865; per_100_pct=10.5; vacancies_open=3834; vacancies_per_100_pct=10.5; open_incl_reposting=3865; per_100_incl_reposting_pct=8.9; greenhouse_per_100_pct=11.8; lever_per_100_pct=9.9; ashby_per_100_pct=6.8; recruitee_per_100_pct=13.9; personio_per_100_pct=16.4; workable_per_100_pct=8.9",
+   "numbers": [
+    "6.8",
+    "8.9",
+    "9.9",
+    "10.5",
+    "11.8",
+    "13.9",
+    "16.4",
+    "26",
+    "182",
+    "189",
+    "3834",
+    "3865"
+   ]
+  },
+  {
+   "id": "cohort-52",
+   "claim": "listings posted 52 weeks earlier still open",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "week=52; from_days=364; to_days=371; open=1214; per_100_pct=3.3; vacancies_open=1192; vacancies_per_100_pct=3.3; open_incl_reposting=1214; per_100_incl_reposting_pct=2.8; greenhouse_per_100_pct=3.1; lever_per_100_pct=5.6; ashby_per_100_pct=1.3; recruitee_per_100_pct=4.3; personio_per_100_pct=11.8; workable_per_100_pct=2.7",
+   "numbers": [
+    "1.3",
+    "2.7",
+    "2.8",
+    "3.1",
+    "3.3",
+    "4.3",
+    "5.6",
+    "11.8",
+    "52",
+    "364",
+    "371",
+    "1192",
+    "1214"
+   ]
+  },
+  {
+   "id": "over-year-board-1",
+   "claim": "Svetness Personal Training: listings a year old or more",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "rank=1; listings_over_year=4540; listings=5044; share_of_over_year_pct=6.3",
+   "numbers": [
+    "1",
+    "6.3",
+    "4540",
+    "5044"
+   ]
+  },
+  {
+   "id": "over-year-board-2",
+   "claim": "BoxLunch & Hot Topic: listings a year old or more",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "rank=2; listings_over_year=4334; listings=4663; share_of_over_year_pct=6.1",
+   "numbers": [
+    "2",
+    "6.1",
+    "4334",
+    "4663"
+   ]
+  },
+  {
+   "id": "over-year-board-3",
+   "claim": "TSMG: listings a year old or more",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "rank=3; listings_over_year=2227; listings=4491; share_of_over_year_pct=3.1",
+   "numbers": [
+    "3",
+    "3.1",
+    "2227",
+    "4491"
+   ]
+  },
+  {
+   "id": "over-year-board-4",
+   "claim": "EōS Fitness: listings a year old or more",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "rank=4; listings_over_year=2069; listings=2858; share_of_over_year_pct=2.9",
+   "numbers": [
+    "2.9",
+    "4",
+    "2069",
+    "2858"
+   ]
+  },
+  {
+   "id": "over-year-board-5",
+   "claim": "Pulse Healthcare: listings a year old or more",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "rank=5; listings_over_year=1908; listings=2815; share_of_over_year_pct=2.7",
+   "numbers": [
+    "2.7",
+    "5",
+    "1908",
+    "2815"
+   ]
+  },
+  {
+   "id": "over-year-board-6",
+   "claim": "Talent Trader Group: listings a year old or more",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "rank=6; listings_over_year=858; listings=861; share_of_over_year_pct=1.2",
+   "numbers": [
+    "1.2",
+    "6",
+    "858",
+    "861"
+   ]
+  },
+  {
+   "id": "over-year-board-7",
+   "claim": "TowardJobs: listings a year old or more",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "rank=7; listings_over_year=848; listings=1566; share_of_over_year_pct=1.2",
+   "numbers": [
+    "1.2",
+    "7",
+    "848",
+    "1566"
+   ]
+  },
+  {
+   "id": "over-year-board-8",
+   "claim": "PLS: listings a year old or more",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "rank=8; listings_over_year=717; listings=779; share_of_over_year_pct=1.0",
+   "numbers": [
+    "1.0",
+    "8",
+    "717",
+    "779"
+   ]
+  },
+  {
+   "id": "over-year-board-9",
+   "claim": "Gopuff: listings a year old or more",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "rank=9; listings_over_year=669; listings=757; share_of_over_year_pct=0.9",
+   "numbers": [
+    "0.9",
+    "9",
+    "669",
+    "757"
+   ]
+  },
+  {
+   "id": "over-year-board-10",
+   "claim": "Uptalent.io: listings a year old or more",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "rank=10; listings_over_year=645; listings=697; share_of_over_year_pct=0.9",
+   "numbers": [
+    "0.9",
+    "10",
+    "645",
+    "697"
+   ]
+  },
+  {
+   "id": "jobs_in_index",
+   "claim": "jobs in index",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"jobs_in_index\": 461985",
+   "numbers": [
+    "461985"
+   ]
+  },
+  {
+   "id": "boards_in_index",
+   "claim": "boards in index",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"boards_in_index\": 23287",
+   "numbers": [
+    "23287"
+   ]
+  },
+  {
+   "id": "jobs_read",
+   "claim": "jobs read",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"jobs_read\": 461985",
+   "numbers": [
+    "461985"
+   ]
+  },
+  {
+   "id": "jobs_without_posting_time",
+   "claim": "jobs without posting time",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"jobs_without_posting_time\": 84",
+   "numbers": [
+    "84"
+   ]
+  },
+  {
+   "id": "reposting_boards",
+   "claim": "reposting boards",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"reposting_boards\": 6",
+   "numbers": [
+    "6"
+   ]
+  },
+  {
+   "id": "reposting_listings",
+   "claim": "reposting listings",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"reposting_listings\": 7858",
+   "numbers": [
+    "7858"
+   ]
+  },
+  {
+   "id": "reposting_min_listings",
+   "claim": "reposting min listings",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"reposting_min_listings\": 50",
+   "numbers": [
+    "50"
+   ]
+  },
+  {
+   "id": "reposting_max_age_days",
+   "claim": "reposting max age days",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"reposting_max_age_days\": 14",
+   "numbers": [
+    "14"
+   ]
+  },
+  {
+   "id": "copies_dropped",
+   "claim": "copies dropped",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"copies_dropped\": 5304",
+   "numbers": [
+    "5304"
+   ]
+  },
+  {
+   "id": "listings",
+   "claim": "listings",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"listings\": 456597",
+   "numbers": [
+    "456597"
+   ]
+  },
+  {
+   "id": "boards_with_listings",
+   "claim": "boards with listings",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"boards_with_listings\": 18767",
+   "numbers": [
+    "18767"
+   ]
+  },
+  {
+   "id": "median_age_days",
+   "claim": "median age days",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"median_age_days\": 69.5",
+   "numbers": [
+    "69.5"
+   ]
+  },
+  {
+   "id": "older_30d_pct",
+   "claim": "older 30d pct",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"older_30d_pct\": 69.5",
+   "numbers": [
+    "69.5"
+   ]
+  },
+  {
+   "id": "older_30d",
+   "claim": "older 30d",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"older_30d\": 317200",
+   "numbers": [
+    "317200"
+   ]
+  },
+  {
+   "id": "younger_30d_pct",
+   "claim": "younger 30d pct",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"younger_30d_pct\": 30.5",
+   "numbers": [
+    "30.5"
+   ]
+  },
+  {
+   "id": "older_90d_pct",
+   "claim": "older 90d pct",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"older_90d_pct\": 43.8",
+   "numbers": [
+    "43.8"
+   ]
+  },
+  {
+   "id": "older_365d_pct",
+   "claim": "older 365d pct",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"older_365d_pct\": 15.7",
+   "numbers": [
+    "15.7"
+   ]
+  },
+  {
+   "id": "older_365d",
+   "claim": "older 365d",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"older_365d\": 71572",
+   "numbers": [
+    "71572"
+   ]
+  },
+  {
+   "id": "older_730d_pct",
+   "claim": "older 730d pct",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"older_730d_pct\": 8.1",
+   "numbers": [
+    "8.1"
+   ]
+  },
+  {
+   "id": "board_median_days",
+   "claim": "board median days",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"board_median_days\": 71.5",
+   "numbers": [
+    "71.5"
+   ]
+  },
+  {
+   "id": "boards_median_over_30d_pct",
+   "claim": "boards median over 30d pct",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"boards_median_over_30d_pct\": 79.9",
+   "numbers": [
+    "79.9"
+   ]
+  },
+  {
+   "id": "pool_listings",
+   "claim": "pool listings",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"pool_listings\": 5552",
+   "numbers": [
+    "5552"
+   ]
+  },
+  {
+   "id": "pool_pct",
+   "claim": "pool pct",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"pool_pct\": 1.22",
+   "numbers": [
+    "1.22"
+   ]
+  },
+  {
+   "id": "pool_median_days",
+   "claim": "pool median days",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"pool_median_days\": 547.7",
+   "numbers": [
+    "547.7"
+   ]
+  },
+  {
+   "id": "pool_boards",
+   "claim": "pool boards",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"pool_boards\": 3667",
+   "numbers": [
+    "3667"
+   ]
+  },
+  {
+   "id": "pool_share_of_over_year_pct",
+   "claim": "pool share of over year pct",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"pool_share_of_over_year_pct\": 4.9",
+   "numbers": [
+    "4.9"
+   ]
+  },
+  {
+   "id": "vacancy_median_days",
+   "claim": "vacancy median days",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"vacancy_median_days\": 68.5",
+   "numbers": [
+    "68.5"
+   ]
+  },
+  {
+   "id": "vacancy_older_30d_pct",
+   "claim": "vacancy older 30d pct",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"vacancy_older_30d_pct\": 69.2",
+   "numbers": [
+    "69.2"
+   ]
+  },
+  {
+   "id": "vacancy_older_365d_pct",
+   "claim": "vacancy older 365d pct",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"vacancy_older_365d_pct\": 15.1",
+   "numbers": [
+    "15.1"
+   ]
+  },
+  {
+   "id": "over_year_boards",
+   "claim": "over year boards",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"over_year_boards\": 8559",
+   "numbers": [
+    "8559"
+   ]
+  },
+  {
+   "id": "over_year_half_boards",
+   "claim": "over year half boards",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"over_year_half_boards\": 163",
+   "numbers": [
+    "163"
+   ]
+  },
+  {
+   "id": "over_year_half_boards_pct",
+   "claim": "over year half boards pct",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"over_year_half_boards_pct\": 1.9",
+   "numbers": [
+    "1.9"
+   ]
+  },
+  {
+   "id": "over_year_half_boards_of_all_pct",
+   "claim": "over year half boards of all pct",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"over_year_half_boards_of_all_pct\": 0.9",
+   "numbers": [
+    "0.9"
+   ]
+  },
+  {
+   "id": "over_year_top3_listings",
+   "claim": "over year top3 listings",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"over_year_top3_listings\": 11101",
+   "numbers": [
+    "11101"
+   ]
+  },
+  {
+   "id": "over_year_top3_pct",
+   "claim": "over year top3 pct",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"over_year_top3_pct\": 15.5",
+   "numbers": [
+    "15.5"
+   ]
+  },
+  {
+   "id": "cohort_half_week",
+   "claim": "cohort half week",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"cohort_half_week\": 6",
+   "numbers": [
+    "6"
+   ]
+  },
+  {
+   "id": "week0_open",
+   "claim": "week0 open",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"week0_open\": 36710",
+   "numbers": [
+    "36710"
+   ]
+  },
+  {
+   "id": "week4_open",
+   "claim": "week4 open",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"week4_open\": 22151",
+   "numbers": [
+    "22151"
+   ]
+  },
+  {
+   "id": "week4_per_100",
+   "claim": "week4 per 100",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"week4_per_100\": 60.3",
+   "numbers": [
+    "60.3"
+   ]
+  },
+  {
+   "id": "jobs_read_greenhouse",
+   "claim": "jobs read greenhouse",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"jobs_read_greenhouse\": 191853",
+   "numbers": [
+    "191853"
+   ]
+  },
+  {
+   "id": "copies_dropped_greenhouse",
+   "claim": "copies dropped greenhouse",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"copies_dropped_greenhouse\": 499",
+   "numbers": [
+    "499"
+   ]
+  },
+  {
+   "id": "week0_boards_greenhouse",
+   "claim": "week0 boards greenhouse",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"week0_boards_greenhouse\": 2741",
+   "numbers": [
+    "2741"
+   ]
+  },
+  {
+   "id": "jobs_read_lever",
+   "claim": "jobs read lever",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"jobs_read_lever\": 64112",
+   "numbers": [
+    "64112"
+   ]
+  },
+  {
+   "id": "copies_dropped_lever",
+   "claim": "copies dropped lever",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"copies_dropped_lever\": 1",
+   "numbers": [
+    "1"
+   ]
+  },
+  {
+   "id": "week0_boards_lever",
+   "claim": "week0 boards lever",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"week0_boards_lever\": 709",
+   "numbers": [
+    "709"
+   ]
+  },
+  {
+   "id": "jobs_read_ashby",
+   "claim": "jobs read ashby",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"jobs_read_ashby\": 60125",
+   "numbers": [
+    "60125"
+   ]
+  },
+  {
+   "id": "copies_dropped_ashby",
+   "claim": "copies dropped ashby",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"copies_dropped_ashby\": 0",
+   "numbers": [
+    "0"
+   ]
+  },
+  {
+   "id": "week0_boards_ashby",
+   "claim": "week0 boards ashby",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"week0_boards_ashby\": 1380",
+   "numbers": [
+    "1380"
+   ]
+  },
+  {
+   "id": "jobs_read_recruitee",
+   "claim": "jobs read recruitee",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"jobs_read_recruitee\": 47017",
+   "numbers": [
+    "47017"
+   ]
+  },
+  {
+   "id": "copies_dropped_recruitee",
+   "claim": "copies dropped recruitee",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"copies_dropped_recruitee\": 4757",
+   "numbers": [
+    "4757"
+   ]
+  },
+  {
+   "id": "week0_boards_recruitee",
+   "claim": "week0 boards recruitee",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"week0_boards_recruitee\": 814",
+   "numbers": [
+    "814"
+   ]
+  },
+  {
+   "id": "jobs_read_personio",
+   "claim": "jobs read personio",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"jobs_read_personio\": 31869",
+   "numbers": [
+    "31869"
+   ]
+  },
+  {
+   "id": "copies_dropped_personio",
+   "claim": "copies dropped personio",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"copies_dropped_personio\": 30",
+   "numbers": [
+    "30"
+   ]
+  },
+  {
+   "id": "week0_boards_personio",
+   "claim": "week0 boards personio",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"week0_boards_personio\": 595",
+   "numbers": [
+    "595"
+   ]
+  },
+  {
+   "id": "jobs_read_workable",
+   "claim": "jobs read workable",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"jobs_read_workable\": 67009",
+   "numbers": [
+    "67009"
+   ]
+  },
+  {
+   "id": "copies_dropped_workable",
+   "claim": "copies dropped workable",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"copies_dropped_workable\": 17",
+   "numbers": [
+    "17"
+   ]
+  },
+  {
+   "id": "week0_boards_workable",
+   "claim": "week0 boards workable",
+   "source_url": "https://scrapetools.scaleturn.com/data/job-posting-age-2026-11.json",
+   "fetched": "2026-11-20",
+   "excerpt": "\"week0_boards_workable\": 1018",
+   "numbers": [
+    "1018"
+   ]
+  }
+ ]
+}
