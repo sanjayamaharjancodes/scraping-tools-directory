@@ -16,7 +16,7 @@ Goal: one original-data page from the job-index refresh evidence, retire the 3 t
   fixed afterwards; the fixes were not re-reviewed.
 - Retired (ct-001/RETIRED.md): web-scraping-apis-with-free-tier, scraperapi-free-trial, scrapingdog-vs-scrapingbee.
 - Not pushed. Post-merge:
-  - `python -I ct-001/check_live.py`. Before the merge it fails 11 of 13, as expected.
+  - `python -I ct-001/check_live.py`. Before the merge it fails 11 of 14, as expected.
   - Re-run build_data (facts expire 3 days after their date), then `python ct-001/run_gate.py --autopilot <dir> --live`.
 
 ## Decisions
