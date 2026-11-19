@@ -53,11 +53,11 @@
  },
  {
   "page": "index.html",
-  "words": 1651,
-  "facts": 70,
-  "unique_facts": 10,
-  "facts_elsewhere_pct": 85.7,
-  "overlap_any_pct": 6.4,
+  "words": 1618,
+  "facts": 72,
+  "unique_facts": 13,
+  "facts_elsewhere_pct": 81.9,
+  "overlap_any_pct": 5.9,
   "max_overlap_pct": 1.5,
   "max_overlap_with": "scraperapi-cost-calculator.html",
   "inbound_links": 14,
@@ -118,16 +118,16 @@
  },
  {
   "page": "scraperapi-free-trial.html",
-  "words": 1065,
+  "words": 1109,
   "facts": 25,
   "unique_facts": 5,
   "facts_elsewhere_pct": 80.0,
-  "overlap_any_pct": 6.4,
-  "max_overlap_pct": 3.4,
+  "overlap_any_pct": 8.0,
+  "max_overlap_pct": 3.3,
   "max_overlap_with": "scraperapi-cost-calculator.html",
   "inbound_links": 14,
-  "in_sitemap": true,
-  "noindex": false
+  "in_sitemap": false,
+  "noindex": true
  },
  {
   "page": "scraperapi-vs-bright-data.html",
@@ -148,7 +148,7 @@
   "facts": 66,
   "unique_facts": 15,
   "facts_elsewhere_pct": 77.3,
-  "overlap_any_pct": 11.6,
+  "overlap_any_pct": 11.4,
   "max_overlap_pct": 5.3,
   "max_overlap_with": "scrapingdog-vs-scrapingbee.html",
   "inbound_links": 14,
@@ -157,16 +157,16 @@
  },
  {
   "page": "scrapingdog-vs-scrapingbee.html",
-  "words": 948,
+  "words": 991,
   "facts": 43,
   "unique_facts": 7,
   "facts_elsewhere_pct": 83.7,
-  "overlap_any_pct": 8.8,
-  "max_overlap_pct": 5.9,
+  "overlap_any_pct": 10.1,
+  "max_overlap_pct": 5.6,
   "max_overlap_with": "scraperapi-vs-scrapingbee.html",
-  "inbound_links": 4,
-  "in_sitemap": true,
-  "noindex": false
+  "inbound_links": 3,
+  "in_sitemap": false,
+  "noindex": true
  },
  {
   "page": "serp-api-pricing-comparison.html",
@@ -174,7 +174,7 @@
   "facts": 54,
   "unique_facts": 28,
   "facts_elsewhere_pct": 48.1,
-  "overlap_any_pct": 2.4,
+  "overlap_any_pct": 2.3,
   "max_overlap_pct": 1.4,
   "max_overlap_with": "scrapecreators-pricing.html",
   "inbound_links": 1,
@@ -196,15 +196,15 @@
  },
  {
   "page": "web-scraping-apis-with-free-tier.html",
-  "words": 1008,
+  "words": 1045,
   "facts": 18,
   "unique_facts": 1,
   "facts_elsewhere_pct": 94.4,
-  "overlap_any_pct": 1.5,
-  "max_overlap_pct": 1.1,
-  "max_overlap_with": "cheapest-web-scraping-api.html",
+  "overlap_any_pct": 3.5,
+  "max_overlap_pct": 2.1,
+  "max_overlap_with": "scraperapi-free-trial.html",
   "inbound_links": 14,
-  "in_sitemap": true,
-  "noindex": false
+  "in_sitemap": false,
+  "noindex": true
  }
 ]

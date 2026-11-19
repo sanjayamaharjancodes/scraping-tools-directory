@@ -1,4 +1,7 @@
-"""Rebuild every number on ats-job-board-api-crawl-data.html from the job-index refresh's own report files.
+"""Rebuild every number on ats-job-posting-api-crawl-data.html from the job-index refresh's own report files.
+
+The report files themselves are not published (one also holds BambooHR figures, which the page excludes). The CSV
+and JSON written here carry every per-ATS count the page uses, plus each report file's SHA-256 hash.
 
 Usage:
     python ct-001/build_data.py --evidence <dir with refresh-*.json / *.log> --crawler-src <crawler src dir>
@@ -321,6 +324,16 @@ def build(evidence, src):
     summary["personio_pass_b_checked_18nov"] = pa_row["personio_pass_b"]["checked"]
     summary["personio_pass_b_errors_18nov"] = pa_row["personio_pass_b"]["error"]
     summary["personio_pass_b_hours_18nov"] = round(pa_row["personio_pass_b"]["seconds"] / 3600, 1)
+    # That pass also looked up company names on the same one-a-second lane (counted only when a name was found),
+    # so it made at least checked + names requests.
+    summary["personio_pass_b_names_fetched_18nov"] = pb["refresh"]["namesFetched"]
+    summary["personio_pass_b_requests_min_18nov"] = pb["refresh"]["checked"] + pb["refresh"]["namesFetched"]
+    summary["personio_pass_b_seconds_per_request_18nov"] = round(
+        pb["refresh"]["seconds"] / summary["personio_pass_b_requests_min_18nov"], 2)
+    wk = next(r for r in rows if r["ats"] == "Workable")
+    if wk.get("failed_at_once_19nov") is not None:
+        # Failed checks outside the burst the log can time (progress lines come every 1,000 checks).
+        summary["workable_failed_outside_timed_burst_19nov"] = wk["failed_19nov"] - wk["failed_at_once_19nov"]
     inputs_meta = {os.path.basename(p): sha256(p) for p in inputs.values()}
     return {"rows": rows, "summary": summary, "inputs_sha256": inputs_meta}
 
@@ -470,7 +483,7 @@ TABLES = {
 }
 OVERRIDES = {("First check of each board address", "Workable"): {
     "Not a board": "not_a_board_19nov", "Share": "not_a_board_pct_of_answered_19nov"},
-    ("Re-check of known boards", "Workable"): {"Job list returned": "answered_before_stop_19nov"}}
+    ("Re-check of known boards", "Workable"): {"Job list returned": "live_pct_of_answered_19nov"}}
 
 
 def check_tables(page, data):

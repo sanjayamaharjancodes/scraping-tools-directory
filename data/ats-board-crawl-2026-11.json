@@ -291,7 +291,11 @@
   "personio_pass_a_seconds_18nov": 114,
   "personio_pass_b_checked_18nov": 6682,
   "personio_pass_b_errors_18nov": 0,
-  "personio_pass_b_hours_18nov": 2.8
+  "personio_pass_b_hours_18nov": 2.8,
+  "personio_pass_b_names_fetched_18nov": 3232,
+  "personio_pass_b_requests_min_18nov": 9914,
+  "personio_pass_b_seconds_per_request_18nov": 1.01,
+  "workable_failed_outside_timed_burst_19nov": 166
  },
  "inputs_sha256": {
   "refresh-2026-11-18.json": "39f5e0f39500d576824ace72ea033b783b5f5137c0b4af24194e786dff86ec43",

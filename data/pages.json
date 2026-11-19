@@ -63,8 +63,8 @@
     },
     {
       "url": "https://scrapetools.scaleturn.com/ats-job-posting-api-crawl-data.html",
-      "title": "ATS Public Job Posting APIs: What 30,590 Boards Returned | ScrapeTools",
-      "description": "Our crawl of 30,590 public ATS job boards on 18-19 Nov 2026: dead board addresses, failures, rate limits and jobs per board for six ATSs, with a CSV."
+      "title": "Public ATS Job Posting APIs: A 30,928-Address Crawl | ScrapeTools",
+      "description": "Our crawl of 30,928 public ATS job board addresses and 19,805 re-checks, 18-19 Nov 2026: dead boards, failures, rate limits and jobs per board, with a CSV."
     }
   ]
 }

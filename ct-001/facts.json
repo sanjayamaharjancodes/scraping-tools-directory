@@ -643,6 +643,46 @@
    ]
   },
   {
+   "id": "personio_pass_b_names_fetched_18nov",
+   "claim": "personio pass b names fetched 18nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_pass_b_names_fetched_18nov\": 3232",
+   "numbers": [
+    "3232"
+   ]
+  },
+  {
+   "id": "personio_pass_b_requests_min_18nov",
+   "claim": "personio pass b requests min 18nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_pass_b_requests_min_18nov\": 9914",
+   "numbers": [
+    "9914"
+   ]
+  },
+  {
+   "id": "personio_pass_b_seconds_per_request_18nov",
+   "claim": "personio pass b seconds per request 18nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_pass_b_seconds_per_request_18nov\": 1.01",
+   "numbers": [
+    "1.01"
+   ]
+  },
+  {
+   "id": "workable_failed_outside_timed_burst_19nov",
+   "claim": "workable failed outside timed burst 19nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"workable_failed_outside_timed_burst_19nov\": 166",
+   "numbers": [
+    "166"
+   ]
+  },
+  {
    "id": "lane_greenhouse_concurrency",
    "claim": "lane greenhouse concurrency",
    "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
