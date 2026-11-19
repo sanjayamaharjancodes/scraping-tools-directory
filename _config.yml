@@ -1,7 +1,8 @@
 # GitHub Pages build settings. The site is plain static HTML; this file only keeps working folders out of the
-# published site. ct-001/, ct-002/ and ct-003/ hold the scripts and notes behind the job-data pages: they stay in the
-# repository (public on GitHub) but are not served as pages.
+# published site. ct-001/, ct-002/ and ct-003/ hold the scripts and notes behind the job-data pages, and ct-004/ the
+# AdSense checks: they stay in the repository (public on GitHub) but are not served as pages.
 exclude:
   - ct-001
   - ct-002
   - ct-003
+  - ct-004
