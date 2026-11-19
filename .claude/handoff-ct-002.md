@@ -1,28 +1,47 @@
-# ct-002 hand-off (branch worktree-ct-002)
+# ct-002 hand-off (site branch worktree-ct-002; content-autopilot branch ct-002-leftovers)
 
 Goal: a second original-data page from our job index (manifest + shards), plus ct-001's leftovers (nav, autopilot
-registry, publish.py keeping data lines in llms.txt). Brief: D:/Lab/manager/briefs (ct-002 text is in the task
-message); ct-001 brief at D:/Lab/manager/briefs/ct-001.md. Linear SAN-118.
+registry, publish.py keeping data lines in llms.txt). Brief: D:/Lab/manager/briefs/ct-002.md. Linear SAN-118.
 
 ## State (19 Nov 2026)
-- Worktree: F:/Lab/assets/scraping-tools-directory/.claude/worktrees/ct-002, branch worktree-ct-002.
-- Index snapshot (the build the brief cites, builtAt 2026-11-19T04:03:40Z, 23,287 boards, 461,985 jobs), copied
-  at 10:28 Nepal time because the Actor keeps only the latest build in data/index:
-  `ct-002/index-snapshot/` (git-ignored, not published). SHA-256:
-  - index-manifest.json 4c302194d6386bdc305f804c78e82e2e75b3ff7fd7bbcaa370127cfec26e6c7e
-  - index-ashby-0.gz 250ff59939e319f8b25e521b5fc4ef456d5af1d0e6ced94ac2b2d94a96c01c56
-  - index-greenhouse-0.gz 8bbaac67b4e62e04f6e59fefe927e4501c746165001daec296d3636df004f9e7
-  - index-lever-0.gz 51880d82b821dd182ab43dcd948b24797c025b034268ee8ec625ae2e898265dd
-  - index-personio-0.gz b7eb3e494a299ccdac055568a4fd2a62c014442897926712741dded64bffdaea
-  - index-recruitee-0.gz de78defc708dbb0cc2cad7ff1d68a06f4e73b1008bff1d3cd3ae3216b0097cd0
-  - index-workable-0.gz 5c6a507c70a1b287d33a6d93ab4af88774e351621b174ffa06ec2553aa7eb1d3
-- `_config.yml` excludes ct-002/ from the Pages build; `.gitignore` ignores the snapshot and `.tmp-ct002/`.
-- Next: premise check (topic by data validity, then top-3 originality, then demand).
+- **Page:** `what-day-are-most-jobs-posted.html`, query `what day are most jobs posted` (ct-002/PREMISE.md: GO).
+  Answer: Tuesday, narrowly (20.7% closure-adjusted; 18.6-19.9% other weekdays; weekend 2.9%; Tuesday led 3 of 4
+  weeks). Hours by ATS/region/day chart, daily-refresh wait table. Data `data/job-posting-days-2026-11.{csv,json}`.
+- **Index snapshot** (the build the brief cites, builtAt 2026-11-19T04:03:40.394Z; the Actor keeps only the latest
+  build): `ct-002/index-snapshot/` in this worktree, git-ignored, not published. build_data.py refuses any other
+  build by SHA-256 (hashes in the script; manifest 4c302194d638...).
+- **Checks on the branch (all pass):**
+  - `python -I ct-002/build_data.py --index ct-002/index-snapshot --check what-day-are-most-jobs-posted.html`:
+    every number in the data, 65 table cells, widget block. Outputs byte-identical across runs. Positive control:
+    3 planted errors, all caught.
+  - `python -I ct-002/run_gate.py --autopilot F:/Lab/assets/content-autopilot/.claude/worktrees/ct-002`: 0
+    findings, about 1,300 words, 8.4 phone screens.
+  - ct-001 re-checked after its nav change: build_data --check (42 cells), run_gate 0 findings.
+  - content-autopilot branch: `tests/test_data_pages.py` 7 pass (6 fail on main); full suite 191 passed.
+  - `python -I ct-002/check_live.py` before merge: 11 of 19 fail, as expected.
+- **Blind review:** running (5 pages: Recruiter.com, Facebook fb-answers, ChiefJobs, CNBC, ours; Reddit #1 is
+  unreadable by our tools). Record in ct-002/REVIEW.md.
+
+## Post-merge (manager)
+1. Merge the site branch and content-autopilot `ct-002-leftovers` together (nav must match the skeleton).
+2. `python -I ct-002/check_live.py` must print ALL PASS.
+3. `python -I ct-002/build_data.py --refresh-facts --check what-day-are-most-jobs-posted.html` (facts expire after
+   3 days), then `python -I ct-002/run_gate.py --autopilot <content-autopilot> --live`.
 
 ## Decisions
-- Cross-ATS shares (market share, "where companies post") are weak: Workable's lane stopped on a 429 (3,681 ok of
-  10,785), six ATSs only. Prefer within-ATS rates (posting age, weekday, remote rate).
-- `remote` is defined per ATS in the crawler (src/ats.js); show both the vendor flag and the word "remote".
+- Cross-ATS shares and remote share rejected (coverage and per-ATS definitions); posting-age rejected (others
+  measure durations; a snapshot cannot).
+- Snapshot bias: same-weekday counts fall 13.9%/week of age; closure-adjusted shares are the headline, raw shown.
+- Region from location text (US / Europe / other); US Eastern and CET with DST rules coded in the script.
+- Data pages are kind `data` in the autopilot registry (never refreshed or retired by the planner).
+- CNBC consent banner removed from the capture only (nothing clicked or accepted).
+
+## Left over / for the manager
+- `F:/Lab/assets/content-autopilot/.claude/worktrees/ct-002/site/` is a git-ignored clone used for the test suite;
+  deleting it was refused to this session. Delete it (or the whole autopilot worktree) after merge.
+- Nothing pushed in either repo.
 
 ## Attempts
-(none yet)
+- Gate: 1 miss ("25" from "25 Oct" without a year; the gate strips only dates with years) -> dates carry years.
+- Phone tables clipped: 1 miss -> fewer columns, day abbreviations.
+- Headline misattribution and week stability (advisor) -> fixed once.

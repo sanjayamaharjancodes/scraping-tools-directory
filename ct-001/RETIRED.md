@@ -63,22 +63,21 @@ its own (per-1,000 prices at each volume), twice the free-trial page's 5. So it 
   next" line. The new data page takes a card there.
 - **Reversible:** delete the robots meta and the note box, then re-add the four index entries.
 
-## Left for the manager
+## Left for the manager (19 Nov), and what ct-002 did about it
 
-- **The shared navigation still links two retired pages** ("Free Tiers", "ScraperAPI free trial") on every page.
-  That nav comes from the content-autopilot's page skeleton, and its gate compares each draft's nav with the
-  skeleton. Changing it means changing the skeleton too, so it is left until the autopilot's next step is decided.
-  The links still work, and the pages are noindex.
+- **Shared navigation: fixed in ct-002.** Every page's nav, and the content-autopilot's page skeleton, drop "Free
+  Tiers" and "ScraperAPI free trial" and link the two original-data pages instead ("ATS API crawl data", "Job
+  posting days"). The autopilot's one waiting draft (`ready_to_publish/web-search-api-pricing-ai-agents`) got the
+  same nav. The site's change and the skeleton's must be merged together: the gate compares a page's nav with the
+  skeleton.
 - **Other pages' body text still links a retired page in places**, for example the cheapest-API page's "free tier
-  comparison". Those links work.
-- **The content-autopilot's page registry still lists the three pages.** Before it resumes, mark them retired there,
-  or its refresh rule (facts older than 30 days) could rewrite one and put it back in the sitemap.
-- **Its publish step rebuilds three things this change edited by hand.** `publish.py` regenerates `llms.txt` and
-  `data/pages.json` from the site's pages:
-  - **llms.txt / pages.json:** it skips noindex pages, so the retired pages stay out and the new page is picked up.
-    Its fixed "Data" section would drop the two crawl-data lines in `llms.txt`.
-  - **Home-page cards:** it rebuilds the "More guides" block from its own registry, so the new page's card stays
-    only if the page is registered there.
-  Register the new page and keep those two lines before lifting STOP.
+  comparison". Left as is: those links work and the pages they reach are noindex with a notice.
+- **Autopilot registry: fixed in ct-002** (content-autopilot branch `ct-002-leftovers`). `state/pages.json` marks
+  the three pages `retired`. Before that, the planner would have refreshed two of them (shown by
+  `tests/test_data_pages.py` on main). Both data pages are registered as kind `data`, which the planner never
+  refreshes or retires.
+- **Autopilot publish step: fixed in ct-002.** `publish.py` keeps hand-added "Data" lines in `llms.txt` while their
+  files exist, so the crawl-data and posting-day lines survive a publish. `run.py` rebuilds the home cards with the
+  data pages first.
 - Per the 19 Nov rule (every public page carries something only we have), none of the three was rewritten or merged
   into another page. Each points to an existing page.
