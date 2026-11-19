@@ -505,6 +505,7 @@ def build(index_dir, audit=False):
         "ai_in_role_name": in_role, "ai_in_role_name_pct": pct(in_role, total_ai),
         "ai_in_suffix": in_suffix, "ai_in_suffix_pct": pct(in_suffix, total_ai),
         "role_names_2plus_boards": len(role_list), "suffix_roles_2plus_boards": len(suffix_list),
+        "guide_titles_counted": len(GUIDE_TITLES),
         "short_form_titles_dropped": caps_dropped,      # all-capitals or Master of Laws rule
         "top5_boards_ai_listings": top5, "top5_boards_ai_pct": pct(top5, total_ai),
         "training_listings_pct": pct(grp_n["training"], total_ai),

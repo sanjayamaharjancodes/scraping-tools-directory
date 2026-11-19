@@ -10923,6 +10923,16 @@
    ]
   },
   {
+   "id": "guide_titles_counted",
+   "claim": "guide titles counted",
+   "source_url": "https://scrapetools.scaleturn.com/data/ai-job-titles-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"guide_titles_counted\": 47",
+   "numbers": [
+    "47"
+   ]
+  },
+  {
    "id": "short_form_titles_dropped",
    "claim": "short form titles dropped",
    "source_url": "https://scrapetools.scaleturn.com/data/ai-job-titles-2026-11.json",

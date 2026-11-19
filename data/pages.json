@@ -70,6 +70,11 @@
       "url": "https://scrapetools.scaleturn.com/what-day-are-most-jobs-posted.html",
       "title": "What Day Are Most Jobs Posted? Data on 117,153 Jobs | ScrapeTools",
       "description": "Tuesday, narrowly: allowing for jobs that closed, 20.7% of postings on 12,228 company job boards fell on a Tuesday in the four weeks to 15 Nov 2026. With a CSV."
+    },
+    {
+      "url": "https://scrapetools.scaleturn.com/ai-job-titles.html",
+      "title": "AI Job Titles Companies Post: 19,600 Listings Counted | ScrapeTools",
+      "description": "Machine Learning Engineer (556 boards) and AI Engineer (539) lead; 23.1% of AI-titled listings are AI-training gigs. Counts from 456,681 open jobs, with a CSV."
     }
   ]
 }
