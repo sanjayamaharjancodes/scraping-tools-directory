@@ -97,7 +97,7 @@ removed.
    seniority word or role group.
 3. **Talent pools versus vacancies:** how many open postings collect applications for no vacancy, how old they are,
    and how small a share of year-old postings they are; how few boards hold half of the year-old postings; boards
-   that re-date every listing.
+   whose every listing looks new.
 4. **How fast postings come down (estimate):** open jobs by week posted, against the last 7 days, with its assumption
    stated.
 5. **By ATS, role group, seniority and location**, with each ATS's posting-time field named, and board-weighted

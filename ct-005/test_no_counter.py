@@ -3,8 +3,7 @@
 Usage:
     python -I ct-005/test_no_counter.py [--autopilot F:/Lab/assets/content-autopilot] [--no-browser]
 
-Why: on 18 Nov 2026, 80 of the 119 GoatCounter visitors were our own checks (rx-001/BASELINE.md). "Loads the
-counter" means a request for the GoatCounter script (gc.zgo.at/count.js) or its count endpoint
+Why: in November 2026 our own checks were counted among the sites' GoatCounter visitors. "Loads the counter" means a request for the GoatCounter script (gc.zgo.at/count.js) or its count endpoint
 (<code>.goatcounter.com/count). Reads of GoatCounter's API (/api/v0/, by rx-001/reach_read.py) count no visit and
 are allowed.
 

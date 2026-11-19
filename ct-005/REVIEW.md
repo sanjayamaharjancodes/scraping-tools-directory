@@ -35,8 +35,11 @@ postings stay up: jobglance.app and secondround.app. Seven pages in all.
 | Usefulness | R > M > P > N > L > Q > K | **1st** |
 | Trustworthiness | R > P > M > N > L > Q > K | **1st** |
 
-**Gate (ours first on originality, not last on usefulness): PASSED.** The readable Google results for the target
-query (Q, K) ranked 6th and 7th on originality; the two data pages (N, M) 2nd and 3rd.
+**Gate (ours first on originality, not last on usefulness): passed against the pages that could be read.** None of
+Google's top 3 for the target query (Reddit, Quora, the Loopcv Facebook post) could be reviewed: all three refuse a
+signed-out reader. Ours ranked first against the target query's #4 (Q) and #6 (K), the sibling query's #2 (P) and #3
+(L), and both data pages (N, M). The readable target-query results ranked 6th and 7th on originality; the data
+pages 2nd and 3rd. Whether this stands in for the top 3 is the manager's call.
 
 Reasons, condensed:
 - **Originality:** R is "the only page built on its own data that you can see": a dated count of 456,597 open jobs
@@ -58,7 +61,16 @@ Reasons, condensed:
 | "60.3" in the short answer reads as false precision for an estimate | Kept: 60.3 is an exact count ratio (22,151 of 36,710); the estimate is what it implies about duration, and the page labels that as an estimate |
 | No practical steps beyond checking the careers page; a few large boards shape the year-old tail | Kept: advice beyond the data would restate public material; the concentration is stated (163 boards hold half) |
 
-After these edits: `build_data.py --check` passes (103 table cells); `run_gate.py` gives 0 findings, 1,296 words and
-8.7 phone screens, with no JS errors.
+Three more edits from a self-check after the review, not from the reviewer:
+
+| Claim | Edit |
+|---|---|
+| Six boards "re-date every listing" | The rule only sees boards with 50+ listings and none 14+ days old; one (92 listings, all 1.9 days old) fits a single bulk publish as well. Page, table note and script now say they "re-post their listings or post them all at once" |
+| "Old postings are mostly ordinary vacancies" | A title that misses the pool keywords is not a confirmed vacancy: now "mostly carry ordinary job titles", as the section heading says |
+| 60.3 open per 100 four weeks back | It leaves those six boards out; the table note now gives the figure with them, 50.8 (already in the JSON) |
+
+After these edits: `build_data.py --check` passes (103 table cells); `run_gate.py` gives 0 findings, 1,317 words and
+8.7 phone screens, with no JS errors. The three earlier data pages, each with one added link, also pass their gates
+(0 findings; 8.9, 9.1 and 9.9 phone screens).
 
 The reviewer's full reply (with every page's defects) is kept with the job's temporary files, not published.

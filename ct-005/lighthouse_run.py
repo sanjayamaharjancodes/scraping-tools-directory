@@ -6,8 +6,8 @@ Usage:
 
 Prints, per URL, the Performance score of each run and their median. With --out, each run's JSON report is kept.
 
-Why a runner: on 18 Nov 2026 our own checks made 80 of the 119 GoatCounter visitors (rx-001/BASELINE.md). A Lighthouse
-run loads the page like a visitor, so it loads the GoatCounter script (gc.zgo.at/count.js) and, on the live sites, the
+Why a runner: in November 2026 our own checks were counted among the sites' GoatCounter visitors. A Lighthouse run
+loads the page like a visitor, so it loads the GoatCounter script (gc.zgo.at/count.js) and, on the live sites, the
 AdSense loader's ad requests too. This runner starts its own headless Chrome on a throwaway profile with a
 host-resolver allowlist: only the hosts of the URLs under test, the AdSense loader host (pagead2.googlesyndication.com,
 so the page loads as visitors get it) and Google Fonts resolve. Every other name, gc.zgo.at and *.goatcounter.com

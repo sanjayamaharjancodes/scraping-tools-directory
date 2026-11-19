@@ -75,9 +75,10 @@ BANDS = [(0, 7, "Under 1 week"), (7, 14, "1 to 2 weeks"), (14, 30, "2 weeks to 3
 COHORT_WEEKS = [0, 1, 2, 3, 4, 6, 8, 13, 26, 52]
 # A posting time before 2000 is not a real posting date (84 Greenhouse jobs carry 0, 1 Jan 1970): treated as missing.
 VALID_FROM = dt.datetime(2000, 1, 1, tzinfo=dt.timezone.utc).timestamp()
-# Boards that re-date every listing: 50 or more open listings and none posted 14 or more days before the build
-# (an aggregator re-posting daily, for example). Their dates do not mark when a job opened, so the weekly cohorts
-# leave them out; every other figure keeps them, because a job seeker sees those dates.
+# Boards with 50 or more open listings and none posted 14 or more days before the build: they re-post their
+# listings (an aggregator re-posting daily, for example) or posted them all at once. Their dates need not mark when
+# a job opened, so the weekly cohorts leave them out; every other figure keeps them, because a job seeker sees those
+# dates.
 REPOST_MIN_LISTINGS, REPOST_MAX_AGE = 50, 14
 
 # ---------------------------------------------------------------- talent pools and general applications
@@ -391,8 +392,9 @@ def build(index_dir, audit=False):
             "invalid_times": "A posting time before 1 Jan 2000 (a zero timestamp) is treated as missing and the job "
                              "is left out.",
             "reposting_boards": f"Boards with {REPOST_MIN_LISTINGS} or more open listings, none posted "
-                                f"{REPOST_MAX_AGE} or more days before the build, re-date their listings; they are "
-                                "left out of the weekly cohorts only.",
+                                f"{REPOST_MAX_AGE} or more days before the build (re-posted or posted all at once), "
+                                "are left out of the weekly cohorts only; the cohorts with them are kept as "
+                                "open_incl_reposting.",
             "pools": "A talent pool or general application: the title matches " + POOL_RX.pattern,
             "groups": "Role groups come from keyword rules on the whole title; the first rule that matches wins. "
                       "Short forms (AI, HR, IT, PR, RN...) count only in capitals.",
