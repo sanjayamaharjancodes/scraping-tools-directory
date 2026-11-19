@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>What Day Are Most Jobs Posted? Data on 117,153 Jobs | ScrapeTools</title>
-<meta name="description" content="Tuesday, narrowly: 20.7% of 117,153 jobs that 12,228 company job boards posted in four weeks to 15 Nov 2026. Posting hours by ATS and region, with a CSV.">
+<meta name="description" content="Tuesday, narrowly: allowing for jobs that closed, 20.7% of postings on 12,228 company job boards fell on a Tuesday in the four weeks to 15 Nov 2026. With a CSV.">
 <link rel="canonical" href="https://scrapetools.scaleturn.com/what-day-are-most-jobs-posted.html">
 <link rel="icon" href="favicon.ico">
 <link rel="stylesheet" href="style.css">
@@ -17,7 +17,7 @@
     {
       "@type": "Article",
       "headline": "What day are most jobs posted? Four weeks of new jobs on 12,228 company job boards",
-      "description": "Tuesday, narrowly: 20.7% of 117,153 jobs that 12,228 company job boards posted in four weeks to 15 Nov 2026. Posting hours by ATS and region, with a CSV.",
+      "description": "Tuesday, narrowly: allowing for jobs that closed, 20.7% of postings on 12,228 company job boards fell on a Tuesday in the four weeks to 15 Nov 2026. With a CSV.",
       "url": "https://scrapetools.scaleturn.com/what-day-are-most-jobs-posted.html",
       "datePublished": "2026-11-19",
       "dateModified": "2026-11-19",
@@ -90,7 +90,7 @@
   <div class="container prose">
     <div class="answer-first">
       <span class="answer-first-label">Short answer</span>
-      <p>Most jobs are posted on a Tuesday, but only just. Of the 117,153 jobs that 12,228 companies posted on their career pages from 19 Oct 2026 to 15 Nov 2026, 20.7% went up on a Tuesday once jobs that had already closed are allowed for. Each other weekday had 18.6% to 19.9%, and Saturday and Sunday together 2.9%. Jobs go up during working hours: 68.2% of US jobs with a posting time went up between 9:00 and 17:00 US Eastern time.</p>
+      <p>Most jobs are posted on a Tuesday, but only just, and not every week. The data is 117,153 jobs posted on 12,228 company job boards from 19 Oct 2026 to 15 Nov 2026 and still open on 19 Nov 2026. Allowing for the jobs that had closed by then, 20.7% of postings fell on a Tuesday, against 18.6% to 19.9% on each other weekday and 2.9% across Saturday and Sunday. Tuesday led in 3 of the 4 weeks. Jobs go up in working hours: 68.2% of US jobs with a posting time went up between 9:00 and 17:00 US Eastern time.</p>
     </div>
     <p class="data-links">Download the numbers: <a href="data/job-posting-days-2026-11.csv" data-goatcounter-click="download/job-posting-days-csv">CSV</a> · <a href="data/job-posting-days-2026-11.json" data-goatcounter-click="download/job-posting-days-json">JSON</a></p>
 
@@ -118,24 +118,25 @@
     <h2>Why the raw count is not the answer</h2>
     <p>A snapshot only holds jobs that are still open, and a job posted on a Monday has had four more days to be filled or taken down than one posted that Friday. That makes later weekdays look busier. In the raw count, Thursday leads with 20.3%, a hair ahead of Tuesday and Friday at 20.1%.</p>
     <p>The data shows how large the effect is. The number of jobs from the same weekday falls 13.9% for each week of age, about 2.12% a day. After weighting each day's jobs by that rate, Tuesday leads with 20.7%. Tuesday also leads when each board counts once (21.1%), for US jobs in Eastern time (20.8%) and for European jobs in CET (20.9%). Across all 456,597 open jobs, whatever their age, Tuesday and Wednesday tie at 20.8%. Monday to Wednesday together take 58.1% of the adjusted count.</p>
-    <p>So the familiar advice that Tuesday is the top posting day holds, but the margin is under one percentage point. For a job seeker, the useful pattern is broader: new jobs arrive on every weekday at a similar rate and almost never at the weekend.</p>
+    <p>Week by week the lead is less steady. Tuesday led in 3 of the 4 weeks; in the week from 9 Nov 2026, Friday did, when Lever boards posted far more than usual on Thursday and Friday. For US jobs and for European jobs, Tuesday led in 2 of the 4 weeks each.</p>
+    <p>So the familiar advice that Tuesday is the top posting day holds, but the margin is under one percentage point and one busy week can change it. For a job seeker, the useful pattern is broader: new jobs arrive on every weekday at a similar rate and almost never at the weekend.</p>
 
     <h2>Posting day by ATS</h2>
     <div class="table-wrap">
       <table class="day-table">
         <caption>Posting day by ATS, closure-adjusted, 19 Oct 2026 to 15 Nov 2026</caption>
-        <thead><tr><th>ATS</th><th>Jobs</th><th>Top day</th><th>Mon-Wed</th><th>Weekend</th><th>By board</th></tr></thead>
+        <thead><tr><th>ATS</th><th>Jobs</th><th>Top day</th><th>Weeks led</th><th>Weekend</th><th>By board</th></tr></thead>
         <tbody>
-          <tr><td data-label="ATS">Greenhouse</td><td data-label="Jobs">52,601</td><td data-label="Top day">Tue 21.5%</td><td data-label="Mon-Wed">59.1%</td><td data-label="Weekend">1.9%</td><td data-label="By board">Tue</td></tr>
-          <tr><td data-label="ATS">Lever</td><td data-label="Jobs">14,796</td><td data-label="Top day">Fri 21.1%</td><td data-label="Mon-Wed">54.3%</td><td data-label="Weekend">5.4%</td><td data-label="By board">Fri</td></tr>
-          <tr><td data-label="ATS">Ashby</td><td data-label="Jobs">17,439</td><td data-label="Top day">Thu 21.2%</td><td data-label="Mon-Wed">57.9%</td><td data-label="Weekend">3.4%</td><td data-label="By board">Tue</td></tr>
-          <tr><td data-label="ATS">Recruitee</td><td data-label="Jobs">9,387</td><td data-label="Top day">Mon 21.3%</td><td data-label="Mon-Wed">60.5%</td><td data-label="Weekend">1.1%</td><td data-label="By board">Tue</td></tr>
-          <tr><td data-label="ATS">Personio</td><td data-label="Jobs">4,625</td><td data-label="Top day">Tue 20.9%</td><td data-label="Mon-Wed">59.4%</td><td data-label="Weekend">1.4%</td><td data-label="By board">Tue</td></tr>
-          <tr><td data-label="ATS">Workable</td><td data-label="Jobs">18,305</td><td data-label="Top day">Thu 20.2%</td><td data-label="Mon-Wed">57.4%</td><td data-label="Weekend">3.9%</td><td data-label="By board">Tue</td></tr>
+          <tr><td data-label="ATS">Greenhouse</td><td data-label="Jobs">52,601</td><td data-label="Top day">Tue 21.5%</td><td data-label="Weeks led">3 of 4</td><td data-label="Weekend">1.9%</td><td data-label="By board">Tue</td></tr>
+          <tr><td data-label="ATS">Lever</td><td data-label="Jobs">14,796</td><td data-label="Top day">Fri 21.1%</td><td data-label="Weeks led">2 of 4</td><td data-label="Weekend">5.4%</td><td data-label="By board">Fri</td></tr>
+          <tr><td data-label="ATS">Ashby</td><td data-label="Jobs">17,439</td><td data-label="Top day">Thu 21.2%</td><td data-label="Weeks led">2 of 4</td><td data-label="Weekend">3.4%</td><td data-label="By board">Tue</td></tr>
+          <tr><td data-label="ATS">Recruitee</td><td data-label="Jobs">9,387</td><td data-label="Top day">Mon 21.3%</td><td data-label="Weeks led">1 of 4</td><td data-label="Weekend">1.1%</td><td data-label="By board">Tue</td></tr>
+          <tr><td data-label="ATS">Personio</td><td data-label="Jobs">4,625</td><td data-label="Top day">Tue 20.9%</td><td data-label="Weeks led">2 of 4</td><td data-label="Weekend">1.4%</td><td data-label="By board">Tue</td></tr>
+          <tr><td data-label="ATS">Workable</td><td data-label="Jobs">18,305</td><td data-label="Top day">Thu 20.2%</td><td data-label="Weeks led">3 of 4</td><td data-label="Weekend">3.9%</td><td data-label="By board">Tue</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="table-note">Each ATS's own closure rate is used. <strong>By board</strong> names the top day when every board counts equally. Lever's weekend share comes mostly from boards that post many jobs: with each board counted once it is 2.2%, against 5.4% by jobs.</p>
+    <p class="table-note">Each ATS's own closure rate is used. <strong>Weeks led</strong> counts the four weeks in which the top day also led on its own; within one ATS the top day changes often, so read close shares as a tie. <strong>By board</strong> names the top day when every board counts equally. Lever's weekend share comes mostly from boards that post many jobs: with each board counted once it is 2.2%, against 5.4% by jobs.</p>
 
     <h2>What time are jobs posted?</h2>
     <p>US jobs go up through the US working day. Few appear before 8:00 Eastern time (0.6% in the hour from 7:00), then 6.4% arrive between 8:00 and 9:00. From 10:00 to 17:00 every hour holds 7.8% to 9.4%, and the busiest three hours run from 12:00 to 15:00 (27.9%). The often-quoted "post at 11 AM" is not a peak here. European jobs follow office hours in CET: 71.6% between 9:00 and 17:00, with the most at 15:00 (10.3%). Workable gives only a date, so it is left out of the hours.</p>

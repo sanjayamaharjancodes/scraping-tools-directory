@@ -9,6 +9,8 @@ Usage:
     python -I ct-002/build_data.py --index <dir> --check what-day-are-most-jobs-posted.html
     python -I ct-002/build_data.py --check what-day-are-most-jobs-posted.html      (no index: checks the page
                                                                                        against the committed JSON)
+    python -I ct-002/build_data.py --refresh-facts                                 (no index: re-dates facts.json
+                                                                                       from the committed JSON)
 
 Writes (paths relative to the site root, the parent of ct-002/):
     data/job-posting-days-2026-11.csv    weekday counts and shares per group (the page's download)
@@ -223,6 +225,13 @@ def closure_adjusted(by_date, start, build_day):
     out["top_day_adj_pct"] = out[f"{DAY_KEYS[top]}_adj_pct"]
     others = [out[f"{DAY_KEYS[i]}_adj_pct"] for i in range(5) if i != top]
     out["other_weekdays_adj_min_pct"], out["other_weekdays_adj_max_pct"] = min(others), max(others)
+    # The same test one week at a time: which weekday leads each of the four weeks, with the same rate.
+    leaders = []
+    for w in range(4):
+        wk = [by_date[w * 7 + d] * math.exp(rate * ((build_day - start).days - (w * 7 + d))) for d in range(7)]
+        leaders.append(DAYS[max(range(7), key=lambda d: wk[d])])
+    out["week_leaders_adj"] = "; ".join(leaders)
+    out["top_day_adj_weeks"] = leaders.count(DAYS[top])
     return out
 
 
@@ -443,7 +452,8 @@ CSV_COLS = (["id", "label", "clock", "window", "jobs", "boards"] + [f"{k}_jobs" 
                "top_day_boards"]
             + [f"{k}_adj_pct" for k in DAY_KEYS]
             + ["mon_wed_adj_pct", "weekend_adj_pct", "top_day_adj", "top_day_adj_pct", "other_weekdays_adj_min_pct",
-               "other_weekdays_adj_max_pct", "closure_rate_per_day_pct", "same_weekday_decline_per_week_pct"])
+               "other_weekdays_adj_max_pct", "closure_rate_per_day_pct", "same_weekday_decline_per_week_pct",
+               "top_day_adj_weeks", "week_leaders_adj"])
 
 
 def write_outputs(data):
@@ -460,6 +470,11 @@ def write_outputs(data):
     write_facts(data)
 
 
+def num_key(s):
+    """Numeric order, then text, so "17" and "17.0" always come out in the same order (sets do not keep one)."""
+    return float(s), s
+
+
 def write_facts(data, today=None):
     today = today or dt.date.today().isoformat()
     facts = []
@@ -467,14 +482,14 @@ def write_facts(data, today=None):
         cells = [(c, r.get(c)) for c in CSV_COLS[1:] if r.get(c) not in (None, "")]
         excerpt = f"{r['id']}: " + "; ".join(f"{c}={v}" for c, v in cells)
         nums = sorted({str(abs(v)) for _, v in cells if isinstance(v, (int, float)) and not isinstance(v, bool)},
-                      key=float)
+                      key=num_key)
         facts.append({"id": f"row-{r['id']}", "claim": f"{r['label']}: jobs posted per weekday (CSV row)",
                       "source_url": f"{SITE}/{CSV_REL}", "fetched": today, "excerpt": excerpt, "numbers": nums})
     for gid, h in data["hours"].items():
         flat = {k: v for k, v in h.items() if isinstance(v, (int, float)) and not isinstance(v, bool)}
         flat.update({f"hour_{i:02d}_pct": v for i, v in enumerate(h["hour_pct"])})
         excerpt = f'"hours" / "{gid}": ' + "; ".join(f"{k}={v}" for k, v in flat.items())
-        nums = sorted({str(abs(v)) for v in flat.values() if v is not None}, key=float)
+        nums = sorted({str(abs(v)) for v in flat.values() if v is not None}, key=num_key)
         facts.append({"id": f"hours-{gid}", "claim": f"{h['label']}: posting hour ({h['clock']})",
                       "source_url": f"{SITE}/{JSON_REL}", "fetched": today, "excerpt": excerpt, "numbers": nums})
     for r in data["refresh_by_hour_utc"]:
@@ -483,7 +498,7 @@ def write_facts(data, today=None):
                       "excerpt": f'"hour_utc": {r["hour_utc"]}, "mean_wait_h": {r["mean_wait_h"]}, '
                                  f'"within_6h_pct": {r["within_6h_pct"]}',
                       "numbers": sorted({str(r["hour_utc"]), str(r["mean_wait_h"]), str(r["within_6h_pct"])},
-                                        key=float)})
+                                        key=num_key)})
     for k, v in data["summary"].items():
         if isinstance(v, (int, float)) and not isinstance(v, bool):
             facts.append({"id": k, "claim": k.replace("_", " "), "source_url": f"{SITE}/{JSON_REL}",
@@ -552,7 +567,7 @@ def check_page(page, data):
 # Table caption prefix -> {column label: row field}. Each cell must hold its own row's value.
 TABLES = {
     "Jobs posted on each weekday": "weekday",
-    "Posting day by ATS": {"Jobs": "jobs", "Top day": "top_day_adj_pct", "Mon-Wed": "mon_wed_adj_pct",
+    "Posting day by ATS": {"Jobs": "jobs", "Top day": "top_day_adj_pct", "Weeks led": "top_day_adj_weeks",
                            "Weekend": "weekend_adj_pct", "By board": "top_day_boards"},
 }
 
@@ -627,6 +642,9 @@ def main():
     ap.add_argument("--index", help="directory with index-manifest.json and the index-*.gz shards of the "
                                     f"{BUILT_AT} build; without it, --check uses the committed {JSON_REL}")
     ap.add_argument("--check", help="page to verify: every visible number must come from the data")
+    ap.add_argument("--refresh-facts", action="store_true",
+                    help="without --index: rewrite ct-002/facts.json from the committed JSON with today's date (the "
+                         "content gate accepts facts fetched within 3 days)")
     a = ap.parse_args()
     if a.index:
         data = build(a.index)
@@ -636,13 +654,16 @@ def main():
               f"{s['copies_dropped']} copies dropped; window {s['window_start']} to {s['window_end']}: "
               f"{s['window_jobs']} jobs on {s['window_boards']} boards")
         print(f"wrote {CSV_REL}, {JSON_REL}, ct-002/facts.json")
-    elif a.check:
+    elif a.check or a.refresh_facts:
         data = json.load(open(os.path.join(ROOT, JSON_REL), encoding="utf-8"))
         if data.get("widget") != widget_data(data):
             sys.exit("STOP: the committed JSON's widget block does not match its own hours")
-        print(f"no --index: checking against the committed {JSON_REL}")
+        print(f"no --index: using the committed {JSON_REL} (index {data['summary']['index_built_at']})")
+        if a.refresh_facts:
+            write_facts(data)
+            print("wrote ct-002/facts.json with today's date")
     else:
-        ap.error("give --index, --check or both")
+        ap.error("give --index, --check, --refresh-facts or a combination")
     if a.check:
         bad = check_page(a.check, data)
         tbad, seen = check_tables(a.check, data)
