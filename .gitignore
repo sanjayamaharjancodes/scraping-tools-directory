@@ -4,3 +4,5 @@
 # ct-002: a local copy of the job index build the data page was measured from (not published)
 ct-002/index-snapshot/
 .tmp-ct002/
+# ct-003: scratch (exploration scripts, captures, gate scratch)
+.tmp-ct003/
