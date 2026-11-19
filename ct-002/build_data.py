@@ -345,6 +345,7 @@ def build(index_dir):
                 "by_weekday_hour": hours, "hour_pct": [pct(x, timed) for x in by_hour],
                 "peak_hour": ph, "peak_hour_pct": pct(by_hour[ph], timed),
                 "share_9_to_17_pct": pct(sum(by_hour[9:17]), timed),
+                "share_before_17_pct": pct(sum(by_hour[0:17]), timed),
                 "share_0_to_6_pct": pct(sum(by_hour[0:6]), timed),
                 "busiest_three_hours_start": max(range(22), key=lambda h: sum(by_hour[h:h + 3])),
                 "weekday_peak_hour": max(range(24), key=lambda h: weekday_hours[h]),

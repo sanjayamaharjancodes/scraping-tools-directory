@@ -90,12 +90,12 @@
   <div class="container prose">
     <div class="answer-first">
       <span class="answer-first-label">Short answer</span>
-      <p>Most jobs are posted on a Tuesday, but only just, and not every week. The data is 117,153 jobs posted on 12,228 company job boards from 19 Oct 2026 to 15 Nov 2026 and still open on 19 Nov 2026. Allowing for the jobs that had closed by then, 20.7% of postings fell on a Tuesday, against 18.6% to 19.9% on each other weekday and 2.9% across Saturday and Sunday. Tuesday led in 3 of the 4 weeks. Jobs go up in working hours: 68.2% of US jobs with a posting time went up between 9:00 and 17:00 US Eastern time.</p>
+      <p>Most jobs are posted on a Tuesday, but only just, and not every week. The data is 117,153 jobs posted on 12,228 company job boards from 19 Oct 2026 to 15 Nov 2026 and still open on 19 Nov 2026. Allowing for the jobs that had closed by then, 20.7% of postings fell on a Tuesday, against 18.6% to 19.9% on each other weekday and 2.9% across Saturday and Sunday. Tuesday led in 3 of the 4 weeks (2 of 4 for US jobs alone). Jobs go up in working hours: 68.2% of US jobs with a posting time went up between 9:00 and 17:00 US Eastern time.</p>
     </div>
     <p class="data-links">Download the numbers: <a href="data/job-posting-days-2026-11.csv" data-goatcounter-click="download/job-posting-days-csv">CSV</a> · <a href="data/job-posting-days-2026-11.json" data-goatcounter-click="download/job-posting-days-json">JSON</a></p>
 
     <h2>Jobs posted on each weekday</h2>
-    <p>The index was built at 04:03 UTC on 19 Nov 2026 from 23,287 company job boards holding 461,985 open jobs. This table counts the jobs posted in the last four full weeks before that, Monday 19 Oct 2026 to Sunday 15 Nov 2026, so every weekday appears four times.</p>
+    <p>The index was built at 04:03 UTC on 19 Nov 2026 from 23,287 company job boards holding 461,985 open jobs. In the last four full weeks before that, Monday 19 Oct 2026 to Sunday 15 Nov 2026, 12,228 of those boards posted the 117,153 jobs counted here, so every weekday appears four times.</p>
     <div class="table-wrap">
       <table class="day-table">
         <caption>Jobs posted on each weekday, 19 Oct 2026 to 15 Nov 2026</caption>
@@ -140,6 +140,7 @@
 
     <h2>What time are jobs posted?</h2>
     <p>US jobs go up through the US working day. Few appear before 8:00 Eastern time (0.6% in the hour from 7:00), then 6.4% arrive between 8:00 and 9:00. From 10:00 to 17:00 every hour holds 7.8% to 9.4%, and the busiest three hours run from 12:00 to 15:00 (27.9%). The often-quoted "post at 11 AM" is not a peak here. European jobs follow office hours in CET: 71.6% between 9:00 and 17:00, with the most at 15:00 (10.3%). Workable gives only a date, so it is left out of the hours.</p>
+    <p>For a job seeker, that makes one daily check late in the working day the efficient habit: by 17:00 Eastern time, 78.1% of a day's US postings are already up, and by 17:00 CET, 78.4% of a day's European ones.</p>
     <div class="calculator" id="hc">
       <div class="field-grid">
         <div>
@@ -155,6 +156,7 @@
       <div class="hour-chart" id="hc-chart" role="img" aria-label="Share of jobs posted in each hour of the day"></div>
       <div class="hour-axis" id="hc-axis" aria-hidden="true"></div>
       <p class="chart-caption" id="hc-caption"></p>
+      <p class="chart-caption" id="hc-pick" aria-live="polite"></p>
       <noscript><p>The chart needs JavaScript. The JSON download holds every hour's count.</p></noscript>
     </div>
 
@@ -176,7 +178,7 @@
       <li><strong>Posting time:</strong> the vendor's own field: Greenhouse <code>first_published</code>, Lever <code>createdAt</code>, Ashby <code>publishedAt</code>, Recruitee <code>published_at</code>, Personio <code>createdAt</code>, Workable <code>published_on</code> (a date only). 84 jobs had no date.</li>
       <li><strong>Copies:</strong> a job with the same title, location and posting time on two boards of one ATS counts once. That removed 5,304 jobs, 4,757 of them on Recruitee.</li>
       <li><strong>Closure adjustment:</strong> the daily rate is fitted from how each weekday's count falls from week to week, then each day's jobs are weighted by it. If posting volume itself changed over the four weeks, the rate absorbs that too.</li>
-      <li><strong>Region:</strong> read from the location text. 46.5% of open jobs name a US place, 23.1% a European one; the other 30.4% name another region, several regions or no place we recognize. US Eastern and CET include their daylight-saving changes on 1 Nov 2026 and 25 Oct 2026.</li>
+      <li><strong>Region:</strong> read from the location text. Of all 456,597 open jobs, 46.5% name a US place and 23.1% a European one; the other 30.4% name another region, several regions or no place we recognize. Of the 117,153 jobs in the four weeks, 61,239 are US-located and 25,641 Europe-located. US Eastern and CET include their daylight-saving changes on 1 Nov 2026 and 25 Oct 2026.</li>
       <li><strong>Reproducible:</strong> <a href="https://github.com/sanjayamaharjancodes/scraping-tools-directory/blob/main/ct-002/build_data.py">build_data.py</a> rebuilds the CSV and JSON from the index files, refuses any other index build by its SHA-256 hashes, and fails if a number on this page is not in that data. The index files are not published; the CSV and JSON carry every count used. This page was drafted with AI tools from that data.</li>
     </ul>
 
@@ -209,7 +211,7 @@
   "use strict";
   function $(id) { return document.getElementById(id); }
   var groupSel = $("hc-group"), daySel = $("hc-day"), chart = $("hc-chart"), axis = $("hc-axis"),
-    caption = $("hc-caption"), err = $("hc-error"), hourSel = $("rf-hour"), waitOut = $("rf-wait"), sixOut = $("rf-six");
+    caption = $("hc-caption"), pick = $("hc-pick"), err = $("hc-error"), hourSel = $("rf-hour"), waitOut = $("rf-wait"), sixOut = $("rf-six");
   var nf = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
   var SHORT = { all: "All five ATSs with times", us: "US-located jobs", europe: "Europe-located jobs" };
   var w = null;
@@ -228,12 +230,14 @@
       bar.className = "bar";
       bar.style.height = (100 * c / max) + "%";
       bar.title = pad(i) + " to " + pad(i).slice(0, 2) + ":59: " + share.toFixed(1) + "% (" + nf.format(c) + " jobs)";
+      bar.addEventListener("click", function () { pick.textContent = bar.title; });
       chart.appendChild(bar);
     });
+    pick.textContent = "";
     chart.setAttribute("aria-label", "Share of jobs posted in each hour, " + g.clock + "; busiest hour " + pad(peak));
     var dayText = d === "all" ? "every day" : w.days[Number(d)];
     caption.textContent = g.label + ", " + dayText + ", " + g.clock + ": " + nf.format(total) + " jobs. Busiest hour " +
-      pad(peak) + " (" + (total ? (100 * counts[peak] / total).toFixed(1) : "0") + "%). On a desktop, hover a bar for its share.";
+      pad(peak) + " (" + (total ? (100 * counts[peak] / total).toFixed(1) : "0") + "%). Tap or hover a bar for its share.";
   }
   function drawRefresh() {
     var r = w.refresh[Number(hourSel.value)];
@@ -255,6 +259,7 @@
       var s = document.createElement("span"); s.textContent = h % 6 === 0 ? String(h) : ""; axis.appendChild(s);
     }
     hourSel.value = "23";
+    if (w.groups.us) groupSel.value = "us";
     [groupSel, daySel].forEach(function (el) { el.addEventListener("change", drawHours); el.addEventListener("input", drawHours); });
     hourSel.addEventListener("change", drawRefresh); hourSel.addEventListener("input", drawRefresh);
     drawHours(); drawRefresh();
