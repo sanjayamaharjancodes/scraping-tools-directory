@@ -151,8 +151,20 @@ def crawler_settings(src):
                       "min_interval_ms": int(m.group(2)) if m.group(2) else None}
     const = {k: int(re.search(rf"const {k} = (\d+);", http_js).group(1))
              for k in ("STOP_WINDOW", "STOP_BLOCKED", "STOP_RETRY_AFTER_S")}
+    # Board statuses, from the header comment of refresh.js ("//   miss   answered 404, 410 or 401, ...").
+    refresh_js = open(os.path.join(src, "refresh.js"), encoding="utf-8").read()
+    statuses, cur = {}, None
+    for line in refresh_js.splitlines():
+        m = re.match(r"^//\s{3}(new|ok|miss|gone|error|nopage)\s+(.*)$", line)
+        if m:
+            cur = m.group(1)
+            statuses[cur] = m.group(2).strip()
+        elif cur and re.match(r"^//\s{6,}\S", line):
+            statuses[cur] += " " + line[2:].strip()
+        elif not line.startswith("//"):
+            break
     return {"lanes": lanes, "stop_window": const["STOP_WINDOW"], "stop_blocked": const["STOP_BLOCKED"],
-            "stop_retry_after_s": const["STOP_RETRY_AFTER_S"]}
+            "stop_retry_after_s": const["STOP_RETRY_AFTER_S"], "board_statuses": statuses}
 
 
 def build(evidence, src):
@@ -216,14 +228,25 @@ def build(evidence, src):
                       "jobs_per_live_board_19nov": r1(d["jobs"] / d["ok"]) if d["ok"] else None})
             if d.get("complete"):
                 # A stopped lane's share is taken over the boards that answered before the stop (below), not all.
+                # live = in the index (job list and a working public board page); answered = the job API returned
+                # a job list, whether or not the company's hosted board page still exists ("no public page").
+                answered = d["ok"] + d["no_public_page"]
                 r.update({"not_a_board_19nov": d["not_boards"], "failed_19nov": d["failed"],
                           "no_public_page_19nov": d["no_public_page"],
+                          "answered_19nov": None if d.get("stopped") else answered,
+                          "answered_pct_19nov": None if d.get("stopped") else pct(answered, d["checked"]),
                           "live_pct_19nov": None if d.get("stopped") else pct(d["ok"], d["checked"])})
             if d.get("stopped"):
                 r.update({"answered_before_stop_19nov": d["answered_before_stop"],
                           "failed_at_once_19nov": d["failed_at_once"],
                           "failed_at_once_seconds_19nov": d["failed_at_once_seconds"],
-                          "live_pct_of_answered_19nov": pct(d["ok"], d["answered_before_stop"])})
+                          "live_pct_of_answered_19nov": pct(d["ok"], d["answered_before_stop"]),
+                          "not_a_board_pct_of_answered_19nov": pct(d["not_boards"], d["answered_before_stop"])})
+            # Boards with and without jobs in the index the 19 Nov report built (only when that report exists).
+            ix19 = (p2json or {}).get("byAts", {}).get(ats) if primary_name == "pass2" else None
+            if ix19:
+                r.update({"index_boards_19nov": ix19["boards"], "index_boards_with_jobs_19nov": ix19["boardsWithJobs"],
+                          "empty_board_pct_19nov": pct(ix19["boards"] - ix19["boardsWithJobs"], ix19["boards"])})
             if ix and d.get("complete"):
                 r.update({"boards_change_18_to_19nov": d["ok"] - ix["boards"],
                           "jobs_change_18_to_19nov": d["jobs"] - ix["jobs"],
@@ -266,6 +289,30 @@ def build(evidence, src):
         "pass2_19nov_report_seconds": (p2json or {}).get("seconds"),
     }
     summary["workable_retry_after_hours_18nov"] = round(summary["workable_retry_after_s_18nov"] / 3600, 1)
+    # The 18 Nov stop happened after that run began (builtAt minus its duration), so its Retry-After ran out no
+    # earlier than run start + Retry-After. The 19 Nov first pass started before that moment and was answered.
+    run18_start = ts(first["builtAt"]) - dt.timedelta(seconds=first["seconds"])
+    earliest_end = run18_start + dt.timedelta(seconds=summary["workable_retry_after_s_18nov"])
+    summary["workable_18nov_run_start"] = run18_start.isoformat().replace("+00:00", "Z")
+    summary["workable_18nov_retry_after_earliest_end"] = earliest_end.isoformat().replace("+00:00", "Z")
+    summary["workable_answered_19nov_before_18nov_wait_ended"] = bool(p1_start < earliest_end
+                                                                       and p1["workable"].get("ok", 0) > 0)
+    stop19 = {s["lane"]: s["reason"] for s in (summary["stopped_lanes_19nov_report"] or [])}
+    if "workable" in stop19:
+        summary["workable_stop_reason_19nov"] = stop19["workable"]
+        summary["workable_retry_after_s_19nov"] = int(re.search(r"Retry-After (\d+)", stop19["workable"]).group(1))
+        summary["workable_retry_after_hours_19nov"] = round(summary["workable_retry_after_s_19nov"] / 3600, 1)
+    if p2json:
+        # Candidates still "new" after 19 Nov never answered at all (not even 404) in any pass.
+        summary["recruitee_never_answered_19nov"] = p2json["directoryStatus"].get("recruitee:new", 0)
+    done = [r for r in rows if r.get("answered_pct_19nov") is not None]
+    if done:
+        summary["answered_pct_19nov_min"] = min(r["answered_pct_19nov"] for r in done)
+        summary["answered_pct_19nov_max"] = max(r["answered_pct_19nov"] for r in done)
+        summary["rechecked_19nov_five_ats"] = sum(r["checked_19nov"] for r in done)
+        summary["answered_19nov_five_ats"] = sum(r["answered_19nov"] for r in done)
+        summary["answered_pct_19nov_five_ats"] = pct(summary["answered_19nov_five_ats"],
+                                                     summary["rechecked_19nov_five_ats"])
     m = re.search(r"(\d+) of its last (\d+) answers", summary["personio_stop_reason_18nov"])
     summary["personio_stop_blocked_18nov"], summary["personio_stop_window_18nov"] = int(m.group(1)), int(m.group(2))
     pa_row = next(r for r in rows if r["ats"] == "Personio")
@@ -282,8 +329,12 @@ CSV_COLS = ["ats", "candidates_18nov", "live_18nov", "not_a_board_18nov", "faile
             "not_a_board_pct_18nov", "lane_stopped_18nov", "index_boards_18nov", "index_boards_with_jobs_18nov",
             "index_jobs_18nov", "jobs_per_board_18nov", "jobs_per_board_with_jobs_18nov", "empty_board_pct_18nov",
             "no_public_page_18nov", "checked_19nov", "complete_19nov", "live_19nov", "not_a_board_19nov",
-            "failed_19nov", "no_public_page_19nov", "live_pct_19nov", "answered_before_stop_19nov",
-            "live_pct_of_answered_19nov", "failed_at_once_19nov", "jobs_19nov", "jobs_per_live_board_19nov",
+            "failed_19nov", "no_public_page_19nov", "answered_19nov", "answered_pct_19nov", "live_pct_19nov",
+            "answered_before_stop_19nov",
+            "live_pct_of_answered_19nov", "not_a_board_pct_of_answered_19nov", "failed_at_once_19nov",
+            "failed_at_once_seconds_19nov",
+            "index_boards_19nov", "index_boards_with_jobs_19nov", "empty_board_pct_19nov",
+            "jobs_19nov", "jobs_per_live_board_19nov",
             "seconds_per_board_19nov", "lane_seconds_19nov", "boards_change_18_to_19nov", "jobs_change_18_to_19nov",
             "jobs_change_pct_18_to_19nov", "live_19nov_other_pass", "jobs_19nov_other_pass",
             "jobs_diff_between_passes", "answered_before_stop_19nov_other_pass"]
@@ -312,12 +363,14 @@ def write_outputs(data, root, settings):
     # facts.json for the content-autopilot machine gate: one fact per CSV row, one per summary/method value.
     today = dt.date.today().isoformat()
     facts = []
-    lines = csv_text.strip().split("\n")
-    for line, r in zip(lines[1:], data["rows"]):
-        nums = sorted({c for c in line.split(",") if re.fullmatch(r"-?\d+(?:\.\d+)?", c)}, key=float)
-        facts.append({"id": f"row-{r['ats'].lower()}", "claim": f"{r['ats']} per-ATS crawl figures, 18-19 Nov 2026",
-                      "source_url": f"{SITE}/{CSV_REL}", "fetched": today, "excerpt": line,
-                      "numbers": [n.lstrip("-") for n in nums]})
+    for r in data["rows"]:
+        # "column=value; ..." rather than the raw CSV line: the gate reads "10785,0,0" as one number.
+        cells = [(c, r.get(c)) for c in CSV_COLS[1:] if r.get(c) not in (None, "")]
+        excerpt = f"{r['ats']}: " + "; ".join(f"{c}={v}" for c, v in cells)
+        nums = sorted({str(abs(v)) for _, v in cells if isinstance(v, (int, float)) and not isinstance(v, bool)},
+                      key=float)
+        facts.append({"id": f"row-{r['ats'].lower()}", "claim": f"{r['ats']} per-ATS crawl figures (CSV row)",
+                      "source_url": f"{SITE}/{CSV_REL}", "fetched": today, "excerpt": excerpt, "numbers": nums})
     flat = dict(data["summary"])
     for ats, lane in settings["lanes"].items():
         flat[f"lane_{ats}_concurrency"] = lane["concurrency"]
@@ -329,10 +382,17 @@ def write_outputs(data, root, settings):
         for sub in ("personio_pass_a", "personio_pass_b"):
             for k, v in (r.get(sub) or {}).items():
                 flat[f"{sub}_{k}"] = v
+    for k, st in settings["board_statuses"].items():
+        flat[f"board_status_{k}"] = st
     for k, v in flat.items():
         if isinstance(v, (int, float)) and not isinstance(v, bool):
             facts.append({"id": k, "claim": k.replace("_", " "), "source_url": f"{SITE}/{JSON_REL}",
                           "fetched": today, "excerpt": f'"{k}": {v}', "numbers": [str(abs(v))]})
+        elif isinstance(v, str) and re.search(r"\d", v):
+            # Stop reasons, status rules and timestamps: their numbers (HTTP codes, crawl days) are traced too.
+            nums = sorted({m.group(0) for m in re.finditer(r"\d+(?:\.\d+)?", v)}, key=float)
+            facts.append({"id": k, "claim": k.replace("_", " "), "source_url": f"{SITE}/{JSON_REL}",
+                          "fetched": today, "excerpt": f'"{k}": "{v}"', "numbers": nums})
     with open(os.path.join(root, "ct-001", "facts.json"), "w", encoding="utf-8") as f:
         json.dump({"target_query": TARGET_QUERY, "facts": facts}, f, indent=1)
         f.write("\n")
@@ -399,6 +459,42 @@ def check_page(page, data):
     return sorted(set(bad), key=lambda s: float(s.replace(",", "")))
 
 
+# Each table cell must hold its own row's value, not just any value from the data. Caption prefix -> {column label:
+# data key}; a per-ATS override covers Workable, whose first check and stop are on 19 Nov.
+TABLES = {
+    "First check of each board address": {
+        "Addresses": "candidates_18nov", "Not a board": "not_a_board_18nov", "Share": "not_a_board_pct_18nov"},
+    "Re-check of known boards": {
+        "Job list returned": "answered_pct_19nov", "Jobs per board": "jobs_per_live_board_19nov",
+        "No jobs": "empty_board_pct_19nov", "Seconds per board": "seconds_per_board_19nov"},
+}
+OVERRIDES = {("First check of each board address", "Workable"): {
+    "Not a board": "not_a_board_19nov", "Share": "not_a_board_pct_of_answered_19nov"},
+    ("Re-check of known boards", "Workable"): {"Job list returned": "answered_before_stop_19nov"}}
+
+
+def check_tables(page, data):
+    html = open(page, encoding="utf-8").read()
+    rows = {r["ats"]: r for r in data["rows"]}
+    bad, seen = [], 0
+    for cap, body in re.findall(r"<caption>(.*?)</caption>.*?<tbody>(.*?)</tbody>", html, re.S):
+        spec = next((v for k, v in TABLES.items() if cap.startswith(k)), None)
+        if not spec:
+            continue
+        key = next(k for k in TABLES if cap.startswith(k))
+        for tr in re.findall(r"<tr>(.*?)</tr>", body, re.S):
+            cells = dict(re.findall(r'<t[dh] data-label="([^"]+)"[^>]*>(.*?)</t[dh]>', tr, re.S))
+            ats = re.sub(r"[^A-Za-z]", "", cells.get("ATS", ""))   # "Workable*" (footnote mark) -> "Workable"
+            for label, field in {**spec, **OVERRIDES.get((key, ats), {})}.items():
+                m = re.search(r"-?\d[\d,]*(?:\.\d+)?", re.sub(r"<[^>]+>", "", cells.get(label, "")))
+                want = rows[ats].get(field)
+                got = float(m.group(0).replace(",", "")) if m else None
+                seen += 1
+                if want is None or got is None or abs(got - float(want)) > 1e-9:
+                    bad.append(f"{key} / {ats} / {label}: page {got}, data {field}={want}")
+    return bad, seen
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--evidence", required=True, help="directory holding the refresh reports and logs")
@@ -418,6 +514,11 @@ def main():
                   + ", ".join(bad))
             sys.exit(1)
         print(f"CHECK PASS: every number on {os.path.basename(args.check)} is in the generated data")
+        tbad, seen = check_tables(args.check, data)
+        if tbad or not seen:
+            print(f"TABLE CHECK FAIL ({seen} cells): " + ("; ".join(tbad) or "no table cells found"))
+            sys.exit(1)
+        print(f"TABLE CHECK PASS: {seen} table cells match their own row and column in the data")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATS Public Job Posting APIs: What 30,590 Boards Returned | ScrapeTools</title>
+<meta name="description" content="Our crawl of 30,590 public ATS job boards on 18-19 Nov 2026: dead board addresses, failures, rate limits and jobs per board for six ATSs, with a CSV.">
+<link rel="canonical" href="https://scrapetools.scaleturn.com/ats-job-posting-api-crawl-data.html">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="widgets.css">
+<link rel="alternate" type="application/json" href="data/ats-board-crawl-2026-11.json" title="ATS job board crawl data">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "ATS public job posting APIs: what 30,590 job boards returned",
+      "description": "Our crawl of 30,590 public ATS job boards on 18-19 Nov 2026: dead board addresses, failures, rate limits and jobs per board for six ATSs, with a CSV.",
+      "url": "https://scrapetools.scaleturn.com/ats-job-posting-api-crawl-data.html",
+      "datePublished": "2026-11-19",
+      "dateModified": "2026-11-19",
+      "inLanguage": "en-US",
+      "publisher": {"@type": "Organization", "name": "Scaleturn", "url": "https://scaleturn.com/"},
+      "isPartOf": {"@type": "WebSite", "name": "ScrapeTools", "url": "https://scrapetools.scaleturn.com/"}
+    },
+    {
+      "@type": "Dataset",
+      "name": "ATS job board crawl results per applicant tracking system, November 2026",
+      "description": "Board addresses checked, boards that answered with a job list, boards that were not boards, failures, rate-limit stops, jobs and seconds per board for Greenhouse, Lever, Ashby, Recruitee, Personio and Workable public job posting APIs, from the ScrapeTools job-index refresh.",
+      "url": "https://scrapetools.scaleturn.com/ats-job-posting-api-crawl-data.html",
+      "temporalCoverage": "2026-11-18/2026-11-19",
+      "isAccessibleForFree": true,
+      "creator": {"@type": "Organization", "name": "Scaleturn", "url": "https://scaleturn.com/"},
+      "distribution": [
+        {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.csv"},
+        {"@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json"}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  .crawl-table th, .crawl-table td { padding-left: 0.4rem; padding-right: 0.4rem; }
+  .crawl-table td + td, .crawl-table th + th { text-align: right; }
+  .endpoint-list code { overflow-wrap: anywhere; font-size: 0.85em; }
+  .data-links { font-weight: 600; }
+  .table-note { font-size: 0.9em; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="site-logo" href="index.html">Scrape<span>Tools</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="scraperapi-vs-scrapingbee.html">ScraperAPI vs ScrapingBee</a></li>
+        <li><a href="scraperapi-vs-bright-data.html">ScraperAPI vs Bright Data</a></li>
+        <li><a href="cheapest-web-scraping-api.html">Cheapest API</a></li>
+        <li><a href="web-scraping-api-cost-per-1000-requests.html">Cost per 1,000 requests</a></li>
+        <li><a href="web-scraping-apis-with-free-tier.html">Free Tiers</a></li>
+        <li><a href="scraperapi-free-trial.html">ScraperAPI free trial</a></li>
+        <li><a href="scraperapi-cost-calculator.html">Cost calculator</a></li>
+        <li><a href="methodology.html">Methodology</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container prose">
+    <span class="freshness-stamp">Crawl data: 18 Nov 2026 and 19 Nov 2026</span>
+    <h1>ATS public job posting APIs: what 30,590 job boards returned</h1>
+    <p>First-hand numbers from the ScrapeTools job-index refresh, which reads company job boards on six applicant tracking systems (ATS) through their public, keyless job posting APIs.</p>
+  </div>
+</section>
+
+<main>
+  <div class="container prose">
+    <div class="answer-first">
+      <span class="answer-first-label">Short answer</span>
+      <p>The public job posting APIs of Greenhouse, Lever, Ashby, Recruitee and Personio are dependable once you know a board exists: on 19 Nov they returned a job list for 19,768 of 19,805 known boards (99.8%), with no API key. The waste is in finding boards: 36.0% of 30,928 board addresses taken from Common Crawl answered "not a board". Workable is the exception: it stopped answering after 3,834 to 3,840 boards in each pass, and the recorded stop was an HTTP 429 asking for a 24-hour wait.</p>
+    </div>
+    <p class="data-links">Download the per-ATS numbers: <a href="data/ats-board-crawl-2026-11.csv" data-goatcounter-click="download/ats-board-crawl-csv">CSV</a> · <a href="data/ats-board-crawl-2026-11.json" data-goatcounter-click="download/ats-board-crawl-json">JSON</a></p>
+
+    <h2>How many discovered board addresses are real job boards?</h2>
+    <p>Between 57.1% (Personio) and 75.5% (Ashby) of the addresses were live boards on their first check. Every address came from Common Crawl's public URL index, which keeps links to boards that have since closed or moved. "Not a board" means HTTP 404, 410 or 401, or a response that is not the job API; such an address is not read again.</p>
+    <div class="table-wrap">
+      <table class="crawl-table">
+        <caption>First check of each board address, 18 Nov 2026</caption>
+        <thead><tr><th>ATS</th><th>Addresses</th><th>Not a board</th><th>Share</th></tr></thead>
+        <tbody>
+          <tr><td data-label="ATS">Greenhouse</td><td data-label="Addresses">10,154</td><td data-label="Not a board">3,654</td><td data-label="Share">36.0%</td></tr>
+          <tr><td data-label="ATS">Lever</td><td data-label="Addresses">3,855</td><td data-label="Not a board">1,560</td><td data-label="Share">40.5%</td></tr>
+          <tr><td data-label="ATS">Ashby</td><td data-label="Addresses">4,915</td><td data-label="Not a board">1,202</td><td data-label="Share">24.5%</td></tr>
+          <tr><td data-label="ATS">Recruitee</td><td data-label="Addresses">4,807</td><td data-label="Not a board">1,619</td><td data-label="Share">33.7%</td></tr>
+          <tr><td data-label="ATS">Personio</td><td data-label="Addresses">7,197</td><td data-label="Not a board">3,088</td><td data-label="Share">42.9%</td></tr>
+          <tr><td data-label="ATS">Workable*</td><td data-label="Addresses">10,785</td><td data-label="Not a board">153</td><td data-label="Share">4.0%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">*Workable's lane stopped on 18 Nov before reading any board. Its share is of the 3,834 addresses read on 19 Nov before its rate limit.</p>
+
+    <!-- ad:after-answer -->
+
+    <h2>How reliable are the APIs on a daily re-check?</h2>
+    <p>Very, for boards already known to exist. On 19 Nov the crawl read every board not ruled out the day before; Greenhouse alone returned 191,853 of the 461,985 jobs.</p>
+    <div class="table-wrap">
+      <table class="crawl-table">
+        <caption>Re-check of known boards, 19 Nov 2026</caption>
+        <thead><tr><th>ATS</th><th>Job list returned</th><th>Jobs per board</th><th>No jobs</th><th>Seconds per board</th></tr></thead>
+        <tbody>
+          <tr><td data-label="ATS">Greenhouse</td><td data-label="Job list returned">99.9%</td><td data-label="Jobs per board">29.5</td><td data-label="No jobs">14.6%</td><td data-label="Seconds per board">0.08</td></tr>
+          <tr><td data-label="ATS">Lever</td><td data-label="Job list returned">99.7%</td><td data-label="Jobs per board">29.7</td><td data-label="No jobs">23.0%</td><td data-label="Seconds per board">2.15</td></tr>
+          <tr><td data-label="ATS">Ashby</td><td data-label="Job list returned">99.9%</td><td data-label="Jobs per board">16.3</td><td data-label="No jobs">10.0%</td><td data-label="Seconds per board">0.08</td></tr>
+          <tr><td data-label="ATS">Recruitee</td><td data-label="Job list returned">99.5%</td><td data-label="Jobs per board">14.8</td><td data-label="No jobs">13.6%</td><td data-label="Seconds per board">0.25</td></tr>
+          <tr><td data-label="ATS">Personio</td><td data-label="Job list returned">99.9%</td><td data-label="Jobs per board">7.8</td><td data-label="No jobs">13.6%</td><td data-label="Seconds per board">1.03</td></tr>
+          <tr><td data-label="ATS">Workable</td><td data-label="Job list returned">3,834 read, then stopped</td><td data-label="Jobs per board">18.2</td><td data-label="No jobs">41.7%</td><td data-label="Seconds per board">1.01</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Job list returned: share of known boards whose API answered with jobs. No jobs: share of boards with an empty list. Seconds per board: each ATS's pass time divided by its boards, at 4 requests at a time for Greenhouse, Ashby and Recruitee and one a second for the others. That is the pace the crawl allowed itself, not each API's limit; Lever is slower than one a second because each Lever request waits for the previous answer.</p>
+
+    <h2>Why requests failed</h2>
+    <ul>
+      <li><strong>Workable stops after a few thousand requests.</strong> On 18 Nov it answered HTTP 429 with <code>Retry-After: 84362</code> (23.4 hours) before any board was read, and the crawler stops a lane told to wait over an hour. Yet on 19 Nov it answered again before that wait was up: 3,840 boards in the first pass and 3,834 in the second, which began 2.4 hours after the first, both at one request a second. The second pass's stop was HTTP 429 with <code>Retry-After: 86400</code> (24.0 hours), and its other 6,785 checks ended within 0.8 seconds, without a request. Budget for a few thousand Workable requests per run rather than for the stated wait.</li>
+      <li><strong>Personio blocks bursts.</strong> Its first pass, several requests at a time, stopped after 114 seconds, when 20 of the last 50 answers were HTTP 403 or 429; only 515 boards had answered. At one request a second the other 6,682 boards answered with no errors in 2.8 hours, and the 19 Nov pass had none either.</li>
+      <li><strong>Boards vanish overnight.</strong> 6 Greenhouse, 8 Lever, 3 Ashby, 8 Recruitee and 3 Personio boards that were live on 18 Nov answered "not a board" on 19 Nov.</li>
+      <li><strong>Some addresses never answer.</strong> The same 9 Recruitee addresses failed in every pass on both days without returning 404: timeouts, 5xx or 403 (the reports do not split them).</li>
+      <li><strong>A job list is not always enough.</strong> For 126 Lever, 21 Ashby and 15 Personio boards the API returned jobs, but the hosted board page answered 404, so job links would not open. The index leaves those boards out.</li>
+    </ul>
+
+    <h2>Endpoints and the request rate that held</h2>
+    <ul class="endpoint-list">
+      <li><strong>Greenhouse:</strong> <code>boards-api.greenhouse.io/v1/boards/{token}/jobs</code>, 4 at a time, no failures.</li>
+      <li><strong>Lever:</strong> <code>api.lever.co/v0/postings/{token}?mode=json</code>, one a second (its robots.txt sets <code>Crawl-delay: 1</code>).</li>
+      <li><strong>Ashby:</strong> <code>api.ashbyhq.com/posting-api/job-board/{token}</code>, 4 at a time, no failures.</li>
+      <li><strong>Recruitee:</strong> <code>{token}.recruitee.com/api/offers/</code>, 4 at a time.</li>
+      <li><strong>Personio:</strong> <code>{token}.jobs.personio.de/xml</code> (some accounts use <code>.com</code>), one a second.</li>
+      <li><strong>Workable:</strong> <code>apply.workable.com/api/v1/widget/accounts/{token}</code>, one a second, still rate-limited.</li>
+    </ul>
+    <p>Field lists are in the vendors' docs: <a href="https://docs.greenhouse.io/job-board.html">Greenhouse Job Board API</a>, <a href="https://github.com/lever/postings-api">Lever Postings API</a>, <a href="https://developers.ashbyhq.com/docs/public-job-posting-api">Ashby Job Postings API</a>.</p>
+
+    <h2>Plan a crawl with these rates</h2>
+    <p>The planner applies the rates above to your own number of board addresses, assuming they behave like the ones in this crawl. It reads the same JSON file you can download.</p>
+    <div class="calculator" id="cp">
+      <div class="field-grid">
+        <div>
+          <label for="cp-ats">ATS</label>
+          <select id="cp-ats">
+            <option>Greenhouse</option><option>Lever</option><option>Ashby</option>
+            <option>Recruitee</option><option>Personio</option><option>Workable</option>
+          </select>
+        </div>
+        <div>
+          <label for="cp-n">Board addresses</label>
+          <input id="cp-n" type="number" inputmode="numeric" min="1" step="1" value="1000">
+          <p class="field-help">Whole number you plan to read.</p>
+        </div>
+        <div>
+          <label for="cp-mode">The addresses are</label>
+          <select id="cp-mode">
+            <option value="new">New, from discovery</option>
+            <option value="known">Known boards, read again</option>
+          </select>
+        </div>
+      </div>
+      <p class="form-error" id="cp-error" role="alert" hidden></p>
+      <div class="calculator-result" id="cp-result" aria-live="polite">
+        <p class="result-label">Expected at this crawl's rates</p>
+        <p class="result-number" id="cp-jobs"></p>
+        <ul id="cp-list"></ul>
+      </div>
+      <noscript><p>The planner needs JavaScript. The tables above hold the same figures.</p></noscript>
+    </div>
+
+    <h2>Day over day</h2>
+    <p>Totals barely moved. From the 18 Nov index to 19 Nov, live boards changed by -6 at Greenhouse, -4 at Lever, -3 at Ashby, -8 at Recruitee and -3 at Personio, and jobs by -0.05%, -0.53%, -0.01%, +0.09% and +0.03%. For the five ATSs that finished both 19 Nov passes, 2.4 hours apart, job counts differed by 38 or fewer. These are net counts: the reports do not show how many jobs opened and closed in between.</p>
+
+    <h2>Method and limits</h2>
+    <ul>
+      <li><strong>What ran:</strong> the refresh behind our job search index, from one machine, with a generic user agent and no login, key, proxy or browser. It retries 429, 5xx and timeouts up to 4 times with backoff, and stops a lane when 20 of its last 50 answers are HTTP 403 or 429 or when a 429 asks to wait over an hour.</li>
+      <li><strong>Addresses:</strong> board URLs in Common Crawl's index. Shares describe those addresses, not how many companies use each ATS.</li>
+      <li><strong>Dates:</strong> reports exist for two days, 18 Nov 2026 and 19 Nov 2026 (UTC): a day-over-day change, not a trend.</li>
+      <li><strong>Excluded:</strong> BambooHR, read on 18 Nov and then dropped from the crawler because its developer terms bar crawling.</li>
+      <li><strong>Reproducible:</strong> <a href="https://github.com/sanjayamaharjancodes/scraping-tools-directory/blob/main/ct-001/build_data.py">build_data.py</a> rebuilds the CSV and JSON from the refresh's report files, records each file's SHA-256 hash, and fails if a number on this page is not in that data. This page was drafted with AI tools from those files.</li>
+    </ul>
+
+    <h2>Read these feeds yourself</h2>
+    <p>The open-source <a href="https://github.com/sanjayamaharjancodes/ats-job-feed" data-goatcounter-click="github/ats-job-feed-scrapetools-crawl">ats-job-feed</a> library reads the Greenhouse, Lever, Ashby and Workable public APIs into one schema, and the hosted <a href="https://apify.com/scaleturn/career-site-job-feed" data-goatcounter-click="apify/career-site-job-feed-scrapetools-crawl">Career Site Job Feed</a> runs it on Apify. Both use the same public endpoints as the refresh; the figures on this page come from the refresh, not from them.</p>
+
+    <h2>Sources</h2>
+    <p class="source-line">ScrapeTools job-index refresh reports for 18 Nov 2026 and 19 Nov 2026, summarized in <a href="data/ats-board-crawl-2026-11.csv">ats-board-crawl-2026-11.csv</a> and <a href="data/ats-board-crawl-2026-11.json">ats-board-crawl-2026-11.json</a>.<br>
+    Board addresses: <a href="https://commoncrawl.org/">Common Crawl</a> URL index.<br>
+    Endpoint documentation: <a href="https://docs.greenhouse.io/job-board.html">Greenhouse</a>, <a href="https://github.com/lever/postings-api">Lever</a>, <a href="https://developers.ashbyhq.com/docs/public-job-posting-api">Ashby</a>, checked 19 Nov 2026.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="about.html#contact">Contact</a></li>
+      <li><a href="methodology.html">Methodology</a></li>
+      <li><a href="disclosure.html">Affiliate Disclosure</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+    </ul>
+    <div class="footer-disclosure">
+      <strong>Affiliate disclosure:</strong> ScrapeTools is a comparison site published by Scaleturn. Pages are researched and drafted with AI tools and checked against vendor sources by an automated reviewer; they are not individually reviewed by a person. Some links to vendors are affiliate/referral links. If you sign up through one, we may earn a commission at no extra cost to you.
+    </div>
+    <p>&copy; 2026 ScrapeTools, published by <a href="https://scaleturn.com/">Scaleturn</a>. Pricing and features change. Always confirm current terms on the vendor's own site before buying.</p>
+  </div>
+</footer>
+<script>
+(function () {
+  "use strict";
+  function $(id) { return document.getElementById(id); }
+  var atsSel = $("cp-ats"), countIn = $("cp-n"), modeSel = $("cp-mode"), err = $("cp-error"), big = $("cp-jobs"), list = $("cp-list");
+  var nf = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
+  var data = null;
+
+  function duration(s) {
+    if (s < 90) return nf.format(s) + " seconds";
+    if (s < 5400) return nf.format(s / 60) + " minutes";
+    return (s / 3600).toFixed(1) + " hours";
+  }
+  function item(text) { var li = document.createElement("li"); li.textContent = text; list.appendChild(li); }
+  function row(name) {
+    for (var i = 0; i < data.rows.length; i++) if (data.rows[i].ats === name) return data.rows[i];
+    return null;
+  }
+  function rate(name) {
+    var lane = data.method.lanes[name.toLowerCase()];
+    return lane.min_interval_ms ? "one request a second" : lane.concurrency + " requests at a time";
+  }
+  function update() {
+    if (!data) return;
+    var v = Number(countIn.value);
+    list.textContent = "";
+    if (!(v >= 1 && v <= 10000000 && Math.floor(v) === v)) {
+      err.textContent = "Enter a whole number of board addresses from 1 to 10,000,000.";
+      err.hidden = false;
+      big.textContent = "";
+      return;
+    }
+    err.hidden = true;
+    var r = row(atsSel.value), isNew = modeSel.value === "new", live, dead;
+    if (r.ats === "Workable") {
+      live = r.live_pct_of_answered_19nov; dead = r.not_a_board_pct_of_answered_19nov;
+    } else if (isNew) {
+      live = r.live_pct_18nov; dead = r.not_a_board_pct_18nov;
+    } else {
+      live = r.answered_pct_19nov; dead = 100 * r.not_a_board_19nov / r.checked_19nov;
+    }
+    var boards = v * live / 100;
+    big.textContent = "About " + nf.format(boards * r.jobs_per_live_board_19nov) + " jobs";
+    item("About " + nf.format(boards) + " boards return a job list (" + live.toFixed(1) + "%).");
+    item("About " + nf.format(v * dead / 100) + " answer “not a board” (" + dead.toFixed(1) + "%).");
+    item("About " + duration(v * r.seconds_per_board_19nov) + " at " + rate(r.ats) + ", the pace of the 19 Nov pass.");
+    if (r.ats === "Workable") {
+      item("Workable's shares come from the boards read before its rate limit; all its boards were first checked on 19 Nov. In both passes it stopped answering after " +
+        nf.format(r.answered_before_stop_19nov) + " to " + nf.format(r.answered_before_stop_19nov_other_pass) +
+        " boards and asked for a " + nf.format(data.summary.workable_retry_after_hours_19nov) + "-hour wait.");
+    }
+    if (r.ats === "Personio") {
+      item("Several requests at a time drew HTTP 403 and 429 answers within " + data.summary.personio_pass_a_seconds_18nov + " seconds; one a second had none.");
+    }
+  }
+  [atsSel, countIn, modeSel].forEach(function (el) {
+    el.addEventListener("input", update);
+    el.addEventListener("change", update);
+  });
+  fetch("data/ats-board-crawl-2026-11.json")
+    .then(function (res) { if (!res.ok) throw new Error("HTTP " + res.status); return res.json(); })
+    .then(function (d) { data = d; update(); })
+    .catch(function () {
+      err.textContent = "The data file did not load. The tables above hold the same figures.";
+      err.hidden = false;
+    });
+})();
+</script>
+<script>window.goatcounter = {path: function(p) { return location.host + p }}</script>
+<script data-goatcounter="https://scaleturn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

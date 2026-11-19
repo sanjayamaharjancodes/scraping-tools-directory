@@ -3,26 +3,27 @@
  "facts": [
   {
    "id": "row-greenhouse",
-   "claim": "Greenhouse per-ATS crawl figures, 18-19 Nov 2026",
+   "claim": "Greenhouse per-ATS crawl figures (CSV row)",
    "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.csv",
    "fetched": "2026-11-19",
-   "excerpt": "Greenhouse,10154,6500,3654,0,64.0,36.0,,6500,5555,191948,29.5,34.6,14.5,0,6500,yes,6494,6,0,0,99.9,,,,191815,29.5,0.08,521.4,-6,-133,-0.07,6494,191853,-38,",
+   "excerpt": "Greenhouse: candidates_18nov=10154; live_18nov=6500; not_a_board_18nov=3654; failed_18nov=0; live_pct_18nov=64.0; not_a_board_pct_18nov=36.0; index_boards_18nov=6500; index_boards_with_jobs_18nov=5555; index_jobs_18nov=191948; jobs_per_board_18nov=29.5; jobs_per_board_with_jobs_18nov=34.6; empty_board_pct_18nov=14.5; no_public_page_18nov=0; checked_19nov=6500; complete_19nov=yes; live_19nov=6494; not_a_board_19nov=6; failed_19nov=0; no_public_page_19nov=0; answered_19nov=6494; answered_pct_19nov=99.9; live_pct_19nov=99.9; index_boards_19nov=6494; index_boards_with_jobs_19nov=5549; empty_board_pct_19nov=14.6; jobs_19nov=191853; jobs_per_live_board_19nov=29.5; seconds_per_board_19nov=0.08; lane_seconds_19nov=507.4; boards_change_18_to_19nov=-6; jobs_change_18_to_19nov=-95; jobs_change_pct_18_to_19nov=-0.05; live_19nov_other_pass=6494; jobs_19nov_other_pass=191815; jobs_diff_between_passes=38",
    "numbers": [
-    "133",
-    "38",
-    "6",
-    "0.07",
     "0",
+    "0.05",
     "0.08",
     "6",
     "14.5",
+    "14.6",
     "29.5",
     "34.6",
     "36.0",
+    "38",
     "64.0",
+    "95",
     "99.9",
-    "521.4",
+    "507.4",
     "3654",
+    "5549",
     "5555",
     "6494",
     "6500",
@@ -34,58 +35,70 @@
   },
   {
    "id": "row-lever",
-   "claim": "Lever per-ATS crawl figures, 18-19 Nov 2026",
+   "claim": "Lever per-ATS crawl figures (CSV row)",
    "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.csv",
    "fetched": "2026-11-19",
-   "excerpt": "Lever,3855,2295,1560,0,59.5,40.5,,2165,1665,64451,29.8,38.7,23.1,130,1000,no (1000 of 2295),950,,,,,,,,37259,39.2,2.51,2507.0,,,,,,,",
+   "excerpt": "Lever: candidates_18nov=3855; live_18nov=2295; not_a_board_18nov=1560; failed_18nov=0; live_pct_18nov=59.5; not_a_board_pct_18nov=40.5; index_boards_18nov=2165; index_boards_with_jobs_18nov=1665; index_jobs_18nov=64451; jobs_per_board_18nov=29.8; jobs_per_board_with_jobs_18nov=38.7; empty_board_pct_18nov=23.1; no_public_page_18nov=130; checked_19nov=2295; complete_19nov=yes; live_19nov=2161; not_a_board_19nov=8; failed_19nov=0; no_public_page_19nov=126; answered_19nov=2287; answered_pct_19nov=99.7; live_pct_19nov=94.2; index_boards_19nov=2161; index_boards_with_jobs_19nov=1664; empty_board_pct_19nov=23.0; jobs_19nov=64112; jobs_per_live_board_19nov=29.7; seconds_per_board_19nov=2.15; lane_seconds_19nov=4926.6; boards_change_18_to_19nov=-4; jobs_change_18_to_19nov=-339; jobs_change_pct_18_to_19nov=-0.53",
    "numbers": [
     "0",
-    "2.51",
+    "0.53",
+    "2.15",
+    "4",
+    "8",
+    "23.0",
     "23.1",
+    "29.7",
     "29.8",
     "38.7",
-    "39.2",
     "40.5",
     "59.5",
+    "94.2",
+    "99.7",
+    "126",
     "130",
-    "950",
-    "1000",
+    "339",
     "1560",
+    "1664",
     "1665",
+    "2161",
     "2165",
+    "2287",
     "2295",
-    "2507.0",
     "3855",
-    "37259",
+    "4926.6",
+    "64112",
     "64451"
    ]
   },
   {
    "id": "row-ashby",
-   "claim": "Ashby per-ATS crawl figures, 18-19 Nov 2026",
+   "claim": "Ashby per-ATS crawl figures (CSV row)",
    "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.csv",
    "fetched": "2026-11-19",
-   "excerpt": "Ashby,4915,3713,1202,0,75.5,24.5,,3692,3320,60132,16.3,18.1,10.1,21,3713,yes,3689,3,0,21,99.4,,,,60091,16.3,0.08,301.2,-3,-41,-0.07,3689,60125,-34,",
+   "excerpt": "Ashby: candidates_18nov=4915; live_18nov=3713; not_a_board_18nov=1202; failed_18nov=0; live_pct_18nov=75.5; not_a_board_pct_18nov=24.5; index_boards_18nov=3692; index_boards_with_jobs_18nov=3320; index_jobs_18nov=60132; jobs_per_board_18nov=16.3; jobs_per_board_with_jobs_18nov=18.1; empty_board_pct_18nov=10.1; no_public_page_18nov=21; checked_19nov=3713; complete_19nov=yes; live_19nov=3689; not_a_board_19nov=3; failed_19nov=0; no_public_page_19nov=21; answered_19nov=3710; answered_pct_19nov=99.9; live_pct_19nov=99.4; index_boards_19nov=3689; index_boards_with_jobs_19nov=3321; empty_board_pct_19nov=10.0; jobs_19nov=60125; jobs_per_live_board_19nov=16.3; seconds_per_board_19nov=0.08; lane_seconds_19nov=306.4; boards_change_18_to_19nov=-3; jobs_change_18_to_19nov=-7; jobs_change_pct_18_to_19nov=-0.01; live_19nov_other_pass=3689; jobs_19nov_other_pass=60091; jobs_diff_between_passes=34",
    "numbers": [
-    "41",
-    "34",
-    "3",
-    "0.07",
     "0",
+    "0.01",
     "0.08",
     "3",
+    "7",
+    "10.0",
     "10.1",
     "16.3",
     "18.1",
     "21",
     "24.5",
+    "34",
     "75.5",
     "99.4",
-    "301.2",
+    "99.9",
+    "306.4",
     "1202",
     "3320",
+    "3321",
     "3689",
     "3692",
+    "3710",
     "3713",
     "4915",
     "60091",
@@ -95,15 +108,14 @@
   },
   {
    "id": "row-recruitee",
-   "claim": "Recruitee per-ATS crawl figures, 18-19 Nov 2026",
+   "claim": "Recruitee per-ATS crawl figures (CSV row)",
    "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.csv",
    "fetched": "2026-11-19",
-   "excerpt": "Recruitee,4807,3179,1619,9,66.1,33.7,,3179,2748,46974,14.8,17.1,13.6,0,3188,yes,3171,8,9,0,99.5,,,,47020,14.8,0.26,822.4,-8,46,0.1,3171,47017,3,",
+   "excerpt": "Recruitee: candidates_18nov=4807; live_18nov=3179; not_a_board_18nov=1619; failed_18nov=9; live_pct_18nov=66.1; not_a_board_pct_18nov=33.7; index_boards_18nov=3179; index_boards_with_jobs_18nov=2748; index_jobs_18nov=46974; jobs_per_board_18nov=14.8; jobs_per_board_with_jobs_18nov=17.1; empty_board_pct_18nov=13.6; no_public_page_18nov=0; checked_19nov=3188; complete_19nov=yes; live_19nov=3171; not_a_board_19nov=8; failed_19nov=9; no_public_page_19nov=0; answered_19nov=3171; answered_pct_19nov=99.5; live_pct_19nov=99.5; index_boards_19nov=3171; index_boards_with_jobs_19nov=2740; empty_board_pct_19nov=13.6; jobs_19nov=47017; jobs_per_live_board_19nov=14.8; seconds_per_board_19nov=0.25; lane_seconds_19nov=787.6; boards_change_18_to_19nov=-8; jobs_change_18_to_19nov=43; jobs_change_pct_18_to_19nov=0.09; live_19nov_other_pass=3171; jobs_19nov_other_pass=47020; jobs_diff_between_passes=-3",
    "numbers": [
-    "8",
     "0",
-    "0.1",
-    "0.26",
+    "0.09",
+    "0.25",
     "3",
     "8",
     "9",
@@ -111,11 +123,12 @@
     "14.8",
     "17.1",
     "33.7",
-    "46",
+    "43",
     "66.1",
     "99.5",
-    "822.4",
+    "787.6",
     "1619",
+    "2740",
     "2748",
     "3171",
     "3179",
@@ -128,30 +141,33 @@
   },
   {
    "id": "row-personio",
-   "claim": "Personio per-ATS crawl figures, 18-19 Nov 2026",
+   "claim": "Personio per-ATS crawl figures (CSV row)",
    "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.csv",
    "fetched": "2026-11-19",
-   "excerpt": "Personio,7197,4109,3088,0,57.1,42.9,20 of its last 50 answers were HTTP 403 or 429,4094,3540,31860,7.8,9.0,13.5,15,4109,yes,4091,3,0,15,99.6,,,,31869,7.8,1.01,4169.8,-3,9,0.03,4091,31869,0,",
+   "excerpt": "Personio: candidates_18nov=7197; live_18nov=4109; not_a_board_18nov=3088; failed_18nov=0; live_pct_18nov=57.1; not_a_board_pct_18nov=42.9; lane_stopped_18nov=20 of its last 50 answers were HTTP 403 or 429; index_boards_18nov=4094; index_boards_with_jobs_18nov=3540; index_jobs_18nov=31860; jobs_per_board_18nov=7.8; jobs_per_board_with_jobs_18nov=9.0; empty_board_pct_18nov=13.5; no_public_page_18nov=15; checked_19nov=4109; complete_19nov=yes; live_19nov=4091; not_a_board_19nov=3; failed_19nov=0; no_public_page_19nov=15; answered_19nov=4106; answered_pct_19nov=99.9; live_pct_19nov=99.6; index_boards_19nov=4091; index_boards_with_jobs_19nov=3535; empty_board_pct_19nov=13.6; jobs_19nov=31869; jobs_per_live_board_19nov=7.8; seconds_per_board_19nov=1.03; lane_seconds_19nov=4227.1; boards_change_18_to_19nov=-3; jobs_change_18_to_19nov=9; jobs_change_pct_18_to_19nov=0.03; live_19nov_other_pass=4091; jobs_19nov_other_pass=31869; jobs_diff_between_passes=0",
    "numbers": [
-    "3",
     "0",
     "0.03",
-    "1.01",
+    "1.03",
     "3",
     "7.8",
-    "9.0",
     "9",
+    "9.0",
     "13.5",
+    "13.6",
     "15",
     "42.9",
     "57.1",
     "99.6",
+    "99.9",
     "3088",
+    "3535",
     "3540",
     "4091",
     "4094",
+    "4106",
     "4109",
-    "4169.8",
+    "4227.1",
     "7197",
     "31860",
     "31869"
@@ -159,26 +175,28 @@
   },
   {
    "id": "row-workable",
-   "claim": "Workable per-ATS crawl figures, 18-19 Nov 2026",
+   "claim": "Workable per-ATS crawl figures (CSV row)",
    "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.csv",
    "fetched": "2026-11-19",
-   "excerpt": "Workable,10785,0,0,10785,0.0,0.0,HTTP 429 with Retry-After 84362 s,,,,,,,,10785,yes,3683,157,6945,0,34.1,3840,95.9,6785,67003,18.2,1.01,3866.3,,,,3681,67009,-6,3834",
+   "excerpt": "Workable: candidates_18nov=10785; live_18nov=0; not_a_board_18nov=0; failed_18nov=10785; lane_stopped_18nov=HTTP 429 with Retry-After 84362 s; checked_19nov=10785; complete_19nov=yes; live_19nov=3681; not_a_board_19nov=153; failed_19nov=6951; no_public_page_19nov=0; answered_before_stop_19nov=3834; live_pct_of_answered_19nov=96.0; not_a_board_pct_of_answered_19nov=4.0; failed_at_once_19nov=6785; failed_at_once_seconds_19nov=0.8; index_boards_19nov=3681; index_boards_with_jobs_19nov=2146; empty_board_pct_19nov=41.7; jobs_19nov=67009; jobs_per_live_board_19nov=18.2; seconds_per_board_19nov=1.01; lane_seconds_19nov=3858.4; live_19nov_other_pass=3683; jobs_19nov_other_pass=67003; jobs_diff_between_passes=6; answered_before_stop_19nov_other_pass=3840",
    "numbers": [
-    "6",
     "0",
-    "0.0",
+    "0.8",
     "1.01",
+    "4.0",
+    "6",
     "18.2",
-    "34.1",
-    "95.9",
-    "157",
+    "41.7",
+    "96.0",
+    "153",
+    "2146",
     "3681",
     "3683",
     "3834",
     "3840",
-    "3866.3",
+    "3858.4",
     "6785",
-    "6945",
+    "6951",
     "10785",
     "67003",
     "67009"
@@ -275,6 +293,21 @@
    ]
   },
   {
+   "id": "index_built_18nov",
+   "claim": "index built 18nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"index_built_18nov\": \"2026-11-18T10:20:58.743Z\"",
+   "numbers": [
+    "10",
+    "11",
+    "18",
+    "20",
+    "58.743",
+    "2026"
+   ]
+  },
+  {
    "id": "index_empty_board_pct_18nov",
    "claim": "index empty board pct 18nov",
    "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
@@ -299,9 +332,9 @@
    "claim": "live 19nov",
    "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
    "fetched": "2026-11-19",
-   "excerpt": "\"live_19nov\": 22078",
+   "excerpt": "\"live_19nov\": 23287",
    "numbers": [
-    "22078"
+    "23287"
    ]
   },
   {
@@ -309,9 +342,49 @@
    "claim": "jobs 19nov",
    "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
    "fetched": "2026-11-19",
-   "excerpt": "\"jobs_19nov\": 435057",
+   "excerpt": "\"jobs_19nov\": 461985",
    "numbers": [
-    "435057"
+    "461985"
+   ]
+  },
+  {
+   "id": "primary_19nov_pass",
+   "claim": "primary 19nov pass",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"primary_19nov_pass\": \"pass2\"",
+   "numbers": [
+    "2"
+   ]
+  },
+  {
+   "id": "pass1_19nov_start",
+   "claim": "pass1 19nov start",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"pass1_19nov_start\": \"2026-11-19T00:16:02.759Z\"",
+   "numbers": [
+    "00",
+    "02.759",
+    "11",
+    "16",
+    "19",
+    "2026"
+   ]
+  },
+  {
+   "id": "pass2_19nov_start",
+   "claim": "pass2 19nov start",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"pass2_19nov_start\": \"2026-11-19T02:41:33.776Z\"",
+   "numbers": [
+    "02",
+    "11",
+    "19",
+    "33.776",
+    "41",
+    "2026"
    ]
   },
   {
@@ -335,6 +408,40 @@
    ]
   },
   {
+   "id": "personio_stop_reason_18nov",
+   "claim": "personio stop reason 18nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"personio_stop_reason_18nov\": \"20 of its last 50 answers were HTTP 403 or 429\"",
+   "numbers": [
+    "20",
+    "50",
+    "403",
+    "429"
+   ]
+  },
+  {
+   "id": "workable_stop_reason_18nov",
+   "claim": "workable stop reason 18nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"workable_stop_reason_18nov\": \"HTTP 429 with Retry-After 84362 s\"",
+   "numbers": [
+    "429",
+    "84362"
+   ]
+  },
+  {
+   "id": "pass2_19nov_report_seconds",
+   "claim": "pass2 19nov report seconds",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"pass2_19nov_report_seconds\": 4927",
+   "numbers": [
+    "4927"
+   ]
+  },
+  {
    "id": "workable_retry_after_hours_18nov",
    "claim": "workable retry after hours 18nov",
    "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
@@ -342,6 +449,127 @@
    "excerpt": "\"workable_retry_after_hours_18nov\": 23.4",
    "numbers": [
     "23.4"
+   ]
+  },
+  {
+   "id": "workable_18nov_run_start",
+   "claim": "workable 18nov run start",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"workable_18nov_run_start\": \"2026-11-18T04:20:44.645000Z\"",
+   "numbers": [
+    "04",
+    "11",
+    "18",
+    "20",
+    "44.645000",
+    "2026"
+   ]
+  },
+  {
+   "id": "workable_18nov_retry_after_earliest_end",
+   "claim": "workable 18nov retry after earliest end",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"workable_18nov_retry_after_earliest_end\": \"2026-11-19T03:46:46.645000Z\"",
+   "numbers": [
+    "03",
+    "11",
+    "19",
+    "46",
+    "46.645000",
+    "2026"
+   ]
+  },
+  {
+   "id": "workable_stop_reason_19nov",
+   "claim": "workable stop reason 19nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"workable_stop_reason_19nov\": \"HTTP 429 with Retry-After 86400 s\"",
+   "numbers": [
+    "429",
+    "86400"
+   ]
+  },
+  {
+   "id": "workable_retry_after_s_19nov",
+   "claim": "workable retry after s 19nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"workable_retry_after_s_19nov\": 86400",
+   "numbers": [
+    "86400"
+   ]
+  },
+  {
+   "id": "workable_retry_after_hours_19nov",
+   "claim": "workable retry after hours 19nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"workable_retry_after_hours_19nov\": 24.0",
+   "numbers": [
+    "24.0"
+   ]
+  },
+  {
+   "id": "recruitee_never_answered_19nov",
+   "claim": "recruitee never answered 19nov",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"recruitee_never_answered_19nov\": 9",
+   "numbers": [
+    "9"
+   ]
+  },
+  {
+   "id": "answered_pct_19nov_min",
+   "claim": "answered pct 19nov min",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"answered_pct_19nov_min\": 99.5",
+   "numbers": [
+    "99.5"
+   ]
+  },
+  {
+   "id": "answered_pct_19nov_max",
+   "claim": "answered pct 19nov max",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"answered_pct_19nov_max\": 99.9",
+   "numbers": [
+    "99.9"
+   ]
+  },
+  {
+   "id": "rechecked_19nov_five_ats",
+   "claim": "rechecked 19nov five ats",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"rechecked_19nov_five_ats\": 19805",
+   "numbers": [
+    "19805"
+   ]
+  },
+  {
+   "id": "answered_19nov_five_ats",
+   "claim": "answered 19nov five ats",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"answered_19nov_five_ats\": 19768",
+   "numbers": [
+    "19768"
+   ]
+  },
+  {
+   "id": "answered_pct_19nov_five_ats",
+   "claim": "answered pct 19nov five ats",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"answered_pct_19nov_five_ats\": 99.8",
+   "numbers": [
+    "99.8"
    ]
   },
   {
@@ -642,6 +870,40 @@
    "excerpt": "\"personio_pass_b_seconds\": 10046",
    "numbers": [
     "10046"
+   ]
+  },
+  {
+   "id": "board_status_miss",
+   "claim": "board status miss",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"board_status_miss\": \"answered 404, 410 or 401, or served something that is not its job API, once after being ok\"",
+   "numbers": [
+    "401",
+    "404",
+    "410"
+   ]
+  },
+  {
+   "id": "board_status_error",
+   "claim": "board status error",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"board_status_error\": \"failed for another reason (timeout, 5xx, 403, 429, stopped lane): its previous jobs are kept once\"",
+   "numbers": [
+    "5",
+    "403",
+    "429"
+   ]
+  },
+  {
+   "id": "board_status_nopage",
+   "claim": "board status nopage",
+   "source_url": "https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json",
+   "fetched": "2026-11-19",
+   "excerpt": "\"board_status_nopage\": \"its job feed answers, but its public board page on the ATS answers 404 (the company switched hosted pages off), so its job links would not open: left out of the index, checked again next refresh\"",
+   "numbers": [
+    "404"
    ]
   }
  ]

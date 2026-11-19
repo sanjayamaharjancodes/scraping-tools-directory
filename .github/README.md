@@ -19,10 +19,17 @@ This README lives in `.github/` so the Pages build does not publish it; GitHub s
   center, with a link and a verification date. Where a vendor does not publish a detail, the page says so.
   Promotional and annual-discount prices are not used as headline figures.
 - **Affiliate links.** ScraperAPI links carrying `fp_ref` are referral links, marked `rel="sponsored"`. The
-  relationship is named on `disclosure.html`, and a banner at the top of every page says a commission may be
+  relationship is named on `disclosure.html`, and a banner at the top of every vendor page says a commission may be
   earned through its vendor links and links to that disclosure. Other vendor links are plain.
 - **No benchmark results yet.** `methodology.html` describes the planned benchmark and says none has been run. Pages
   report vendor-published facts, never "we tested".
+- **One first-hand data page.** `ats-job-posting-api-crawl-data.html` reports our own job-index refresh (18-19 Nov
+  2026). Every figure on it comes from `data/ats-board-crawl-2026-11.{csv,json}`. `ct-001/build_data.py` rebuilds
+  those files from the refresh's report files, and its `--check` mode fails on any number on the page that is not
+  in them. That page has no affiliate links, so it carries no affiliate banner. `ct-001/` is kept out of the Pages
+  build by `_config.yml`.
+- **Retired pages.** Three pages are `noindex` and out of the sitemap since 19 Nov 2026. Their URLs still work and
+  link to a current page; `ct-001/RETIRED.md` lists them and how to reverse it.
 
 ## Updating content
 
