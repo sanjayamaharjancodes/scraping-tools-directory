@@ -65,6 +65,11 @@
       "url": "https://scrapetools.scaleturn.com/ats-job-posting-api-crawl-data.html",
       "title": "Public ATS Job Posting APIs: A 30,928-Address Crawl | ScrapeTools",
       "description": "Our crawl of 30,928 public ATS job board addresses and 19,805 re-checks, 18-19 Nov 2026: dead boards, failures, rate limits and jobs per board, with a CSV."
+    },
+    {
+      "url": "https://scrapetools.scaleturn.com/what-day-are-most-jobs-posted.html",
+      "title": "What Day Are Most Jobs Posted? Data on 117,153 Jobs | ScrapeTools",
+      "description": "Tuesday, narrowly: 20.7% of 117,153 jobs that 12,228 company job boards posted in four weeks to 15 Nov 2026. Posting hours by ATS and region, with a CSV."
     }
   ]
 }
