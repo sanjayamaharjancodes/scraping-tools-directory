@@ -9335,7 +9335,7 @@
    "claim": "AI training and data work: AI-named listings",
    "source_url": "https://scrapetools.scaleturn.com/data/ai-job-titles-2026-11.json",
    "fetched": "2026-11-19",
-   "excerpt": "id=training; group=AI training and data work; listings=4521; listings_pct=23.1; boards=41; boards_pct=1.0; top_board_listings=2865; top_board_pct=63.4; junior_pct=0.2; senior_pct=4.7; us_pct=9.5; europe_pct=11.3",
+   "excerpt": "id=training; group=AI training and data work; listings=4521; listings_pct=23.1; boards=41; boards_pct=1.0; top_board=Prolific Academic Ltd; top_board_ats=Greenhouse; top_board_listings=2865; top_board_pct=63.4; junior_pct=0.2; senior_pct=4.7; us_pct=9.5; europe_pct=11.3",
    "numbers": [
     "0.2",
     "1.0",
@@ -9354,7 +9354,7 @@
    "claim": "Leadership and founders: AI-named listings",
    "source_url": "https://scrapetools.scaleturn.com/data/ai-job-titles-2026-11.json",
    "fetched": "2026-11-19",
-   "excerpt": "id=leadership; group=Leadership and founders; listings=793; listings_pct=4.0; boards=400; boards_pct=10.1; top_board_listings=133; top_board_pct=16.8; junior_pct=0.5; senior_pct=72.1; us_pct=39.5; europe_pct=13.5",
+   "excerpt": "id=leadership; group=Leadership and founders; listings=793; listings_pct=4.0; boards=400; boards_pct=10.1; top_board=EWOR GmbH; top_board_ats=Recruitee; top_board_listings=133; top_board_pct=16.8; junior_pct=0.5; senior_pct=72.1; us_pct=39.5; europe_pct=13.5",
    "numbers": [
     "0.5",
     "4.0",
@@ -9373,7 +9373,7 @@
    "claim": "Research: AI-named listings",
    "source_url": "https://scrapetools.scaleturn.com/data/ai-job-titles-2026-11.json",
    "fetched": "2026-11-19",
-   "excerpt": "id=research; group=Research; listings=1053; listings_pct=5.4; boards=475; boards_pct=12.0; top_board_listings=75; top_board_pct=7.1; junior_pct=16.0; senior_pct=31.0; us_pct=46.7; europe_pct=17.7",
+   "excerpt": "id=research; group=Research; listings=1053; listings_pct=5.4; boards=475; boards_pct=12.0; top_board=Huawei Technologies Canada Co., Ltd.; top_board_ats=Recruitee; top_board_listings=75; top_board_pct=7.1; junior_pct=16.0; senior_pct=31.0; us_pct=46.7; europe_pct=17.7",
    "numbers": [
     "5.4",
     "7.1",
@@ -9392,7 +9392,7 @@
    "claim": "Customer-facing and consulting: AI-named listings",
    "source_url": "https://scrapetools.scaleturn.com/data/ai-job-titles-2026-11.json",
    "fetched": "2026-11-19",
-   "excerpt": "id=customer; group=Customer-facing and consulting; listings=1164; listings_pct=5.9; boards=519; boards_pct=13.1; top_board_listings=35; top_board_pct=3.0; junior_pct=3.0; senior_pct=31.8; us_pct=32.8; europe_pct=37.3",
+   "excerpt": "id=customer; group=Customer-facing and consulting; listings=1164; listings_pct=5.9; boards=519; boards_pct=13.1; top_board=OpenAI; top_board_ats=Ashby; top_board_listings=35; top_board_pct=3.0; junior_pct=3.0; senior_pct=31.8; us_pct=32.8; europe_pct=37.3",
    "numbers": [
     "3.0",
     "5.9",
@@ -9410,7 +9410,7 @@
    "claim": "Product and design: AI-named listings",
    "source_url": "https://scrapetools.scaleturn.com/data/ai-job-titles-2026-11.json",
    "fetched": "2026-11-19",
-   "excerpt": "id=product; group=Product and design; listings=1396; listings_pct=7.1; boards=578; boards_pct=14.6; top_board_listings=461; top_board_pct=33.0; junior_pct=1.9; senior_pct=46.9; us_pct=30.2; europe_pct=28.4",
+   "excerpt": "id=product; group=Product and design; listings=1396; listings_pct=7.1; boards=578; boards_pct=14.6; top_board=BJAK; top_board_ats=Ashby; top_board_listings=461; top_board_pct=33.0; junior_pct=1.9; senior_pct=46.9; us_pct=30.2; europe_pct=28.4",
    "numbers": [
     "1.9",
     "7.1",
@@ -9429,7 +9429,7 @@
    "claim": "Engineering: AI-named listings",
    "source_url": "https://scrapetools.scaleturn.com/data/ai-job-titles-2026-11.json",
    "fetched": "2026-11-19",
-   "excerpt": "id=engineering; group=Engineering; listings=7869; listings_pct=40.1; boards=2621; boards_pct=66.2; top_board_listings=374; top_board_pct=4.8; junior_pct=2.9; senior_pct=44.3; us_pct=39.5; europe_pct=22.6",
+   "excerpt": "id=engineering; group=Engineering; listings=7869; listings_pct=40.1; boards=2621; boards_pct=66.2; top_board=BJAK; top_board_ats=Ashby; top_board_listings=374; top_board_pct=4.8; junior_pct=2.9; senior_pct=44.3; us_pct=39.5; europe_pct=22.6",
    "numbers": [
     "2.9",
     "4.8",
@@ -9448,7 +9448,7 @@
    "claim": "Data science and analytics: AI-named listings",
    "source_url": "https://scrapetools.scaleturn.com/data/ai-job-titles-2026-11.json",
    "fetched": "2026-11-19",
-   "excerpt": "id=data; group=Data science and analytics; listings=301; listings_pct=1.5; boards=197; boards_pct=5.0; top_board_listings=25; top_board_pct=8.3; junior_pct=5.0; senior_pct=40.2; us_pct=38.2; europe_pct=24.3",
+   "excerpt": "id=data; group=Data science and analytics; listings=301; listings_pct=1.5; boards=197; boards_pct=5.0; top_board=Jobgether; top_board_ats=Lever; top_board_listings=25; top_board_pct=8.3; junior_pct=5.0; senior_pct=40.2; us_pct=38.2; europe_pct=24.3",
    "numbers": [
     "1.5",
     "5.0",
@@ -9466,7 +9466,7 @@
    "claim": "Sales, marketing and content: AI-named listings",
    "source_url": "https://scrapetools.scaleturn.com/data/ai-job-titles-2026-11.json",
    "fetched": "2026-11-19",
-   "excerpt": "id=gtm; group=Sales, marketing and content; listings=548; listings_pct=2.8; boards=321; boards_pct=8.1; top_board_listings=26; top_board_pct=4.7; junior_pct=7.3; senior_pct=25.7; us_pct=31.0; europe_pct=34.5",
+   "excerpt": "id=gtm; group=Sales, marketing and content; listings=548; listings_pct=2.8; boards=321; boards_pct=8.1; top_board=EverAI; top_board_ats=Ashby; top_board_listings=26; top_board_pct=4.7; junior_pct=7.3; senior_pct=25.7; us_pct=31.0; europe_pct=34.5",
    "numbers": [
     "2.8",
     "4.7",
@@ -9485,7 +9485,7 @@
    "claim": "Governance, policy and safety: AI-named listings",
    "source_url": "https://scrapetools.scaleturn.com/data/ai-job-titles-2026-11.json",
    "fetched": "2026-11-19",
-   "excerpt": "id=governance; group=Governance, policy and safety; listings=124; listings_pct=0.6; boards=89; boards_pct=2.2; top_board_listings=6; top_board_pct=4.8; junior_pct=0.8; senior_pct=33.9; us_pct=39.5; europe_pct=21.8",
+   "excerpt": "id=governance; group=Governance, policy and safety; listings=124; listings_pct=0.6; boards=89; boards_pct=2.2; top_board=Jobgether; top_board_ats=Lever; top_board_listings=6; top_board_pct=4.8; junior_pct=0.8; senior_pct=33.9; us_pct=39.5; europe_pct=21.8",
    "numbers": [
     "0.6",
     "0.8",
@@ -9504,7 +9504,7 @@
    "claim": "Other roles: AI-named listings",
    "source_url": "https://scrapetools.scaleturn.com/data/ai-job-titles-2026-11.json",
    "fetched": "2026-11-19",
-   "excerpt": "id=other; group=Other roles; listings=1831; listings_pct=9.3; boards=936; boards_pct=23.6; top_board_listings=77; top_board_pct=4.2; junior_pct=10.5; senior_pct=26.0; us_pct=35.8; europe_pct=28.9",
+   "excerpt": "id=other; group=Other roles; listings=1831; listings_pct=9.3; boards=936; boards_pct=23.6; top_board=TSMG; top_board_ats=Lever; top_board_listings=77; top_board_pct=4.2; junior_pct=10.5; senior_pct=26.0; us_pct=35.8; europe_pct=28.9",
    "numbers": [
     "4.2",
     "9.3",

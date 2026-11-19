@@ -459,11 +459,14 @@ def build(index_dir, audit=False):
                          "ai_pct": pct(n_ai[a], n_all[a]), "boards": len(boards_all[a]),
                          "ai_boards": len(boards_ai[a]), "ai_boards_pct": pct(len(boards_ai[a]), len(boards_all[a]))})
 
+    names = {(ats, b): bname for (ats, bname, b) in board_ai_n}
     grp_rows = []
     for g in GROUP_ORDER:
-        top_board = max(grp_board_n[g].values()) if grp_board_n[g] else 0
+        tb = min(grp_board_n[g].items(), key=lambda kv: (-kv[1], kv[0])) if grp_board_n[g] else (None, 0)
+        top_board = tb[1]
         grp_rows.append({"id": g, "group": GROUP_LABEL[g], "listings": grp_n[g], "listings_pct": pct(grp_n[g], total_ai),
                          "boards": len(grp_boards[g]), "boards_pct": pct(len(grp_boards[g]), nb_ai),
+                         "top_board": names.get(tb[0]), "top_board_ats": ATS_NAME.get(tb[0][0]) if tb[0] else None,
                          "top_board_listings": top_board, "top_board_pct": pct(top_board, grp_n[g]),
                          "junior_pct": pct(grp_sen[g]["junior"], grp_n[g]),
                          "senior_pct": pct(grp_sen[g]["senior"], grp_n[g]),
