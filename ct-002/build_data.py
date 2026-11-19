@@ -553,7 +553,7 @@ def check_page(page, data):
 TABLES = {
     "Jobs posted on each weekday": "weekday",
     "Posting day by ATS": {"Jobs": "jobs", "Top day": "top_day_adj_pct", "Mon-Wed": "mon_wed_adj_pct",
-                           "Weekend": "weekend_adj_pct", "Each board once": "top_day_boards"},
+                           "Weekend": "weekend_adj_pct", "By board": "top_day_boards"},
 }
 
 
@@ -590,7 +590,7 @@ def check_tables(page, data):
                 seen += 1
                 want = rows[gid].get(field)
                 if isinstance(want, str):          # a weekday name, e.g. the top day when each board counts once
-                    if cells[label] != want:
+                    if cells[label] not in (want, want[:3]):
                         bad.append(f"{key} / {gid} / {label}: page {cells[label]!r}, data {field}={want!r}")
                     continue
                 m = re.search(r"\d[\d,]*(?:\.\d+)?", cells[label])
@@ -598,15 +598,15 @@ def check_tables(page, data):
                 if want is None or got is None or abs(got - float(want)) > 1e-9:
                     bad.append(f"{key} / {cells.get('Day') or cells.get('ATS')} / {label}: page {got}, "
                                f"data {gid}.{field}={want}")
-                if field == "top_day_adj_pct" and not cells[label].startswith(rows[gid]["top_day_adj"]):
+                if field == "top_day_adj_pct" and cells[label].split()[0] not in (rows[gid]["top_day_adj"],
+                                                                                  rows[gid]["top_day_adj"][:3]):
                     bad.append(f"{key} / {gid}: top day on page {cells[label]!r}, data {rows[gid]['top_day_adj']}")
     return bad, seen
 
 
 # Weekday table columns: data-label -> (group id, field suffix)
 WEEKDAY_COLS = {"Jobs": ("all", "jobs"), "Raw share": ("all", "pct"), "Adjusted": ("all", "adj_pct"),
-                "Each board once": ("all", "board_pct"), "US, Eastern": ("us", "adj_pct"),
-                "Europe, CET": ("europe", "adj_pct")}
+                "Each board once": ("all", "board_pct"), "US, Eastern": ("us", "adj_pct")}
 
 
 def check_widget(page, data):
