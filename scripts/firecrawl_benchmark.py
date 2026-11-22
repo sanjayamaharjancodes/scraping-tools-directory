@@ -10,8 +10,9 @@ Usage (from the repository root):
     python -I scripts/firecrawl_benchmark.py smoke --page S01  # one request, with the credit counter before and after
     python -I scripts/firecrawl_benchmark.py run --rounds 5    # the benchmark; writes data/firecrawl-benchmark-<date>.*
     python -I scripts/firecrawl_benchmark.py summary <json>    # recompute the summary from a raw file
-    python -I scripts/firecrawl_benchmark.py check <json> <page.html> [...]   # every Firecrawl figure on the pages
-                                                               # must come from the raw file's summary
+    python -I scripts/firecrawl_benchmark.py check <json> <page.html> [...]   # every element marked
+                                       # data-bench="<path>" must print the value at <path> in the raw file
+                                       # (e.g. summary.general.success_rate_pct); two planted errors must be caught
 
 The API key is read from D:/Lab/secrets/firecrawl/.env (FIRECRAWL_API_KEY=...) or the FIRECRAWL_KEY_FILE path, and is
 never printed or written anywhere else. Raw files hold status codes, timings, lengths, SHA-256 hashes and marker
@@ -436,64 +437,83 @@ def cmd_summary(a):
     return 0
 
 
-def figures(summary):
-    """Every figure a page may print about this run, as the strings it would print."""
+def resolve(raw, path):
+    """A dotted path into the raw file; a list step matches an item's "name" or "id", or an index."""
+    node = raw
+    for part in path.split("."):
+        if isinstance(node, dict):
+            node = node.get(part)
+        elif isinstance(node, list):
+            hit = [x for x in node if isinstance(x, dict) and part in (x.get("name"), x.get("id"))]
+            node = hit[0] if hit else (node[int(part)] if part.isdigit() and int(part) < len(node) else None)
+        else:
+            return None
+    return node
+
+
+def renderings(key, value):
+    """The strings a page may print for one value: as stored, with thousands separators, to 1 or 2 decimals, and
+    for a *_ms value also in seconds to 1 or 2 decimals."""
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        return set()
+    vals = [value] + ([value / 1000] if key.endswith("_ms") else [])
     f = set()
-
-    def add_num(x):
-        if x is None:
-            return
-        if isinstance(x, float) and x.is_integer():
-            x = int(x)
-        f.add(f"{x:,}" if isinstance(x, int) else f"{x}")
-        if isinstance(x, float):
-            f.add(f"{x:,.1f}")
-            f.add(f"{x:,.2f}")
-
-    def walk(o):
-        if isinstance(o, dict):
-            for k, v in o.items():
-                if k.endswith("_ms") and isinstance(v, (int, float)):
-                    add_num(v)
-                    add_num(round(v / 1000, 1))
-                    add_num(round(v / 1000, 2))
-                else:
-                    walk(v)
-        elif isinstance(o, list):
-            for v in o:
-                walk(v)
-        elif isinstance(o, bool):
-            return
-        elif isinstance(o, (int, float)):
-            add_num(o)
-    walk(summary)
+    for v in vals:
+        if isinstance(v, float) and v.is_integer():
+            v = int(v)
+        if isinstance(v, int):
+            f |= {f"{v:,}", str(v)}
+        else:
+            f |= {f"{v:,.1f}", f"{v:,.2f}", repr(v)}
     return f
 
 
+BENCH = re.compile(r'data-bench="([^"]+)"[^>]*>(.*?)</', re.S)
+NUM = re.compile(r"[0-9][0-9,]*(?:\.[0-9]+)?")
+
+
+def check_text(raw, text, label):
+    """Each element marked data-bench="<path>" must print only figures of the value at <path> in the raw file."""
+    fails, n = [], 0
+    for m in BENCH.finditer(text):
+        path, shown = m.group(1), re.sub(r"<[^>]+>", "", m.group(2))
+        n += 1
+        value = resolve(raw, path)
+        allowed = renderings(path.rsplit(".", 1)[-1], value)
+        nums = NUM.findall(shown)
+        if value is None or not nums or any(x not in allowed for x in nums):
+            fails.append(f"{label}: data-bench={path!r} shows {shown.strip()!r}; the raw file has {value!r}")
+    return n, fails
+
+
 def cmd_check(a):
-    """Each element marked data-bench="..." on the pages must print a figure from the raw file's summary."""
     raw = json.load(open(a.raw, encoding="utf-8"))
-    s = summarize(raw)
-    if raw.get("summary") != s:
-        out("FAIL stored summary differs from the recomputed one")
+    if raw.get("summary") != summarize(raw):
+        out("FAIL the stored summary differs from the recomputed one")
         return 1
-    allowed = figures(s)
-    bad, n = 0, 0
+    total, fails = 0, []
     for page in a.pages:
-        text = open(page, encoding="utf-8").read()
-        for m in re.finditer(r'data-bench="([^"]+)"[^>]*>(.*?)</', text, re.S):
-            path, shown = m.group(1), re.sub(r"<[^>]+>", "", m.group(2))
-            node = s
-            for part in path.split("."):
-                node = node.get(part) if isinstance(node, dict) else None
-            nums = re.findall(r"[0-9][0-9,]*(?:\.[0-9]+)?", shown)
-            n += 1
-            if node is None or not nums or any(x not in allowed for x in nums) or \
-                    not any(x in figures({"v": node} if not isinstance(node, dict) else node) for x in nums):
-                bad += 1
-                out(f"FAIL {os.path.basename(page)}: data-bench={path!r} shows {shown.strip()!r}; summary has {node!r}")
-    out(f"{n} marked figures checked, {bad} failed")
-    return 1 if bad or not n else 0
+        n, f = check_text(raw, open(page, encoding="utf-8").read(), os.path.basename(page))
+        out(f"{os.path.basename(page)}: {n} marked figures, {len(f)} failed")
+        total, fails = total + n, fails + f
+    for x in fails:
+        out("FAIL " + x)
+    # Planted errors: the check must catch a changed figure and a wrong path, or it proves nothing.
+    sample = open(a.pages[0], encoding="utf-8").read()
+    m = BENCH.search(sample)
+    planted_ok = False
+    if m:
+        shown = m.group(2)
+        num = NUM.search(re.sub(r"<[^>]+>", "", shown))
+        if num:
+            wrong = str(int(float(num.group(0).replace(",", ""))) + 7)
+            p1 = sample[:m.start(2)] + shown.replace(num.group(0), wrong, 1) + sample[m.end(2):]
+            p2 = sample[:m.start(1)] + "summary.no_such_figure" + sample[m.end(1):]
+            planted_ok = bool(check_text(raw, p1, "plant")[1]) and bool(check_text(raw, p2, "plant")[1])
+    out(f"planted errors (changed figure, wrong path) caught: {planted_ok}")
+    ok = total > 0 and not fails and planted_ok
+    out("CHECK PASSED" if ok else "CHECK FAILED")
+    return 0 if ok else 1
 
 
 def main():
