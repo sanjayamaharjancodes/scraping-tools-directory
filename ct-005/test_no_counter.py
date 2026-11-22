@@ -7,7 +7,7 @@ Why: in November 2026 our own checks were counted among the sites' GoatCounter v
 (<code>.goatcounter.com/count). Reads of GoatCounter's API (/api/v0/, by rx-001/reach_read.py) count no visit and
 are allowed.
 
-1. Discovery. Every script in ct-*/, rx-*/ and tools/ is classified by what it can reach: browser (starts Chrome,
+1. Discovery. Every script in ct-*/, rx-*/, md-*/, tools/ and scripts/ is classified by what it can reach: browser (starts Chrome,
    Playwright, Puppeteer or Lighthouse, or renders through content-autopilot's render.py), network (urllib,
    http.client, requests, fetch) or offline. Each browser or network tool must be listed in TOOLS with how the test
    drives it; one that is not listed fails the test. So rx-001/reach_read.py is driven once its branch is merged,
@@ -46,7 +46,7 @@ sys.dont_write_bytecode = True
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 CHROME = "C:/Program Files/Google/Chrome/Application/chrome.exe"
-SCAN_DIRS = re.compile(r"^(?:ct-\d+|rx-\d+|tools)$")
+SCAN_DIRS = re.compile(r"^(?:ct-\d+|rx-\d+|md-\d+|tools|scripts)$")
 SCAN_EXT = (".py", ".mjs", ".js", ".ps1")
 SELF = "ct-005/test_no_counter.py"
 
@@ -59,6 +59,7 @@ TOOLS = {
     "ct-004/check_live.py": ("python", []),
     "ct-005/check_live.py": ("python", []),
     "rx-001/reach_read.py": ("python", []),
+    "scripts/firecrawl_benchmark.py": ("python", ["robots"]),   # md-009: reaches Firecrawl and the panel sites, never ours
     "ct-001/run_gate.py": ("render", None),
     "ct-002/run_gate.py": ("render", None),
     "ct-003/run_gate.py": ("render", None),
