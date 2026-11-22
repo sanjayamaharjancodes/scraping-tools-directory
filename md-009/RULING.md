@@ -68,3 +68,27 @@ Firecrawl goes into the home page comparison (index.html) and the nine-vendor ta
 cheapest-web-scraping-api.html, labelled as the one entry we tested; the other vendors stay "from vendor pages".
 Price rank was not a criterion: for plain pages Firecrawl is the most expensive of the five credit-plan vendors at
 100,000 ($99) and 1,000,000 ($749) a month.
+
+## 4. Pages changed and checks (22 Nov 2026)
+
+Changed: index.html (Firecrawl row with a Tested pill, widget data, results section, Firecrawl in the text lines),
+cheapest-web-scraping-api.html (vendor-table row, corrected "eight"/"four"/"no benchmark" lines), methodology.html
+(first results live for one vendor), and one-line truth fixes on about.html, scraperapi-free-trial.html and
+scraperapi-vs-bright-data.html; llms.txt, data/pages.json, sitemap.xml, .github/README.md, style.css
+(.tier-pill.tested). data/vendors.json is unchanged, so the vendors.json widgets on other pages still show four
+vendors; the cheapest page's widget line says "four of these vendors".
+
+| Check | Command | Result |
+|---|---|---|
+| Summary recomputes | `python -I scripts/firecrawl_benchmark.py summary data/firecrawl-benchmark-2026-11-22.json` | exit 0 |
+| Figures trace to the raw file | `... check data/firecrawl-benchmark-2026-11-22.json index.html cheapest-web-scraping-api.html` | 22 marked figures, 0 failed; 2 planted errors caught |
+| Widget unchanged for the other four | node diff of `best()` before/after, 212 volumes x rendering on/off | 1,696 cases, 0 differ |
+| Machine gate, cheapest page | `python -I md-009/run_gate.py --autopilot F:/Lab/assets/content-autopilot --slug cheapest-web-scraping-api --original <main copy>` | passed apart from 18 fact-age findings on its 8 Nov facts; 8,984 px (original 8,965), under the 10-screen cap |
+| Machine gate, home page | same, `--original <main copy of index.html>` | 2 findings, both already on main: 21 untraced numbers (all in the "More guides" cards added by ct-001..005; md-009 adds none) and too_long, 14.9 phone screens (main: 12.2). Plus 54 fact-age findings on the 5 Nov facts. |
+| AdSense loader and affiliate links | `python -I ct-004/check_live.py --local --scrapetools . --scaleturn F:/Lab/assets/scaleturn-site --gettingpaid F:/Lab/assets/getting-paid-nepal` | 64 of 64, ALL PASS |
+| Our tools count no visit | `python -I ct-005/test_no_counter.py` (now scans scripts/ and md-*/) | 18 of 18, ALL PASS |
+| Links | every href on the six changed pages | 149 local targets exist; 31 external links all 200 |
+| Render | phone (gate render, 412 px) and desktop (1,536 px viewport, local copy without counter/ad code) | no overflow, no JS errors; widget interaction ok |
+
+The gate's "claimed testing" rule (checks.py BANNED) predates any real test; the pages state the test in the
+site's third-person voice ("ScrapeTools ran", "ScrapeTools test") and the claims trace to the raw file.

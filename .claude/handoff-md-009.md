@@ -4,21 +4,29 @@ Goal: first tested result on ScrapeTools: Firecrawl on the methodology.html meth
 only if it earns a place. Brief: D:/Lab/manager/briefs/md-009.md. Linear SAN-161. Do not push; the manager merges.
 
 ## State (22 Nov 2026)
-- Key: D:/Lab/secrets/firecrawl/.env (copied via the dashboard copy button + clipboard, never printed; clipboard
-  cleared). Account: u/1 Google sign-in, existing team; free plan 1,000 credits, 1,025 remaining before any request,
-  period ends 25 Nov.
-- Pre-registered (commit before the run): data/benchmark-panel-2026-11.json (panel, settings, rule),
-  md-009/RULING.md, scripts/firecrawl_benchmark.py. _config.yml excludes scripts and md-009.
-- Stale premise: the "8 Tools Compared" home page was replaced 5 Nov (f857e04); index.html is now a 4-vendor
-  credit-plan page; the 8-vendor table is cheapest-web-scraping-api.html.
-- Firecrawl pricing checked 22 Nov on the page itself: Hobby $19/5k, Standard $99/100k, Growth $399/500k,
-  Scale $749/1M (monthly billing); 1 credit per scrape incl. 403/404 documents; enhanced proxy +0.
+- Pre-registration committed before any keyed request (f541565): panel data/benchmark-panel-2026-11.json, rule R1-R4.
+- Run 22 Nov 05:41-05:57 UTC: raw data/firecrawl-benchmark-2026-11-22.{csv,json}. 95 requests, 96 credits with the
+  smoke request (1,025 -> 929). General panel 80/85 (94.1%); static 65/65; JS 15/20 (js-delayed 0/5); protected
+  10/10; median 2.22 s, p95 2.97 s (n 80). $1.05 per 1,000 passed pages on Standard.
+- Ruling YES (md-009/RULING.md). Pages: index.html, cheapest-web-scraping-api.html, methodology.html + truth fixes
+  (about, scraperapi-free-trial, scraperapi-vs-bright-data), llms.txt, pages.json, sitemap, README, style.css.
+- Checks: see RULING.md section 4. Originality gate: section 5 (blind reviewer, job tmp folder).
+- Reply draft: md-009/reply.md (link live only after merge).
+- Key: D:/Lab/secrets/firecrawl/.env (never printed; clipboard cleared).
 
-## Next
-1. smoke (1 request) and credit delta; 2. run --rounds 5 (background); 3. ruling in RULING.md; 4. page edits if yes;
-5. originality gate (fresh subagent); 6. checks (check_live/run_gate where applicable, test_no_counter with scripts/
-scanned, links 200, phone+desktop render); 7. md-009/reply.md; 8. report to manager.
+## Manager notes
+- Stale premise: the "8 Tools Compared" page was replaced 5 Nov (f857e04); index.html is a credit-plan price page.
+- ToS 5.d.1 bars commercial use "except as expressly authorized by Firecrawl"; Firecrawl's growth team invited the test.
+- Reddit (Google result #3) unreadable by plain fetch (403) and blocked by the Chrome extension; #4 used instead.
+- data/vendors.json not changed (other pages' widgets would change). A resumed autopilot refresh of the cheapest
+  page could drop the hand-added Firecrawl row (the autopilot is paused by STOP).
+- refs/backup/w-md-009 (not mine) still points at a pre-squash commit whose raw JSON had billing-period dates.
+- One Chrome tab from the first tab group (Firecrawl billing docs, signed in) became unreachable after the extension
+  reconnected; it may still be open in a separate window.
 
 ## Attempts
-- probe stdout encoding: `python -I` ignores PYTHONIOENCODING (2 misses); fixed with sys.stdout.reconfigure.
-- Chrome: "Couldn't determine which page" errors after navigations; a tabs_context read before each action fixed it.
+- probe stdout encoding: `python -I` ignores PYTHONIOENCODING (2 misses), fixed with sys.stdout.reconfigure.
+- Chrome "Couldn't determine which page": a tabs_context read before each action fixed it.
+- git index.lock: transient lock from another short-lived git process on this worktree; retry worked (1 miss).
+- run_gate local fetch of the site root (5 Nov fact) read the folder: map "" to index.html (1 miss).
+- Phone height: home 16.3 -> 15.4 -> 14.9 screens (main 12.2); cheapest 10.7 -> 10.4 -> 10.1 -> 10.0 (x2) -> 8,984 px.
