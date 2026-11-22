@@ -30,8 +30,16 @@ This README lives in `.github/` so the Pages build does not publish it; GitHub s
   scaleturn.com covers this subdomain. `ct-004/` holds `check_live.py` (every page carries the loader once, in
   `<head>`, and the privacy pages none) and `consent_probe.mjs` (whether Google's EU consent message shows, with ad
   requests blocked); `_config.yml` keeps it out of the Pages build.
-- **No benchmark results yet.** `methodology.html` describes the planned benchmark and says none has been run. Pages
-  report vendor-published facts, never "we tested".
+- **One benchmark result: Firecrawl (md-009, 22 Nov 2026).** `methodology.html` describes the method. The panel
+  (`data/benchmark-panel-2026-11.json`, with the pass text per page and the rule for joining the comparison) was
+  committed before the first request; `scripts/firecrawl_benchmark.py` runs it (the API key stays outside the
+  repository) and writes `data/firecrawl-benchmark-<date>.{csv,json}`. Firecrawl is the only vendor marked
+  Tested (`index.html`, `cheapest-web-scraping-api.html`); every other vendor figure is vendor-published. Checks:
+  `python -I scripts/firecrawl_benchmark.py summary <json>` (the stored summary recomputes), `check <json> index.html`
+  (each `data-bench` figure traces to the raw file; two planted errors must be caught), and
+  `python -I md-009/run_gate.py --autopilot <content-autopilot> --original <page before md-009> [--slug ...]` (the
+  machine gate; md-009/RULING.md has the run, the ruling and the gate results). The content-autopilot gate's
+  "claimed testing" rule predates this result, so tested pages say "ScrapeTools ran", not "we tested".
 - **One first-hand data page.** `ats-job-posting-api-crawl-data.html` reports our own job-index refresh (18-19 Nov
   2026). Every figure on it comes from `data/ats-board-crawl-2026-11.{csv,json}`. `ct-001/build_data.py` rebuilds
   those files from the refresh's report files, and its `--check` mode fails on any number on the page that is not

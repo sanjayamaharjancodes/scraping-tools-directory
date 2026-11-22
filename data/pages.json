@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-19",
+  "updated": "2026-11-22",
   "pages": [
     {
       "url": "https://scrapetools.scaleturn.com/about.html",
@@ -9,7 +9,7 @@
     {
       "url": "https://scrapetools.scaleturn.com/cheapest-web-scraping-api.html",
       "title": "Cheap Web Scraping API: Lowest Published Prices | ScrapeTools",
-      "description": "Scrapfly's $30 plan covers 100,000 basic requests a month, the lowest fixed per-request price we found. Eight APIs compared, with catches, from vendor pages."
+      "description": "Scrapfly's $30 plan covers 100,000 basic requests a month, the lowest fixed per-request price we found. Nine APIs compared from vendor pages, one also tested."
     },
     {
       "url": "https://scrapetools.scaleturn.com/disclosure.html",
@@ -19,12 +19,12 @@
     {
       "url": "https://scrapetools.scaleturn.com/",
       "title": "Web Scraping API Pricing: Credit Plans by Monthly Cost | ScrapeTools",
-      "description": "Web scraping API pricing from published credit plans: 100,000 plain requests a month cost $30 to $49 at ScraperAPI, ScrapingBee, ScrapingDog and Scrapfly."
+      "description": "Web scraping API prices by monthly cost, with test results for Firecrawl: 100,000 plain requests cost $30 to $49 at four credit-plan vendors, $99 at Firecrawl."
     },
     {
       "url": "https://scrapetools.scaleturn.com/methodology.html",
       "title": "Benchmarks: Methodology | ScrapeTools",
-      "description": "How ScrapeTools plans to run independent, real success-rate and speed benchmarks across web scraping APIs — methodology published in advance; first results not live yet."
+      "description": "How ScrapeTools benchmarks web scraping APIs: a fixed public page panel, text checks, pacing and cost per 1,000 pages. First run: Firecrawl, 22 Nov 2026."
     },
     {
       "url": "https://scrapetools.scaleturn.com/privacy.html",

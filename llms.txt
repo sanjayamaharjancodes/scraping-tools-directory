@@ -5,10 +5,10 @@
 ## Pages
 
 - [About | ScrapeTools (by Scaleturn)](https://scrapetools.scaleturn.com/about.html): About ScrapeTools — a sourced, honest web scraping API comparison site published by Scaleturn, an agent-operated software studio.
-- [Cheap Web Scraping API: Lowest Published Prices | ScrapeTools](https://scrapetools.scaleturn.com/cheapest-web-scraping-api.html): Scrapfly's $30 plan covers 100,000 basic requests a month, the lowest fixed per-request price we found. Eight APIs compared, with catches, from vendor pages.
+- [Cheap Web Scraping API: Lowest Published Prices | ScrapeTools](https://scrapetools.scaleturn.com/cheapest-web-scraping-api.html): Scrapfly's $30 plan covers 100,000 basic requests a month, the lowest fixed per-request price we found. Nine APIs compared from vendor pages, one also tested.
 - [Affiliate Disclosure | ScrapeTools](https://scrapetools.scaleturn.com/disclosure.html): Full affiliate disclosure for ScrapeTools — which links are affiliate links, which aren't, and how (and how not) that affects what we publish.
-- [Web Scraping API Pricing: Credit Plans by Monthly Cost | ScrapeTools](https://scrapetools.scaleturn.com/): Web scraping API pricing from published credit plans: 100,000 plain requests a month cost $30 to $49 at ScraperAPI, ScrapingBee, ScrapingDog and Scrapfly.
-- [Benchmarks: Methodology | ScrapeTools](https://scrapetools.scaleturn.com/methodology.html): How ScrapeTools plans to run independent, real success-rate and speed benchmarks across web scraping APIs — methodology published in advance; first results not live yet.
+- [Web Scraping API Pricing: Credit Plans by Monthly Cost | ScrapeTools](https://scrapetools.scaleturn.com/): Web scraping API prices by monthly cost, with test results for Firecrawl: 100,000 plain requests cost $30 to $49 at four credit-plan vendors, $99 at Firecrawl.
+- [Benchmarks: Methodology | ScrapeTools](https://scrapetools.scaleturn.com/methodology.html): How ScrapeTools benchmarks web scraping APIs: a fixed public page panel, text checks, pacing and cost per 1,000 pages. First run: Firecrawl, 22 Nov 2026.
 - [Privacy Policy | ScrapeTools](https://scrapetools.scaleturn.com/privacy.html): What ScrapeTools collects, how page counts and affiliate links are tracked, how Google's AdSense code here uses advertising cookies, and how to turn personalized ads off.
 - [ScrapeCreators Pricing: Cost per Credit by Pack | ScrapeTools](https://scrapetools.scaleturn.com/scrapecreators-pricing.html): ScrapeCreators sells one-time credit packs: $47 for 25,000 or $497 for 500,000. Enter the credits you need and see the cheapest pack mix and what is left over.
 - [ScraperAPI Credits & Pricing Calculator 2026 | ScrapeTools](https://scrapetools.scaleturn.com/scraperapi-cost-calculator.html): Calculate ScraperAPI credits, the smallest monthly plan that covers them, and its thread limit for normal, rendered, premium, Google, Amazon, and LinkedIn requests.
@@ -25,6 +25,9 @@
 
 - [Vendor pricing data (JSON, no ads)](https://scrapetools.scaleturn.com/data/vendors.json): per-vendor plans, source URL and verification date.
 - [Page index (JSON)](https://scrapetools.scaleturn.com/data/pages.json): every indexable page with title and description.
+- [Benchmark panel, November 2026 (JSON)](https://scrapetools.scaleturn.com/data/benchmark-panel-2026-11.json): the 19 test pages, their pass text, request settings, pacing and the rule for joining the comparison, fixed before the first run.
+- [Firecrawl benchmark, 22 Nov 2026 (CSV)](https://scrapetools.scaleturn.com/data/firecrawl-benchmark-2026-11-22.csv): one row per request: page, round, time, status codes, pass or fail and reason, credits.
+- [Firecrawl benchmark, full (JSON)](https://scrapetools.scaleturn.com/data/firecrawl-benchmark-2026-11-22.json): the same requests plus the panel, robots.txt checks, the credit counter before and after, and the summary.
 - [ATS job board crawl, per ATS (CSV)](https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.csv): boards checked, live, not a board, failed, jobs and pace per ATS, 18-19 Nov 2026.
 - [ATS job board crawl, full (JSON)](https://scrapetools.scaleturn.com/data/ats-board-crawl-2026-11.json): the same rows plus totals, stop reasons, crawler settings and input file hashes.
 - [Job posting days, per weekday (CSV)](https://scrapetools.scaleturn.com/data/job-posting-days-2026-11.csv): jobs posted per weekday, raw, closure-adjusted and per board, by ATS and region, 19 Oct-15 Nov 2026.
