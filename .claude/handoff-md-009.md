@@ -10,7 +10,10 @@ only if it earns a place. Brief: D:/Lab/manager/briefs/md-009.md. Linear SAN-161
   10/10; median 2.22 s, p95 2.97 s (n 80). $1.05 per 1,000 passed pages on Standard.
 - Ruling YES (md-009/RULING.md). Pages: index.html, cheapest-web-scraping-api.html, methodology.html + truth fixes
   (about, scraperapi-free-trial, scraperapi-vs-bright-data), llms.txt, pages.json, sitemap, README, style.css.
-- Checks: see RULING.md section 4. Originality gate: section 5 (blind reviewer, job tmp folder).
+- Checks: RULING.md section 4. Originality gate (section 5): blind headless `claude -p` in a neutral folder ranks the
+  home page 1st of 4 on originality, usefulness and trust (counting run); two earlier subagent runs agreed but were
+  not blind (git snapshot in context). Home-page gate still fails as on main: too_long 15.0 screens (main 12.2) and
+  21 untraced numbers in the More-guides cards; option: move the results table to methodology.html.
 - Reply draft: md-009/reply.md (link live only after merge).
 - Key: D:/Lab/secrets/firecrawl/.env (never printed; clipboard cleared).
 
@@ -29,4 +32,6 @@ only if it earns a place. Brief: D:/Lab/manager/briefs/md-009.md. Linear SAN-161
 - Chrome "Couldn't determine which page": a tabs_context read before each action fixed it.
 - git index.lock: transient lock from another short-lived git process on this worktree; retry worked (1 miss).
 - run_gate local fetch of the site root (5 Nov fact) read the folder: map "" to index.html (1 miss).
-- Phone height: home 16.3 -> 15.4 -> 14.9 screens (main 12.2); cheapest 10.7 -> 10.4 -> 10.1 -> 10.0 (x2) -> 8,984 px.
+- Phone height: home 16.3 -> 15.4 -> 14.9 -> 15.0 screens (main 12.2); cheapest 10.7 -> 10.4 -> 10.1 -> 10.0 (x2) -> 8,984 px.
+- Originality gate: subagent runs saw this repo's git snapshot (2 runs), so method changed to headless claude -p in a
+  neutral folder (1 run, counts). Reviewer 1 found the $4.04 basis slip; fixed before the counting run.

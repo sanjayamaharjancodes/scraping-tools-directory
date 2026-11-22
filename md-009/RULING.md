@@ -99,24 +99,41 @@ site's third-person voice ("ScrapeTools ran", "ScrapeTools test") and the claims
   scrapingdog.com/blog/best-web-scraping-apis/, a Reddit r/developer thread. Reddit could not be read (plain fetch 403;
   the Chrome extension refuses reddit.com), so #4, zackproser.com/blog/best-web-scraping-api-2026, took its place.
 - **Inputs** All four pages went through one text extractor (`<main>`/`<article>`, scripts stripped); the rivals' word
-  counts match a browser view of their articles. Saved as doc-A..D in random order in the job's temp folder (not the
-  repo); the mapping was kept outside that folder.
-- **Reviewer** A fresh general-purpose subagent, told only the query, reading only those four files (no web), ranked
-  them once on originality (main criterion), usefulness and trust.
-- **Result: ours (doc-C) 1st on all three.**
+  counts match a browser view of their articles. Files in the job's temp folder (not the repo), labels drawn at random
+  each time, the mapping kept outside the reviewer's folder.
+
+**Counting run (attempt 3, blind).** A separate headless Claude (`claude -p --tools Read --strict-mcp-config
+--setting-sources project --no-session-persistence`) started in a neutral folder outside any repository, as in
+ct-003/ct-005. Labels: X ours, Z ScrapingDog, Y tinyfish.ai, W zackproser.com. Prompt, verbatim:
+
+> Four web pages that rank on Google for "best web scraping api 2026" were saved as plain text (page furniture and scripts stripped; tables flattened with " | "). They are the files page-W.txt, page-X.txt, page-Y.txt and page-Z.txt in the current folder. Read all four with the Read tool and nothing else.
+>
+> Rank the four pages from most original (1) to least original (4), using your own judgment of what originality means for a page like this. Then rank them the same way for usefulness to someone choosing a web scraping API, and for trustworthiness. Reply with a table (page | originality | usefulness | trust) and one or two sentences per page on its originality, under 300 words. No ties.
 
 | Page | Originality | Usefulness | Trust |
 |---|---|---|---|
-| ScrapeTools home page (this branch) | 1 | 1 | 1 |
+| ScrapeTools home page (this branch, after the fix below) | **1** | **1** | **1** |
 | ScrapingDog blog (vendor's own benchmark) | 2 | 3 | 4 |
-| tinyfish.ai blog | 3 | 2 | 2 |
-| zackproser.com (#4, in place of Reddit) | 4 | 4 | 3 |
+| tinyfish.ai blog | 3 | 2 | 3 |
+| zackproser.com (#4, in place of Reddit) | 4 | 4 | 2 |
 
-- **Reason given for first place** A method and pass rule published before the run, results by page type with p95, a
-  plain-request baseline, a stated cause for the one failure, downloadable raw data, and billing checked against the
-  account's counter.
-- **Defect it found, fixed after** The cost sentence cited the counter's 95 credits but gave the 85-request figure
-  ($4.04 on Hobby, versus $4.01 over all 95). The sentence now names its basis: 85 credits, 80 passes. Re-checked:
-  24 figures traced, gate unchanged apart from height 15.0 screens.
-- **Weakness it named for ours** Narrow: five credit-plan vendors from their own pages, only one tested, once, mostly
-  on practice sites. The page says so.
+Its reason for first place: cost per volume worked out across five vendors with credits per request, a test planned
+in advance with raw CSV and JSON published, and plain statements of what it does not cover.
+
+**Earlier runs (do not count as blind).** Two Agent-tool subagents, started from this session, also ranked our page
+1st on every criterion. The second said its context carried this branch's git snapshot (commit messages naming
+Firecrawl), so neither run was blind; the first one's prompt also defined originality in terms that favour a
+disclosed method and discount a vendor's self-test. The first prompt asked for ranks on originality ("information a
+reader could not get from the vendors' own pages or from other round-ups — first-hand measurements, data the author
+produced, a disclosed method, analysis that goes beyond restating marketing claims ... Self-reported tests by an
+interested party count, but less than a test whose method and data are disclosed"), usefulness and trust; the
+second asked for originality only, judged by the reviewer's own meaning. Both were run before attempt 3.
+
+- **Defect found by attempt 1, fixed before attempt 3.** The cost sentence cited the counter's 95 credits but gave the
+  85-request figure ($4.04 on Hobby, versus $4.01 over all 95). It now names its basis: 85 credits, 80 passes.
+  Re-checked: 24 figures traced; gate unchanged apart from height 15.0 screens.
+- **Weakness named for ours** Narrow: five credit-plan vendors priced from their own pages, one tested, once, mostly
+  on practice sites, at that vendor's request. The page says all of this.
+- **Checked by hand, not by a script:** the methodology page's figures (19 pages: 13, 4, 2; 8 s and 10 s pacing;
+  90%, 1 credit) match data/benchmark-panel-2026-11.json, and "published here in July 2026" matches the page's first
+  commit (506ab21, 25 Jul 2026).
