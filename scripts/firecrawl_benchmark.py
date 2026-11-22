@@ -158,9 +158,8 @@ def balance(key):
     if st != 200 or not js.get("success"):
         raise SystemExit(f"credit-usage read failed: HTTP {st}")
     d = js["data"]
-    return {"remaining": d.get("remainingCredits"), "plan": d.get("planCredits"),
-            "period_start": d.get("billingPeriodStart"), "period_end": d.get("billingPeriodEnd"),
-            "read_utc": now()}
+    # The billing period's dates are account details, not results, so they are not kept.
+    return {"remaining": d.get("remainingCredits"), "plan": d.get("planCredits"), "read_utc": now()}
 
 
 def now():
@@ -285,7 +284,8 @@ def summarize(raw):
                 "success_rate_pct": round(100 * len(succ) / len(rs), 1) if rs else None,
                 "latency_n": len(lat),
                 "median_latency_ms": round(statistics.median(lat)) if lat else None,
-                "p95_latency_ms": pctl(lat, 0.95)}
+                "p95_latency_ms": pctl(lat, 0.95),
+                "max_latency_ms": max(lat) if lat else None}
 
     general = [r for r in reqs if r["category"] in ("static", "js")]
     s = {"all": block(reqs), "general": block(general)}
