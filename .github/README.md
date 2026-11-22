@@ -35,7 +35,7 @@ This README lives in `.github/` so the Pages build does not publish it; GitHub s
   committed before the first request; `scripts/firecrawl_benchmark.py` runs it (the API key stays outside the
   repository) and writes `data/firecrawl-benchmark-<date>.{csv,json}`. Firecrawl is the only vendor marked
   Tested (`index.html`, `cheapest-web-scraping-api.html`); every other vendor figure is vendor-published. Checks:
-  `python -I scripts/firecrawl_benchmark.py summary <json>` (the stored summary recomputes), `check <json> index.html`
+  `python -I scripts/firecrawl_benchmark.py summary <json>` (the stored summary recomputes), `check <json> index.html methodology.html`
   (each `data-bench` figure traces to the raw file; two planted errors must be caught), and
   `python -I md-009/run_gate.py --autopilot <content-autopilot> --original <page before md-009> [--slug ...]` (the
   machine gate; md-009/RULING.md has the run, the ruling and the gate results). The content-autopilot gate's

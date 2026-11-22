@@ -37,7 +37,7 @@
   <div class="container prose">
     <span class="freshness-stamp">Last reviewed: 22 Nov 2026</span>
     <h1>Benchmarks: Methodology</h1>
-    <p><strong>First results are live for one vendor.</strong> On 22 Nov 2026 ScrapeTools ran this method on Firecrawl, so far the only API with tested results on this site (<a href="index.html#firecrawl-test">results</a>). Every other price, credit system, free-tier term and feature on the site still comes from each vendor's own pages, cited with a link and a verification date. The method was published here in July 2026, and the first run's pages, settings and pass rule were fixed before its first request.</p>
+    <p><strong>First results are live for one vendor.</strong> On 22 Nov 2026 ScrapeTools ran this method on Firecrawl, so far the only API with tested results on this site (<a href="#firecrawl-results">results</a>). Every other price, credit system, free-tier term and feature on the site still comes from each vendor's own pages, cited with a link and a verification date. The method was published here in July 2026, and the first run's pages, settings and pass rule were fixed before its first request.</p>
   </div>
 </section>
 
@@ -65,8 +65,24 @@
       <li><strong>Only publish what we actually ran.</strong> No estimated, interpolated, or "typical" numbers standing in for a real test. If a vendor isn't tested yet, its page says so — as this page does now.</li>
     </ul>
 
-    <h2>First run: Firecrawl, 22 Nov 2026</h2>
-    <p>Firecrawl asked to be added to the site's comparison and offered free credits. The test used its public free plan instead, five rounds over the 19 pages, 95 requests in all, and Firecrawl pays this site nothing. A rule written before the run decided whether it joined the comparison: published monthly credit plans, at least 90% of requests to the static and JavaScript pages passing, no more than 1 credit billed per request, and a run free of harness faults. It met all four, so it now appears on the <a href="index.html">home page</a> and the <a href="cheapest-web-scraping-api.html">cheapest API</a> table, marked Tested. Raw data: <a href="data/firecrawl-benchmark-2026-11-22.csv">CSV</a> and <a href="data/firecrawl-benchmark-2026-11-22.json">JSON</a>, with timings, status codes and the result of each text check, not the pages' content.</p>
+    <h2 id="firecrawl-results">First run: Firecrawl, 22 Nov 2026</h2>
+    <p>Firecrawl asked to be added to the site's comparison and offered free credits. The test used its public free plan instead, five rounds over the 19 pages, <span data-bench="summary.all.requests">95</span> requests in all, and Firecrawl pays this site nothing. A rule written before the run decided whether it joined the comparison: published monthly credit plans, at least 90% of requests to the static and JavaScript pages passing, no more than 1 credit billed per request, and a run free of harness faults. It met all four, so it now appears on the <a href="index.html">home page</a> and the <a href="cheapest-web-scraping-api.html">cheapest API</a> table, marked Tested.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Pages</th><th>Passed</th><th>Median</th><th>Slow end</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Static HTML (13)</td><td><span data-bench="summary.static.successes">65</span> of <span data-bench="summary.static.requests">65</span></td><td><span data-bench="summary.static.median_latency_ms">2.26</span> s</td><td><span data-bench="summary.static.p95_latency_ms">2.98</span> s p95</td></tr>
+          <tr><td>JavaScript (4)</td><td><span data-bench="summary.js.successes">15</span> of <span data-bench="summary.js.requests">20</span></td><td><span data-bench="summary.js.median_latency_ms">1.78</span> s</td><td><span data-bench="summary.js.max_latency_ms">2.66</span> s max</td></tr>
+          <tr><td>Cloudflare challenge (2)</td><td><span data-bench="summary.protected.successes">10</span> of <span data-bench="summary.protected.requests">10</span></td><td><span data-bench="summary.protected.median_latency_ms">1.64</span> s</td><td><span data-bench="summary.protected.max_latency_ms">4.34</span> s max</td></tr>
+          <tr><td><strong>Static + JavaScript (17)</strong></td><td><strong><span data-bench="summary.general.successes">80</span> of <span data-bench="summary.general.requests">85</span></strong></td><td><span data-bench="summary.general.median_latency_ms">2.22</span> s</td><td><span data-bench="summary.general.p95_latency_ms">2.97</span> s p95</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="source-line">Times are for requests that passed. p95: 95th percentile; max: the slowest, shown where a group has fewer than 20. The two challenge pages are practice pages built for scraper tests.</p>
+    <p>All five failures were one page whose quotes appear 10 seconds after loading; Firecrawl returned it before they did, with its <code>waitFor</code> option left at the default. Every other page passed every round, both challenge pages included. A plain HTTP request matched 12 of the 13 static pages (the 13th keeps its check text in link titles, which that check skips) and none of the other 6.</p>
+    <p>Each request, failures included, used 1 credit: the account's counter fell by <span data-bench="summary.credits.used">95</span>. On the static and JavaScript pages, <span data-bench="summary.general.requests">85</span> credits bought <span data-bench="summary.general.successes">80</span> passes: $<span data-bench="summary.cost_per_1000_successful_pages.Standard.per_1000_successful_general_usd">1.05</span> per 1,000 passed pages on the $99 Standard plan, or $<span data-bench="summary.cost_per_1000_successful_pages.Hobby.per_1000_successful_general_usd">4.04</span> on the $19 Hobby plan. Times run end to end from one machine. This is one run on one day, mostly on practice sites built to be scraped; other sites can do better or worse. Raw data: <a href="data/firecrawl-benchmark-2026-11-22.csv">CSV</a> and <a href="data/firecrawl-benchmark-2026-11-22.json">JSON</a>, with timings, status codes and the result of each text check, not the pages' content.</p>
 
     <h2>Legal and platform-terms scope</h2>
     <p>Test targets will be limited to pages and services where automated access is either explicitly permitted or falls within general, publicly-documented technique — no scraping of the org's own confidential client work, and no targets chosen specifically to demonstrate bypassing a site's terms of service. This methodology draws only on public, general-technique knowledge, consistent with the org's standing clean-room policy for all published work.</p>

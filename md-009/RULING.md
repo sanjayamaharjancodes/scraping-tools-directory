@@ -81,10 +81,10 @@ vendors; the cheapest page's widget line says "four of these vendors".
 | Check | Command | Result |
 |---|---|---|
 | Summary recomputes | `python -I scripts/firecrawl_benchmark.py summary data/firecrawl-benchmark-2026-11-22.json` | exit 0 |
-| Figures trace to the raw file | `... check data/firecrawl-benchmark-2026-11-22.json index.html cheapest-web-scraping-api.html` | 24 marked figures, 0 failed; 2 planted errors caught |
+| Figures trace to the raw file | `... check data/firecrawl-benchmark-2026-11-22.json index.html methodology.html` | index 2, methodology 22 marked figures, 0 failed; 2 planted errors caught (after the rework) |
 | Widget unchanged for the other four | node diff of `best()` before/after, 212 volumes x rendering on/off | 1,696 cases, 0 differ |
 | Machine gate, cheapest page | `python -I md-009/run_gate.py --autopilot F:/Lab/assets/content-autopilot --slug cheapest-web-scraping-api --original <main copy>` | passed apart from 18 fact-age findings on its 8 Nov facts; 8,984 px (original 8,965), under the 10-screen cap |
-| Machine gate, home page | same, `--original <main copy of index.html>` | 2 findings, both already on main: 21 untraced numbers (all in the "More guides" cards added by ct-001..005; md-009 adds none) and too_long, 15.0 phone screens (main: 12.2). Plus 54 fact-age findings on the 5 Nov facts. |
+| Machine gate, home page | same, `--original <main copy of index.html>` | after the rework: the same 2 findings as main and no worse: "22 numbers on the page not in facts.json" (identical list on main, all in the More-guides cards) and too_long 12.2 screens, 10,982 px (main 11,001 px). Plus 54 fact-age findings on the 5 Nov facts. |
 | AdSense loader and affiliate links | `python -I ct-004/check_live.py --local --scrapetools . --scaleturn F:/Lab/assets/scaleturn-site --gettingpaid F:/Lab/assets/getting-paid-nepal` | 64 of 64, ALL PASS |
 | Our tools count no visit | `python -I ct-005/test_no_counter.py` (now scans scripts/ and md-*/) | 18 of 18, ALL PASS |
 | Links | every href on the six changed pages | 149 local targets exist; 31 external links all 200 |
@@ -137,3 +137,21 @@ second asked for originality only, judged by the reviewer's own meaning. Both we
 - **Checked by hand, not by a script:** the methodology page's figures (19 pages: 13, 4, 2; 8 s and 10 s pacing;
   90%, 1 credit) match data/benchmark-panel-2026-11.json, and "published here in July 2026" matches the page's first
   commit (506ab21, 25 Jul 2026).
+
+## 6. Rework (manager, 22 Nov 2026): full results on methodology.html, compact summary on the home page
+
+- The results table, its footnote, the failures paragraph and the cost paragraph moved from index.html to
+  methodology.html's first-run section (anchor `#firecrawl-results`); methodology renders at 6,251 px on a phone with
+  no overflow or JS errors.
+- index.html keeps a compact Tested summary in the short answer (80 of 85, traced, linking to the full results), the
+  Firecrawl table row (Tested pill; anchor `#firecrawl-test`, so the cheapest page's links still land on it) and the
+  widget entry. Removed from index: the results section, Firecrawl's vendor summary, its out-of-credit bullet, the
+  mixed-workload and tie sentences, the rendered-price sentence, the extra free-offer clause, the change-log line and
+  the billing-docs source link.
+- To end no taller than main with a table row and a widget entry added, existing content was recast with the same
+  facts and links: the short answer's three "lowest list price" bullets became one sentence, the "Where the lowest
+  list price changes hands" heading and six bullets became one paragraph, and the "These four are the credit-plan
+  vendors..." paragraph was folded into the ScrapeOps paragraph ("Other credit-plan vendors exist and were not
+  checked."). The widget footer went back to its original wording.
+- Checks after the rework: figure check index 2 + methodology 22, 0 failed, plants caught; gate as in section 4;
+  `ct-004/check_live.py --local` 64 of 64; `ct-005/test_no_counter.py` 18 of 18.

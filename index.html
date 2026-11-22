@@ -52,7 +52,7 @@
 
 <section class="hero">
   <div class="container prose">
-    <span class="freshness-stamp">Pricing verified: Nov 5, 2026 · Firecrawl priced and tested: Nov 22, 2026</span>
+    <span class="freshness-stamp">Pricing verified: Nov 5, 2026</span>
     <h1>Web Scraping API Pricing Compared by Monthly Cost</h1>
   </div>
 </section>
@@ -61,13 +61,8 @@
   <div class="container prose">
     <div class="answer-first">
       <span class="answer-first-label">Short answer</span>
-      <p>Among ScrapingBee, Scrapfly, ScrapingDog and ScraperAPI, web scraping API paid plans start at $19 a month, and 100,000 plain requests cost $30 to $49. Firecrawl costs $99 for 100,000 pages with JavaScript rendering included, and in a ScrapeTools test on 22 Nov 2026 it passed <span data-bench="summary.general.successes">80</span> of <span data-bench="summary.general.requests">85</span> requests to ordinary pages. These are five credit-plan vendors, not the whole market, and only Firecrawl's performance has been tested. Plain means no JavaScript rendering, base proxy, unprotected target.</p>
-      <p><strong>Lowest list price:</strong></p>
-      <ul>
-        <li><strong>100,000 plain requests:</strong> Scrapfly, $30/mo.</li>
-        <li><strong>1,000,000 plain requests:</strong> ScrapingDog, $90/mo with dynamic=false.</li>
-        <li><strong>JavaScript rendering on:</strong> ScrapingDog, $90/mo for 100,000 and $350/mo for 1,000,000.</li>
-      </ul>
+      <p>Among ScrapingBee, Scrapfly, ScrapingDog and ScraperAPI, web scraping API paid plans start at $19 a month, and 100,000 plain requests cost $30 to $49. Firecrawl, the one tested API here, costs $99 with rendering included; <span data-bench="summary.general.successes">80</span> of <span data-bench="summary.general.requests">85</span> test requests passed (<a href="methodology.html#firecrawl-results">results</a>). These are five credit-plan vendors, not the whole market. Plain means no JavaScript rendering, base proxy, unprotected target.</p>
+      <p><strong>Lowest list price:</strong> Scrapfly, $30/mo, for 100,000 plain requests; ScrapingDog, $90/mo with dynamic=false, for 1,000,000; with JavaScript rendering on, ScrapingDog, $90/mo for 100,000 and $350/mo for 1,000,000.</p>
     </div>
 
     <div class="vcw-page" id="cost-widget" style="border:1px solid var(--color-border,#dbe4e1);border-radius:8px;padding:.75rem;margin:1.5rem 0;background:#fff">
@@ -80,7 +75,7 @@
       <p class="vcw-summary" id="cw-summary" aria-live="polite">Among these five vendors, at 100,000 plain requests a month the lowest published paid-plan price is $30/month: Scrapfly – Discovery plan.</p>
       <ul class="vcw-list" id="cw-list"></ul>
       <p class="vcw-foot" id="cw-free" hidden>ScraperAPI, Scrapfly and ScrapingBee also list 1,000 free credits, which cover this volume of plain requests; their pricing pages don't say whether these renew. Firecrawl's free plan gives 1,000 credits every month.</p>
-      <p class="vcw-foot">Monthly list prices on the cheapest published route, including published extra-credit rates: Scrapfly's up to its cap of 50% of a plan's monthly credits, and Firecrawl's in $5 blocks. Harder targets and premium or residential proxies cost more at every vendor here.</p>
+      <p class="vcw-foot">Monthly list prices on the cheapest published route, including published extra-credit rates up to Scrapfly's cap on extra usage, 50% of a plan's monthly credits. Harder targets and premium or residential proxies cost more at every vendor here.</p>
       <div class="affiliate-card" id="cw-aff">
         <span class="affiliate-card-label">Affiliate link</span>
         <p class="affiliate-card-text"><a href="https://www.scraperapi.com/?fp_ref=sanjaya18" target="_blank" rel="sponsored nofollow noopener" data-goatcounter-click="affiliate/scraperapi-home" data-goatcounter-title="ScraperAPI affiliate card (home page)">Check ScraperAPI's current plans</a></p>
@@ -89,7 +84,7 @@
     </div>
 
     <h2>How much do these APIs cost at 100,000 and 1,000,000 requests?</h2>
-    <p>All five sell monthly credit plans, so the comparison comes down to the plan price, the credits included and the credits each request uses. Each cost is the cheapest published route that covers the volume at monthly list price. Prices come from vendor pricing pages; Firecrawl, marked Tested, also has measured results.</p>
+    <p>All five sell monthly credit plans, so the comparison comes down to the plan price, the credits included and the credits each request uses. Each cost is the cheapest published route that covers the volume at monthly list price.</p>
     <div class="table-wrap">
       <table class="stack-table">
         <thead>
@@ -120,56 +115,27 @@
             <td data-label="100,000 plain" class="price">$49 (Freelance)</td>
             <td data-label="1,000,000 plain" class="price">$99 (Startup)</td>
           </tr>
-          <tr>
-            <td data-label="Tool"><strong><a href="#firecrawl">Firecrawl</a></strong> <span class="tier-pill tested">Tested</span></td>
+          <tr id="firecrawl-test">
+            <td data-label="Tool"><strong><a href="methodology.html#firecrawl-results">Firecrawl</a></strong> <span class="tier-pill tested">Tested</span></td>
             <td data-label="100,000 plain" class="price">$99 (Standard)</td>
             <td data-label="1,000,000 plain" class="price">$749 (Scale)</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p>Plain figures need rendering switched off at ScrapingDog (<a href="https://www.scrapingdog.com/documentation/javascript-rendering/" target="_blank" rel="noopener">dynamic=false</a>) and ScrapingBee (render_js=false). Both render by default at 5 credits, so a default ScrapingDog call makes the $90 plan cover about 200,000 requests. With rendering on, 100,000 pages cost $90 at ScrapingDog, $99 at ScrapingBee and Firecrawl, $100 at Scrapfly and $149 at ScraperAPI. Firecrawl lists no cheaper unrendered request, so its plain and rendered prices match.</p>
-    <p>Free offers: Scrapfly gives 1,000 credits on signup and ScrapingDog a 100-credit free plan, both with no credit card. ScraperAPI lists a 1,000-credit free plan, renewal not stated, and a 5,000-credit 7-day trial with no credit card. ScrapingBee lists <a href="https://www.scrapingbee.com/" target="_blank" rel="noopener">1,000 free credits</a>, no credit card, and Firecrawl 1,000 credits a month, no card. More in <a href="web-scraping-apis-with-free-tier.html">web scraping APIs with a free tier</a> and <a href="scraperapi-free-trial.html">the ScraperAPI free trial</a>.</p>
+    <p>Plain figures need rendering switched off at ScrapingDog (<a href="https://www.scrapingdog.com/documentation/javascript-rendering/" target="_blank" rel="noopener">dynamic=false</a>) and ScrapingBee (render_js=false). Both render by default at 5 credits, so a default ScrapingDog call makes the $90 plan cover about 200,000 requests.</p>
+    <p>Free offers: Scrapfly gives 1,000 credits on signup and ScrapingDog a 100-credit free plan, both with no credit card. ScraperAPI lists a 1,000-credit free plan, renewal not stated, and a 5,000-credit 7-day trial with no credit card. ScrapingBee lists <a href="https://www.scrapingbee.com/" target="_blank" rel="noopener">1,000 free credits</a>, no credit card. More in <a href="web-scraping-apis-with-free-tier.html">web scraping APIs with a free tier</a> and <a href="scraperapi-free-trial.html">the ScraperAPI free trial</a>.</p>
 
-    <h2 id="firecrawl-test">How did Firecrawl do in the ScrapeTools test?</h2>
-    <p>Firecrawl is the one API on this site with test results. On 22 Nov 2026 ScrapeTools sent its free plan <span data-bench="summary.all.requests">95</span> requests: 19 public pages, five rounds each. The pages, settings and pass rule were <a href="data/benchmark-panel-2026-11.json">published</a> before the first request (<a href="methodology.html">method</a>), and a request passed only if text a person sees on that page came back. Firecrawl asked to be listed and offered credits; the test used its public free plan, and Firecrawl pays this site nothing.</p>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Pages</th><th>Passed</th><th>Median</th><th>Slow end</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Static HTML (13)</td><td><span data-bench="summary.static.successes">65</span> of <span data-bench="summary.static.requests">65</span></td><td><span data-bench="summary.static.median_latency_ms">2.26</span> s</td><td><span data-bench="summary.static.p95_latency_ms">2.98</span> s p95</td></tr>
-          <tr><td>JavaScript (4)</td><td><span data-bench="summary.js.successes">15</span> of <span data-bench="summary.js.requests">20</span></td><td><span data-bench="summary.js.median_latency_ms">1.78</span> s</td><td><span data-bench="summary.js.max_latency_ms">2.66</span> s max</td></tr>
-          <tr><td>Cloudflare challenge (2)</td><td><span data-bench="summary.protected.successes">10</span> of <span data-bench="summary.protected.requests">10</span></td><td><span data-bench="summary.protected.median_latency_ms">1.64</span> s</td><td><span data-bench="summary.protected.max_latency_ms">4.34</span> s max</td></tr>
-          <tr><td><strong>Static + JavaScript (17)</strong></td><td><strong><span data-bench="summary.general.successes">80</span> of <span data-bench="summary.general.requests">85</span></strong></td><td><span data-bench="summary.general.median_latency_ms">2.22</span> s</td><td><span data-bench="summary.general.p95_latency_ms">2.97</span> s p95</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="source-line">Times are for requests that passed. p95: 95th percentile; max: the slowest, shown where a group has fewer than 20. The two challenge pages are practice pages built for scraper tests.</p>
-    <p>All five failures were one page whose quotes appear 10 seconds after loading; Firecrawl returned it before they did, with its <code>waitFor</code> option left at the default. Every other page passed every round, both challenge pages included. A plain HTTP request matched 12 of the 13 static pages (the 13th keeps its check text in link titles, which that check skips) and none of the other 6.</p>
-    <p>Each request, failures included, used 1 credit: the account's counter fell by <span data-bench="summary.credits.used">95</span>. On the static and JavaScript pages, <span data-bench="summary.general.requests">85</span> credits bought <span data-bench="summary.general.successes">80</span> passes: $<span data-bench="summary.cost_per_1000_successful_pages.Standard.per_1000_successful_general_usd">1.05</span> per 1,000 passed pages on the $99 Standard plan, or $<span data-bench="summary.cost_per_1000_successful_pages.Hobby.per_1000_successful_general_usd">4.04</span> on the $19 Hobby plan. Times run end to end from one machine. This is one run on one day, mostly on practice sites built to be scraped; other sites can do better or worse. Raw data: <a href="data/firecrawl-benchmark-2026-11-22.csv">CSV</a>, <a href="data/firecrawl-benchmark-2026-11-22.json">JSON</a>.</p>
-
-    <h3>Where the lowest list price changes hands</h3>
-    <ul>
-      <li><strong>Up to 75,000 plain requests:</strong> ScrapingBee Hobby, $19, tied with Firecrawl Hobby up to 5,000 (see <a href="cheapest-web-scraping-api.html">the cheapest web scraping API</a>).</li>
-      <li><strong>Up to 200,000:</strong> Scrapfly Discovery, $30.</li>
-      <li><strong>Up to 250,000:</strong> ScrapingBee Freelance, $49.</li>
-      <li><strong>Up to 1,000,000:</strong> ScrapingDog Standard, $90.</li>
-      <li><strong>Up to 1,285,714:</strong> Scrapfly Pro plus extra credits at $3.50 per 10,000, $100 to $200.</li>
-      <li><strong>Up to 3,000,000:</strong> ScrapingDog Pro, $200.</li>
-    </ul>
-    <p>Move the widget's slider for higher volumes. Scrapfly's table lists $5.00 per 10,000 for Discovery but also says the plan hard-caps at quota; we treat it as capped.</p>
-    <p>The comparison covers five vendors that each sell their own API on monthly credit plans. <a href="https://scrapeops.io/proxy-api-aggregator/" target="_blank" rel="noopener">ScrapeOps</a> is left out because it aggregates other proxy providers and its page does not state credits per request, so like-for-like is unproven. It lists $9/mo for 25,000 credits and $19/mo for 100,000 credits, both with 1 concurrent thread.</p>
-    <p>The first four are the credit-plan vendors this site already tracked. Firecrawl joined on 22 Nov 2026, after it asked to be included and met the bar set before its test; other credit-plan vendors exist and were not checked. <a href="https://brightdata.com/pricing/web-unlocker" target="_blank" rel="noopener">Bright Data</a>, <a href="https://oxylabs.io/pricing" target="_blank" rel="noopener">Oxylabs</a>, <a href="https://www.zyte.com/pricing/" target="_blank" rel="noopener">Zyte</a> and <a href="https://apify.com/pricing" target="_blank" rel="noopener">Apify</a> are also left out and not ranked, because their prices cover different work and billing terms. Bright Data's Web Unlocker bills per request, Oxylabs per result, Zyte per successful response by site tier, and Apify by Actor, most often per event or by compute unit.</p>
+    <p>The lowest plain-request price changes hands as volume grows: ScrapingBee Hobby, $19, up to 75,000 (see <a href="cheapest-web-scraping-api.html">the cheapest web scraping API</a>); Scrapfly Discovery, $30, up to 200,000; ScrapingBee Freelance, $49, up to 250,000; ScrapingDog Standard, $90, up to 1,000,000; Scrapfly Pro plus extra credits at $3.50 per 10,000, $100 to $200, up to 1,285,714; ScrapingDog Pro, $200, up to 3,000,000. Move the widget's slider for higher volumes. Scrapfly's table lists $5.00 per 10,000 for Discovery but also says the plan hard-caps at quota; we treat it as capped.</p>
+    <p>The comparison covers five vendors that each sell their own API on monthly credit plans. <a href="https://scrapeops.io/proxy-api-aggregator/" target="_blank" rel="noopener">ScrapeOps</a> is left out because it aggregates other proxy providers and its page does not state credits per request, so like-for-like is unproven. It lists $9/mo for 25,000 credits and $19/mo for 100,000 credits, both with 1 concurrent thread. Other credit-plan vendors exist and were not checked. <a href="https://brightdata.com/pricing/web-unlocker" target="_blank" rel="noopener">Bright Data</a>, <a href="https://oxylabs.io/pricing" target="_blank" rel="noopener">Oxylabs</a>, <a href="https://www.zyte.com/pricing/" target="_blank" rel="noopener">Zyte</a> and <a href="https://apify.com/pricing" target="_blank" rel="noopener">Apify</a> are also left out and not ranked, because their prices cover different work and billing terms. Bright Data's Web Unlocker bills per request, Oxylabs per result, Zyte per successful response by site tier, and Apify by Actor, most often per event or by compute unit.</p>
 
     <!-- ad:after-answer -->
 
     <h2>How do you estimate a mixed workload?</h2>
-    <p>Add up credits before you compare prices. Take an illustrative month of 300,000 plain requests and 20,000 rendered requests. That is 400,000 credits at ScrapingDog and ScrapingBee, 420,000 at Scrapfly and 500,000 at ScraperAPI. The smallest plans that cover those totals are ScrapingDog Standard at $90, ScrapingBee Startup at $99, Scrapfly Pro at $100 and ScraperAPI Startup at $149. Firecrawl counts 320,000 credits, which need its Growth plan at $399.</p>
+    <p>Add up credits before you compare prices. Take an illustrative month of 300,000 plain requests and 20,000 rendered requests. That is 400,000 credits at ScrapingDog and ScrapingBee, 420,000 at Scrapfly and 500,000 at ScraperAPI. The smallest plans that cover those totals are ScrapingDog Standard at $90, ScrapingBee Startup at $99, Scrapfly Pro at $100 and ScraperAPI Startup at $149.</p>
 
     <h2>Why can't you compare credits directly?</h2>
-    <p>A credit buys different work at each vendor. A rendered request costs 5 credits at ScrapingBee and ScrapingDog, 6 at Scrapfly, 10 at ScraperAPI and 1 at Firecrawl, whose credits cost more: $0.99 per 1,000 on its Standard plan. That is why rendering reorders the widget's list.</p>
+    <p>A credit buys different work at each vendor. A rendered request costs 5 credits at ScrapingBee and ScrapingDog, 6 at Scrapfly, 10 at ScraperAPI and 1 at Firecrawl, which is why rendering reorders the widget's list.</p>
     <div class="note-box">
       <strong>A worked example.</strong> ScrapingBee's Freelance plan is $49 for 250,000 credits, or $0.196 per 1,000 classic-proxy requests without rendering. With JavaScript rendering at 5 credits, it covers 50,000 requests, or $0.98 per 1,000. A premium proxy with rendering (25 credits) covers 10,000 requests, or $4.90 per 1,000.
     </div>
@@ -180,7 +146,6 @@
       <li><strong>Scrapfly</strong> Discovery hard-caps at quota, while Pro and above switch to pay-as-you-go. <a href="https://scrapfly.io/docs/billing" target="_blank" rel="noopener">Its billing docs</a> cap extra usage at 50% of monthly quota on non-custom plans, then suspend the account until renewal or upgrade. Each project can also set a Budget Limit or turn pay-as-you-go off. The docs and pricing page don't say whether unused credits roll over at a normal renewal.</li>
       <li><strong>ScrapingDog</strong> requests return an over-limit response until credits reset on your next billing date. From Standard upward, unused credits carry over to the next billing cycle.</li>
       <li><strong>ScrapingBee</strong>: <a href="https://www.scrapingbee.com/documentation/" target="_blank" rel="noopener">its docs</a> list a 401 response for being out of credits, which is not billed. Credits are valid for one month and don't roll over.</li>
-      <li><strong>Firecrawl</strong>'s free credits don't roll over. <a href="https://docs.firecrawl.dev/billing" target="_blank" rel="noopener">Its billing docs</a> add credits in $5 blocks on paid plans only, automatically up to a monthly limit you set or by hand.</li>
     </ul>
 
     <h2>How does geotargeting differ?</h2>
@@ -204,9 +169,6 @@
 
     <h3 id="scrapingbee">ScrapingBee</h3>
     <p>Hobby is $19/mo (75,000 credits, 25 concurrent requests), and the price list reaches $5,799/mo for 120,000,000 credits. Geotargeting covers 200+ countries and territories (40+ on classic proxies).</p>
-
-    <h3 id="firecrawl">Firecrawl</h3>
-    <p>A scrape costs 1 credit and JSON output 4 more; a page returned with an error status such as 403 or 404 is still billed. Hobby allows 5 concurrent requests and the free plan 10 scrapes a minute. <a href="#firecrawl-test">Test results</a>.</p>
 
     <h2>Where to go next</h2>
     <p><a href="cheapest-web-scraping-api.html">Cheapest web scraping API</a> · <a href="scraperapi-cost-calculator.html">ScraperAPI cost calculator</a> · <a href="ats-job-posting-api-crawl-data.html">ATS job board crawl data</a> ·<a href="scraperapi-vs-scrapingbee.html">ScraperAPI vs ScrapingBee</a> · <a href="scraperapi-vs-bright-data.html">ScraperAPI vs Bright Data</a></p>
@@ -246,13 +208,13 @@
     <!-- autopilot:guides:end -->
 
     <h2>What these numbers do not cover</h2>
-    <p>Prices come from each vendor's own pages, checked Nov 5, 2026, and Firecrawl's on Nov 22, 2026. Only Firecrawl's performance has been tested, on one day and 19 pages; the other four have no test results here. Costs assume full use of a plan and exclude taxes, annual discounts, promotions and negotiated contracts.</p>
+    <p>Prices come from vendor pages, checked Nov 5, 2026 (Firecrawl's Nov 22, 2026); only Firecrawl has been tested. Costs assume full use of a plan and exclude taxes, annual discounts, promotions and negotiated contracts.</p>
 
     <h2>What changed since the Jul 25, 2026 check?</h2>
-    <p>On Nov 22, 2026 Firecrawl was added, with this site's first test results. ScrapingBee now lists a $19/mo Hobby plan. ScrapingDog's free plan is now 100 credits, down from 200. This version also narrows the cost comparison to plans sold in credits.</p>
+    <p>ScrapingBee now lists a $19/mo Hobby plan. ScrapingDog's free plan is now 100 credits, down from 200. This version also narrows the cost comparison to plans sold in credits.</p>
 
     <h2>Sources</h2>
-    <p class="source-line">Checked Nov 5, 2026: <a href="https://www.scraperapi.com/pricing/" target="_blank" rel="noopener">ScraperAPI pricing</a>, <a href="https://www.scrapingbee.com/pricing/" target="_blank" rel="noopener">ScrapingBee pricing</a>, <a href="https://www.scrapingdog.com/pricing/" target="_blank" rel="noopener">ScrapingDog pricing</a>, <a href="https://scrapfly.io/pricing" target="_blank" rel="noopener">Scrapfly pricing</a>. Checked Nov 22, 2026: <a href="https://www.firecrawl.dev/pricing" target="_blank" rel="noopener">Firecrawl pricing</a>, <a href="https://docs.firecrawl.dev/billing" target="_blank" rel="noopener">Firecrawl billing docs</a>. Docs and other vendors' pages are linked where cited above.</p>
+    <p class="source-line">Checked Nov 5, 2026: <a href="https://www.scraperapi.com/pricing/" target="_blank" rel="noopener">ScraperAPI pricing</a>, <a href="https://www.scrapingbee.com/pricing/" target="_blank" rel="noopener">ScrapingBee pricing</a>, <a href="https://www.scrapingdog.com/pricing/" target="_blank" rel="noopener">ScrapingDog pricing</a>, <a href="https://scrapfly.io/pricing" target="_blank" rel="noopener">Scrapfly pricing</a>. Checked Nov 22, 2026: <a href="https://www.firecrawl.dev/pricing" target="_blank" rel="noopener">Firecrawl pricing</a>. Docs and other vendors' pages are linked where cited above.</p>
   </div>
 </main>
 
@@ -280,8 +242,8 @@
       rendered: '5 credits per rendered request, the default setting.',
       tiers: [['Lite', 40, 200000], ['Standard', 90, 1000000], ['Pro', 200, 3000000], ['Premium', 350, 6000000], ['Business', 500, 9000000], ['Business Plus', 1000, 19000000], ['Business Pro', 1500, 29000000], ['Corporate', 2000, 42000000], ['Corporate Plus', 2500, 55000000]]},
     {id: 'firecrawl', name: 'Firecrawl', js: 1, unit: 'credits', src: U + 'www.firecrawl.dev/pricing',
-      plain: 'A page costs 1 credit; no cheaper unrendered request is listed. Tested by ScrapeTools on 22 Nov 2026.',
-      rendered: 'A page costs 1 credit with JavaScript rendered (ScrapeTools test, 22 Nov 2026).',
+      plain: '1 credit a page, rendering included.',
+      rendered: '1 credit a page, rendering included.',
       extraNote: 'Extra credits are sold in $5 blocks at the plan rate.',
       overLabel: 'Enterprise: custom pricing', extraCap: null, blocks: true,
       tiers: [['Hobby', 19, 5000, 5, 1000], ['Standard', 99, 100000, 5, 2000], ['Growth', 399, 500000, 5, 2500], ['Scale', 749, 1000000, 5, 5000]]}

@@ -14,6 +14,8 @@ only if it earns a place. Brief: D:/Lab/manager/briefs/md-009.md. Linear SAN-161
   home page 1st of 4 on originality, usefulness and trust (counting run); two earlier subagent runs agreed but were
   not blind (git snapshot in context). Home-page gate still fails as on main: too_long 15.0 screens (main 12.2) and
   21 untraced numbers in the More-guides cards; option: move the results table to methodology.html.
+- Rework done (RULING.md section 6): full results on methodology.html#firecrawl-results; index keeps a compact
+  summary, the row and the widget entry; index 10,982 px vs main 11,001 px; untraced list identical to main.
 - Reply draft: md-009/reply.md (link live only after merge).
 - Key: D:/Lab/secrets/firecrawl/.env (never printed; clipboard cleared).
 
