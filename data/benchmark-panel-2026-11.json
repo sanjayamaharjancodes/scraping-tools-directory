@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "name": "ScrapeTools benchmark panel, November 2026",
+  "frozen": "2026-11-22",
+  "method": "https://scrapetools.scaleturn.com/methodology.html",
+  "about": "Fixed before the first run and not changed after seeing results. Each page has a category and one or more success markers: text a person sees on the page in a normal browser. A request succeeds only when every marker appears in the returned content and no block-page phrase does. Markers are matched case-sensitively after removing Markdown emphasis characters (* _ `) and collapsing whitespace. Practice sites are pages built to be scraped; their owners are named where the site names them.",
+  "categories": {
+    "static": "The content is in the page's HTML; a plain HTTP request gets it.",
+    "js": "The content is added by JavaScript after the page loads; a plain HTTP request does not get it.",
+    "protected": "A bot-protection challenge (Cloudflare) answers a plain HTTP request with 403 'Just a moment...'. Both pages are on a practice site that lists them as challenges to bypass. Reported separately from the general success rate, as the method says."
+  },
+  "block_phrases": ["Just a moment...", "Enable JavaScript and cookies to continue", "Verify you are human", "Checking your browser", "Attention Required!"],
+  "pages": [
+    {"id": "S01", "category": "static", "url": "https://books.toscrape.com/", "markers": ["A Light in the Attic"], "site": "Books to Scrape, a practice site (toscrape.com)"},
+    {"id": "S02", "category": "static", "url": "https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html", "markers": ["51.77"], "site": "Books to Scrape, a practice site (toscrape.com)"},
+    {"id": "S03", "category": "static", "url": "https://quotes.toscrape.com/", "markers": ["Albert Einstein"], "site": "Quotes to Scrape, a practice site (toscrape.com; footer: made by Zyte)"},
+    {"id": "S04", "category": "static", "url": "https://en.wikipedia.org/wiki/Web_scraping", "markers": ["web harvesting"], "site": "Wikipedia"},
+    {"id": "S05", "category": "static", "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status", "markers": ["404 Not Found"], "site": "MDN Web Docs"},
+    {"id": "S06", "category": "static", "url": "https://www.gov.uk/bank-holidays", "markers": ["England and Wales"], "site": "GOV.UK"},
+    {"id": "S07", "category": "static", "url": "https://news.ycombinator.com/", "markers": [{"re": "[0-9]+ points by"}], "site": "Hacker News"},
+    {"id": "S08", "category": "static", "url": "https://httpbin.org/html", "markers": ["Herman Melville - Moby-Dick"], "site": "httpbin.org, an HTTP test service"},
+    {"id": "S09", "category": "static", "url": "https://www.rfc-editor.org/rfc/rfc9309.html", "markers": ["Robots Exclusion Protocol"], "site": "RFC Editor"},
+    {"id": "S10", "category": "static", "url": "https://docs.python.org/3/library/urllib.robotparser.html", "markers": ["RobotFileParser"], "site": "Python documentation"},
+    {"id": "S11", "category": "static", "url": "https://web-scraping.dev/products", "markers": ["Box of Chocolate Candy"], "site": "web-scraping.dev, a practice site made by Scrapfly (a vendor on ScrapeTools)"},
+    {"id": "S12", "category": "static", "url": "https://web-scraping.dev/testimonials", "markers": ["using this utility for years"], "site": "web-scraping.dev, a practice site made by Scrapfly (a vendor on ScrapeTools)"},
+    {"id": "S13", "category": "static", "url": "https://www.scrapingcourse.com/infinite-scrolling", "markers": ["Chaz Kangeroo Hoodie"], "site": "ScrapingCourse.com, a practice site"},
+    {"id": "J01", "category": "js", "url": "https://quotes.toscrape.com/js/", "markers": ["Albert Einstein"], "site": "Quotes to Scrape, a practice site (toscrape.com; footer: made by Zyte)"},
+    {"id": "J02", "category": "js", "url": "https://quotes.toscrape.com/scroll", "markers": ["Albert Einstein"], "site": "Quotes to Scrape, a practice site (toscrape.com; footer: made by Zyte)"},
+    {"id": "J03", "category": "js", "url": "https://quotes.toscrape.com/js-delayed/", "markers": ["Albert Einstein"], "site": "Quotes to Scrape, a practice site (toscrape.com; footer: made by Zyte)", "note": "The quotes appear about 10 seconds after the page loads (the page's own script waits 10,000 ms)."},
+    {"id": "J04", "category": "js", "url": "https://www.scrapingcourse.com/javascript-rendering", "markers": ["Chaz Kangeroo Hoodie"], "site": "ScrapingCourse.com, a practice site"},
+    {"id": "P01", "category": "protected", "url": "https://www.scrapingcourse.com/antibot-challenge", "markers": ["You bypassed the Antibot challenge"], "site": "ScrapingCourse.com, a practice site (its home page lists it as 'Bypass the Antibot challenge')"},
+    {"id": "P02", "category": "protected", "url": "https://www.scrapingcourse.com/cloudflare-challenge", "markers": ["You bypassed the Cloudflare challenge"], "site": "ScrapingCourse.com, a practice site (its home page lists it as 'Bypass the Cloudflare challenge')"}
+  ],
+  "run_plan": {
+    "rounds": 5,
+    "order": "Pages are interleaved by host, the same order every round; one request at a time.",
+    "pacing": "At least 8 seconds between request starts (under the free plan's 10 scrapes a minute), and at least 10 seconds, or the host's robots.txt Crawl-delay if longer, between requests for the same host.",
+    "retries": "None. A failed request counts as a failure. An HTTP 429 from the API stops the run (a harness fault, not a vendor result).",
+    "robots": "Every page must be allowed by its site's robots.txt for User-agent * and FirecrawlAgent before the run starts; a robots.txt answering 401, 403, 5xx or not at all counts as disallow.",
+    "control": "One direct request per page (plain HTTP GET, no rendering, user agent ScrapeToolsBench/1.0) shows which pages need rendering or unblocking. It is a reference, not a vendor."
+  },
+  "vendors": {
+    "firecrawl": {
+      "endpoint": "POST https://api.firecrawl.dev/v2/scrape",
+      "request": {"formats": ["markdown"], "onlyMainContent": false, "maxAge": 0, "storeInCache": false, "proxy": "auto", "timeout": 60000},
+      "settings_note": "Defaults except: maxAge 0 and storeInCache false so every request fetches the page fresh (the default serves a cached copy up to 2 days old), onlyMainContent false so the whole page is checked, proxy pinned to its default 'auto' (retries with Firecrawl's enhanced proxy if the basic one fails, at no extra credit per its docs). No waitFor, no actions, no JSON format. Client timeout 90 s.",
+      "pricing": {
+        "checked": "2026-11-22",
+        "source_url": "https://www.firecrawl.dev/pricing",
+        "billing_url": "https://docs.firecrawl.dev/billing",
+        "credits_per_scrape": 1,
+        "note": "1 credit per page scraped, including pages returned with an error status such as 403 or 404; 0 credits when no document is returned (billing docs). The enhanced proxy costs the same 1 credit. Monthly list prices; annual billing is cheaper but this site quotes monthly prices.",
+        "plans": [
+          {"name": "Free", "monthly_usd": 0, "credits": 1000},
+          {"name": "Hobby", "monthly_usd": 19, "credits": 5000},
+          {"name": "Standard", "monthly_usd": 99, "credits": 100000},
+          {"name": "Growth", "monthly_usd": 399, "credits": 500000},
+          {"name": "Scale", "monthly_usd": 749, "credits": 1000000}
+        ]
+      }
+    }
+  },
+  "ruling_rule": {
+    "question": "Does Firecrawl earn a place in the ScrapeTools price comparison?",
+    "yes_only_if_all": [
+      "R1 eligibility: it sells its own API on published monthly credit plans that state the credits a request uses (the home page's existing rule for its credit-plan vendors).",
+      "R2 reliability: at least 90% of requests to the general panel (static and js pages) succeed.",
+      "R3 billing: the credits the account's own counter shows for the run equal at most 1 credit per request sent, so the published price is what the measured pages cost.",
+      "R4 valid run: harness faults (API 429, our own network errors) stay under 5% of requests; otherwise no ruling is made from the run."
+    ],
+    "not_criteria": "Price rank. The comparison lists every eligible vendor sorted by cost, so a more expensive vendor still belongs if it meets R1-R3. The protected pair is reported but is not part of R2, because two pages are too few to rule on."
+  }
+}
