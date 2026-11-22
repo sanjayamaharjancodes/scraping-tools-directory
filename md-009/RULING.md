@@ -81,10 +81,10 @@ vendors; the cheapest page's widget line says "four of these vendors".
 | Check | Command | Result |
 |---|---|---|
 | Summary recomputes | `python -I scripts/firecrawl_benchmark.py summary data/firecrawl-benchmark-2026-11-22.json` | exit 0 |
-| Figures trace to the raw file | `... check data/firecrawl-benchmark-2026-11-22.json index.html cheapest-web-scraping-api.html` | 22 marked figures, 0 failed; 2 planted errors caught |
+| Figures trace to the raw file | `... check data/firecrawl-benchmark-2026-11-22.json index.html cheapest-web-scraping-api.html` | 24 marked figures, 0 failed; 2 planted errors caught |
 | Widget unchanged for the other four | node diff of `best()` before/after, 212 volumes x rendering on/off | 1,696 cases, 0 differ |
 | Machine gate, cheapest page | `python -I md-009/run_gate.py --autopilot F:/Lab/assets/content-autopilot --slug cheapest-web-scraping-api --original <main copy>` | passed apart from 18 fact-age findings on its 8 Nov facts; 8,984 px (original 8,965), under the 10-screen cap |
-| Machine gate, home page | same, `--original <main copy of index.html>` | 2 findings, both already on main: 21 untraced numbers (all in the "More guides" cards added by ct-001..005; md-009 adds none) and too_long, 14.9 phone screens (main: 12.2). Plus 54 fact-age findings on the 5 Nov facts. |
+| Machine gate, home page | same, `--original <main copy of index.html>` | 2 findings, both already on main: 21 untraced numbers (all in the "More guides" cards added by ct-001..005; md-009 adds none) and too_long, 15.0 phone screens (main: 12.2). Plus 54 fact-age findings on the 5 Nov facts. |
 | AdSense loader and affiliate links | `python -I ct-004/check_live.py --local --scrapetools . --scaleturn F:/Lab/assets/scaleturn-site --gettingpaid F:/Lab/assets/getting-paid-nepal` | 64 of 64, ALL PASS |
 | Our tools count no visit | `python -I ct-005/test_no_counter.py` (now scans scripts/ and md-*/) | 18 of 18, ALL PASS |
 | Links | every href on the six changed pages | 149 local targets exist; 31 external links all 200 |
@@ -92,3 +92,31 @@ vendors; the cheapest page's widget line says "four of these vendors".
 
 The gate's "claimed testing" rule (checks.py BANNED) predates any real test; the pages state the test in the
 site's third-person voice ("ScrapeTools ran", "ScrapeTools test") and the claims trace to the raw file.
+
+## 5. Originality gate (22 Nov 2026)
+
+- **Query** "best web scraping api 2026" (Google, en/US, 22 Nov). Top 3 organic: tinyfish.ai/blog/best-web-scraping-tools,
+  scrapingdog.com/blog/best-web-scraping-apis/, a Reddit r/developer thread. Reddit could not be read (plain fetch 403;
+  the Chrome extension refuses reddit.com), so #4, zackproser.com/blog/best-web-scraping-api-2026, took its place.
+- **Inputs** All four pages went through one text extractor (`<main>`/`<article>`, scripts stripped); the rivals' word
+  counts match a browser view of their articles. Saved as doc-A..D in random order in the job's temp folder (not the
+  repo); the mapping was kept outside that folder.
+- **Reviewer** A fresh general-purpose subagent, told only the query, reading only those four files (no web), ranked
+  them once on originality (main criterion), usefulness and trust.
+- **Result: ours (doc-C) 1st on all three.**
+
+| Page | Originality | Usefulness | Trust |
+|---|---|---|---|
+| ScrapeTools home page (this branch) | 1 | 1 | 1 |
+| ScrapingDog blog (vendor's own benchmark) | 2 | 3 | 4 |
+| tinyfish.ai blog | 3 | 2 | 2 |
+| zackproser.com (#4, in place of Reddit) | 4 | 4 | 3 |
+
+- **Reason given for first place** A method and pass rule published before the run, results by page type with p95, a
+  plain-request baseline, a stated cause for the one failure, downloadable raw data, and billing checked against the
+  account's counter.
+- **Defect it found, fixed after** The cost sentence cited the counter's 95 credits but gave the 85-request figure
+  ($4.04 on Hobby, versus $4.01 over all 95). The sentence now names its basis: 85 credits, 80 passes. Re-checked:
+  24 figures traced, gate unchanged apart from height 15.0 screens.
+- **Weakness it named for ours** Narrow: five credit-plan vendors from their own pages, only one tested, once, mostly
+  on practice sites. The page says so.
