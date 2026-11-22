@@ -218,6 +218,11 @@ main { padding: var(--space-6) 0 var(--space-7) 0; }
   border: 1px solid var(--color-tier-free-border);
   color: #1c6b36;
 }
+.tier-pill.tested {
+  background: #e8f0fa;
+  border: 1px solid #b4c9e6;
+  color: #1d4a80;
+}
 .tier-pill.trial {
   background: var(--color-tier-trial-bg);
   border: 1px solid var(--color-tier-trial-border);

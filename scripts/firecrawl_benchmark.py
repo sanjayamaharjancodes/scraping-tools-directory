@@ -516,6 +516,103 @@ def cmd_check(a):
     return 0 if ok else 1
 
 
+# Firecrawl's own words, copied from its pages on 22 Nov 2026 (the pricing figures are also in the panel file).
+FIRECRAWL_SOURCES = [
+    ("fc-plans", "Firecrawl paid plans: monthly price, annual price, credits",
+     "https://www.firecrawl.dev/pricing",
+     "Hobby: $19/month billed monthly ($16/month billed annually), 5,000 credits/month | Standard: $99/month billed "
+     "monthly ($83/month billed annually), 100,000 credits/month | Growth: $399/month billed monthly ($333/month "
+     "billed annually), 500,000 credits/month | Scale: $749/month billed monthly ($599/month billed annually), "
+     "1,000,000 credits/month",
+     ["19", "16", "5,000", "99", "83", "100,000", "399", "333", "500,000", "749", "599", "1,000,000"]),
+    ("fc-free", "Firecrawl free tier and Hobby concurrency",
+     "https://www.firecrawl.dev/pricing",
+     "Free tier: 1,000 credits every month, refreshed monthly, no credit card required. | Hobby | 5,000 credits / "
+     "month | 5 concurrent requests",
+     ["1,000", "5,000", "5"]),
+    ("fc-billing", "Firecrawl billing: credits per scrape, JSON surcharge, billed error pages, pay-as-you-go blocks",
+     "https://docs.firecrawl.dev/billing",
+     "Scrape 1 credit / page | JSON format: +4 credits per page | Firecrawl returned a document: 1 credit per page. "
+     "This includes pages that come back with an error status such as 403 Forbidden or 404 Not Found. | You buy "
+     "credits in increments of 5 USD. | Pay-as-you-go needs a paid self-serve plan. | Hobby 1,000 | Standard 2,000 | "
+     "Growth 2,500 | Scale 5,000",
+     ["1", "4", "403", "404", "5", "1,000", "2,000", "2,500", "5,000"]),
+    ("fc-free-limits", "Firecrawl free plan: monthly credits, no rollover, rate limit",
+     "https://docs.firecrawl.dev/billing",
+     "1,000 credits per month. The allotment resets at the start of each monthly cycle. Unused free credits do not "
+     "roll over. | Rate limits of 10 requests per minute on /scrape, /map and /search",
+     ["1,000", "10"]),
+]
+
+
+def cmd_facts(a):
+    """Write the content-autopilot gate's facts for this run: the summary, the panel and Firecrawl's pages."""
+    raw = json.load(open(a.raw, encoding="utf-8"))
+    s = summarize(raw)
+    if raw.get("summary") != s:
+        raise SystemExit("the stored summary differs from the recomputed one")
+    site = "https://scrapetools.scaleturn.com/"
+    date = raw["run_date"]
+    facts = []
+
+    def sec(ms):
+        return f"{ms / 1000:.2f}"
+
+    parts, nums = [f"requests={s['all']['requests']}"], [str(s["all"]["requests"])]
+    for g in ("static", "js", "protected", "general"):
+        b = s[g]
+        tail = f"p95_s={sec(b['p95_latency_ms'])}" if b["latency_n"] >= 20 else f"slowest_s={sec(b['max_latency_ms'])}"
+        parts.append(f"{g}: requests={b['requests']} successes={b['successes']} success_rate_pct="
+                     f"{b['success_rate_pct']} median_s={sec(b['median_latency_ms'])} {tail}")
+        nums += [str(b["requests"]), str(b["successes"]), f"{b['success_rate_pct']}", sec(b["median_latency_ms"]),
+                 sec(b["p95_latency_ms"] if b["latency_n"] >= 20 else b["max_latency_ms"])]
+    c = s["cost_per_1000_successful_pages"]
+    parts.append(f"credits_used={s['credits']['used']}; per_1000_successful_general_usd: "
+                 f"Standard={c['Standard']['per_1000_successful_general_usd']} "
+                 f"Hobby={c['Hobby']['per_1000_successful_general_usd']}")
+    nums += [str(s["credits"]["used"]), str(c["Standard"]["per_1000_successful_general_usd"]),
+             str(c["Hobby"]["per_1000_successful_general_usd"])]
+    ctl = s["control"]["by_category"]
+    parts.append(f"control: static {ctl['static']}, js {ctl['js']}, protected {ctl['protected']}")
+    nums += re.findall(r"\d+", " ".join(ctl.values()))
+    facts.append({"id": "bench-summary", "claim": f"Firecrawl benchmark run {date}: summary",
+                  "source_url": site + f"data/firecrawl-benchmark-{date}.json", "fetched": date,
+                  "excerpt": "; ".join(parts), "numbers": sorted(set(nums), key=lambda x: float(x.replace(",", "")))})
+    panel = raw["panel"]
+    cats = {k: sum(1 for p in panel["pages"] if p["category"] == k) for k in ("static", "js", "protected")}
+    j03 = next(p for p in panel["pages"] if p["id"] == "J03")
+    ex = (f"pages={len(panel['pages'])}; static={cats['static']}; js={cats['js']}; protected={cats['protected']}; "
+          f"rounds={panel['run_plan']['rounds']}; J03: {j03['note']}")
+    facts.append({"id": "bench-panel", "claim": "Benchmark panel: pages per category, rounds, the delayed page",
+                  "source_url": site + raw["panel_file"], "fetched": date, "excerpt": ex,
+                  "numbers": sorted({str(len(panel["pages"])), str(cats["static"]), str(cats["js"]),
+                                     str(cats["protected"]), str(panel["run_plan"]["rounds"]), "10", "10,000"},
+                                    key=lambda x: float(x.replace(",", "")))})
+    for fid, claim, url, excerpt, numbers in FIRECRAWL_SOURCES:
+        facts.append({"id": fid, "claim": claim, "source_url": url, "fetched": date, "excerpt": excerpt,
+                      "numbers": numbers})
+    derived = [
+        {"id": "d-fc-general-pages", "numbers": ["17"], "inputs": ["bench-panel"],
+         "expr": f"{cats['static']}+{cats['js']}", "result": cats["static"] + cats["js"]},
+        {"id": "d-fc-other-pages", "numbers": ["6"], "inputs": ["bench-panel"],
+         "expr": f"{cats['js']}+{cats['protected']}", "result": cats["js"] + cats["protected"]},
+        {"id": "d-fc-standard-per-1000-credits", "numbers": ["0.99"], "inputs": ["fc-plans"],
+         "expr": "99/100000*1000", "result": 0.99},
+        {"id": "d-fc-mixed-credits", "numbers": ["320,000"], "inputs": ["fc-billing"],
+         "expr": "300000*1+20000*1", "result": 320000},
+        {"id": "d-scrapfly-1m-rendered", "numbers": ["560"], "inputs": ["f7", "f38"],
+         "expr": "500+(6*1000000-5500000)/10000*1.20", "result": 560},
+    ]
+    out_doc = {"about": "Facts behind md-009's additions to index.html and cheapest-web-scraping-api.html, written by "
+                        "scripts/firecrawl_benchmark.py facts from the raw run file; md-009/run_gate.py adds them to "
+                        "the page's earlier facts.", "facts": facts, "derived": derived}
+    with open(a.out, "w", encoding="utf-8", newline="\n") as fh:
+        json.dump(out_doc, fh, indent=1, ensure_ascii=False)
+        fh.write("\n")
+    out(f"wrote {a.out}: {len(facts)} facts, {len(derived)} derived")
+    return 0
+
+
 def main():
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -533,9 +630,12 @@ def main():
     sp = sub.add_parser("check")
     sp.add_argument("raw")
     sp.add_argument("pages", nargs="+")
+    sp = sub.add_parser("facts")
+    sp.add_argument("raw")
+    sp.add_argument("out")
     a = ap.parse_args()
     return {"robots": cmd_robots, "balance": cmd_balance, "smoke": cmd_smoke, "run": cmd_run,
-            "summary": cmd_summary, "check": cmd_check}[a.cmd](a)
+            "summary": cmd_summary, "check": cmd_check, "facts": cmd_facts}[a.cmd](a)
 
 
 if __name__ == "__main__":

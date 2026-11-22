@@ -64,6 +64,7 @@ TOOLS = {
     "ct-002/run_gate.py": ("render", None),
     "ct-003/run_gate.py": ("render", None),
     "ct-005/run_gate.py": ("render", None),
+    "md-009/run_gate.py": ("render", None),
     "ct-004/consent_probe.mjs": ("node", ["--url", "{url}", "--wait", "4"]),
     "ct-005/lighthouse_run.py": ("python-browser", ["--url", "{url}", "--runs", "1"]),
 }

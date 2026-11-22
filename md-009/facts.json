@@ -1,0 +1,175 @@
+{
+ "about": "Facts behind md-009's additions to index.html and cheapest-web-scraping-api.html, written by scripts/firecrawl_benchmark.py facts from the raw run file; md-009/run_gate.py adds them to the page's earlier facts.",
+ "facts": [
+  {
+   "id": "bench-summary",
+   "claim": "Firecrawl benchmark run 2026-11-22: summary",
+   "source_url": "https://scrapetools.scaleturn.com/data/firecrawl-benchmark-2026-11-22.json",
+   "fetched": "2026-11-22",
+   "excerpt": "requests=95; static: requests=65 successes=65 success_rate_pct=100.0 median_s=2.26 p95_s=2.98; js: requests=20 successes=15 success_rate_pct=75.0 median_s=1.78 slowest_s=2.66; protected: requests=10 successes=10 success_rate_pct=100.0 median_s=1.64 slowest_s=4.34; general: requests=85 successes=80 success_rate_pct=94.1 median_s=2.22 p95_s=2.97; credits_used=95; per_1000_successful_general_usd: Standard=1.05 Hobby=4.04; control: static 12 of 13, js 0 of 4, protected 0 of 2",
+   "numbers": [
+    "0",
+    "1.05",
+    "1.64",
+    "1.78",
+    "2",
+    "2.22",
+    "2.26",
+    "2.66",
+    "2.97",
+    "2.98",
+    "4",
+    "4.04",
+    "4.34",
+    "10",
+    "12",
+    "13",
+    "15",
+    "20",
+    "65",
+    "75.0",
+    "80",
+    "85",
+    "94.1",
+    "95",
+    "100.0"
+   ]
+  },
+  {
+   "id": "bench-panel",
+   "claim": "Benchmark panel: pages per category, rounds, the delayed page",
+   "source_url": "https://scrapetools.scaleturn.com/data/benchmark-panel-2026-11.json",
+   "fetched": "2026-11-22",
+   "excerpt": "pages=19; static=13; js=4; protected=2; rounds=5; J03: The quotes appear about 10 seconds after the page loads (the page's own script waits 10,000 ms).",
+   "numbers": [
+    "2",
+    "4",
+    "5",
+    "10",
+    "13",
+    "19",
+    "10,000"
+   ]
+  },
+  {
+   "id": "fc-plans",
+   "claim": "Firecrawl paid plans: monthly price, annual price, credits",
+   "source_url": "https://www.firecrawl.dev/pricing",
+   "fetched": "2026-11-22",
+   "excerpt": "Hobby: $19/month billed monthly ($16/month billed annually), 5,000 credits/month | Standard: $99/month billed monthly ($83/month billed annually), 100,000 credits/month | Growth: $399/month billed monthly ($333/month billed annually), 500,000 credits/month | Scale: $749/month billed monthly ($599/month billed annually), 1,000,000 credits/month",
+   "numbers": [
+    "19",
+    "16",
+    "5,000",
+    "99",
+    "83",
+    "100,000",
+    "399",
+    "333",
+    "500,000",
+    "749",
+    "599",
+    "1,000,000"
+   ]
+  },
+  {
+   "id": "fc-free",
+   "claim": "Firecrawl free tier and Hobby concurrency",
+   "source_url": "https://www.firecrawl.dev/pricing",
+   "fetched": "2026-11-22",
+   "excerpt": "Free tier: 1,000 credits every month, refreshed monthly, no credit card required. | Hobby | 5,000 credits / month | 5 concurrent requests",
+   "numbers": [
+    "1,000",
+    "5,000",
+    "5"
+   ]
+  },
+  {
+   "id": "fc-billing",
+   "claim": "Firecrawl billing: credits per scrape, JSON surcharge, billed error pages, pay-as-you-go blocks",
+   "source_url": "https://docs.firecrawl.dev/billing",
+   "fetched": "2026-11-22",
+   "excerpt": "Scrape 1 credit / page | JSON format: +4 credits per page | Firecrawl returned a document: 1 credit per page. This includes pages that come back with an error status such as 403 Forbidden or 404 Not Found. | You buy credits in increments of 5 USD. | Pay-as-you-go needs a paid self-serve plan. | Hobby 1,000 | Standard 2,000 | Growth 2,500 | Scale 5,000",
+   "numbers": [
+    "1",
+    "4",
+    "403",
+    "404",
+    "5",
+    "1,000",
+    "2,000",
+    "2,500",
+    "5,000"
+   ]
+  },
+  {
+   "id": "fc-free-limits",
+   "claim": "Firecrawl free plan: monthly credits, no rollover, rate limit",
+   "source_url": "https://docs.firecrawl.dev/billing",
+   "fetched": "2026-11-22",
+   "excerpt": "1,000 credits per month. The allotment resets at the start of each monthly cycle. Unused free credits do not roll over. | Rate limits of 10 requests per minute on /scrape, /map and /search",
+   "numbers": [
+    "1,000",
+    "10"
+   ]
+  }
+ ],
+ "derived": [
+  {
+   "id": "d-fc-general-pages",
+   "numbers": [
+    "17"
+   ],
+   "inputs": [
+    "bench-panel"
+   ],
+   "expr": "13+4",
+   "result": 17
+  },
+  {
+   "id": "d-fc-other-pages",
+   "numbers": [
+    "6"
+   ],
+   "inputs": [
+    "bench-panel"
+   ],
+   "expr": "4+2",
+   "result": 6
+  },
+  {
+   "id": "d-fc-standard-per-1000-credits",
+   "numbers": [
+    "0.99"
+   ],
+   "inputs": [
+    "fc-plans"
+   ],
+   "expr": "99/100000*1000",
+   "result": 0.99
+  },
+  {
+   "id": "d-fc-mixed-credits",
+   "numbers": [
+    "320,000"
+   ],
+   "inputs": [
+    "fc-billing"
+   ],
+   "expr": "300000*1+20000*1",
+   "result": 320000
+  },
+  {
+   "id": "d-scrapfly-1m-rendered",
+   "numbers": [
+    "560"
+   ],
+   "inputs": [
+    "f7",
+    "f38"
+   ],
+   "expr": "500+(6*1000000-5500000)/10000*1.20",
+   "result": 560
+  }
+ ]
+}
