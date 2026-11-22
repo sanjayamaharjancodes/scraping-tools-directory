@@ -155,3 +155,37 @@ second asked for originality only, judged by the reviewer's own meaning. Both we
   checked."). The widget footer went back to its original wording.
 - Checks after the rework: figure check index 2 + methodology 22, 0 failed, plants caught; gate as in section 4;
   `ct-004/check_live.py --local` 64 of 64; `ct-005/test_no_counter.py` 18 of 18.
+
+## 7. Rework 2 (manager's second review, 22 Nov 2026)
+
+1. Cheapest page: both results links now go to methodology.html#firecrawl-results.
+2. methodology.html and the panel's `about` text name the exception: S01's marker is in the page's HTML only in link
+   and image titles (the panel gained an `amended` note; pages, markers, settings and rule unchanged; the panel as
+   run stays embedded in the raw JSON with its SHA-256).
+3. Widget note: "Extra credits cost $5 per 1,000 on Hobby, 2,000 on Standard, 2,500 on Growth and 5,000 on Scale."
+4. Credits: the dashboard's Usage page, "View all balances" (read 22 Nov, read-only), shows two balances: Free plan,
+   granted 1,000, used 96, remaining 904, expires and refreshes Nov 25, 2026; One-time credits, granted 25, used 0,
+   remaining 25, no expiry. The dashboard does not say where the 25 came from; they were on the account before the
+   smoke request (1,025). Every credit the test used came from the free plan. Public wording is now "on a free-plan
+   account" (index short answer, methodology, reply), and methodology says the 25 one-time credits were not used.
+5. Cheapest page: Zyte's "$0.13 to $1.27 per 1,000 responses" and "You cannot know that before you test your own
+   target sites." restored.
+6. Index short answer: "Firecrawl costs $99 for 100,000 pages (tested at Firecrawl's request on a free-plan account;
+   it pays us nothing); 80 of 85 requests to static and JavaScript pages passed" (linked to the full results).
+7. Cheapest page: "monthly list prices before annual discounts and taxes" restored; the $19 sentence names both $19
+   Hobby plans (75,000 and 5,000 credits); "each request burns more credits at most vendors".
+8. disclosure.html: "One tested result is live so far, for Firecrawl on 22 Nov 2026".
+9. methodology.html is LF again. Cause: the rework script converted the moved block to CRLF, then its replace helper
+   converted each "\n" again, giving CR CR LF on 16 lines, which git does not normalize.
+10. methodology.html: times "include the network distance from it to Firecrawl's API".
+
+Height: to keep both pages within bounds after the added words, five more of md-009's own words or clauses went
+(", rendering included" and "the one tested API here" in the index short answer, which the widget note and the
+parenthesis cover; "Firecrawl bills 403 and 404 pages." and the separate widget line on the cheapest page, folded into
+its short answer as "The widget covers four of them."; a duplicate methodology link in its disclaimer), and two
+recast sentences were tightened ("with rendering on"; "Of plans stating their volume, ...").
+
+Checks after rework 2: figure check index 2 + methodology 22, 0 failed, plants caught; summary recomputes; home gate
+10,982 px vs main 11,001 px with main's identical 2 findings; cheapest gate passes apart from 18 fact ages (8,986 px);
+check_live --local 64 of 64; links 101 local + 23 external, 0 problems; methodology phone render 6,409 px, no
+overflow or JS errors; methodology.html LF only.

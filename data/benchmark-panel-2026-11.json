@@ -3,7 +3,8 @@
   "name": "ScrapeTools benchmark panel, November 2026",
   "frozen": "2026-11-22",
   "method": "https://scrapetools.scaleturn.com/methodology.html",
-  "about": "Fixed before the first run and not changed after seeing results. Each page has a category and one or more success markers: text a person sees on the page in a normal browser. A request succeeds only when every marker appears in the returned content and no block-page phrase does. Markers are matched case-sensitively after removing Markdown emphasis characters (* _ `) and collapsing whitespace. Practice sites are pages built to be scraped; their owners are named where the site names them.",
+  "about": "Fixed before the first run and not changed after seeing results. Each page has a category and one or more success markers: text a person sees on the page in a normal browser, with one exception: S01's marker, 'A Light in the Attic', is in the page's HTML only in link and image titles (the visible link text is cut short to 'A Light in the ...'). A request succeeds only when every marker appears in the returned content and no block-page phrase does. Markers are matched case-sensitively after removing Markdown emphasis characters (* _ `) and collapsing whitespace. Practice sites are pages built to be scraped; their owners are named where the site names them.",
+  "amended": "22 Nov 2026, after the run: the about text names the S01 exception. Pages, markers, settings, pacing and the rule are unchanged; the panel as run is embedded in data/firecrawl-benchmark-2026-11-22.json with its SHA-256.",
   "categories": {
     "static": "The content is in the page's HTML; a plain HTTP request gets it.",
     "js": "The content is added by JavaScript after the page loads; a plain HTTP request does not get it.",

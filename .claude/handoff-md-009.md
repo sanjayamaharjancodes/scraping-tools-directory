@@ -16,6 +16,8 @@ only if it earns a place. Brief: D:/Lab/manager/briefs/md-009.md. Linear SAN-161
   21 untraced numbers in the More-guides cards; option: move the results table to methodology.html.
 - Rework done (RULING.md section 6): full results on methodology.html#firecrawl-results; index keeps a compact
   summary, the row and the widget entry; index 10,982 px vs main 11,001 px; untraced list identical to main.
+- Rework 2 done (RULING.md section 7): ten review items; credits: free plan 1,000 (96 used) + 25 one-time credits
+  (unused, source not shown); wording now "on a free-plan account". methodology.html back to LF.
 - Reply draft: md-009/reply.md (link live only after merge).
 - Key: D:/Lab/secrets/firecrawl/.env (never printed; clipboard cleared).
 

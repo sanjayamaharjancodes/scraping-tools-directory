@@ -61,8 +61,8 @@
   <div class="container prose">
     <div class="answer-first">
       <span class="answer-first-label">Short answer</span>
-      <p>Among ScrapingBee, Scrapfly, ScrapingDog and ScraperAPI, web scraping API paid plans start at $19 a month, and 100,000 plain requests cost $30 to $49. Firecrawl, the one tested API here, costs $99 with rendering included; <span data-bench="summary.general.successes">80</span> of <span data-bench="summary.general.requests">85</span> test requests passed (<a href="methodology.html#firecrawl-results">results</a>). These are five credit-plan vendors, not the whole market. Plain means no JavaScript rendering, base proxy, unprotected target.</p>
-      <p><strong>Lowest list price:</strong> Scrapfly, $30/mo, for 100,000 plain requests; ScrapingDog, $90/mo with dynamic=false, for 1,000,000; with JavaScript rendering on, ScrapingDog, $90/mo for 100,000 and $350/mo for 1,000,000.</p>
+      <p>Among ScrapingBee, Scrapfly, ScrapingDog and ScraperAPI, web scraping API paid plans start at $19 a month, and 100,000 plain requests cost $30 to $49. Firecrawl costs $99 for 100,000 pages (tested at Firecrawl's request on a free-plan account; it pays us nothing); <a href="methodology.html#firecrawl-results"><span data-bench="summary.general.successes">80</span> of <span data-bench="summary.general.requests">85</span> requests to static and JavaScript pages passed</a>. These are five credit-plan vendors, not the whole market. Plain means no JavaScript rendering, base proxy, unprotected target.</p>
+      <p><strong>Lowest list price:</strong> Scrapfly, $30/mo, for 100,000 plain requests; ScrapingDog, $90/mo with dynamic=false, for 1,000,000; with rendering on, ScrapingDog, $90/mo for 100,000 and $350/mo for 1,000,000.</p>
     </div>
 
     <div class="vcw-page" id="cost-widget" style="border:1px solid var(--color-border,#dbe4e1);border-radius:8px;padding:.75rem;margin:1.5rem 0;background:#fff">
@@ -244,7 +244,7 @@
     {id: 'firecrawl', name: 'Firecrawl', js: 1, unit: 'credits', src: U + 'www.firecrawl.dev/pricing',
       plain: '1 credit a page, rendering included.',
       rendered: '1 credit a page, rendering included.',
-      extraNote: 'Extra credits are sold in $5 blocks at the plan rate.',
+      extraNote: 'Extra credits cost $5 per 1,000 on Hobby, 2,000 on Standard, 2,500 on Growth and 5,000 on Scale.',
       overLabel: 'Enterprise: custom pricing', extraCap: null, blocks: true,
       tiers: [['Hobby', 19, 5000, 5, 1000], ['Standard', 99, 100000, 5, 2000], ['Growth', 399, 500000, 5, 2500], ['Scale', 749, 1000000, 5, 5000]]}
   ];
