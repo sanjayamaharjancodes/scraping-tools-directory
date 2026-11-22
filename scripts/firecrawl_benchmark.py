@@ -188,6 +188,7 @@ def firecrawl_request(page, panel, key):
         rec["credits_reported"] = meta.get("creditsUsed")
         rec["proxy_used"] = meta.get("proxyUsed")
         rec["cache_state"] = meta.get("cacheState")
+        rec["concurrency_limited"] = meta.get("concurrencyLimited")
         rec["warning"] = (data.get("warning") or None) and str(data.get("warning"))[:200]
         rec["metadata_keys"] = sorted(k for k in meta.keys() if not re.match(r"^(og|twitter|article|fb|al)[:_A-Z]", k))[:40]
         rec["chars"] = len(md)
@@ -362,7 +363,7 @@ def write_outputs(prefix, raw):
 
 CSV_COLS = ["run_date", "vendor", "round", "seq", "id", "category", "url", "started_utc", "latency_ms",
             "api_status", "target_status", "chars", "sha256", "markers_found", "block_phrases", "success", "reason",
-            "credits_reported", "proxy_used", "error"]
+            "credits_reported", "proxy_used", "concurrency_limited", "error"]
 
 
 def cmd_run(a):
