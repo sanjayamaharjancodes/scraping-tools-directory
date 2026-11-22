@@ -598,10 +598,10 @@ def cmd_facts(a):
          "expr": f"{cats['js']}+{cats['protected']}", "result": cats["js"] + cats["protected"]},
         {"id": "d-fc-standard-per-1000-credits", "numbers": ["0.99"], "inputs": ["fc-plans"],
          "expr": "99/100000*1000", "result": 0.99},
+        {"id": "d-fc-hobby-per-1000-credits", "numbers": ["3.80"], "inputs": ["fc-plans"],
+         "expr": "19/5000*1000", "result": 3.8},
         {"id": "d-fc-mixed-credits", "numbers": ["320,000"], "inputs": ["fc-billing"],
          "expr": "300000*1+20000*1", "result": 320000},
-        {"id": "d-scrapfly-1m-rendered", "numbers": ["560"], "inputs": ["f7", "f38"],
-         "expr": "500+(6*1000000-5500000)/10000*1.20", "result": 560},
     ]
     out_doc = {"about": "Facts behind md-009's additions to index.html and cheapest-web-scraping-api.html, written by "
                         "scripts/firecrawl_benchmark.py facts from the raw run file; md-009/run_gate.py adds them to "

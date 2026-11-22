@@ -1,7 +1,8 @@
-"""Run the content-autopilot machine gate (checks.run_all, with its phone render) on the home page after md-009.
+"""Run the content-autopilot machine gate (checks.run_all, with its phone render) on a page md-009 changed.
 
 Usage:
-    python -I md-009/run_gate.py --autopilot <content-autopilot dir> --original <index.html before md-009>
+    python -I md-009/run_gate.py --autopilot <content-autopilot dir> --original <the page before md-009>
+                                 [--slug index|cheapest-web-scraping-api]
                                  [--work <scratch dir>] [--live]
 
 The home page is a hub the autopilot never refreshes, so its facts were last recorded by the 5 Nov 2026 refresh
@@ -21,7 +22,6 @@ import shutil
 import sys
 import tempfile
 
-SLUG = "index"
 SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -44,11 +44,14 @@ def untraced_all(checks, common, dd, cfg):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--autopilot", required=True)
-    ap.add_argument("--original", required=True, help="the home page as it was before md-009")
+    ap.add_argument("--original", required=True, help="the page as it was before md-009")
     ap.add_argument("--work")
     ap.add_argument("--live", action="store_true")
-    ap.add_argument("--page", help="the page to gate (default: this branch's index.html)")
+    ap.add_argument("--slug", default="index", help="index or cheapest-web-scraping-api")
+    ap.add_argument("--page", help="the page to gate (default: this branch's copy)")
     a = ap.parse_args()
+    SLUG = a.slug
+    fname = "index.html" if SLUG == "index" else SLUG + ".html"
     sys.path.insert(0, a.autopilot)
     import checks
     import common
@@ -64,9 +67,9 @@ def main():
     # A copy of this branch's site with the pre-md-009 home page, which refresh mode reads as the live page.
     shutil.copytree(SITE, site, ignore=shutil.ignore_patterns(".git", ".claude", "ct-*", "md-*", "scripts",
                                                               "__pycache__", ".tmp-*", ".rx001-repos"))
-    shutil.copy(a.original, os.path.join(site, "index.html"))
-    shutil.copy(a.page or os.path.join(SITE, "index.html"), os.path.join(dd, "page.html"))
-    base = json.load(open(os.path.join(a.autopilot, "published", "index", "facts.json"), encoding="utf-8"))
+    shutil.copy(a.original, os.path.join(site, fname))
+    shutil.copy(a.page or os.path.join(SITE, fname), os.path.join(dd, "page.html"))
+    base = json.load(open(os.path.join(a.autopilot, "published", SLUG, "facts.json"), encoding="utf-8"))
     ours = json.load(open(os.path.join(SITE, "md-009", "facts.json"), encoding="utf-8"))
     facts = {"target_query": base["target_query"], "facts": base["facts"] + ours["facts"],
              "derived": base.get("derived", []) + ours.get("derived", [])}
@@ -91,7 +94,7 @@ def main():
         return r
 
     findings = checks.run_all(dd, SLUG, cfg, site, mode="refresh", fetch=fetch, check_net=True, render=renderer)
-    age = re.compile(r"^fact (\S+): fetch date 2026-11-05 is not within 3 days of today$")
+    age = re.compile(r"^fact (\S+): fetch date (\S+) is not within 3 days of today$")
     stale, other = [], []
     for f in findings:
         m = age.match(f.get("msg", "") or f.get("message", "") or "")
@@ -100,7 +103,7 @@ def main():
     for f in other:
         if f["rule"] == "untraced_number":
             print("untraced:", " ".join(sorted(set(x for x in untraced_all(checks, common, dd, cfg)))))
-    print(f"fact-age findings on the unchanged 5 Nov facts: {len(stale)} (of {len(old_ids)} such facts)")
+    print(f"fact-age findings on the page's earlier facts (unchanged figures): {len(stale)} (of {len(old_ids)} such facts)")
     pg = checks.parse(common.read_text(os.path.join(dd, "page.html")))
     inter = shots.get("interaction") or {}
     print(f"words in <main>: {len(checks.words(' '.join(pg.main_parts)))}; phone height {shots.get('height')} px "
@@ -109,7 +112,7 @@ def main():
           f"links {'live' if a.live else 'repository'}")
     print(f"phone screenshots: {os.path.join(dd, 'shots')}")
     fails = [f for f in other if f.get("severity", "fail") == "fail"]
-    print("GATE PASSED (apart from the 5 Nov fact ages)" if not fails else f"GATE FAILED: {len(fails)} findings")
+    print("GATE PASSED (apart from the earlier facts' ages)" if not fails else f"GATE FAILED: {len(fails)} findings")
     sys.exit(0 if not fails else 1)
 
 
