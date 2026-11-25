@@ -60,6 +60,7 @@ TOOLS = {
     "ct-005/check_live.py": ("python", []),
     "rx-001/reach_read.py": ("python", []),
     "scripts/firecrawl_benchmark.py": ("python", ["robots"]),   # md-009: reaches Firecrawl and the panel sites, never ours
+    "md-010/check.py": ("python", []),
     "ct-001/run_gate.py": ("render", None),
     "ct-002/run_gate.py": ("render", None),
     "ct-003/run_gate.py": ("render", None),

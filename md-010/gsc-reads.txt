@@ -1,0 +1,141 @@
+Search Console reads, property https://scrapetools.scaleturn.com/ (Chrome u/1), read 2026-11-25 ~21:33-21:37 NPT. "Last update: 3.5 hours ago". Data through 23 Nov.
+
+== Daily, whole site, Search type Web, 24 Aug - 23 Nov (clicks|impressions|position)
+Nov 23 0 1 2.0; Nov 22 0 0 -; Nov 21 0 1 1.0; Nov 20 0 1 2.0; Nov 19 0 2 6.5; Nov 18 0 0 -; Nov 17 0 1 66.0; Nov 16 0 4 90.8;
+Nov 15 0 20 78.2; Nov 14 0 27 45.6; Nov 13 0 22 46.9; Nov 12 0 16 38.9; Nov 11 0 10 65.8; Nov 10 0 12 55.4; Nov 9 0 17 64.0;
+Nov 8 0 15 64.5; Nov 7 0 20 62.1; Nov 6 0 16 41.1; Nov 5 0 8 73.9; Nov 4 0 8 62.8; Nov 3 0 9 60.3; Nov 2 0 8 56.0; Nov 1 0 5 72.6;
+Oct 31 0 10 49.6; Oct 30 0 21 15.0; Oct 29 0 9 62.1; Oct 28 0 10 34.0; Oct 27 0 12 76.3; Oct 26 0 6 78.3; Oct 25 0 14 49.2;
+Oct 24 0 7 67.0; Oct 23 0 7 45.9; Oct 22 0 15 50.2; Oct 21 0 6 58.8; Oct 20 0 5 58.4; Oct 19 0 7 43.4; Oct 18 0 8 45.9;
+Oct 17 0 7 59.9; Oct 16 0 7 57.7; Oct 15 0 14 40.1; Oct 14 0 9 48.6; Oct 13 0 8 59.4; Oct 12 0 5 7.2; Oct 11 0 8 15.4;
+Oct 10 0 9 24.7; Oct 9 0 6 29.8; Oct 8 0 1 1.0; Oct 7 0 9 41.6; Oct 6 0 9 52.0; Oct 5 0 17 37.6; Oct 4 0 18 29.9;
+Oct 3 0 9 35.1; Oct 2 0 11 30.5; Oct 1 0 6 62.5; Sep 30 0 4 4.5; Sep 29 0 2 6.0; Sep 28 0 4 7.5; Sep 27 0 2 26.0;
+Sep 26 0 7 5.1; Sep 25 0 3 2.7; Sep 24 0 4 30.8; Sep 23 0 2 55.0; Sep 22 0 1 11.0; Sep 21 0 2 24.5; Sep 20 0 0 -;
+Sep 19 0 1 62.0; Sep 18 0 2 66.0; Sep 17 0 0 -; Sep 16 0 4 66.5; Sep 15 0 5 61.0; Sep 14 0 8 55.5; Sep 13 0 6 70.5;
+Sep 12 0 5 67.8; Sep 11 0 8 53.4; Sep 10 0 5 70.8; Sep 9 0 6 67.7; Sep 8 0 4 47.0; Sep 7 0 8 40.1; Sep 6 0 7 43.6;
+Sep 5 0 13 25.7; Sep 4 0 9 42.8; Sep 3 0 8 69.0; Sep 2 0 4 73.5; Sep 1 0 4 54.2; Aug 31 0 5 77.0; Aug 30 0 8 68.8;
+Aug 29 0 8 76.8; Aug 28 0 6 68.0; Aug 27 0 19 65.4; Aug 26 0 28 72.8; Aug 25 0 10 73.9; Aug 24 0 11 72.2
+3-month totals: 0 clicks, 746 impressions, average position 51.1.
+
+== Compare 16-23 Nov (A, 8 days) vs 1-15 Nov (B, 15 days). Totals: impressions 10 vs 213; position 44.7 vs 57.2; clicks 0 vs 0.
+-- Pages (page | imprA | imprB | posA | posB)
+/ | 4 | 77 | 68.3 | 51.9
+/scraperapi-cost-calculator.html | 3 | 109 | 68 | 58.7
+/scraperapi-vs-scrapingbee.html | 2 | 35 | 80.5 | 79.1
+/scraperapi-vs-bright-data.html | 0 | 21 | - | 59.9
+/web-scraping-api-cost-per-1000-requests.html | 3 | 20 | 65.3 | 92.3
+/about.html | 1 | 3 | 1 | 5.3
+/methodology.html | 1 | 2 | 9 | 1.5
+/ai-job-titles.html | 3 | 0 | 5 | -
+/ats-job-posting-api-crawl-data.html | 2 | 0 | 5 | -
+/scrapecreators-pricing.html | 1 | 0 | 3 | -
+/scrapingdog-vs-scrapingbee.html | 1 | 0 | 7 | -
+-- Queries (query | imprA | imprB | posA | posB); 31 named queries, the rest anonymised
+scraper api pricing|2|35|86.5|82.2
+scrapingbee|1|4|66|64.8
+scraper api cost|1|14|95|88.3
+scrapingbee vs scraperapi|1|8|95|87
+scraperapi pricing|0|18|-|54.1
+bright data web scraper api pricing|0|10|-|75.2
+buy scrapingbee proxies|0|8|-|95.6
+scraper api credit cost|0|6|-|15.5
+staples scraper api|0|6|-|38.7
+profit scraper pricing|0|6|-|61.2
+web scraper api cost|0|6|-|93.3
+web scraping api pricing|0|6|-|99.3
+newegg scraper api|0|5|-|55.4
+scraping api pricing|0|5|-|72.2
+scraperapi plans|0|4|-|23
+scraperapi vs|0|3|-|73.7
+bright data serp api pricing|0|3|-|76.7
+affordable scraper api|0|2|-|48.5
+scrapingbee pricing|0|2|-|77
+web scraper api pricing|0|2|-|99
+scraping api cost for 1 million requests|0|1|-|11
+cost per 1k scrapes|0|1|-|15
+scraperapi free tier|0|1|-|18
+scrappingbee|0|1|-|58
+scrapping bee|0|1|-|67
+scrape do pricing|0|1|-|68
+scrapingbee promo code|0|1|-|69
+scraperapi coupon code|0|1|-|75
+scrapecreators pricing|0|1|-|94
+scrapingbee discount code|0|1|-|99
+scrapingbee proxy|0|1|-|100
+-- Countries (A|B|posA|posB): United States 8|159|35.8|64.6; Germany 1|10|95|70.4; Denmark 1|0|66|-; Brazil 0|6|-|6.5; France 0|5|-|69.2;
+   Ecuador 0|4|-|4.8; Colombia 0|4|-|5.5; Vietnam 0|4|-|59.8; India 0|3|-|6; Canada 0|3|-|49.3; Nepal 0|2|-|1; Switzerland 0|2|-|3.5;
+   Argentina 0|2|-|42; UK 0|2|-|71; Malaysia, South Africa, Peru, Netherlands, Singapore, Russia, Taiwan 0|1 each
+-- Devices: Desktop 9|197|49.4|59; Mobile 1|16|2|34.9
+
+== Daily per page, 1-23 Nov (date|clicks|impressions|position)
+calculator: Nov23 0 -;22 0;21 1 @10;20 0;19 0;18 0;17 0;16 2 @97;15 5 @46.4;14 19 @41.4;13 10 @48.2;12 9 @53.6;11 5 @78.2;10 8 @55.1;9 9 @64;8 8 @67.5;7 8 @62.9;6 7 @45.9;5 2 @74;4 6 @69.5;3 6 @75.3;2 4 @88.5;1 3 @89.3
+home /: 23 0;22 0;21 1 @5;20 0;19 0;18 0;17 0;16 3 @89.3;15 2 @90.5;14 7 @60.4;13 8 @36;12 10 @45.8;11 3 @76.7;10 4 @59;9 6 @72;8 6 @54.8;7 9 @63.2;6 7 @33.3;5 4 @63;4 2 @42.5;3 3 @30.3;2 4 @23.5;1 2 @47.5
+scraperapi-vs-scrapingbee: 23-18 0;17 1 @66;16 1 @95;15 5 @80.4;14 4 @81.2;13 4 @85.2;12 0;11 3 @67.7;10 3 @59.7;9 4 @90.2;8 4 @78.2;7 5 @71.6;6 1 @95;5 2 @95.5;4-1 0
+scraperapi-vs-bright-data: 23-16 0;15 2 @69.5;14 4 @48.5;13 1 @73;12 1 @45;11 1 @77;10 2 @40.5;9 1 @79;8 4 @73.8;7 2 @75;6 3 @41.7;5-1 0
+cost-per-1000: 23-22 0;21 1 @4;20-17 0;16 2 @96;15 10 @98;14 5 @91.4;13 5 @81.8;12-1 0
+
+== Not read: other properties (gettingpaid.scaleturn.com, makeyeti.com, scrape-diagnose) as a control. Navigation to another property's
+   report was refused by the session's permission classifier ("Unauthorized Access"); the brief puts other properties out of scope.
+
+== URL Inspection (Google index version), read 2026-11-25 ~21:38-21:42 NPT; times as Search Console displays them
+/scraperapi-cost-calculator.html : URL is on Google; Page is indexed; Discovery sitemaps: "Temporary processing error"; referring page none detected;
+   last crawl Nov 5, 2026, 5:47:41 PM; Googlebot smartphone; crawl allowed Yes; page fetch Successful; indexing allowed Yes; user canonical = self; Google canonical = inspected URL
+/ (home) : URL is on Google; Page is indexed; sitemap https://scrapetools.scaleturn.com/sitemap.xml; last crawl Nov 5, 2026, 10:40:03 PM; smartphone; allowed; Successful; canonical self/inspected
+/scraperapi-vs-scrapingbee.html : on Google; indexed; sitemap; last crawl Nov 5, 2026, 5:45:27 PM; smartphone; allowed; Successful; canonical self/inspected
+/scraperapi-vs-bright-data.html : on Google; indexed; sitemap; last crawl Nov 5, 2026, 5:45:27 PM; smartphone; allowed; Successful; canonical self/inspected
+/web-scraping-api-cost-per-1000-requests.html : on Google; indexed; sitemap; last crawl Nov 12, 2026, 7:56:54 PM; smartphone; allowed; Successful; canonical self/inspected
+Overview card (same read): 9 indexed pages, 5 not indexed; Datasets enhancement: 3 valid, 0 invalid. Recommendation card: "A page recently got fewer impressions than usual ... scraperapi-cost-calculator.html (down 95%)".
+
+== Other Search Console reads (25 Nov ~21:42-21:48 NPT)
+Page indexing (last update 11/16/26): 9 indexed, 5 not indexed (all "Discovered - currently not indexed", first detected 8/18/26, last crawled N/A:
+  cheapest-web-scraping-api, disclosure, privacy, scraperapi-free-trial, web-scraping-apis-with-free-tier). Indexed pages and last crawled:
+  scrapecreators-pricing Nov 15; scrapingdog-vs-scrapingbee Nov 15; cost-per-1000 Nov 12; / Nov 5; calculator Nov 5; about Nov 5; methodology Nov 5;
+  scraperapi-vs-bright-data Nov 5; scraperapi-vs-scrapingbee (Nov 5).
+Sitemaps: /sitemap.xml submitted Nov 19, 2026, last read Nov 19, 2026, Success, 15 discovered pages.
+Crawl stats (last updated 11/23/26, 90 days): 104 requests; host status "Host had no problems in the last 90 days"; OK 90%, 404 8% (all /favicon.ico,
+  6 Sep - 2 Nov, before favicon was added), 304 2%. Recent 200 crawls: 22 Nov 1:40 AM data pages; 19 Nov 11:27 PM data pages + css; 17 Nov 4:23 PM / and widgets.js;
+  15 Nov 8:42 PM scrapecreators-pricing; 15 Nov 6:04 PM scrapingdog-vs-scrapingbee; 13 Nov 7:47-7:50 PM every page incl. not-indexed ones; 12 Nov 7:56 PM cost-per-1000.
+Manual actions: No issues detected. Security issues: No issues detected.
+Query "scraper api pricing", daily impressions@position (days with impressions only), 27 Aug - 23 Nov:
+  Nov 16 2@86.5; 15 1@85; 14 2@85; 13 2@84.5; 12 3@87; 11 2@72; 10 2@75.5; 9 4@79.5; 8 2@80.5; 7 2@83; 6 2@86; 5 2@74; 4 3@82.7; 3 4@81.2; 2 2@91; 1 2@89;
+  Oct 31 3@83; 30 1@90; 29 3@87.7; 28 1@88; 27 8@87.2; 26 2@64; 25 2@63.5; 24 3@64; 23 2@66.5; 22 3@68.7; 21 3@67.7; 20 2@63; 19 2@62.5; 18 2@63.5;
+  17 3@64.7; 16 2@64.5; 15 3@66.3; 14 2@67; 13 2@63.5; 10 1@64; 9 1@66; 7 2@69.5; 6 2@69.5; 5 3@69; 4 3@69.7; 3 1@69; 2 2@67; 1 2@67.5;
+  Sep 24 1@65; 23 1@67; 19 1@62; 18 1@63; 16 1@66; 15 2@62; 14 3@64.3; 13 3@63; 12 2@61.5; 11 2@61; 10 2@62; 9 3@59.3; 8 1@60; 7 3@61.7; 6 2@66;
+  5 2@68; 4 2@63.5; 3 2@66.5; 2 2@70; 1 2@69; Aug 31 1@70; 30 2@68.5; 29 2@70; 28 2@74; (no impressions 17-23 Nov, 25-30 Sep, 8, 11, 12 Oct)
+
+== Google primary sources (read 25 Nov ~21:46 NPT)
+status.search.google.com/incidents.json: "November 2026 core update" begin 2026-11-10T18:06:00Z end 2026-11-24T14:03:00Z (Ranking);
+  "December 2026 core update" begin 2026-11-24T15:02:00Z, no end (Ranking); "September 2026 spam update" 2026-09-24T16:15Z - 2026-10-08T08:00Z;
+  "August 2026 spam update" 2026-08-18T16:27Z - 2026-08-21T08:49Z.
+support.google.com/webmasters/answer/6211453 (Data anomalies): Product-wide "No recent issues"; Performance: only Nov 9-11 2026 (Generative AI in Search
+  report, impressions logging error) in November; nothing for the Web search report around 15-16 Nov.
+
+== Repo facts
+robots.txt: one commit only (506ab21, 25 Jul 2026). GitHub Pages builds 13-17 Nov (UTC): 14 Nov 04:58 a32d222 (new scrapingdog page); 15 Nov 16:07 f134f58 (md-004
+  footer/free-tier/About); 16 Nov 13:41 83a7b98 (handoff note removed); 17 Nov 05:08 a5f9d67 (new serp page). Builds 14 Aug - 4 Nov: only 30 Sep 13:18 (5ff8ea2, README line).
+
+== Rank check (25 Nov, started 21:51:09 NPT): google.com/search?q=scraper+api+credit+cost&gl=us&hl=en&pws=0&filter=0 page 1: 9 results, scrapetools absent
+   (before the drop this query averaged position 15.5, i.e. page 2). Page 2 (start=10) returned Google's "unusual traffic" CAPTCHA page (/sorry/); stopped there,
+   not solved, no further SERP requests.
+
+== September control (read 25 Nov from 21:51:48 NPT)
+Totals: 3-16 Sep 96 impressions @52.6; 17-30 Sep 34 @18.9; 1-14 Oct 125 @36.2 (all 0 clicks).
+Pages 17-30 Sep vs 3-16 Sep: calculator 20|70 @21.3|56.4; / 15|26 @14.7|42.2.
+Queries 17-30 Sep vs 3-16 Sep: scraper api pricing 4|30 @64.3|63.1; affordable scraper api 3|11 @43.7|76.4; scraper api cost 2|13 @51.5|63.1;
+  scraping api pricing 0|12 @-|81.2; cheap scraper api 0|3 @-|60.3; scraperapi pricing 2026 0|2 @-|5; "what does a web scraping api cost per 1,000 requests in
+  united states?" 2|0 @3; "how much does a web scraping api cost in united states?" 1|0 @5; scrapingdog vs scrapingbee 1|0 @10.
+Queries 1-14 Oct vs 17-30 Sep: scraper api pricing 21|4 @67.8|64.3; staples scraper api 10|0 @6.9; scraper api cost 10|2 @67|51.5; cheap scraper api 7|0 @46.1;
+  affordable scraper api 7|3 @56.1|43.7; scraping api pricing 5|0 @85.2; scraperapi pricing 2026 3|0 @7.7; scraperapi pricing 3|0 @41 ...
+Site deploys 14 Aug - 4 Nov: one build, 30 Sep 13:18 UTC (README one-line change). Google ranking incidents: Sep spam update began 24 Sep 16:15 UTC (after the dip began 17 Sep).
+
+== More reads (25 Nov 21:52:58-21:57 NPT)
+Removals: "No requests submitted in the last 6 months".
+Datasets (last update 11/24/26): 3 valid, 0 invalid; improve-appearance issue Missing field "license": validation Passed, 0 items. Valid items (last detected
+  Nov 22): ats-job-posting-api-crawl-data, ai-job-titles, what-day-are-most-jobs-posted. Dataset markup first committed cd7b6d4, 2026-11-19 09:58:54 +0545.
+Calculator "View crawled page" (index copy): canonical self; no meta robots; contains "is an independent comparison site" (text replaced by 34710d3, built
+  5 Nov 15:37 UTC); lacks the AI-drafting line, the 11 Nov nav links (cost-per-1000, free trial), the 15 Nov footer Contact link and scaleturn.com link, and adsbygoogle.
+  So the index copy predates 5 Nov 15:37 UTC, which fixes URL Inspection's display zone as NPT (5 Nov 5:47:41 PM NPT = 12:02:41 UTC).
+Crawl stats by type: Desktop: 17 Nov 4:23 PM /, 13 Nov 2:30 PM calculator, 5 Nov 5:34 PM /, ...; Smartphone: 22 Nov 1:40 AM data pages, 19 Nov 11:27 PM data pages,
+  17 Nov 4:23 PM /, 15 Nov 8:42 PM scrapecreators-pricing, 15 Nov 6:04 PM scrapingdog-vs-scrapingbee, 13 Nov 7:50 PM methodology (13 Nov sweep was smartphone).
+  Crawl stats and URL Inspection show the same time for the cost-per-1000 crawl (12 Nov 7:56 PM), so both display NPT.
+Pages with impressions 24 Aug - 15 Nov (736 impressions, 0 clicks, pos 51.2): calculator 470 @55.3; / 249 @40.6; scraperapi-vs-scrapingbee 35 @79.1;
+  scraperapi-vs-bright-data 21 @59.9; cost-per-1000 20 @92.3; about 3 @5.3; methodology 2 @1.5. No other page had an impression.
